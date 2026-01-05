@@ -671,7 +671,34 @@ def main():
     parser.add_argument("--eval-every", type=int, default=5, help="TDA validation frequency")
     parser.add_argument("--tda-samples", type=int, default=50, help="Samples for TDA validation")
     
+    # Debug/fast iteration mode
+    parser.add_argument("--debug", action="store_true", 
+                        help="Fast debug mode: 20 samples, 2 epochs, no TDA validation")
+    parser.add_argument("--fast", action="store_true",
+                        help="Fast iteration mode: 100 samples, 5 epochs, TDA every 5 epochs")
+    
     args = parser.parse_args()
+    
+    # Apply debug/fast presets
+    if args.debug:
+        print("=" * 60)
+        print("DEBUG MODE: Fast iteration with minimal data")
+        print("=" * 60)
+        args.max_samples = 20
+        args.epochs = 2
+        args.eval_every = 99  # Effectively disable TDA validation
+        args.tda_samples = 5
+        args.batch_size = 2
+        args.grad_accum = 1
+        args.save_every = 1
+    elif args.fast:
+        print("=" * 60)
+        print("FAST MODE: Quick training with reduced data")
+        print("=" * 60)
+        args.max_samples = 100
+        args.epochs = 5
+        args.eval_every = 5
+        args.tda_samples = 20
     
     # Create config
     config = TrainingConfig(
