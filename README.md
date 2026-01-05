@@ -47,6 +47,17 @@ We tested 3 Qwen3 models (4B, 1.7B, 0.6B) on 30 GSM8K grade-school math problems
 - H₀ entropy × correctness: 4B r=-0.517, 1.7B r=-0.590, 0.6B r=-0.365
 - Dust score × correctness: 4B r=-0.517, 1.7B r=-0.595, 0.6B r=-0.364
 
+### Note on Model Accuracy
+
+**Why does 1.7B outperform 4B?** Our results show 1.7B (93.3%) > 4B (80.0%) > 0.6B (63.3%), which may seem counterintuitive. This is likely due to our intentionally small sample size (n=30). Published benchmarks on the full GSM8K dataset show the expected scaling: larger models generally perform better.
+
+This small dataset is **by design** — the primary goal of this project is not to benchmark model accuracy, but to:
+1. Validate that H₀ entropy correlates with correctness
+2. Establish the TDA pipeline for activation analysis
+3. Prepare for the **GRU intervention experiment** (see Future Work)
+
+The topological findings (H₀ entropy predicts correctness) are statistically significant and consistent across all three models, which is what matters for our downstream goal.
+
 ### Truth Bucket Distribution
 
 | Bucket | Meaning | Count |
@@ -151,6 +162,78 @@ Again — the wrong 1.7B has loops but fails. High entropy = failure.
    - Wrong answers: Components stay separate longer (curve drops slowly = high entropy)
 
 **This is a really clean result!** The topology of correct reasoning is coherent (low H₀), not loopy (high H₁).
+
+## Future Work
+
+### 1. Full Dataset Validation
+
+Run the TDA analysis on the complete GSM8K test set (~1,319 questions) to:
+- Confirm H₀ entropy findings at scale
+- Get proper accuracy rankings (expect 4B > 1.7B > 0.6B)
+- Build larger training set for the GRU intervention experiment
+
+### 2. GRU-Based Reasoning Intervention
+
+The ultimate goal of this project: **Can we improve a small model's reasoning by detecting and correcting "topological drift" in real-time?**
+
+#### The Idea
+
+When a small model (0.6B) starts producing fragmented, high-entropy activations (a sign it's about to fail), inject a learned correction into the residual stream to nudge it back toward coherent reasoning.
+
+#### Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Small Model (0.6B) Residual Stream                         │
+│                                                             │
+│  Layer L activations ──┬──► Continue normally               │
+│                        │                                    │
+│                        ▼                                    │
+│                   ┌─────────┐                               │
+│                   │  GRU    │◄── Encodes recent activation  │
+│                   │ Encoder │    trajectory context         │
+│                   └────┬────┘                               │
+│                        │                                    │
+│                        ▼                                    │
+│                   ┌─────────┐                               │
+│                   │  Gate   │◄── Opens when trajectory      │
+│                   │  (σ)    │    looks "dusty" (high        │
+│                   └────┬────┘    local entropy)             │
+│                        │                                    │
+│                        ▼                                    │
+│                   ┌─────────┐                               │
+│                   │  GRU    │──► Inject correction to       │
+│                   │ Decoder │    reduce fragmentation       │
+│                   └─────────┘                               │
+└─────────────────────────────────────────────────────────────┘
+```
+
+#### Training Signal
+
+Use **H₀ entropy as direct feedback**:
+- Generate response with intervention → compute trajectory H₀ entropy
+- Loss = H₀ entropy + task loss (correctness)
+- Gate learns to activate when local variance spikes (early fragmentation warning)
+
+Alternative: **Distill from 1.7B** (the better-performing model on our dataset):
+- Train GRU to nudge 0.6B activations toward 1.7B's coherent trajectories
+- Only intervene when 0.6B is fragmenting
+
+#### Success Criteria
+
+| Metric | Before GRU | After GRU (Target) |
+|--------|------------|-------------------|
+| 0.6B H₀ Entropy | ~3.57 | Lower |
+| 0.6B Accuracy | 63.3% | Higher |
+
+**Critical**: If entropy drops but accuracy doesn't improve, the intervention is just collapsing representations (bad). Both must improve together.
+
+#### Why This Matters
+
+If successful, this demonstrates:
+1. **Interpretable steering**: We can detect *when* reasoning goes wrong (entropy spike)
+2. **Efficient improvement**: Small models + lightweight GRU ≈ large model quality
+3. **TDA as training signal**: Topology provides geometric feedback for reasoning quality
 
 ## How It Works
 
