@@ -17,7 +17,7 @@ from contextlib import contextmanager
 @dataclass 
 class HookConfig:
     """Configuration for model hooks."""
-    intervention_layer: int = 9  # Layer to intercept
+    intervention_layer: int = 4  # Layer to intercept (early = more correction room)
     monitor_layers: List[int] = None  # Additional layers to monitor
     extract_before_intervention: bool = True  # Extract before or after layer
     

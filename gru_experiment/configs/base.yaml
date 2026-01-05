@@ -13,8 +13,12 @@ teacher_model:
 
 # Intervention settings
 intervention:
-  layer: 9  # ~1/3 into 28-layer model
-  layers_to_monitor: [6, 9, 12]  # Optional: multi-layer signal
+  # Layer 4 = early intervention, gives model ~24 layers to use correction
+  # For 28-layer model (0.6B): layer 4 is ~14% depth
+  # Alternatively use ratio (e.g., 0.15) to auto-compute based on model depth
+  layer: 4
+  layer_ratio: null  # Set to 0.15 to use ratio instead of absolute layer
+  layers_to_monitor: [2, 4, 6]  # For debugging/analysis  # Optional: multi-layer signal
   
 # GRU Controller settings
 controller:

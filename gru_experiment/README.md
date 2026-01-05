@@ -49,14 +49,32 @@ We can train a lightweight GRU to:
 
 ## Key Design Decisions
 
-### Intervention Point: Layer L_int (≈1/3 depth)
+### Intervention Point: Layer L_int (configurable, default=4)
 
-For Qwen3-0.6B with 28 layers → **Layer 9 or 10**
+For Qwen3-0.6B with 28 layers → **Layer 4** (default) or configurable via ratio
 
-Why?
-- Early enough that intervention can help downstream layers
-- Late enough that model has started "reasoning" (not just embedding)
-- Matches Google's meta-controller placement strategy
+**Why early (layer 4)?**
+- Gives ~24 remaining layers to use the correction
+- Problems often start early in the reasoning trajectory
+- More room for the steering to propagate and influence output
+
+**Configurable:**
+```python
+# Absolute layer
+intervention_layer: int = 4
+
+# Or as ratio of model depth
+intervention_layer_ratio: float = 0.15  # 15% into model
+```
+
+**Trade-offs:**
+| Layer | Pros | Cons |
+|-------|------|------|
+| Early (4) | More correction room | May be before "reasoning" starts |
+| Middle (9) | Model has started reasoning | Less room to correct |
+| Late (14+) | Clear signal of what's wrong | Too late to fix |
+
+We default to early (layer 4) because we want maximum leverage from the intervention.
 
 ### What the GRU Sees
 

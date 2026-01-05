@@ -42,7 +42,8 @@ class TrainingConfig:
     # Models
     student_model: str = "Qwen/Qwen3-0.6B"
     teacher_model: str = "Qwen/Qwen3-1.7B"
-    intervention_layer: int = 9  # ~1/3 into 28-layer model
+    intervention_layer: int = 4  # Early intervention (~1/7 into model) gives more room to correct
+    intervention_layer_ratio: float = None  # Alternative: set as ratio of model depth (e.g., 0.15)
     
     # GRU Controller
     encoder_hidden_dim: int = 256
@@ -160,9 +161,23 @@ class InterventionTrainer:
         
         # Load student model with hooks
         print(f"\nLoading student: {config.student_model}")
+        
+        # Determine intervention layer
+        if config.intervention_layer_ratio is not None:
+            # Get model config to determine num layers
+            from transformers import AutoConfig
+            model_config = AutoConfig.from_pretrained(config.student_model, trust_remote_code=True)
+            num_layers = model_config.num_hidden_layers
+            intervention_layer = int(num_layers * config.intervention_layer_ratio)
+            print(f"  Using ratio {config.intervention_layer_ratio} -> layer {intervention_layer}/{num_layers}")
+        else:
+            intervention_layer = config.intervention_layer
+        
+        self.intervention_layer = intervention_layer
+        
         self.student = HookedModel(
             model_name=config.student_model,
-            config=HookConfig(intervention_layer=config.intervention_layer),
+            config=HookConfig(intervention_layer=intervention_layer),
             device=config.device,
             dtype=self.dtype
         )
@@ -626,7 +641,10 @@ def main():
     # Model args
     parser.add_argument("--student-model", type=str, default="Qwen/Qwen3-0.6B")
     parser.add_argument("--teacher-model", type=str, default="Qwen/Qwen3-1.7B")
-    parser.add_argument("--intervention-layer", type=int, default=9)
+    parser.add_argument("--intervention-layer", type=int, default=4,
+                        help="Layer to intervene at (default: 4, early intervention)")
+    parser.add_argument("--intervention-layer-ratio", type=float, default=None,
+                        help="Set intervention layer as ratio of model depth (e.g., 0.15). Overrides --intervention-layer")
     
     # Training args
     parser.add_argument("--epochs", type=int, default=20)
@@ -660,6 +678,7 @@ def main():
         student_model=args.student_model,
         teacher_model=args.teacher_model,
         intervention_layer=args.intervention_layer,
+        intervention_layer_ratio=args.intervention_layer_ratio,
         epochs=args.epochs,
         batch_size=args.batch_size,
         learning_rate=args.lr,
