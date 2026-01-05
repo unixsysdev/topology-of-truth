@@ -23,8 +23,7 @@ from config import ExperimentConfig, MODELS, get_bucket, BUCKET_NAMES
 CHUTES_API_URL = "https://llm.chutes.ai/v1/chat/completions"
 CHUTES_API_KEY = os.environ.get(
     "CHUTES_API_TOKEN",
-    "cpk_17f9b37e060244088f988d19519233e0.370d8ad91ab3510687f98806820f1062.5gbrZsdtzbeXmwgETzAJlTdH2aKw3Dwb"
-)
+    "")
 VERIFIER_MODEL = "Qwen/Qwen3-235B-A22B-Thinking-2507"
 
 
