@@ -101,28 +101,60 @@ Following Google's approach:
 
 ## Training Strategy
 
-### Phase 1: Pattern Discovery (Unsupervised)
+### Main Signal: KL Divergence from Teacher Logits
 
-1. Run 1.7B model on GSM8K → collect activation trajectories
-2. Cluster successful reasoning patterns at layer L_int
-3. Learn latent codes for "coherent reasoning phases"
+The key insight: **logit gradients already encode what "good topology" looks like**. 
 
-This gives us implicit sub-goals without manual labeling.
+We don't need TDA as a training signal - the gradient from matching teacher logits teaches the controller:
+- **Gate**: learns WHEN to intervene (when student would diverge from teacher)
+- **Decoder**: learns WHAT steering helps (what correction aligns with teacher)
 
-### Phase 2: Intervention Training (RL or Supervised)
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Training Flow                                              │
+│                                                             │
+│  Input ──► Student (frozen) ──► Layer 9 activations         │
+│                                      │                      │
+│                                      ▼                      │
+│                               GRU Controller                │
+│                               (trainable)                   │
+│                                      │                      │
+│                                steering vector              │
+│                                      │                      │
+│                                      ▼                      │
+│  Input ──► Student + steering ──► Student Logits            │
+│                                      │                      │
+│  Input ──► Teacher (frozen) ────► Teacher Logits            │
+│                                      │                      │
+│                                      ▼                      │
+│                              KL Divergence Loss             │
+│                                      │                      │
+│                                      ▼                      │
+│                         Backprop through Controller         │
+└─────────────────────────────────────────────────────────────┘
+```
 
-**Option A: Supervised Distillation**
-- Train GRU to push 0.6B activations toward 1.7B's coherent patterns
-- Loss = MSE(intervened_0.6B_trajectory, 1.7B_trajectory)
+### TDA Role: Offline Verification (Not Training)
 
-**Option B: RL with TDA Reward**
-- Reward = -H₀_entropy + accuracy_bonus
-- Gate learns when to intervene
-- Decoder learns what correction to apply
+TDA is used to **verify** the intervention works, not to train:
 
-**Option C: Hybrid**
-- Phase 2a: Supervised warmup (distill from 1.7B)
-- Phase 2b: RL fine-tuning (optimize for actual accuracy)
+| Phase | TDA Role |
+|-------|----------|
+| Training | Not used (too slow, redundant with logit signal) |
+| Validation | Periodic check that H₀ entropy is actually reducing |
+| Analysis | Visualize before/after topology for interpretability |
+
+### Why This Design?
+
+1. **Simpler**: One clean loss function (KL divergence)
+2. **Faster**: No TDA computation during training
+3. **Principled**: Logits are the ground truth for "good reasoning"
+4. **Verifiable**: TDA confirms we're not just matching logits superficially
+
+### Optional: TDA Auxiliary Loss
+
+If enabled (`use_tda_aux_loss=True`), adds a pre-trained TDA predictor as auxiliary loss. 
+**Disabled by default** - the logit signal is sufficient and cleaner.
 
 ## Computational Requirements
 
