@@ -17,6 +17,16 @@ from .hooked_model import (
     ActivationCache
 )
 
+from .hyper_connections import (
+    ManifoldHyperConnections,
+    HyperConnectionConfig,
+    HyperConnectionLayer,
+    HyperConnectionMatrix,
+    SinkhornProjection,
+    ExpandedResidualStream,
+    create_mhc_for_model
+)
+
 __all__ = [
     # Controller
     'GRUController',
@@ -30,5 +40,13 @@ __all__ = [
     'HookedModel',
     'HookConfig',
     'create_hooked_model',
-    'ActivationCache'
+    'ActivationCache',
+    # Hyper-connections (mHC)
+    'ManifoldHyperConnections',
+    'HyperConnectionConfig',
+    'HyperConnectionLayer',
+    'HyperConnectionMatrix',
+    'SinkhornProjection',
+    'ExpandedResidualStream',
+    'create_mhc_for_model'
 ]

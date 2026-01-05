@@ -3,29 +3,75 @@
     {
       "epoch": 1,
       "losses": {
-        "total": 109.84992256164551,
-        "kl": 109.8,
-        "gate_sparsity": 0.49921580255031583
+        "total": 107.625,
+        "kl": 107.625,
+        "gate_sparsity": 0.4862109375
       },
       "stats": {
-        "intervention_rate": 0.30000001192092896,
-        "num_steps": 10,
-        "ema_entropy": 0.4832398593425751
+        "intervention_rate": 0.0,
+        "num_steps": 50,
+        "ema_entropy": 0.46484375
       }
     },
     {
       "epoch": 2,
       "losses": {
-        "total": 118.99970207214355,
-        "kl": 118.95,
-        "gate_sparsity": 0.4970110923051834
+        "total": 107.61,
+        "kl": 107.61,
+        "gate_sparsity": 0.4828515625
       },
       "stats": {
-        "intervention_rate": 0.15000000596046448,
-        "num_steps": 20,
-        "ema_entropy": 0.4683258533477783
+        "intervention_rate": 0.0,
+        "num_steps": 100,
+        "ema_entropy": 0.451171875
+      }
+    },
+    {
+      "epoch": 3,
+      "losses": {
+        "total": 100.95,
+        "kl": 100.95,
+        "gate_sparsity": 0.4805859375
+      },
+      "stats": {
+        "intervention_rate": 0.0,
+        "num_steps": 150,
+        "ema_entropy": 0.4453125
+      }
+    },
+    {
+      "epoch": 4,
+      "losses": {
+        "total": 110.665,
+        "kl": 110.665,
+        "gate_sparsity": 0.480546875
+      },
+      "stats": {
+        "intervention_rate": 0.0,
+        "num_steps": 200,
+        "ema_entropy": 0.42578125
+      }
+    },
+    {
+      "epoch": 5,
+      "losses": {
+        "total": 104.72,
+        "kl": 104.72,
+        "gate_sparsity": 0.4890625
+      },
+      "stats": {
+        "intervention_rate": 0.0,
+        "num_steps": 250,
+        "ema_entropy": 0.33984375
       }
     }
   ],
-  "tda_validation": []
+  "tda_validation": [
+    {
+      "epoch": 5,
+      "results": {
+        "status": "No valid TDA computations"
+      }
+    }
+  ]
 }

@@ -53,7 +53,7 @@ class TrainingConfig:
     # Data
     dataset: str = "openai/gsm8k"
     max_samples: int = 500
-    max_seq_length: int = 1024
+    max_seq_length: int = 2048  # Models need ~2048 for full reasoning traces
     
     # Training
     epochs: int = 20
@@ -100,28 +100,80 @@ class TDAValidator:
         # Import TDA tools from parent project
         try:
             sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-            from topological_engine import compute_tda_features
-            self.compute_tda = compute_tda_features
-            self.available = True
-        except ImportError:
-            print("Warning: TDA tools not available. Validation disabled.")
+            from topological_engine import compute_persistent_entropy
+            import numpy as np
+            
+            # Check if ripser is available
+            try:
+                from ripser import ripser
+                self.ripser = ripser
+                self.compute_persistent_entropy = compute_persistent_entropy
+                self.available = True
+            except ImportError:
+                print("Warning: ripser not installed. TDA validation disabled.")
+                self.available = False
+        except ImportError as e:
+            print(f"Warning: TDA tools not available ({e}). Validation disabled.")
             self.available = False
     
-    def compute_entropy(self, activations: np.ndarray) -> Dict[str, float]:
+    def compute_entropy(self, activations: np.ndarray, subsample: int = 500) -> Dict[str, float]:
         """Compute H₀ entropy and dust score from activations."""
         if not self.available:
-            return {'h0_entropy': -1, 'dust_score': -1}
+            return {'h0_entropy': -1, 'dust_score': -1, 'h1_max_persistence': -1}
         
         try:
-            features = self.compute_tda(activations)
+            # Subsample if needed (TDA is expensive)
+            if len(activations) > subsample:
+                indices = np.random.choice(len(activations), subsample, replace=False)
+                indices.sort()
+                activations = activations[indices]
+            
+            # Normalize
+            activations = activations.astype(np.float32)
+            activations = (activations - activations.mean(axis=0)) / (activations.std(axis=0) + 1e-8)
+            
+            # Dimensionality reduction if needed
+            num_points, num_dims = activations.shape
+            if num_dims > num_points:
+                try:
+                    from sklearn.decomposition import PCA
+                    n_components = min(num_points - 1, 50)
+                    if n_components > 1:
+                        pca = PCA(n_components=n_components)
+                        activations = pca.fit_transform(activations)
+                except ImportError:
+                    pass  # Skip PCA if sklearn not available
+            
+            # Compute persistence
+            result = self.ripser(activations, maxdim=1, thresh=2.0)
+            diagrams = result['dgms']
+            
+            # H0 features
+            h0_dgm = diagrams[0]
+            h0_finite = h0_dgm[np.isfinite(h0_dgm[:, 1])]
+            h0_num_components = len(h0_dgm)
+            h0_entropy = self.compute_persistent_entropy(h0_dgm)
+            
+            # Dust score
+            dust_score = h0_entropy / (np.log(h0_num_components + 1) + 1e-8)
+            
+            # H1 features
+            h1_max_persistence = 0.0
+            if len(diagrams) > 1 and len(diagrams[1]) > 0:
+                h1_dgm = diagrams[1]
+                h1_finite = h1_dgm[np.isfinite(h1_dgm[:, 1])]
+                if len(h1_finite) > 0:
+                    h1_lifetimes = h1_finite[:, 1] - h1_finite[:, 0]
+                    h1_max_persistence = float(h1_lifetimes.max()) if len(h1_lifetimes) > 0 else 0.0
+            
             return {
-                'h0_entropy': features.get('h0_entropy', -1),
-                'dust_score': features.get('dust_score', -1),
-                'h1_max_persistence': features.get('h1_max_persistence', -1)
+                'h0_entropy': float(h0_entropy),
+                'dust_score': float(dust_score),
+                'h1_max_persistence': h1_max_persistence
             }
         except Exception as e:
             print(f"TDA computation failed: {e}")
-            return {'h0_entropy': -1, 'dust_score': -1}
+            return {'h0_entropy': -1, 'dust_score': -1, 'h1_max_persistence': -1}
     
     def compare_trajectories(
         self,
@@ -203,7 +255,7 @@ class InterventionTrainer:
             latent_dim=config.latent_dim,
             decoder_rank=config.decoder_rank
         )
-        self.controller = GRUController(controller_config).to(self.device)
+        self.controller = GRUController(controller_config).to(device=self.device, dtype=self.dtype)
         
         num_params = sum(p.numel() for p in self.controller.parameters())
         print(f"  Controller parameters: {num_params:,} ({num_params/1e6:.2f}M)")
@@ -476,7 +528,7 @@ class InterventionTrainer:
                 # Baseline (no intervention)
                 self.student.disable_steering()
                 _ = self.student(**batch)
-                baseline_act = self.student.get_activations().cpu().numpy()
+                baseline_act = self.student.get_activations().float().cpu().numpy()
                 
                 # With intervention
                 ctrl_output = self.controller(
@@ -485,7 +537,7 @@ class InterventionTrainer:
                 self.student.set_steering(ctrl_output['steering'])
                 self.student.enable_steering()
                 _ = self.student(**batch)
-                intervened_act = self.student.get_activations().cpu().numpy()
+                intervened_act = self.student.get_activations().float().cpu().numpy()
                 
                 self.student.disable_steering()
             
@@ -676,10 +728,12 @@ def main():
                         help="Fast debug mode: 20 samples, 2 epochs, no TDA validation")
     parser.add_argument("--fast", action="store_true",
                         help="Fast iteration mode: 100 samples, 5 epochs, TDA every 5 epochs")
+    parser.add_argument("--h200", action="store_true",
+                        help="H200 optimized: large batch, full dataset, optimized for 80GB+ VRAM")
     
     args = parser.parse_args()
     
-    # Apply debug/fast presets
+    # Apply debug/fast/h200 presets
     if args.debug:
         print("=" * 60)
         print("DEBUG MODE: Fast iteration with minimal data")
@@ -699,6 +753,22 @@ def main():
         args.epochs = 5
         args.eval_every = 5
         args.tda_samples = 20
+    elif args.h200:
+        print("=" * 60)
+        print("H200 MODE: Optimized for 80GB+ VRAM datacenter GPU")
+        print("=" * 60)
+        # Full dataset, large batches, longer training
+        args.max_samples = 7473  # Full GSM8K train set
+        args.epochs = 50
+        args.batch_size = 16  # Large batch for H200
+        args.grad_accum = 2   # Effective batch = 32
+        args.eval_every = 10
+        args.tda_samples = 100
+        args.max_seq_length = 2048
+        args.encoder_dim = 512   # Larger controller
+        args.latent_dim = 128
+        args.decoder_rank = 32
+        args.save_every = 5
     
     # Create config
     config = TrainingConfig(

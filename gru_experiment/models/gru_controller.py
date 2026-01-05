@@ -81,8 +81,8 @@ class EntropyProxy(nn.Module):
         # Use last window_size tokens
         window = activations[:, -self.window_size:, :]
         
-        # Project to lower dimension (cast to network dtype first)
-        window = self.input_proj(window.to(self.input_proj.weight.dtype))  # (batch, window, projected_dim)
+        # Project to lower dimension
+        window = self.input_proj(window)  # (batch, window, projected_dim)
         
         # Feature 1: Mean activation
         mean_act = window.mean(dim=1)  # (batch, projected_dim)
@@ -99,7 +99,7 @@ class EntropyProxy(nn.Module):
             )  # (batch, seq-1)
             coherence = cos_sim.mean(dim=-1, keepdim=True)  # (batch, 1)
         else:
-            coherence = torch.ones(batch_size, 1, device=activations.device)
+            coherence = torch.ones(batch_size, 1, device=activations.device, dtype=activations.dtype)
         
         # Combine features
         features = torch.cat([mean_act, var_act], dim=-1)  # (batch, projected_dim*2)
@@ -168,8 +168,8 @@ class GRUEncoder(nn.Module):
             latent: (batch, latent_dim) - compressed representation
             hidden: (num_layers, batch, hidden_dim) - for next step
         """
-        # Project input (cast to network dtype)
-        x = self.input_proj(activations.to(self.input_proj.weight.dtype))  # (batch, seq, projected_dim)
+        # Project input
+        x = self.input_proj(activations)  # (batch, seq, projected_dim)
         
         # Run through GRU
         output, hidden = self.gru(x, hidden)  # output: (batch, seq, hidden_dim)
@@ -228,9 +228,6 @@ class InterventionGate(nn.Module):
             latent, 
             entropy.unsqueeze(-1)
         ], dim=-1)  # (batch, latent_dim + 1)
-        
-        # Cast to network dtype for consistency
-        gate_input = gate_input.to(self.gate_net[0].weight.dtype)
         
         gate = self.gate_net(gate_input)  # (batch, 1)
         
@@ -380,13 +377,22 @@ class GRUController(nn.Module):
             
         return result
     
-    def reset_hidden(self, batch_size: int, device: torch.device) -> torch.Tensor:
-        """Initialize hidden state for new sequences."""
+    def reset_hidden(self, batch_size: int, device: torch.device, dtype: torch.dtype = None) -> torch.Tensor:
+        """Initialize hidden state for new sequences.
+        
+        Args:
+            batch_size: Batch size for hidden state
+            device: Device to create tensor on
+            dtype: Data type (defaults to encoder weight dtype)
+        """
+        if dtype is None:
+            dtype = self.encoder.input_proj.weight.dtype
         return torch.zeros(
             self.config.encoder_num_layers,
             batch_size,
             self.config.encoder_hidden_dim,
-            device=device
+            device=device,
+            dtype=dtype
         )
     
     def get_intervention_stats(self) -> Dict[str, float]:
@@ -426,24 +432,37 @@ def create_controller(
 if __name__ == "__main__":
     print("Testing GRU Controller...")
     
-    # Create controller for Qwen3-0.6B (hidden_size=1024)
-    controller = create_controller(model_hidden_size=1024)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32
     
-    # Simulate input
+    # Create controller for Qwen3-0.6B (hidden_size=1024)
+    controller = create_controller(model_hidden_size=1024).to(device=device, dtype=dtype)
+    
+    # Simulate input (same dtype as controller)
     batch_size = 2
     seq_len = 64
     hidden_size = 1024
     
-    activations = torch.randn(batch_size, seq_len, hidden_size)
+    activations = torch.randn(batch_size, seq_len, hidden_size, device=device, dtype=dtype)
     
     # Forward pass
     result = controller(activations, return_diagnostics=True)
     
+    print(f"Controller dtype: {next(controller.parameters()).dtype}")
+    print(f"Activations dtype: {activations.dtype}")
+    print(f"Steering dtype: {result['steering'].dtype}")
     print(f"Steering shape: {result['steering'].shape}")
     print(f"Gate values: {result['gate'].squeeze()}")
     print(f"Entropy estimates: {result['entropy']}")
     print(f"Latent shape: {result['latent'].shape}")
     print(f"Steering norm: {result['steering_norm']}")
+    
+    # Test that all outputs have correct dtype
+    assert result['steering'].dtype == dtype, f"Steering dtype mismatch: {result['steering'].dtype} != {dtype}"
+    assert result['gate'].dtype == dtype, f"Gate dtype mismatch: {result['gate'].dtype} != {dtype}"
+    assert result['entropy'].dtype == dtype, f"Entropy dtype mismatch: {result['entropy'].dtype} != {dtype}"
+    assert result['latent'].dtype == dtype, f"Latent dtype mismatch: {result['latent'].dtype} != {dtype}"
+    print("\n✓ All dtype checks passed!")
     
     # Count parameters
     num_params = sum(p.numel() for p in controller.parameters())
