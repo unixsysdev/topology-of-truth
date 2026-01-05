@@ -24,9 +24,4 @@ env/
 .serena/
 
 # Large binary files - exclude activation npz files
-results/embeddings/*.npz
-results/tda/diagrams/*.npz
-
-# Keep the directory structure
-!results/embeddings/.gitkeep
-!results/tda/diagrams/.gitkeep
+*.npz

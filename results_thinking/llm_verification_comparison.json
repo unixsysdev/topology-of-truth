@@ -1,0 +1,438 @@
+{
+  "llm_verdicts": {
+    "q_0000_4B": {
+      "correct": true,
+      "student_value": "72"
+    },
+    "q_0000_1.7B": {
+      "correct": true,
+      "student_value": "72"
+    },
+    "q_0000_0.6B": {
+      "correct": true,
+      "student_value": "72"
+    },
+    "q_0001_4B": {
+      "correct": true,
+      "student_value": "10"
+    },
+    "q_0001_1.7B": {
+      "correct": true,
+      "student_value": "10"
+    },
+    "q_0001_0.6B": {
+      "correct": true,
+      "student_value": "10"
+    },
+    "q_0002_4B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0002_1.7B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0002_0.6B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0003_1.7B": {
+      "correct": true,
+      "student_value": "42"
+    },
+    "q_0003_0.6B": {
+      "correct": true,
+      "student_value": "42"
+    },
+    "q_0004_4B": {
+      "correct": true,
+      "student_value": null
+    },
+    "q_0004_1.7B": {
+      "correct": true,
+      "student_value": "624"
+    },
+    "q_0004_0.6B": {
+      "correct": false,
+      "student_value": "312"
+    },
+    "q_0005_4B": {
+      "correct": true,
+      "student_value": "35"
+    },
+    "q_0005_1.7B": {
+      "correct": true,
+      "student_value": "35"
+    },
+    "q_0005_0.6B": {
+      "correct": true,
+      "student_value": "35"
+    },
+    "q_0006_4B": {
+      "correct": true,
+      "student_value": "48"
+    },
+    "q_0006_1.7B": {
+      "correct": true,
+      "student_value": "48"
+    },
+    "q_0006_0.6B": {
+      "correct": true,
+      "student_value": "48"
+    },
+    "q_0007_4B": {
+      "correct": true,
+      "student_value": "16"
+    },
+    "q_0007_1.7B": {
+      "correct": true,
+      "student_value": "16"
+    },
+    "q_0007_0.6B": {
+      "correct": true,
+      "student_value": "16"
+    },
+    "q_0008_4B": {
+      "correct": true,
+      "student_value": "41"
+    },
+    "q_0008_1.7B": {
+      "correct": true,
+      "student_value": "41"
+    },
+    "q_0008_0.6B": {
+      "correct": true,
+      "student_value": "41"
+    },
+    "q_0009_4B": {
+      "correct": false,
+      "student_value": "None"
+    },
+    "q_0009_1.7B": {
+      "correct": true,
+      "student_value": "990"
+    },
+    "q_0009_0.6B": {
+      "correct": false,
+      "student_value": "None"
+    },
+    "q_0010_4B": {
+      "correct": true,
+      "student_value": "121"
+    },
+    "q_0010_1.7B": {
+      "correct": true,
+      "student_value": "121"
+    },
+    "q_0010_0.6B": {
+      "correct": false,
+      "student_value": null
+    },
+    "q_0011_4B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0011_1.7B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0011_0.6B": {
+      "correct": false,
+      "student_value": null
+    },
+    "q_0012_4B": {
+      "correct": true,
+      "student_value": "85"
+    },
+    "q_0012_1.7B": {
+      "correct": true,
+      "student_value": "85"
+    },
+    "q_0012_0.6B": {
+      "correct": true,
+      "student_value": "85"
+    },
+    "q_0013_4B": {
+      "correct": true,
+      "student_value": null
+    },
+    "q_0013_1.7B": {
+      "correct": true,
+      "student_value": "35"
+    },
+    "q_0013_0.6B": {
+      "correct": false,
+      "student_value": "22.50"
+    },
+    "q_0014_4B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0014_1.7B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0014_0.6B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0015_4B": {
+      "correct": false,
+      "student_value": null
+    },
+    "q_0015_1.7B": {
+      "correct": false,
+      "student_value": null
+    },
+    "q_0015_0.6B": {
+      "correct": false,
+      "student_value": null
+    },
+    "q_0016_4B": {
+      "correct": true,
+      "student_value": "800"
+    },
+    "q_0016_1.7B": {
+      "correct": true,
+      "student_value": "800"
+    },
+    "q_0016_0.6B": {
+      "correct": false,
+      "student_value": ""
+    },
+    "q_0017_4B": {
+      "correct": true,
+      "student_value": "43"
+    },
+    "q_0017_1.7B": {
+      "correct": true,
+      "student_value": "43"
+    },
+    "q_0017_0.6B": {
+      "correct": true,
+      "student_value": ""
+    },
+    "q_0018_4B": {
+      "correct": true,
+      "student_value": ""
+    },
+    "q_0018_1.7B": {
+      "correct": true,
+      "student_value": "16"
+    },
+    "q_0018_0.6B": {
+      "correct": false,
+      "student_value": "8"
+    },
+    "q_0019_4B": {
+      "correct": true,
+      "student_value": ""
+    },
+    "q_0019_1.7B": {
+      "correct": true,
+      "student_value": "16"
+    },
+    "q_0019_0.6B": {
+      "correct": true,
+      "student_value": "16"
+    },
+    "q_0020_4B": {
+      "correct": true,
+      "student_value": "38"
+    },
+    "q_0020_1.7B": {
+      "correct": true,
+      "student_value": "38"
+    },
+    "q_0020_0.6B": {
+      "correct": true,
+      "student_value": "38"
+    },
+    "q_0021_4B": {
+      "correct": false,
+      "student_value": ""
+    },
+    "q_0021_1.7B": {
+      "correct": true,
+      "student_value": "1080"
+    },
+    "q_0021_0.6B": {
+      "correct": false,
+      "student_value": null
+    },
+    "q_0022_4B": {
+      "correct": false,
+      "student_value": "9"
+    },
+    "q_0022_1.7B": {
+      "correct": true,
+      "student_value": "7"
+    },
+    "q_0022_0.6B": {
+      "correct": false,
+      "student_value": "3"
+    },
+    "q_0023_4B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0023_1.7B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0023_0.6B": {
+      "correct": true,
+      "student_value": "5"
+    },
+    "q_0024_4B": {
+      "correct": true,
+      "student_value": "62"
+    },
+    "q_0024_1.7B": {
+      "correct": true,
+      "student_value": "62"
+    },
+    "q_0024_0.6B": {
+      "correct": true,
+      "student_value": "62"
+    },
+    "q_0025_4B": {
+      "correct": true,
+      "student_value": "110"
+    },
+    "q_0025_1.7B": {
+      "correct": true,
+      "student_value": "110"
+    },
+    "q_0026_4B": {
+      "correct": true,
+      "student_value": null
+    },
+    "q_0026_1.7B": {
+      "correct": true,
+      "student_value": "400"
+    },
+    "q_0026_0.6B": {
+      "correct": true,
+      "student_value": "400"
+    },
+    "q_0027_4B": {
+      "correct": true,
+      "student_value": "400"
+    },
+    "q_0027_1.7B": {
+      "correct": true,
+      "student_value": "400"
+    },
+    "q_0027_0.6B": {
+      "correct": true,
+      "student_value": "400"
+    },
+    "q_0028_4B": {
+      "correct": true,
+      "student_value": "8"
+    },
+    "q_0028_1.7B": {
+      "correct": true,
+      "student_value": "8"
+    },
+    "q_0028_0.6B": {
+      "correct": true,
+      "student_value": "8"
+    },
+    "q_0029_4B": {
+      "correct": true,
+      "student_value": "1000"
+    },
+    "q_0029_1.7B": {
+      "correct": false,
+      "student_value": ""
+    },
+    "q_0029_0.6B": {
+      "correct": false,
+      "student_value": ""
+    }
+  },
+  "model_stats": {
+    "4B": {
+      "llm_correct": 25,
+      "direct_correct": 22,
+      "agree": 25,
+      "total": 30
+    },
+    "1.7B": {
+      "llm_correct": 28,
+      "direct_correct": 28,
+      "agree": 30,
+      "total": 30
+    },
+    "0.6B": {
+      "llm_correct": 18,
+      "direct_correct": 19,
+      "agree": 29,
+      "total": 30
+    }
+  },
+  "disagreements": [
+    {
+      "id": "q_0003_4B",
+      "qid": "q_0003",
+      "model": "4B",
+      "gold": "42",
+      "answer": "42",
+      "llm_correct": null,
+      "llm_value": null,
+      "direct_correct": true
+    },
+    {
+      "id": "q_0004_4B",
+      "qid": "q_0004",
+      "model": "4B",
+      "gold": "624",
+      "answer": null,
+      "llm_correct": true,
+      "llm_value": null,
+      "direct_correct": false
+    },
+    {
+      "id": "q_0013_4B",
+      "qid": "q_0013",
+      "model": "4B",
+      "gold": "35",
+      "answer": null,
+      "llm_correct": true,
+      "llm_value": null,
+      "direct_correct": false
+    },
+    {
+      "id": "q_0019_4B",
+      "qid": "q_0019",
+      "model": "4B",
+      "gold": "16",
+      "answer": null,
+      "llm_correct": true,
+      "llm_value": "",
+      "direct_correct": false
+    },
+    {
+      "id": "q_0025_0.6B",
+      "qid": "q_0025",
+      "model": "0.6B",
+      "gold": "110",
+      "answer": "110",
+      "llm_correct": null,
+      "llm_value": null,
+      "direct_correct": true
+    },
+    {
+      "id": "q_0026_4B",
+      "qid": "q_0026",
+      "model": "4B",
+      "gold": "400",
+      "answer": null,
+      "llm_correct": true,
+      "llm_value": null,
+      "direct_correct": false
+    }
+  ]
+}

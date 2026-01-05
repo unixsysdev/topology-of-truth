@@ -447,11 +447,20 @@ def main():
     parser.add_argument("--max", type=int, default=None,
                        help="Max questions per bucket")
     parser.add_argument("--output-dir", type=str, default="results/comparisons",
-                       help="Output directory")
+                       help="Output directory for comparison figures")
+    parser.add_argument("--results-dir", type=str, default="./results",
+                       help="Directory containing traces, embeddings, TDA results")
     
     args = parser.parse_args()
     
     config = ExperimentConfig()
+    # Override paths if custom results dir specified
+    results_dir = Path(args.results_dir)
+    config.output_dir = results_dir
+    config.traces_dir = results_dir / "traces"
+    config.embeddings_dir = results_dir / "embeddings"
+    config.tda_dir = results_dir / "tda"
+    
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     

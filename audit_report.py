@@ -184,7 +184,13 @@ def run_full_pipeline(
         print_banner("PHASE 6: COMPARISON FIGURES")
         import subprocess
         
-        cmd = ["python", "visualize_comparisons.py", "--max", str(max_comparisons)]
+        comparisons_dir = config.output_dir / "comparisons"
+        cmd = [
+            "python", "visualize_comparisons.py",
+            "--max", str(max_comparisons),
+            "--output-dir", str(comparisons_dir),
+            "--results-dir", str(config.output_dir)
+        ]
         print(f"Running: {' '.join(cmd)}")
         subprocess.run(cmd)
     else:

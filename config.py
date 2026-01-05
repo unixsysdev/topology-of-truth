@@ -57,11 +57,11 @@ class ExperimentConfig:
     max_samples: Optional[int] = None  # None = use all 817
     
     # === Generation ===
-    max_new_tokens: int = 256
+    max_new_tokens: int = 2048
     temperature: float = 0.6
     top_p: float = 0.95
     system_prompt: str = (
-        "/nothink Please reason step by step, and put your final answer within \\boxed{}."
+        "Please reason step by step, and put your final answer within \\boxed{}."
     )
     
     # === Residual Stream Extraction ===

@@ -1,0 +1,419 @@
+{
+  "ttest_results": [
+    {
+      "metric": "h0_entropy",
+      "model": "4B",
+      "correct_mean": 3.803816857968082,
+      "correct_std": 0.31587812982365493,
+      "correct_n": 24,
+      "wrong_mean": 4.261211672890526,
+      "wrong_std": 0.24525226645954268,
+      "wrong_n": 6,
+      "t_statistic": -3.194359116955371,
+      "p_value": 0.0034540681136164507,
+      "effect_size": -1.458018787607283,
+      "significant": true
+    },
+    {
+      "metric": "h0_entropy",
+      "model": "1.7B",
+      "correct_mean": 3.6623379011433714,
+      "correct_std": 0.4191822938935761,
+      "correct_n": 28,
+      "wrong_mean": 4.867902649187643,
+      "wrong_std": 0.27734979275776217,
+      "wrong_n": 2,
+      "t_statistic": -3.8693222140146104,
+      "p_value": 0.0005958773464848395,
+      "effect_size": -2.832053873188679,
+      "significant": true
+    },
+    {
+      "metric": "h0_entropy",
+      "model": "0.6B",
+      "correct_mean": 3.4139717953821584,
+      "correct_std": 0.4037274982826047,
+      "correct_n": 19,
+      "wrong_mean": 3.8300723417887252,
+      "wrong_std": 0.6576410540912936,
+      "wrong_n": 11,
+      "t_statistic": -2.0736488248459133,
+      "p_value": 0.047425181857479244,
+      "effect_size": -0.7856383850566229,
+      "significant": true
+    },
+    {
+      "metric": "h1_max_persistence",
+      "model": "4B",
+      "correct_mean": 0.025037561853726704,
+      "correct_std": 0.0485114384869394,
+      "correct_n": 24,
+      "wrong_mean": 0.0638502836227417,
+      "wrong_std": 0.07872007469336947,
+      "wrong_n": 6,
+      "t_statistic": -1.4702549120292243,
+      "p_value": 0.1526414820600856,
+      "effect_size": -0.6710764838343164,
+      "significant": false
+    },
+    {
+      "metric": "h1_max_persistence",
+      "model": "1.7B",
+      "correct_mean": 0.015414872339793615,
+      "correct_std": 0.041722399488543546,
+      "correct_n": 28,
+      "wrong_mean": 0.07663768529891968,
+      "wrong_std": 0.07663768529891968,
+      "wrong_n": 2,
+      "t_statistic": -1.7996638328458743,
+      "p_value": 0.08269931394087629,
+      "effect_size": -1.3172190493178442,
+      "significant": false
+    },
+    {
+      "metric": "h1_max_persistence",
+      "model": "0.6B",
+      "correct_mean": 0.009872461620130037,
+      "correct_std": 0.04188530735158727,
+      "correct_n": 19,
+      "wrong_mean": 0.011643030426718971,
+      "wrong_std": 0.03681849501507412,
+      "wrong_n": 11,
+      "t_statistic": -0.11258460404430694,
+      "p_value": 0.9111631839242789,
+      "effect_size": -0.0426546604438585,
+      "significant": false
+    },
+    {
+      "metric": "dust_score",
+      "model": "4B",
+      "correct_mean": 0.611887741757657,
+      "correct_std": 0.05080698377228305,
+      "correct_n": 24,
+      "wrong_mean": 0.6854562757792126,
+      "wrong_std": 0.039451151010232416,
+      "wrong_n": 6,
+      "t_statistic": -3.1942958974755826,
+      "p_value": 0.0034546204101254573,
+      "effect_size": -1.457989931994655,
+      "significant": true
+    },
+    {
+      "metric": "dust_score",
+      "model": "1.7B",
+      "correct_mean": 0.5897082206868302,
+      "correct_std": 0.06639760598965669,
+      "correct_n": 28,
+      "wrong_mean": 0.7830482681712226,
+      "wrong_std": 0.044614342263573414,
+      "wrong_n": 2,
+      "t_statistic": -3.915710295555451,
+      "p_value": 0.0005265263701873833,
+      "effect_size": -2.8660064723084155,
+      "significant": true
+    },
+    {
+      "metric": "dust_score",
+      "model": "0.6B",
+      "correct_mean": 0.5493015283522085,
+      "correct_std": 0.06486562265870759,
+      "correct_n": 19,
+      "wrong_mean": 0.6161034290011235,
+      "wrong_std": 0.10578779519562133,
+      "wrong_n": 11,
+      "t_statistic": -2.0705424156326826,
+      "p_value": 0.047735587080548224,
+      "effect_size": -0.7844614672061336,
+      "significant": true
+    },
+    {
+      "metric": "loop_score",
+      "model": "4B",
+      "correct_mean": 0.04443370355232906,
+      "correct_std": 0.08334988939372537,
+      "correct_n": 24,
+      "wrong_mean": 0.1573072330081208,
+      "wrong_std": 0.206808741875959,
+      "wrong_n": 6,
+      "t_statistic": -2.0111335703269178,
+      "p_value": 0.05402795232000124,
+      "effect_size": -0.9179526855199626,
+      "significant": false
+    },
+    {
+      "metric": "loop_score",
+      "model": "1.7B",
+      "correct_mean": 0.040200618205365544,
+      "correct_std": 0.11625154206290798,
+      "correct_n": 28,
+      "wrong_mean": 0.18288007627809277,
+      "wrong_std": 0.18288007627809277,
+      "wrong_n": 2,
+      "t_statistic": -1.5457897205073121,
+      "p_value": 0.1333842582223453,
+      "effect_size": -1.1314022257546341,
+      "significant": false
+    },
+    {
+      "metric": "loop_score",
+      "model": "0.6B",
+      "correct_mean": 0.0257615756406179,
+      "correct_std": 0.10929710897718657,
+      "correct_n": 19,
+      "wrong_mean": 0.03038176501110427,
+      "wrong_std": 0.09607557677110035,
+      "wrong_n": 11,
+      "t_statistic": -0.11258460404430697,
+      "p_value": 0.9111631839242789,
+      "effect_size": -0.04265466044385851,
+      "significant": false
+    },
+    {
+      "metric": "coherence_score",
+      "model": "4B",
+      "correct_mean": 1.4559128596303108,
+      "correct_std": 0.08143568848647033,
+      "correct_n": 24,
+      "wrong_mean": 1.4337073885226932,
+      "wrong_std": 0.19466759942937195,
+      "wrong_n": 6,
+      "t_statistic": 0.4140616537569586,
+      "p_value": 0.6819837185457512,
+      "effect_size": 0.18899242330048327,
+      "significant": false
+    },
+    {
+      "metric": "coherence_score",
+      "model": "1.7B",
+      "correct_mean": 1.503505430478674,
+      "correct_std": 0.1471353709876474,
+      "correct_n": 28,
+      "wrong_mean": 1.31821905247332,
+      "wrong_std": 0.1255192235423198,
+      "wrong_n": 2,
+      "t_statistic": 1.6774728667646444,
+      "p_value": 0.10458024006280969,
+      "effect_size": 1.227784419783601,
+      "significant": false
+    },
+    {
+      "metric": "coherence_score",
+      "model": "0.6B",
+      "correct_mean": 1.5823841024376584,
+      "correct_std": 0.19443437320407791,
+      "correct_n": 19,
+      "wrong_mean": 1.4656504690670344,
+      "wrong_std": 0.254619787232722,
+      "wrong_n": 11,
+      "t_statistic": 1.3627053605275874,
+      "p_value": 0.1838357869515909,
+      "effect_size": 0.516284930179752,
+      "significant": false
+    }
+  ],
+  "correlations": {
+    "h0_entropy": {
+      "4B": {
+        "r": -0.5168085829303584,
+        "p": 0.00345406811361649
+      },
+      "1.7B": {
+        "r": -0.5902606878168968,
+        "p": 0.0005958773464848445
+      },
+      "0.6B": {
+        "r": -0.3648663549220513,
+        "p": 0.04742518185747935
+      }
+    },
+    "h1_max_persistence": {
+      "4B": {
+        "r": -0.2677103085242143,
+        "p": 0.15264148206008588
+      },
+      "1.7B": {
+        "r": -0.32199141136829296,
+        "p": 0.08269931394087622
+      },
+      "0.6B": {
+        "r": -0.021271676085756353,
+        "p": 0.9111631839242791
+      }
+    },
+    "dust_score": {
+      "4B": {
+        "r": -0.5168010865721848,
+        "p": 0.0034546204101254447
+      },
+      "1.7B": {
+        "r": -0.5948428439553256,
+        "p": 0.000526526370187385
+      },
+      "0.6B": {
+        "r": -0.3643923941510788,
+        "p": 0.047735587080547905
+      }
+    },
+    "loop_score": {
+      "4B": {
+        "r": -0.35527372812870106,
+        "p": 0.054027952320001155
+      },
+      "1.7B": {
+        "r": -0.2804070196890077,
+        "p": 0.13338425822234576
+      },
+      "0.6B": {
+        "r": -0.021271676085756325,
+        "p": 0.9111631839242791
+      }
+    },
+    "coherence_score": {
+      "4B": {
+        "r": 0.07801182441602968,
+        "p": 0.6819837185457464
+      },
+      "1.7B": {
+        "r": 0.30219137342748587,
+        "p": 0.10458024006280947
+      },
+      "0.6B": {
+        "r": 0.24939005343165357,
+        "p": 0.18383578695158953
+      }
+    }
+  },
+  "bucket_analysis": {
+    "000": {
+      "4B": {
+        "n": 1,
+        "h0_entropy": 4.590917775567133,
+        "h1_max_persistence": 0.0,
+        "dust_score": 0.7384926266087605,
+        "loop_score": 0.0
+      },
+      "1.7B": {
+        "n": 1,
+        "h0_entropy": 4.5905528564298805,
+        "h1_max_persistence": 0.0,
+        "dust_score": 0.7384339259076492,
+        "loop_score": 0.0
+      },
+      "0.6B": {
+        "n": 1,
+        "h0_entropy": 3.8431748811405284,
+        "h1_max_persistence": 0.0,
+        "dust_score": 0.6182110966123046,
+        "loop_score": 0.0
+      }
+    },
+    "001": {},
+    "010": {
+      "4B": {
+        "n": 5,
+        "h0_entropy": 4.195270452355205,
+        "h1_max_persistence": 0.07662034034729004,
+        "dust_score": 0.6748490056133031,
+        "loop_score": 0.18876867960974497
+      },
+      "1.7B": {
+        "n": 5,
+        "h0_entropy": 3.908225989095057,
+        "h1_max_persistence": 0.045203542709350585,
+        "dust_score": 0.6286751837351054,
+        "loop_score": 0.119397936026341
+      },
+      "0.6B": {
+        "n": 5,
+        "h0_entropy": 3.814672381928877,
+        "h1_max_persistence": 0.025614666938781738,
+        "dust_score": 0.6136261995314314,
+        "loop_score": 0.06683988302442939
+      }
+    },
+    "011": {},
+    "100": {
+      "4B": {
+        "n": 1,
+        "h0_entropy": 3.608444405743552,
+        "h1_max_persistence": 0.0,
+        "dust_score": 0.5804524753963928,
+        "loop_score": 0.0
+      },
+      "1.7B": {
+        "n": 1,
+        "h0_entropy": 5.145252441945405,
+        "h1_max_persistence": 0.15327537059783936,
+        "dust_score": 0.827662610434796,
+        "loop_score": 0.36576015255618555
+      },
+      "0.6B": {
+        "n": 1,
+        "h0_entropy": 4.082396814045418,
+        "h1_max_persistence": 0.0,
+        "dust_score": 0.656692211328312,
+        "loop_score": 0.0
+      }
+    },
+    "101": {},
+    "110": {
+      "4B": {
+        "n": 4,
+        "h0_entropy": 3.96513536052455,
+        "h1_max_persistence": 0.053380101919174194,
+        "dust_score": 0.6378295953887596,
+        "loop_score": 0.09038036906245232
+      },
+      "1.7B": {
+        "n": 4,
+        "h0_entropy": 3.9003848431472736,
+        "h1_max_persistence": 0.002236008644104004,
+        "dust_score": 0.6274138611086323,
+        "loop_score": 0.004692515218084781
+      },
+      "0.6B": {
+        "n": 4,
+        "h0_entropy": 3.7829655387114114,
+        "h1_max_persistence": 0.0,
+        "dust_score": 0.6085258533536465,
+        "loop_score": 0.0
+      }
+    },
+    "111": {
+      "4B": {
+        "n": 19,
+        "h0_entropy": 3.780137828599591,
+        "h1_max_persistence": 0.020388477726986532,
+        "dust_score": 0.6080807865911758,
+        "loop_score": 0.03709933731610991
+      },
+      "1.7B": {
+        "n": 19,
+        "h0_entropy": 3.5475153638921064,
+        "h1_max_persistence": 0.010350246178476434,
+        "dust_score": 0.571515727164273,
+        "loop_score": 0.026834608881378504
+      },
+      "0.6B": {
+        "n": 19,
+        "h0_entropy": 3.4139717953821584,
+        "h1_max_persistence": 0.009872461620130037,
+        "dust_score": 0.5493015283522085,
+        "loop_score": 0.0257615756406179
+      }
+    }
+  },
+  "conclusions": [
+    "\u2713 H\u2080 ENTROPY DISTINGUISHES CORRECT VS WRONG for 4B, 1.7B, 0.6B (p < 0.05). Wrong answers have higher entropy (more fragmented).",
+    "\u2717 H\u2081 persistence does NOT significantly distinguish correct vs wrong answers.",
+    "\u2713 LARGE EFFECT SIZES (|d| > 0.8) found for: h0_entropy (4B, d=-1.46), h0_entropy (1.7B, d=-2.83), dust_score (4B, d=-1.46), dust_score (1.7B, d=-2.87)",
+    "\u2713 SIGNIFICANT CORRELATIONS (|r| > 0.3, p < 0.05):",
+    "   - h0_entropy \u00d7 correctness (4B): r=-0.517, p=0.0035 (negative)",
+    "   - h0_entropy \u00d7 correctness (1.7B): r=-0.590, p=0.0006 (negative)",
+    "   - h0_entropy \u00d7 correctness (0.6B): r=-0.365, p=0.0474 (negative)",
+    "   - dust_score \u00d7 correctness (4B): r=-0.517, p=0.0035 (negative)",
+    "   - dust_score \u00d7 correctness (1.7B): r=-0.595, p=0.0005 (negative)",
+    "   - dust_score \u00d7 correctness (0.6B): r=-0.364, p=0.0477 (negative)",
+    "\n============================================================\n\u2717 HYPOTHESIS NOT STRONGLY SUPPORTED\n  Only 6/15 tests significant\n============================================================"
+  ]
+}
