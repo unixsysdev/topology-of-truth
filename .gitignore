@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Serena
+.serena/
+
+# Large binary files - exclude activation npz files
+results/embeddings/*.npz
+results/tda/diagrams/*.npz
+
+# Keep the directory structure
+!results/embeddings/.gitkeep
+!results/tda/diagrams/.gitkeep
