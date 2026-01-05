@@ -176,6 +176,9 @@ class HookedModel(nn.Module):
                     # Expand to all positions: (batch, hidden) -> (batch, seq, hidden)
                     steering = steering.unsqueeze(1).expand_as(hidden_states)
                 
+                # Cast steering to match hidden states dtype
+                steering = steering.to(hidden_states.dtype)
+                
                 modified = hidden_states + steering
                 
                 # Return modified output

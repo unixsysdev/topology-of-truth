@@ -1,0 +1,31 @@
+{
+  "training": [
+    {
+      "epoch": 1,
+      "losses": {
+        "total": 109.84992256164551,
+        "kl": 109.8,
+        "gate_sparsity": 0.49921580255031583
+      },
+      "stats": {
+        "intervention_rate": 0.30000001192092896,
+        "num_steps": 10,
+        "ema_entropy": 0.4832398593425751
+      }
+    },
+    {
+      "epoch": 2,
+      "losses": {
+        "total": 118.99970207214355,
+        "kl": 118.95,
+        "gate_sparsity": 0.4970110923051834
+      },
+      "stats": {
+        "intervention_rate": 0.15000000596046448,
+        "num_steps": 20,
+        "ema_entropy": 0.4683258533477783
+      }
+    }
+  ],
+  "tda_validation": []
+}

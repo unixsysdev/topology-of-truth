@@ -52,6 +52,9 @@ class EntropyProxy(nn.Module):
         self.window_size = config.entropy_window
         self.ema_decay = config.entropy_ema_decay
         
+        # Input projection (from model hidden size to projected dim)
+        self.input_proj = nn.Linear(config.model_hidden_size, config.projected_dim)
+        
         # Learnable entropy estimator
         self.entropy_net = nn.Sequential(
             nn.Linear(config.projected_dim * 2, config.gate_hidden_dim),
@@ -78,14 +81,16 @@ class EntropyProxy(nn.Module):
         # Use last window_size tokens
         window = activations[:, -self.window_size:, :]
         
+        # Project to lower dimension (cast to network dtype first)
+        window = self.input_proj(window.to(self.input_proj.weight.dtype))  # (batch, window, projected_dim)
+        
         # Feature 1: Mean activation
-        mean_act = window.mean(dim=1)  # (batch, dim)
+        mean_act = window.mean(dim=1)  # (batch, projected_dim)
         
         # Feature 2: Variance across tokens (high = fragmented)
-        var_act = window.var(dim=1)  # (batch, dim)
-        var_scalar = var_act.mean(dim=-1, keepdim=True)  # (batch, 1)
+        var_act = window.var(dim=1)  # (batch, projected_dim)
         
-        # Feature 3: Cosine coherence (low = fragmented)
+        # Feature 3: Cosine coherence (low = fragmented) - computed but not used currently
         if window.shape[1] > 1:
             cos_sim = F.cosine_similarity(
                 window[:, :-1, :], 
@@ -97,7 +102,7 @@ class EntropyProxy(nn.Module):
             coherence = torch.ones(batch_size, 1, device=activations.device)
         
         # Combine features
-        features = torch.cat([mean_act, var_act], dim=-1)  # (batch, dim*2)
+        features = torch.cat([mean_act, var_act], dim=-1)  # (batch, projected_dim*2)
         
         # Learned entropy estimate
         entropy = self.entropy_net(features).squeeze(-1)  # (batch,)
@@ -163,8 +168,8 @@ class GRUEncoder(nn.Module):
             latent: (batch, latent_dim) - compressed representation
             hidden: (num_layers, batch, hidden_dim) - for next step
         """
-        # Project input
-        x = self.input_proj(activations)  # (batch, seq, projected_dim)
+        # Project input (cast to network dtype)
+        x = self.input_proj(activations.to(self.input_proj.weight.dtype))  # (batch, seq, projected_dim)
         
         # Run through GRU
         output, hidden = self.gru(x, hidden)  # output: (batch, seq, hidden_dim)
@@ -223,6 +228,9 @@ class InterventionGate(nn.Module):
             latent, 
             entropy.unsqueeze(-1)
         ], dim=-1)  # (batch, latent_dim + 1)
+        
+        # Cast to network dtype for consistency
+        gate_input = gate_input.to(self.gate_net[0].weight.dtype)
         
         gate = self.gate_net(gate_input)  # (batch, 1)
         
