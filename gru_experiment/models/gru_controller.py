@@ -30,6 +30,7 @@ class ControllerConfig:
     # Gate
     gate_hidden_dim: int = 128
     gate_threshold: float = 0.5
+    gate_init_bias: float = -2.0  # Negative bias = start closed (sigmoid(-2) ≈ 0.12)
     
     # Decoder (low-rank)
     decoder_rank: int = 16
@@ -207,6 +208,11 @@ class InterventionGate(nn.Module):
             nn.Linear(config.gate_hidden_dim, 1),
             nn.Sigmoid()
         )
+        
+        # Initialize final layer bias to be negative so gate starts "closed"
+        # sigmoid(-2) ≈ 0.12, so gate starts mostly closed and has to learn to open
+        with torch.no_grad():
+            self.gate_net[-2].bias.fill_(config.gate_init_bias)
         
     def forward(
         self, 

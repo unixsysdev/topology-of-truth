@@ -66,7 +66,7 @@ class TrainingConfig:
     
     # Loss weights
     kl_weight: float = 1.0           # Main: KL divergence to teacher logits
-    gate_sparsity_weight: float = 0.1  # Encourage sparse intervention
+    gate_sparsity_weight: float = 0.5  # Encourage sparse intervention (higher = more selective)
     
     # Optional: TDA auxiliary loss (disabled by default)
     use_tda_aux_loss: bool = False
@@ -708,6 +708,8 @@ def main():
     parser.add_argument("--encoder-dim", type=int, default=256)
     parser.add_argument("--latent-dim", type=int, default=64)
     parser.add_argument("--decoder-rank", type=int, default=16)
+    parser.add_argument("--gate-sparsity-weight", type=float, default=0.5,
+                        help="Weight for gate sparsity loss (higher = more selective intervention)")
     
     # Data args
     parser.add_argument("--max-samples", type=int, default=500)
@@ -783,6 +785,7 @@ def main():
         encoder_hidden_dim=args.encoder_dim,
         latent_dim=args.latent_dim,
         decoder_rank=args.decoder_rank,
+        gate_sparsity_weight=args.gate_sparsity_weight,
         max_samples=args.max_samples,
         max_seq_length=args.max_seq_length,
         device=args.device,
