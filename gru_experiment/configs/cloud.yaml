@@ -1,0 +1,52 @@
+# Cloud configuration (H100/A100, 40-80GB VRAM)
+# Full-scale training with all features
+
+_base_: "base.yaml"
+
+# Can use bf16 on modern GPUs
+base_model:
+  dtype: "bfloat16"
+  
+teacher_model:
+  dtype: "bfloat16"
+  load_for_training: true  # Load both models for live distillation
+  
+# Full-size controller
+controller:
+  encoder_hidden_dim: 512
+  latent_dim: 128
+  decoder_rank: 32
+  encoder_num_layers: 3
+
+# Larger batches
+training:
+  phase1:
+    batch_size: 16
+    epochs: 20
+    n_clusters: 32
+    
+  phase2:
+    batch_size: 8
+    epochs: 50
+    learning_rate: 1e-4
+    
+data:
+  max_samples: 2000  # More data
+  max_seq_length: 4096
+  
+# Full TDA evaluation
+evaluation:
+  compute_tda: true
+  tda_samples: 200
+  tda_frequency: "epoch"
+
+# Use torch.compile for speed
+optimization:
+  gradient_checkpointing: false  # Enough memory
+  mixed_precision: true
+  compile_model: true
+
+# Full logging
+logging:
+  wandb_project: "topology-gru-intervention"
+  log_every_n_steps: 5

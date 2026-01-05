@@ -1,0 +1,53 @@
+# Local GPU configuration (RTX 3090/4090, 24GB VRAM)
+# Inherits from base.yaml with memory-optimized settings
+
+_base_: "base.yaml"
+
+# Reduce memory footprint
+base_model:
+  dtype: "float16"  # fp16 slightly more compatible than bf16 on older GPUs
+  
+teacher_model:
+  # Don't load teacher during intervention training
+  # Only use pre-extracted trajectories
+  load_for_training: false
+  
+# Smaller controller
+controller:
+  encoder_hidden_dim: 128
+  latent_dim: 32
+  decoder_rank: 8
+
+# Smaller batches, fewer samples
+training:
+  phase1:
+    batch_size: 2
+    epochs: 5
+    
+  phase2:
+    batch_size: 1
+    epochs: 10
+    gradient_accumulation_steps: 4  # Effective batch = 4
+    
+data:
+  max_samples: 200  # Smaller dataset
+  max_seq_length: 1024  # Shorter sequences
+  
+# Aggressive memory optimization
+optimization:
+  gradient_checkpointing: true
+  mixed_precision: true
+  cpu_offload_optimizer: true  # Offload optimizer states to CPU
+  empty_cache_frequency: 10  # Clear cache every N steps
+  
+# Less frequent TDA (expensive)
+evaluation:
+  compute_tda: true
+  tda_samples: 20
+  tda_frequency: "epoch"  # Only at epoch end
+
+# Disable wandb for local testing
+logging:
+  wandb_project: null  # Disable
+  use_tensorboard: true
+  tensorboard_dir: "results/tensorboard"
