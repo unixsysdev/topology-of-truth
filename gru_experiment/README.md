@@ -1,6 +1,6 @@
 # GRU Reasoning Intervention Experiment
 
-**WIP : currently only setup for end of prompt steering....** 
+**WIP : currently only set up for end of prompt steering....** 
 
 
 **Goal**: Improve small model (0.6B) reasoning by detecting and correcting "topological drift" in real-time using a GRU-based meta-controller.
