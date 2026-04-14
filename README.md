@@ -11,15 +11,15 @@ This repository is now one merged branch with all experiments, artifacts, and pa
 ## The 3 Experiment Tracks
 
 1. **Old global H0/H1 topology (negative)**  
-   Details: [docs/experiments/01_global_h0_topology/README.md](/home/marcel/Work/topology/docs/experiments/01_global_h0_topology/README.md)
+   Details: [docs/experiments/01_global_h0_topology/README.md](docs/experiments/01_global_h0_topology/README.md)
 
 2. **Convergence failure on fixed GSM8K decoding (positive)**  
-   Details: [docs/experiments/02_convergence_failure/README.md](/home/marcel/Work/topology/docs/experiments/02_convergence_failure/README.md)
+   Details: [docs/experiments/02_convergence_failure/README.md](docs/experiments/02_convergence_failure/README.md)
 
 3. **Procedural micro-world semantics (main positive)**  
-   Details: [docs/experiments/03_micro_world_semantics/README.md](/home/marcel/Work/topology/docs/experiments/03_micro_world_semantics/README.md)
+   Details: [docs/experiments/03_micro_world_semantics/README.md](docs/experiments/03_micro_world_semantics/README.md)
 
-Index: [docs/experiments/README.md](/home/marcel/Work/topology/docs/experiments/README.md)
+Index: [docs/experiments/README.md](docs/experiments/README.md)
 
 ## Key Results
 
@@ -59,16 +59,16 @@ Verdict-token probe (`artifacts/micro_world_v1/comparison_probe_states_qwen_gemm
 
 ## Paper and CI
 
-- Paper source: [paper/main.tex](/home/marcel/Work/topology/paper/main.tex)
-- Compiled PDF: [paper/paper.pdf](/home/marcel/Work/topology/paper/paper.pdf)
-- Figure generator: [paper/scripts/make_figures.py](/home/marcel/Work/topology/paper/scripts/make_figures.py)
-- CI workflow: [.github/workflows/paper.yml](/home/marcel/Work/topology/.github/workflows/paper.yml)
-- Release bundle script: [scripts/package_release_bundle.py](/home/marcel/Work/topology/scripts/package_release_bundle.py)
+- Paper source: [paper/main.tex](paper/main.tex)
+- Compiled PDF: [paper/paper.pdf](paper/paper.pdf)
+- Figure generator: [paper/scripts/make_figures.py](paper/scripts/make_figures.py)
+- CI workflow: [.github/workflows/paper.yml](.github/workflows/paper.yml)
+- Release bundle script: [scripts/package_release_bundle.py](scripts/package_release_bundle.py)
 
 ## Reproducibility
 
-- Version lock: [repro/requirements.lock.txt](/home/marcel/Work/topology/repro/requirements.lock.txt)
-- Rebuild instructions: [repro/README.md](/home/marcel/Work/topology/repro/README.md)
+- Version lock: [repro/requirements.lock.txt](repro/requirements.lock.txt)
+- Rebuild instructions: [repro/README.md](repro/README.md)
 
 ## Artifact policy
 
