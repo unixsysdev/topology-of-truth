@@ -216,6 +216,19 @@ def analyze_world_state(world_id: str, state_key: str, rows: list[dict[str, Any]
 
     pair_summary = []
     for pair_type, values in sorted(pair_buckets.items()):
+        same_label_pair = "__" not in pair_type
+        baseline_same = float("nan")
+        pair_gap = float("nan")
+        if not same_label_pair:
+            left, right = pair_type.split("__", 1)
+            same_values = []
+            if left in pair_buckets:
+                same_values.extend(pair_buckets[left])
+            if right in pair_buckets:
+                same_values.extend(pair_buckets[right])
+            if same_values:
+                baseline_same = float(np.mean(same_values))
+                pair_gap = float(np.mean(values) - baseline_same)
         pair_summary.append(
             {
                 "world_id": world_id,
@@ -224,7 +237,9 @@ def analyze_world_state(world_id: str, state_key: str, rows: list[dict[str, Any]
                 "mean_cosine_distance": float(np.mean(values)),
                 "median_cosine_distance": float(np.median(values)),
                 "n_pairs": int(len(values)),
-                "same_label_pair": "__" not in pair_type,
+                "same_label_pair": same_label_pair,
+                "baseline_same_mean_cosine": baseline_same,
+                "pair_gap_vs_same_cosine": pair_gap,
             }
         )
     return summary, pair_rows, pair_summary
@@ -300,6 +315,9 @@ def aggregate_label_pairs(summary: pd.DataFrame) -> pd.DataFrame:
                 "mean_cosine_distance": group["mean_cosine_distance"].mean(),
                 "median_cosine_distance": group["median_cosine_distance"].median(),
                 "mean_n_pairs": group["n_pairs"].mean(),
+                "mean_pair_gap_vs_same_cosine": group["pair_gap_vs_same_cosine"].mean(),
+                "median_pair_gap_vs_same_cosine": group["pair_gap_vs_same_cosine"].median(),
+                "worlds_positive_pair_gap": int((group["pair_gap_vs_same_cosine"] > 0).sum()),
             }
         )
     return pd.DataFrame(rows)
