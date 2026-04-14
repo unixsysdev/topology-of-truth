@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0008",
+  "dataset_sample_id": "gsm8k_000007",
+  "question": "Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has to restart the download from the beginning. How load does it take to download the file?",
+  "gold_answer": "160",
+  "generated_text": "To find the total time required to download the file, we need to break down the process into two distinct phases: the initial download phase and the restart phase.\n\n**Phase 1: Initial Download**\n*   **Total Capacity**: 200 GB\n*   **Download Speed**: 2 GB/minute\n*   **Time to Download**:\n    $$ \\text{Time} = \\frac{\\text{Total Capacity}}{\\text{Speed}} = \\frac{200 \\text{ GB}}{2 \\text{ GB/min}} = 100 \\text{ minutes} $$\n\n**Phase 2: Restart Phase**\n*   **Time to Restart**: 20 minutes\n*   **Speed**: 2 GB/minute\n*   **Time to Download Remaining Capacity**:\n    The file is 40% complete.\n    $$ \\text{Remaining Capacity} = 200 \\text{ GB} \\times (1 - 0.40) = 200 \\times 0.60 = 120 \\text{ GB} $$\n    $$ \\text{Time to Download Remaining} = \\frac{120 \\text{ GB}}{2 \\text{ GB/min}} = 60 \\text{ minutes} $$\n\n**Total Time Calculation**\nThe total time is the sum of the time taken for the initial download and the time taken for the restart:\n$$ \\text{Total Time} = 100 \\text{ minutes} + 20 \\text{ minutes} = 120 \\text{ minutes} $$\n\n\\boxed{120}\n",
+  "pred_answer": "120",
+  "correct": false,
+  "token_count": 351,
+  "hidden_shape": [
+    351,
+    1024
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 24.3715234375,
+  "h0_entropy": 5.818278056252559,
+  "h0_total_persistence": 2131.8478041887283
+}

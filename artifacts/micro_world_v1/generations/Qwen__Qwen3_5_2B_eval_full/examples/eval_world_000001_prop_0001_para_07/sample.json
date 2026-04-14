@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000001_prop_0001_para_07",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0001",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "and_v7_attr_v7_rel_v0",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "soric",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "right": {
+      "object": "grel",
+      "relation": "fosh",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "The compound proposition says The soric property holds for mep and toma foshes grel.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nThe compound proposition says The soric property holds for mep and toma foshes grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.582667421998849,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000001_prop_0001_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000001_prop_0001_para_07/logits_summary.npz"
+}

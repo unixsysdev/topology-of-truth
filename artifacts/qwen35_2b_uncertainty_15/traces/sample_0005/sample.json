@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0005",
+  "dataset_sample_id": "gsm8k_000004",
+  "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
+  "gold_answer": "20",
+  "generated_text": "To find the total amount of feed Wendi needs to give in the final meal, we can break down the problem step-by-step:\n\n1.  **Calculate the total daily feed per chicken:**\n    Wendi feeds each chicken 3 cups of feed per day.\n    $$3 \\text{ cups/chicken}$$\n\n2.  **Calculate the total daily feed for the flock:**\n    The flock has 20 chickens.\n    $$20 \\text{ chickens} \\times 3 \\text{ cups/chicken} = 60 \\text{ cups/day}$$\n\n3.  **Calculate the feed already given in the morning and afternoon:**\n    *   Morning feed: 15 cups\n    *   Afternoon feed: 25 cups\n    *   Total given so far: $15 + 25 = 40 \\text{ cups}$\n\n4.  **Calculate the remaining feed needed for the final meal:**\n    Subtract the feed already given from the total daily requirement.\n    $$60 \\text{ cups (total needed)} - 40 \\text{ cups (already given)} = 20 \\text{ cups}$$\n\nAlternatively, you can calculate the feed per meal directly:\n*   Total daily feed per chicken = 3 cups.\n*   Since she gives 3 meals, each meal provides $3 \\div 3 = 1$ cup of feed per chicken.\n*   For 20 chickens, the total feed per meal is $20 \\times 1 = 20$ cups.\n\nBoth methods yield the same result.\n\n\\boxed{20}\n",
+  "pred_answer": "20",
+  "correct": true,
+  "token_count": 351,
+  "answer_length": 196,
+  "hidden_shape": [
+    351,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 29.11111328125,
+  "h0_entropy": 5.813562513282439,
+  "h0_total_persistence": 2084.102154493332,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0005/logits_summary.npz"
+}

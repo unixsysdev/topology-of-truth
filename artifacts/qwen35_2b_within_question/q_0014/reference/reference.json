@@ -1,0 +1,28 @@
+{
+  "question_id": "q_0014",
+  "dataset_sample_id": "gsm8k_000013",
+  "gold_answer": "18",
+  "question": "Melanie is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, 2 more to the red house, and half of what was left at the orange house. If Melanie has 5 vacuum cleaners left, how many did she start with?",
+  "prompt": "Melanie is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, 2 more to the red house, and half of what was left at the orange house. If Melanie has 5 vacuum cleaners left, how many did she start with?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 18.",
+  "token_count": 7,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    16,
+    23,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5
+  ],
+  "hidden_shape": [
+    7,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0014/reference/reference_hidden.npy"
+}

@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000001_prop_0004_para_01",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0004",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "attr_v5",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "soric",
+    "entity": "toma",
+    "type": "attr"
+  },
+  "statement": "Among the named items, toma is soric.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nAmong the named items, toma is soric.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "Thinking Process:\n\n",
+  "generated_token_ids": [
+    90700,
+    8340,
+    25,
+    271
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.6081146209999133,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000001_prop_0004_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000001_prop_0004_para_01/logits_summary.npz"
+}

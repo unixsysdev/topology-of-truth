@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000008_prop_0007_para_06",
+  "world_id": "eval_world_000008",
+  "proposition_id": "eval_world_000008_prop_0007",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "none_v6",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "peln",
+    "object": "toma",
+    "relation": "fosh",
+    "type": "none"
+  },
+  "statement": "Count the peln things that fosh toma; the result is no.",
+  "prompt": "World:\n- drin is soric.\n- grel is soric.\n- toma is not soric.\n- grel is not peln.\n- drin foshes grel.\n- drin foshes koba.\n- drin foshes toma.\n- toma foshes koba.\n- koba does not fosh drin.\n- toma does not fosh drin.\n- drin sovs grel.\n- drin sovs toma.\n- grel sovs toma.\n- grel does not sov drin.\n- koba does not sov toma.\n- toma does not sov drin.\n\nStatement:\nCount the peln things that fosh toma; the result is no.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.6922654209993198,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000008_prop_0007_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000008_prop_0007_para_06/logits_summary.npz"
+}

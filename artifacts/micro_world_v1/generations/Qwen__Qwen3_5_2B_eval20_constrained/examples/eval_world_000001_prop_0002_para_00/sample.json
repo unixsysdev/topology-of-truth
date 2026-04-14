@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000001_prop_0002_para_00",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0002",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "some_v4",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "mep",
+    "relation": "nimp",
+    "type": "some"
+  },
+  "statement": "In this world, some soric thing nimps mep.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nIn this world, some soric thing nimps mep.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.47281217299678246,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000001_prop_0002_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000001_prop_0002_para_00/logits_summary.npz"
+}

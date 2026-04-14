@@ -1,0 +1,2 @@
+n_examples,accuracy,macro_f1,pred_missing_rate,support_true,accuracy_true,pred_rate_true,support_false,accuracy_false,pred_rate_false,support_unknown,accuracy_unknown,pred_rate_unknown
+1368,0.4327485380116959,0.3367511425010386,0.0,456,0.8859649122807017,0.7266081871345029,456,0.41228070175438597,0.2733918128654971,456,0.0,0.0

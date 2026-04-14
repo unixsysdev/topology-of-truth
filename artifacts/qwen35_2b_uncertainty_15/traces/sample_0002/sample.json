@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0002",
+  "dataset_sample_id": "gsm8k_000001",
+  "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+  "gold_answer": "3",
+  "generated_text": "To find the total number of bolts of fiber required, we need to calculate the amount of blue fiber and the amount of white fiber separately and then add them together.\n\n1.  **Calculate the amount of blue fiber:**\n    The problem states that the robe takes 2 bolts of blue fiber.\n    $$ \\text{Blue bolts} = 2 $$\n\n2.  **Calculate the amount of white fiber:**\n    The problem states that the white fiber is \"half that much\" (half of the blue fiber).\n    $$ \\text{White bolts} = \\frac{1}{2} \\times 2 = 1 $$\n\n3.  **Calculate the total number of bolts:**\n    Add the blue and white bolts together.\n    $$ \\text{Total bolts} = \\text{Blue bolts} + \\text{White bolts} $$\n    $$ \\text{Total bolts} = 2 + 1 = 3 $$\n\nThe total number of bolts required is 3.\n\n\\boxed{3}\n",
+  "pred_answer": "3",
+  "correct": true,
+  "token_count": 218,
+  "answer_length": 132,
+  "hidden_shape": [
+    218,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 18.10242578125,
+  "h0_entropy": 5.335640223684804,
+  "h0_total_persistence": 1432.6751766204834,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0002/logits_summary.npz"
+}

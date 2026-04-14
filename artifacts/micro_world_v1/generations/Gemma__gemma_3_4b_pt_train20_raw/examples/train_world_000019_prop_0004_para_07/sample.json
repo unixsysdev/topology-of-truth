@@ -1,0 +1,31 @@
+{
+  "example_id": "train_world_000019_prop_0004_para_07",
+  "world_id": "train_world_000019",
+  "proposition_id": "train_world_000019_prop_0004",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "rel_v3",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "vonn",
+    "relation": "sume",
+    "subject": "norp",
+    "type": "rel"
+  },
+  "statement": "norp stands in the sume relation to vonn.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is daxel.\n- norp is not daxel.\n- sarn is not daxel.\n- norp is glim.\n- tib is not glim.\n- kiv sumes norp.\n- norp sumes vonn.\n- sarn sumes kiv.\n- tib sumes norp.\n- kiv does not sume tib.\n- norp does not sume tib.\n- sarn does not sume vonn.\n- tib does not sume kiv.\n- vonn does not sume tib.\n- kiv nazes sarn.\n- sarn nazes tib.\n- tib nazes norp.\n- vonn nazes kiv.\n- norp does not naze sarn.\n- norp does not naze tib.\n- sarn does not naze kiv.\n- tib does not naze kiv.\n- vonn does not naze norp.\n\nStatement:\nnorp stands in the sume relation to vonn.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.3206882480008062,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000019_prop_0004_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000019_prop_0004_para_07/logits_summary.npz"
+}

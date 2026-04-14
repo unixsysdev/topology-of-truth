@@ -1,0 +1,38 @@
+experiment_name: gsm8k_qwen35_small
+output_dir: outputs
+dataset:
+  name: openai/gsm8k
+  config: main
+  split: test
+  max_samples: 200
+models:
+  - Qwen/Qwen3.5-0.8B
+  - Qwen/Qwen3.5-2B
+generation:
+  deterministic: true
+  temperature: 0.0
+  top_p: 1.0
+  max_new_tokens: 512
+  prompt_style: math_boxed
+  system_prompt: "Solve the math problem carefully. Put only the final answer in \\boxed{}."
+extraction:
+  layers: ["last"]
+  save_logits: true
+  save_full_logits: false
+  save_attentions: false
+topology:
+  distance: euclidean
+  reduce: pca
+  pca_dims: 64
+  pca_explained_variance: null
+  standardize: true
+  pca_whiten: true
+  max_homology_dim: 1
+  max_edge_length: null
+  window_sizes: [16, 32, 64]
+  prefix_min_tokens: 8
+  stride: 4
+stats:
+  bootstrap_samples: 2000
+  permutation_samples: 500
+  random_seed: 42

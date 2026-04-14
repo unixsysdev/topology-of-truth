@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000009_prop_0004_para_05",
+  "world_id": "eval_world_000009",
+  "proposition_id": "eval_world_000009_prop_0004",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "all_v5",
+  "template_family": "all",
+  "logical_form": {
+    "attribute": "zantic",
+    "object": "toma",
+    "relation": "drel",
+    "type": "all"
+  },
+  "statement": "The number of zantic things that drel toma matches: every.",
+  "prompt": "World:\n- toma is zantic.\n- vex is zantic.\n- bex is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- koba is falm.\n- vex is not falm.\n- bex drels nalo.\n- nalo drels toma.\n- vex drels koba.\n- vex drels toma.\n- bex does not drel toma.\n- koba does not drel nalo.\n- toma does not drel vex.\n- bex foshes koba.\n- nalo foshes bex.\n- nalo foshes toma.\n- nalo foshes vex.\n- toma foshes vex.\n- vex foshes koba.\n- vex foshes nalo.\n- koba does not fosh nalo.\n- koba does not fosh toma.\n- toma does not fosh koba.\n- vex does not fosh toma.\n\nStatement:\nThe number of zantic things that drel toma matches: every.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.32858174800276174,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000009_prop_0004_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000009_prop_0004_para_05/logits_summary.npz"
+}

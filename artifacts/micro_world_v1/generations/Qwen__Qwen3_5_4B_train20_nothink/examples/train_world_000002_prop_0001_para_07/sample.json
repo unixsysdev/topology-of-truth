@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000002_prop_0001_para_07",
+  "world_id": "train_world_000002",
+  "proposition_id": "train_world_000002_prop_0001",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v3_attr_v3_rel_v4",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "pald",
+      "entity": "tib",
+      "type": "attr"
+    },
+    "right": {
+      "object": "norp",
+      "relation": "vark",
+      "subject": "tib",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "It is true that tib belongs to the pald things or that The relation vark holds from tib to norp.",
+  "prompt": "World:\n- norp is daxel.\n- tib is daxel.\n- lume is not daxel.\n- pavo is not daxel.\n- norp is pald.\n- lume is not pald.\n- tib is not pald.\n- lume mips pavo.\n- norp mips lume.\n- tib mips norp.\n- lume does not mip tib.\n- pavo does not mip lume.\n- pavo does not mip tib.\n- lume varks tib.\n- norp varks tib.\n- pavo varks norp.\n- tib varks lume.\n- tib varks norp.\n- norp does not vark pavo.\n- pavo does not vark lume.\n- pavo does not vark tib.\n- tib does not vark pavo.\n\nStatement:\nIt is true that tib belongs to the pald things or that The relation vark holds from tib to norp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7264497059986752,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000002_prop_0001_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000002_prop_0001_para_07/logits_summary.npz"
+}

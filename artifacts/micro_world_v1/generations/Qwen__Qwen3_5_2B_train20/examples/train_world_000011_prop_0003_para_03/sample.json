@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000011_prop_0003_para_03",
+  "world_id": "train_world_000011",
+  "proposition_id": "train_world_000011_prop_0003",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "some_v3",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "vorn",
+    "object": "lume",
+    "relation": "sume",
+    "type": "some"
+  },
+  "statement": "Some vorn entity has the sume relation to lume.",
+  "prompt": "World:\n- norp is vorn.\n- lume is not vorn.\n- tib is not vorn.\n- lume is nubic.\n- norp is nubic.\n- tib is not nubic.\n- lume sumes tib.\n- norp sumes kiv.\n- tib sumes norp.\n- lume does not sume norp.\n- lume mips kiv.\n- norp mips tib.\n- kiv does not mip tib.\n- lume does not mip norp.\n- lume does not mip tib.\n- tib does not mip lume.\n\nStatement:\nSome vorn entity has the sume relation to lume.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.4851656169994385,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000011_prop_0003_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000011_prop_0003_para_03/logits_summary.npz"
+}

@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000001_prop_0002_para_04",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0002",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "some_v4",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "mep",
+    "relation": "nimp",
+    "type": "some"
+  },
+  "statement": "In this world, some soric thing nimps mep.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nIn this world, some soric thing nimps mep.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nTrue\n",
+  "generated_token_ids": [
+    107,
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.43695710000247345,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw/examples/eval_world_000001_prop_0002_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw/examples/eval_world_000001_prop_0002_para_04/logits_summary.npz"
+}

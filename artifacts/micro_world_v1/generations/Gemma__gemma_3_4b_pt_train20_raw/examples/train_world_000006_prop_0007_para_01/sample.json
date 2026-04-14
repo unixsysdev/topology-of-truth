@@ -1,0 +1,42 @@
+{
+  "example_id": "train_world_000006_prop_0007_para_01",
+  "world_id": "train_world_000006",
+  "proposition_id": "train_world_000006_prop_0007",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "or_v1_rel_v1_rel_v2",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "vonn",
+      "relation": "vark",
+      "subject": "kiv",
+      "type": "rel"
+    },
+    "right": {
+      "object": "vonn",
+      "relation": "vark",
+      "subject": "zorb",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "At least one claim holds: The item named kiv varks the item named vonn; It is true that zorb varks vonn.",
+  "prompt": "World:\n- kiv is pald.\n- zorb is pald.\n- dax is not pald.\n- tib is not pald.\n- vonn is vorn.\n- fep is not vorn.\n- kiv is not vorn.\n- zorb is not vorn.\n- kiv varks vonn.\n- tib varks kiv.\n- vonn varks dax.\n- zorb varks dax.\n- zorb varks fep.\n- zorb varks kiv.\n- dax does not vark fep.\n- fep does not vark zorb.\n- kiv does not vark dax.\n- kiv does not vark fep.\n- tib does not vark fep.\n- vonn does not vark fep.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- zorb does not vark vonn.\n- dax lirps vonn.\n- fep lirps vonn.\n- kiv lirps dax.\n- kiv lirps vonn.\n- kiv lirps zorb.\n- dax does not lirp kiv.\n- dax does not lirp tib.\n- dax does not lirp zorb.\n- fep does not lirp tib.\n- fep does not lirp zorb.\n- tib does not lirp zorb.\n- vonn does not lirp fep.\n- zorb does not lirp vonn.\n\nStatement:\nAt least one claim holds: The item named kiv varks the item named vonn; It is true that zorb varks vonn.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n\nWorld:\n",
+  "generated_token_ids": [
+    108,
+    14447,
+    236787,
+    107
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5442706159992667,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000006_prop_0007_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000006_prop_0007_para_01/logits_summary.npz"
+}

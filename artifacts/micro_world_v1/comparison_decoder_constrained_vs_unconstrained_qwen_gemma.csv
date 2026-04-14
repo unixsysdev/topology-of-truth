@@ -1,0 +1,7 @@
+n,accuracy,macro_f1,recall_true,recall_false,recall_unknown,pred_unknown_rate,model,setting,manifest
+1440,0.4361111111111111,0.3402981251100757,0.8875,0.4208333333333333,0.0,0.0,Qwen3.5-2B,unconstrained,/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/manifest_complete_worlds.csv
+1440,0.4347222222222222,0.3384310265744485,0.8916666666666667,0.4125,0.0,0.0,Qwen3.5-2B,constrained,/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/manifest.csv
+1440,0.4777777777777778,0.3767619047619048,0.8958333333333334,0.5375,0.0,0.0,Qwen3.5-4B,unconstrained,/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/manifest.csv
+1440,0.4777777777777778,0.3767619047619048,0.8958333333333334,0.5375,0.0,0.0,Qwen3.5-4B,constrained,/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/manifest.csv
+1440,0.3972222222222222,0.3085034013605442,0.8583333333333333,0.32083333333333336,0.0125,0.008333333333333333,Gemma-3-4B-it,unconstrained,/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_nothink/manifest.csv
+1440,0.3972222222222222,0.3085034013605442,0.8583333333333333,0.32083333333333336,0.0125,0.008333333333333333,Gemma-3-4B-it,constrained,/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_constrained/manifest.csv

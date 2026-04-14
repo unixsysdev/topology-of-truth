@@ -1,0 +1,4 @@
+variant,h0_entropy_std
+variant_c_center_only_cosine,0.021406032224396625
+variant_b_fixed_trace_pca,0.019565912766301152
+variant_a_center_only,0.007094102764928551

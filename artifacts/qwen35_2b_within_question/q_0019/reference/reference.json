@@ -1,0 +1,26 @@
+{
+  "question_id": "q_0019",
+  "dataset_sample_id": "gsm8k_000018",
+  "gold_answer": "7",
+  "question": "Claire makes a 3 egg omelet every morning for breakfast.  How many dozens of eggs will she eat in 4 weeks?",
+  "prompt": "Claire makes a 3 egg omelet every morning for breakfast.  How many dozens of eggs will she eat in 4 weeks?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 7.",
+  "token_count": 6,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    22,
+    13
+  ],
+  "answer_token_indices": [
+    4
+  ],
+  "hidden_shape": [
+    6,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0019/reference/reference_hidden.npy"
+}

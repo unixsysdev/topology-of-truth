@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000007_prop_0000_para_02",
+  "world_id": "eval_world_000007",
+  "proposition_id": "eval_world_000007_prop_0000",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "and_v6_attr_v6_attr_v7",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "brindle",
+      "entity": "nalo",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "falm",
+      "entity": "sop",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "Evaluate this compound claim: brindle applies to nalo and The falm property holds for sop.",
+  "prompt": "World:\n- nalo is brindle.\n- sop is brindle.\n- nalo is falm.\n- sop is falm.\n- bex is not falm.\n- koba is not falm.\n- bex sovs koba.\n- bex sovs sop.\n- sop sovs nalo.\n- koba does not sov sop.\n- nalo does not sov sop.\n- sop does not sov koba.\n- bex drels nalo.\n- koba drels nalo.\n- nalo drels bex.\n- nalo drels koba.\n- sop drels bex.\n- sop drels nalo.\n- bex does not drel koba.\n- koba does not drel sop.\n\nStatement:\nEvaluate this compound claim: brindle applies to nalo and The falm property holds for sop.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6147889839994605,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000007_prop_0000_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000007_prop_0000_para_02/logits_summary.npz"
+}

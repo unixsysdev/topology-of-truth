@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000003_prop_0006_para_00",
+  "world_id": "eval_world_000003",
+  "proposition_id": "eval_world_000003_prop_0006",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "rel_v4",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "koba",
+    "relation": "fosh",
+    "subject": "vex",
+    "type": "rel"
+  },
+  "statement": "The relation fosh holds from vex to koba.",
+  "prompt": "World:\n- drin is brindle.\n- koba is not brindle.\n- toma is not brindle.\n- koba is peln.\n- drin is not peln.\n- toma is not peln.\n- koba foshes vex.\n- toma foshes vex.\n- vex foshes drin.\n- koba does not fosh drin.\n- vex does not fosh koba.\n- vex does not fosh toma.\n- drin kelds toma.\n- drin kelds vex.\n- koba kelds drin.\n- vex kelds koba.\n- vex kelds toma.\n- koba does not keld vex.\n\nStatement:\nThe relation fosh holds from vex to koba.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "The user wants to",
+  "generated_token_ids": [
+    760,
+    1156,
+    6587,
+    310
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.6607636739990994,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000003_prop_0006_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000003_prop_0006_para_00/logits_summary.npz"
+}

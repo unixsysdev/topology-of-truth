@@ -1,0 +1,30 @@
+{
+  "question_id": "q_0011",
+  "dataset_sample_id": "gsm8k_000010",
+  "gold_answer": "366",
+  "question": "A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many as the downloads in the first month, but then reduced by 30% in the third month. How many downloads did the program have total over the three months?",
+  "prompt": "A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many as the downloads in the first month, but then reduced by 30% in the third month. How many downloads did the program have total over the three months?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 366.",
+  "token_count": 8,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    18,
+    21,
+    21,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5,
+    6
+  ],
+  "hidden_shape": [
+    8,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0011/reference/reference_hidden.npy"
+}

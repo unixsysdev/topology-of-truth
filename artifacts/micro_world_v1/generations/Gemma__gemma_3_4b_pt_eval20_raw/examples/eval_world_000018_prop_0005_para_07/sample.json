@@ -1,0 +1,35 @@
+{
+  "example_id": "eval_world_000018_prop_0005_para_07",
+  "world_id": "eval_world_000018",
+  "proposition_id": "eval_world_000018_prop_0005",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "not_v7_attr_v7",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "peln",
+      "entity": "sop",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Apply logical NOT to this sentence: The peln property holds for sop.",
+  "prompt": "World:\n- lirk is soric.\n- mep is soric.\n- nalo is soric.\n- sop is soric.\n- mep is peln.\n- nalo is peln.\n- sop is peln.\n- vex is peln.\n- nalo sovs mep.\n- nalo sovs sop.\n- sop sovs nalo.\n- vex sovs lirk.\n- vex sovs sop.\n- lirk does not sov sop.\n- lirk does not sov vex.\n- sop does not sov lirk.\n- sop does not sov mep.\n- vex does not sov mep.\n- mep foshes nalo.\n- sop foshes vex.\n- vex foshes mep.\n- nalo does not fosh lirk.\n- sop does not fosh mep.\n- vex does not fosh lirk.\n\nStatement:\nApply logical NOT to this sentence: The peln property holds for sop.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n\nAnswer:\n",
+  "generated_token_ids": [
+    108,
+    7925,
+    236787,
+    107
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5215164719993481,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000018_prop_0005_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000018_prop_0005_para_07/logits_summary.npz"
+}

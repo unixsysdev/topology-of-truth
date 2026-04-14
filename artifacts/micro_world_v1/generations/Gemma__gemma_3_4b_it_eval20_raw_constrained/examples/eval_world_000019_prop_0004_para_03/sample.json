@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000019_prop_0004_para_03",
+  "world_id": "eval_world_000019",
+  "proposition_id": "eval_world_000019_prop_0004",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "Unknown",
+  "correct": true,
+  "template_id": "all_v7",
+  "template_family": "all",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "toma",
+    "relation": "nimp",
+    "type": "all"
+  },
+  "statement": "Among soric things, every of them nimp toma.",
+  "prompt": "World:\n- grel is zantic.\n- koba is zantic.\n- lirk is not zantic.\n- koba is soric.\n- lirk is soric.\n- nalo is soric.\n- toma is soric.\n- grel is not soric.\n- sop is not soric.\n- koba nimps nalo.\n- koba nimps toma.\n- lirk nimps grel.\n- nalo nimps grel.\n- nalo nimps koba.\n- sop nimps lirk.\n- toma nimps koba.\n- koba does not nimp grel.\n- lirk does not nimp koba.\n- lirk does not nimp nalo.\n- sop does not nimp koba.\n- sop does not nimp toma.\n- grel kelds koba.\n- lirk kelds grel.\n- lirk kelds koba.\n- lirk kelds nalo.\n- lirk kelds sop.\n- nalo kelds grel.\n- sop kelds koba.\n- toma kelds sop.\n- grel does not keld lirk.\n- grel does not keld nalo.\n- nalo does not keld sop.\n- sop does not keld nalo.\n- sop does not keld toma.\n- toma does not keld grel.\n\nStatement:\nAmong soric things, every of them nimp toma.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " Unknown\n",
+  "generated_token_ids": [
+    60355,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.4186302779999096,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000019_prop_0004_para_03/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000019_prop_0004_para_03/logits_summary.npz"
+}

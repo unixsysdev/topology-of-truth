@@ -1,0 +1,6 @@
+sample_id,ended_on_eos,hit_token_cap,manual_outcome_type,extractor_confident,final_numeric_answer_present,reasoning_failure_mode
+sample_0001,True,False,wrong_reasoning,True,True,omitted_problem_constraint
+sample_0002,False,True,truncated_at_cap,False,True,truncated_after_reasoning_drift
+sample_0003,True,False,wrong_reasoning,True,True,omitted_repair_cost_in_profit
+sample_0004,True,False,wrong_reasoning,True,True,misread_repetition_structure
+sample_0005,True,False,wrong_reasoning,True,True,omitted_total_daily_requirement

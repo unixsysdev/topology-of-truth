@@ -1,0 +1,5 @@
+run,state_kind,best_layer_idx,best_recall_unknown,best_macro_f1,best_accuracy
+gemma_3_4b_it_raw,prompt_last,1,0.7791666666666667,0.2697840761699201,0.3375
+gemma_3_4b_it_raw,verdict_token,10,0.7416666666666667,0.3166949663677412,0.3652777777777777
+gemma_3_4b_pt_basefmt,prompt_last,29,0.825,0.2842911170556222,0.3555555555555555
+gemma_3_4b_pt_basefmt,verdict_token,28,0.7333333333333333,0.4021285382228357,0.4263888888888889

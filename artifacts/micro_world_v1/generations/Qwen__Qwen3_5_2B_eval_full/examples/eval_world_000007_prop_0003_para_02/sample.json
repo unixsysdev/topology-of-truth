@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000007_prop_0003_para_02",
+  "world_id": "eval_world_000007",
+  "proposition_id": "eval_world_000007_prop_0003",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "rel_v6",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "sop",
+    "relation": "drel",
+    "subject": "bex",
+    "type": "rel"
+  },
+  "statement": "For this world, bex drels sop.",
+  "prompt": "World:\n- nalo is brindle.\n- sop is brindle.\n- nalo is falm.\n- sop is falm.\n- bex is not falm.\n- koba is not falm.\n- bex sovs koba.\n- bex sovs sop.\n- sop sovs nalo.\n- koba does not sov sop.\n- nalo does not sov sop.\n- sop does not sov koba.\n- bex drels nalo.\n- koba drels nalo.\n- nalo drels bex.\n- nalo drels koba.\n- sop drels bex.\n- sop drels nalo.\n- bex does not drel koba.\n- koba does not drel sop.\n\nStatement:\nFor this world, bex drels sop.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6209289939997689,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000007_prop_0003_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000007_prop_0003_para_02/logits_summary.npz"
+}

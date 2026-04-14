@@ -1,0 +1,42 @@
+{
+  "example_id": "train_world_000013_prop_0003_para_07",
+  "world_id": "train_world_000013",
+  "proposition_id": "train_world_000013_prop_0003",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "or_v3_rel_v3_attr_v4",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "pavo",
+      "relation": "lirp",
+      "subject": "fep",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "vorn",
+      "entity": "fep",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "It is true that fep stands in the lirp relation to pavo or that The object fep has the property vorn.",
+  "prompt": "World:\n- kiv is vorn.\n- pavo is vorn.\n- pavo is glim.\n- kiv is not glim.\n- fep nazes kiv.\n- kiv nazes fep.\n- kiv nazes norp.\n- norp nazes kiv.\n- pavo does not naze norp.\n- fep lirps kiv.\n- kiv lirps fep.\n- kiv lirps norp.\n- kiv lirps pavo.\n- norp lirps pavo.\n- pavo lirps norp.\n- fep does not lirp norp.\n\nStatement:\nIt is true that fep stands in the lirp relation to pavo or that The object fep has the property vorn.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nStatement",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    19128
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.44199289200332714,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000013_prop_0003_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000013_prop_0003_para_07/logits_summary.npz"
+}

@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000001_prop_0005_para_07",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0005",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "or_v7_attr_v7_rel_v0",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "brindle",
+      "entity": "drin",
+      "type": "attr"
+    },
+    "right": {
+      "object": "mep",
+      "relation": "fosh",
+      "subject": "grel",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The compound proposition says The brindle property holds for drin or grel foshes mep.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nThe compound proposition says The brindle property holds for drin or grel foshes mep.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nExplanation",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    44008
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.4501983099980862,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000001_prop_0005_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000001_prop_0005_para_07/logits_summary.npz"
+}

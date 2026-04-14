@@ -1,0 +1,34 @@
+{
+  "example_id": "eval_world_000000_prop_0008_para_05",
+  "world_id": "eval_world_000000",
+  "proposition_id": "eval_world_000000_prop_0008",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "rel_v5",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "nalo",
+    "relation": "fosh",
+    "subject": "mep",
+    "type": "rel"
+  },
+  "statement": "nalo is foshed by mep.",
+  "prompt": "World:\n- mep is falm.\n- grel is not falm.\n- nalo is not falm.\n- sop is not falm.\n- grel is peln.\n- sop is peln.\n- nalo is not peln.\n- nalo foshes sop.\n- sop foshes grel.\n- grel does not fosh lirk.\n- lirk does not fosh nalo.\n- lirk does not fosh sop.\n- nalo does not fosh grel.\n- nalo does not fosh mep.\n- grel nimps nalo.\n- mep nimps sop.\n- nalo nimps grel.\n- nalo nimps lirk.\n- sop nimps lirk.\n- sop nimps mep.\n- grel does not nimp mep.\n- grel does not nimp sop.\n- nalo does not nimp mep.\n- nalo does not nimp sop.\n\nStatement:\nnalo is foshed by mep.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n",
+  "generated_token_ids": [
+    6288,
+    236761,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5245730759997969,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000000_prop_0008_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000000_prop_0008_para_05/logits_summary.npz"
+}

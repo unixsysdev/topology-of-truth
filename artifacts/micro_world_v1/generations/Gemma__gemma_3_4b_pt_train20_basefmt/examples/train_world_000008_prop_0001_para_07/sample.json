@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000008_prop_0001_para_07",
+  "world_id": "train_world_000008",
+  "proposition_id": "train_world_000008_prop_0001",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "or_v3_attr_v3_rel_v4",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "nubic",
+      "entity": "sarn",
+      "type": "attr"
+    },
+    "right": {
+      "object": "fep",
+      "relation": "tob",
+      "subject": "zorb",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "It is true that sarn belongs to the nubic things or that The relation tob holds from zorb to fep.",
+  "prompt": "World:\n- fep is vorn.\n- sarn is vorn.\n- zorb is vorn.\n- wug is not vorn.\n- fep is nubic.\n- wug is nubic.\n- zorb is nubic.\n- sarn tobs zorb.\n- zorb tobs pavo.\n- fep does not tob sarn.\n- fep does not tob wug.\n- sarn does not tob pavo.\n- sarn does not tob wug.\n- wug does not tob zorb.\n- pavo nazes sarn.\n- sarn nazes fep.\n- sarn nazes wug.\n- sarn nazes zorb.\n- wug nazes zorb.\n- zorb nazes sarn.\n- fep does not naze sarn.\n- sarn does not naze pavo.\n- zorb does not naze wug.\n\nStatement:\nIt is true that sarn belongs to the nubic things or that The relation tob holds from zorb to fep.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.",
+  "generated_token_ids": [
+    6288,
+    236761,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.4382635720030521,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000008_prop_0001_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000008_prop_0001_para_07/logits_summary.npz"
+}

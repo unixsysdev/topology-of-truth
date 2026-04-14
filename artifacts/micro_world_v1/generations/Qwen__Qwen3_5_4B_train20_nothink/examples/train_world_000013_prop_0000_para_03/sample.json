@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000013_prop_0000_para_03",
+  "world_id": "train_world_000013",
+  "proposition_id": "train_world_000013_prop_0000",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "exactly_one_v3",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "vorn",
+    "object": "kiv",
+    "relation": "lirp",
+    "type": "exactly_one"
+  },
+  "statement": "Exactly one vorn entity has the lirp relation to kiv.",
+  "prompt": "World:\n- kiv is vorn.\n- pavo is vorn.\n- pavo is glim.\n- kiv is not glim.\n- fep nazes kiv.\n- kiv nazes fep.\n- kiv nazes norp.\n- norp nazes kiv.\n- pavo does not naze norp.\n- fep lirps kiv.\n- kiv lirps fep.\n- kiv lirps norp.\n- kiv lirps pavo.\n- norp lirps pavo.\n- pavo lirps norp.\n- fep does not lirp norp.\n\nStatement:\nExactly one vorn entity has the lirp relation to kiv.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6446024889992259,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000013_prop_0000_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000013_prop_0000_para_03/logits_summary.npz"
+}

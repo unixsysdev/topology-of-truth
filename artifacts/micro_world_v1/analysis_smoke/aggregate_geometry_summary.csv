@@ -1,0 +1,5 @@
+state_key,n_worlds,mean_same_label_cosine,mean_different_label_cosine,mean_same_minus_different_cosine,median_same_minus_different_cosine,mean_nearest_neighbor_purity,worlds_same_closer
+final_prompt,1,0.011672429243723552,,,,1.0,0
+prompt_tail_mean,1,0.013912681738535564,,,,1.0,0
+verdict_span_mean,1,0.0038903435071309406,,,,1.0,0
+verdict_token,1,0.007358129819234212,,,,1.0,0

@@ -1,0 +1,30 @@
+{
+  "example_id": "train_world_000001_prop_0006_para_04",
+  "world_id": "train_world_000001",
+  "proposition_id": "train_world_000001_prop_0006",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "attr_v0",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "daxel",
+    "entity": "kiv",
+    "type": "attr"
+  },
+  "statement": "kiv is daxel.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is not daxel.\n- norp is selt.\n- kiv is not selt.\n- vonn is not selt.\n- norp varks kiv.\n- norp does not vark vonn.\n- tib does not vark norp.\n- tib does not vark vonn.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- vonn tobs norp.\n- tib does not tob norp.\n- tib does not tob vonn.\n\nStatement:\nkiv is daxel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.24682034400029806,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000001_prop_0006_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000001_prop_0006_para_04/logits_summary.npz"
+}

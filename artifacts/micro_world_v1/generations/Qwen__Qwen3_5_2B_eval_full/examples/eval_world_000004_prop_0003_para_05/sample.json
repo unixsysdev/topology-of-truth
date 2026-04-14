@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000004_prop_0003_para_05",
+  "world_id": "eval_world_000004",
+  "proposition_id": "eval_world_000004_prop_0003",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "some_v5",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "brindle",
+    "object": "grel",
+    "relation": "sov",
+    "type": "some"
+  },
+  "statement": "The number of brindle things that sov grel matches: some.",
+  "prompt": "World:\n- koba is not zantic.\n- vex is not zantic.\n- grel is brindle.\n- koba is brindle.\n- toma is brindle.\n- vex is brindle.\n- vex drels koba.\n- grel does not drel toma.\n- grel does not drel vex.\n- koba does not drel toma.\n- koba does not drel vex.\n- toma does not drel koba.\n- vex does not drel toma.\n- koba sovs grel.\n- toma sovs vex.\n- vex sovs grel.\n- grel does not sov koba.\n- grel does not sov vex.\n- vex does not sov toma.\n\nStatement:\nThe number of brindle things that sov grel matches: some.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5935538279991306,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000004_prop_0003_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000004_prop_0003_para_05/logits_summary.npz"
+}

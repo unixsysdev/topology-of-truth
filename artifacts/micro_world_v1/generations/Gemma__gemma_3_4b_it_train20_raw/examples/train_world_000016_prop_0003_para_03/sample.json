@@ -1,0 +1,36 @@
+{
+  "example_id": "train_world_000016_prop_0003_para_03",
+  "world_id": "train_world_000016",
+  "proposition_id": "train_world_000016_prop_0003",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "not_v3_rel_v3",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "object": "zorb",
+      "relation": "lirp",
+      "subject": "norp",
+      "type": "rel"
+    },
+    "type": "not"
+  },
+  "statement": "Deny the claim that norp stands in the lirp relation to zorb.",
+  "prompt": "World:\n- zorb is not pald.\n- tib is vorn.\n- fep is not vorn.\n- norp is not vorn.\n- fep does not sume norp.\n- norp does not sume fep.\n- norp does not sume tib.\n- fep lirps zorb.\n- norp does not lirp tib.\n- norp does not lirp zorb.\n\nStatement:\nDeny the claim that norp stands in the lirp relation to zorb.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nTrue\n",
+  "generated_token_ids": [
+    107,
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.4661096969975915,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000016_prop_0003_para_03/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000016_prop_0003_para_03/logits_summary.npz"
+}

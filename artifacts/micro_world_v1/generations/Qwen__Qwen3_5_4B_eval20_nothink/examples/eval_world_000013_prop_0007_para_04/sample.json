@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000013_prop_0007_para_04",
+  "world_id": "eval_world_000013",
+  "proposition_id": "eval_world_000013_prop_0007",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "and_v4_rel_v4_attr_v5",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "sop",
+      "relation": "sov",
+      "subject": "drin",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "soric",
+      "entity": "drin",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "The relation sov holds from drin to sop. Also, Among the named items, drin is soric.",
+  "prompt": "World:\n- drin is soric.\n- sop is soric.\n- toma is not soric.\n- sop is peln.\n- toma is peln.\n- bex is not peln.\n- vex is not peln.\n- bex sovs drin.\n- drin sovs sop.\n- sop sovs drin.\n- toma sovs drin.\n- vex sovs drin.\n- drin does not sov bex.\n- drin does not sov vex.\n- sop does not sov bex.\n- toma does not sov bex.\n- vex does not sov sop.\n- vex does not sov toma.\n- drin kelds toma.\n- bex does not keld drin.\n- bex does not keld toma.\n- bex does not keld vex.\n- drin does not keld sop.\n- sop does not keld bex.\n- sop does not keld vex.\n- toma does not keld bex.\n- toma does not keld drin.\n- toma does not keld sop.\n- vex does not keld bex.\n\nStatement:\nThe relation sov holds from drin to sop. Also, Among the named items, drin is soric.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7116216209997219,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000013_prop_0007_para_04/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000013_prop_0007_para_04/logits_summary.npz"
+}

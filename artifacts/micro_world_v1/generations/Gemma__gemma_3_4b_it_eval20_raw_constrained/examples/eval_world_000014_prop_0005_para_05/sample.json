@@ -1,0 +1,39 @@
+{
+  "example_id": "eval_world_000014_prop_0005_para_05",
+  "world_id": "eval_world_000014",
+  "proposition_id": "eval_world_000014_prop_0005",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "Unknown",
+  "correct": false,
+  "template_id": "and_v5_attr_v5_attr_v6",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "soric",
+      "entity": "sop",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "peln",
+      "entity": "grel",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "The first clause is 'Among the named items, sop is soric' and the connector is and with 'peln applies to grel'.",
+  "prompt": "World:\n- sop is soric.\n- drin is not soric.\n- drin is peln.\n- sop is peln.\n- grel is not peln.\n- drin kelds toma.\n- mep kelds drin.\n- sop kelds mep.\n- toma kelds drin.\n- grel does not keld toma.\n- mep does not keld grel.\n- toma does not keld mep.\n- toma does not keld sop.\n- drin nimps sop.\n- grel nimps drin.\n- grel nimps sop.\n- grel nimps toma.\n- mep nimps sop.\n- sop nimps grel.\n- sop nimps mep.\n- toma nimps grel.\n- drin does not nimp mep.\n- drin does not nimp toma.\n- mep does not nimp toma.\n- sop does not nimp toma.\n- toma does not nimp drin.\n\nStatement:\nThe first clause is 'Among the named items, sop is soric' and the connector is and with 'peln applies to grel'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " Unknown\n",
+  "generated_token_ids": [
+    60355,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.42048309500023606,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000014_prop_0005_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000014_prop_0005_para_05/logits_summary.npz"
+}

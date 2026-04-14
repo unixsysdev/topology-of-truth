@@ -1,0 +1,28 @@
+{
+  "question_id": "q_0013",
+  "dataset_sample_id": "gsm8k_000012",
+  "gold_answer": "13",
+  "question": "Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for $1.5 each. It costs $3 a year to water and feed the tree. How many years will it take before he starts earning money on the lemon tree?",
+  "prompt": "Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for $1.5 each. It costs $3 a year to water and feed the tree. How many years will it take before he starts earning money on the lemon tree?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 13.",
+  "token_count": 7,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    16,
+    18,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5
+  ],
+  "hidden_shape": [
+    7,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0013/reference/reference_hidden.npy"
+}

@@ -1,0 +1,36 @@
+{
+  "example_id": "train_world_000000_prop_0002_para_04",
+  "world_id": "train_world_000000",
+  "proposition_id": "train_world_000000_prop_0002",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "not_v0_attr_v0",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "glim",
+      "entity": "blicket",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "It is not the case that blicket is glim.",
+  "prompt": "World:\n- blicket is glim.\n- dax is glim.\n- pavo is glim.\n- lume is daxel.\n- pavo is daxel.\n- blicket is not daxel.\n- dax is not daxel.\n- kiv is not daxel.\n- blicket tobs lume.\n- dax tobs blicket.\n- dax tobs norp.\n- norp tobs dax.\n- norp tobs kiv.\n- blicket does not tob kiv.\n- blicket does not tob norp.\n- blicket does not tob pavo.\n- dax does not tob lume.\n- lume does not tob norp.\n- norp does not tob blicket.\n- norp does not tob pavo.\n- pavo does not tob norp.\n- kiv sumes blicket.\n- lume sumes blicket.\n- norp sumes lume.\n- pavo sumes blicket.\n- pavo sumes kiv.\n- dax does not sume blicket.\n- kiv does not sume lume.\n- kiv does not sume pavo.\n- lume does not sume pavo.\n- norp does not sume kiv.\n- pavo does not sume lume.\n\nStatement:\nIt is not the case that blicket is glim.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True\n\nStatement:",
+  "generated_token_ids": [
+    6288,
+    108,
+    19128,
+    236787
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5260374970021076,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000000_prop_0002_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000000_prop_0002_para_04/logits_summary.npz"
+}

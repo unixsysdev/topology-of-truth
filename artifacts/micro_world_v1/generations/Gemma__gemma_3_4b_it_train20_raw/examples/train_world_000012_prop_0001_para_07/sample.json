@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000012_prop_0001_para_07",
+  "world_id": "train_world_000012",
+  "proposition_id": "train_world_000012_prop_0001",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "some_v3",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "selt",
+    "object": "lume",
+    "relation": "sume",
+    "type": "some"
+  },
+  "statement": "Some selt entity has the sume relation to lume.",
+  "prompt": "World:\n- pavo is selt.\n- tib is selt.\n- vonn is selt.\n- kiv is not selt.\n- lume is not selt.\n- lume is pald.\n- pavo is pald.\n- vonn is not pald.\n- wug is not pald.\n- lume sumes pavo.\n- pavo sumes kiv.\n- pavo sumes lume.\n- pavo sumes tib.\n- tib sumes vonn.\n- tib sumes wug.\n- lume does not sume vonn.\n- pavo does not sume vonn.\n- tib does not sume kiv.\n- tib does not sume lume.\n- vonn does not sume wug.\n- wug does not sume tib.\n- wug does not sume vonn.\n- pavo lirps lume.\n- pavo lirps wug.\n- tib lirps pavo.\n- tib lirps wug.\n- vonn lirps lume.\n- wug lirps kiv.\n- wug lirps vonn.\n- kiv does not lirp pavo.\n- tib does not lirp lume.\n- tib does not lirp vonn.\n- vonn does not lirp kiv.\n- vonn does not lirp pavo.\n- vonn does not lirp tib.\n- wug does not lirp tib.\n\nStatement:\nSome selt entity has the sume relation to lume.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nTrue\n",
+  "generated_token_ids": [
+    107,
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5188709200010635,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000012_prop_0001_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000012_prop_0001_para_07/logits_summary.npz"
+}

@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000008_prop_0004_para_02",
+  "world_id": "eval_world_000008",
+  "proposition_id": "eval_world_000008_prop_0004",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "rel_v6",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "grel",
+    "relation": "fosh",
+    "subject": "toma",
+    "type": "rel"
+  },
+  "statement": "For this world, toma foshes grel.",
+  "prompt": "World:\n- drin is soric.\n- grel is soric.\n- toma is not soric.\n- grel is not peln.\n- drin foshes grel.\n- drin foshes koba.\n- drin foshes toma.\n- toma foshes koba.\n- koba does not fosh drin.\n- toma does not fosh drin.\n- drin sovs grel.\n- drin sovs toma.\n- grel sovs toma.\n- grel does not sov drin.\n- koba does not sov toma.\n- toma does not sov drin.\n\nStatement:\nFor this world, toma foshes grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.24458951999986311,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000008_prop_0004_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000008_prop_0004_para_02/logits_summary.npz"
+}

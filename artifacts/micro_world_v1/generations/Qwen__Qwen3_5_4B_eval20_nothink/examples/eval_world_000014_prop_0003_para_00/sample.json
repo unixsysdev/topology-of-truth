@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000014_prop_0003_para_00",
+  "world_id": "eval_world_000014",
+  "proposition_id": "eval_world_000014_prop_0003",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "and_v4_rel_v4_rel_v5",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "sop",
+      "relation": "keld",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "right": {
+      "object": "mep",
+      "relation": "nimp",
+      "subject": "sop",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "The relation keld holds from toma to sop. Also, mep is nimped by sop.",
+  "prompt": "World:\n- sop is soric.\n- drin is not soric.\n- drin is peln.\n- sop is peln.\n- grel is not peln.\n- drin kelds toma.\n- mep kelds drin.\n- sop kelds mep.\n- toma kelds drin.\n- grel does not keld toma.\n- mep does not keld grel.\n- toma does not keld mep.\n- toma does not keld sop.\n- drin nimps sop.\n- grel nimps drin.\n- grel nimps sop.\n- grel nimps toma.\n- mep nimps sop.\n- sop nimps grel.\n- sop nimps mep.\n- toma nimps grel.\n- drin does not nimp mep.\n- drin does not nimp toma.\n- mep does not nimp toma.\n- sop does not nimp toma.\n- toma does not nimp drin.\n\nStatement:\nThe relation keld holds from toma to sop. Also, mep is nimped by sop.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7088044319989422,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000014_prop_0003_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000014_prop_0003_para_00/logits_summary.npz"
+}

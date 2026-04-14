@@ -1,0 +1,39 @@
+{
+  "example_id": "train_world_000016_prop_0007_para_04",
+  "world_id": "train_world_000016",
+  "proposition_id": "train_world_000016_prop_0007",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "or_v0_attr_v0_rel_v1",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "vorn",
+      "entity": "tib",
+      "type": "attr"
+    },
+    "right": {
+      "object": "fep",
+      "relation": "lirp",
+      "subject": "zorb",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "tib is vorn or The item named zorb lirps the item named fep.",
+  "prompt": "World:\n- zorb is not pald.\n- tib is vorn.\n- fep is not vorn.\n- norp is not vorn.\n- fep does not sume norp.\n- norp does not sume fep.\n- norp does not sume tib.\n- fep lirps zorb.\n- norp does not lirp tib.\n- norp does not lirp zorb.\n\nStatement:\ntib is vorn or The item named zorb lirps the item named fep.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.24969618700197316,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000016_prop_0007_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000016_prop_0007_para_04/logits_summary.npz"
+}

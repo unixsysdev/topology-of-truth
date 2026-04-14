@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000005_prop_0001_para_07",
+  "world_id": "train_world_000005",
+  "proposition_id": "train_world_000005_prop_0001",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "rel_v3",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "dax",
+    "relation": "vark",
+    "subject": "wug",
+    "type": "rel"
+  },
+  "statement": "wug stands in the vark relation to dax.",
+  "prompt": "World:\n- pavo is not pald.\n- tib is not pald.\n- dax is selt.\n- pavo is selt.\n- wug is selt.\n- wug varks dax.\n- dax does not vark tib.\n- pavo does not vark dax.\n- tib does not vark dax.\n- tib does not vark pavo.\n- tib does not vark wug.\n- dax sumes wug.\n- pavo sumes wug.\n- pavo does not sume dax.\n- pavo does not sume tib.\n\nStatement:\nwug stands in the vark relation to dax.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.4898974440002348,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000005_prop_0001_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000005_prop_0001_para_07/logits_summary.npz"
+}

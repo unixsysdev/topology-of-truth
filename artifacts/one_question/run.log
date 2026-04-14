@@ -1,0 +1,8 @@
+{"message": "start", "step": "load_dataset", "ts": "2026-04-14T00:16:53.920328+00:00"}
+{"message": "end", "runtime_sec": 2.137, "step": "load_dataset", "ts": "2026-04-14T00:16:56.057584+00:00"}
+{"message": "start", "step": "load_model", "ts": "2026-04-14T00:16:56.057676+00:00"}
+{"message": "end", "runtime_sec": 4.642, "step": "load_model", "ts": "2026-04-14T00:17:00.699813+00:00"}
+{"message": "start", "step": "generation", "ts": "2026-04-14T00:17:00.699928+00:00"}
+{"message": "end", "runtime_sec": 10.174, "step": "generation", "ts": "2026-04-14T00:17:10.873786+00:00"}
+{"message": "start", "step": "hidden_extraction", "ts": "2026-04-14T00:17:10.874115+00:00"}
+{"message": "end", "runtime_sec": 0.36, "step": "hidden_extraction", "ts": "2026-04-14T00:17:11.233977+00:00"}

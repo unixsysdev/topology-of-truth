@@ -1,0 +1,32 @@
+{
+  "example_id": "train_world_000006_prop_0005_para_01",
+  "world_id": "train_world_000006",
+  "proposition_id": "train_world_000006_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "at_least_two_v1",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "pald",
+    "object": "fep",
+    "relation": "vark",
+    "type": "at_least_two"
+  },
+  "statement": "At least two object with property pald varks fep.",
+  "prompt": "World:\n- kiv is pald.\n- zorb is pald.\n- dax is not pald.\n- tib is not pald.\n- vonn is vorn.\n- fep is not vorn.\n- kiv is not vorn.\n- zorb is not vorn.\n- kiv varks vonn.\n- tib varks kiv.\n- vonn varks dax.\n- zorb varks dax.\n- zorb varks fep.\n- zorb varks kiv.\n- dax does not vark fep.\n- fep does not vark zorb.\n- kiv does not vark dax.\n- kiv does not vark fep.\n- tib does not vark fep.\n- vonn does not vark fep.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- zorb does not vark vonn.\n- dax lirps vonn.\n- fep lirps vonn.\n- kiv lirps dax.\n- kiv lirps vonn.\n- kiv lirps zorb.\n- dax does not lirp kiv.\n- dax does not lirp tib.\n- dax does not lirp zorb.\n- fep does not lirp tib.\n- fep does not lirp zorb.\n- tib does not lirp zorb.\n- vonn does not lirp fep.\n- zorb does not lirp vonn.\n\nStatement:\nAt least two object with property pald varks fep.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.4352546110021649,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000006_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000006_prop_0005_para_01/logits_summary.npz"
+}

@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000003_prop_0000_para_02",
+  "world_id": "eval_world_000003",
+  "proposition_id": "eval_world_000003_prop_0000",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "attr_v6",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "brindle",
+    "entity": "vex",
+    "type": "attr"
+  },
+  "statement": "brindle applies to vex.",
+  "prompt": "World:\n- drin is brindle.\n- koba is not brindle.\n- toma is not brindle.\n- koba is peln.\n- drin is not peln.\n- toma is not peln.\n- koba foshes vex.\n- toma foshes vex.\n- vex foshes drin.\n- koba does not fosh drin.\n- vex does not fosh koba.\n- vex does not fosh toma.\n- drin kelds toma.\n- drin kelds vex.\n- koba kelds drin.\n- vex kelds koba.\n- vex kelds toma.\n- koba does not keld vex.\n\nStatement:\nbrindle applies to vex.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    9277,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.3584744330000831,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_nothink/examples/eval_world_000003_prop_0000_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_nothink/examples/eval_world_000003_prop_0000_para_02/logits_summary.npz"
+}

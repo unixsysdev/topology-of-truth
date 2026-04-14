@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000019_prop_0003_para_07",
+  "world_id": "eval_world_000019",
+  "proposition_id": "eval_world_000019_prop_0003",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "or_v7_rel_v7_rel_v0",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "nalo",
+      "relation": "keld",
+      "subject": "grel",
+      "type": "rel"
+    },
+    "right": {
+      "object": "lirk",
+      "relation": "nimp",
+      "subject": "nalo",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The compound proposition says The ordered pair (grel, nalo) has relation keld or nalo nimps lirk.",
+  "prompt": "World:\n- grel is zantic.\n- koba is zantic.\n- lirk is not zantic.\n- koba is soric.\n- lirk is soric.\n- nalo is soric.\n- toma is soric.\n- grel is not soric.\n- sop is not soric.\n- koba nimps nalo.\n- koba nimps toma.\n- lirk nimps grel.\n- nalo nimps grel.\n- nalo nimps koba.\n- sop nimps lirk.\n- toma nimps koba.\n- koba does not nimp grel.\n- lirk does not nimp koba.\n- lirk does not nimp nalo.\n- sop does not nimp koba.\n- sop does not nimp toma.\n- grel kelds koba.\n- lirk kelds grel.\n- lirk kelds koba.\n- lirk kelds nalo.\n- lirk kelds sop.\n- nalo kelds grel.\n- sop kelds koba.\n- toma kelds sop.\n- grel does not keld lirk.\n- grel does not keld nalo.\n- nalo does not keld sop.\n- sop does not keld nalo.\n- sop does not keld toma.\n- toma does not keld grel.\n\nStatement:\nThe compound proposition says The ordered pair (grel, nalo) has relation keld or nalo nimps lirk.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.6945034319978731,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000019_prop_0003_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000019_prop_0003_para_07/logits_summary.npz"
+}

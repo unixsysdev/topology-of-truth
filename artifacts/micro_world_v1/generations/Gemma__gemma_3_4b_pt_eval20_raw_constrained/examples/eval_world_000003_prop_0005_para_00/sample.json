@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000003_prop_0005_para_00",
+  "world_id": "eval_world_000003",
+  "proposition_id": "eval_world_000003_prop_0005",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "Unknown",
+  "correct": false,
+  "template_id": "some_v4",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "peln",
+    "object": "drin",
+    "relation": "keld",
+    "type": "some"
+  },
+  "statement": "In this world, some peln thing kelds drin.",
+  "prompt": "World:\n- drin is brindle.\n- koba is not brindle.\n- toma is not brindle.\n- koba is peln.\n- drin is not peln.\n- toma is not peln.\n- koba foshes vex.\n- toma foshes vex.\n- vex foshes drin.\n- koba does not fosh drin.\n- vex does not fosh koba.\n- vex does not fosh toma.\n- drin kelds toma.\n- drin kelds vex.\n- koba kelds drin.\n- vex kelds koba.\n- vex kelds toma.\n- koba does not keld vex.\n\nStatement:\nIn this world, some peln thing kelds drin.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " Unknown\n",
+  "generated_token_ids": [
+    60355,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.3717715210004826,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000003_prop_0005_para_00/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000003_prop_0005_para_00/logits_summary.npz"
+}

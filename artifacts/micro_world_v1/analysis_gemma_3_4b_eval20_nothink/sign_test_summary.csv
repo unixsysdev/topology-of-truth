@@ -1,0 +1,5 @@
+state_key,n_worlds,n_valid_worlds,worlds_positive_gap,worlds_zero_gap,worlds_negative_gap,positive_gap_rate
+final_prompt,20,20,20,0,0,1.0
+prompt_tail_mean,20,20,20,0,0,1.0
+verdict_span_mean,20,20,20,0,0,1.0
+verdict_token,20,20,20,0,0,1.0

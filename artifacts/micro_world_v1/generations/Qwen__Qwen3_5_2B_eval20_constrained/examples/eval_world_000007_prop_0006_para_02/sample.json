@@ -1,0 +1,39 @@
+{
+  "example_id": "eval_world_000007_prop_0006_para_02",
+  "world_id": "eval_world_000007",
+  "proposition_id": "eval_world_000007_prop_0006",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "and_v6_attr_v6_rel_v7",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "falm",
+      "entity": "koba",
+      "type": "attr"
+    },
+    "right": {
+      "object": "koba",
+      "relation": "drel",
+      "subject": "sop",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "Evaluate this compound claim: falm applies to koba and The ordered pair (sop, koba) has relation drel.",
+  "prompt": "World:\n- nalo is brindle.\n- sop is brindle.\n- nalo is falm.\n- sop is falm.\n- bex is not falm.\n- koba is not falm.\n- bex sovs koba.\n- bex sovs sop.\n- sop sovs nalo.\n- koba does not sov sop.\n- nalo does not sov sop.\n- sop does not sov koba.\n- bex drels nalo.\n- koba drels nalo.\n- nalo drels bex.\n- nalo drels koba.\n- sop drels bex.\n- sop drels nalo.\n- bex does not drel koba.\n- koba does not drel sop.\n\nStatement:\nEvaluate this compound claim: falm applies to koba and The ordered pair (sop, koba) has relation drel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False",
+  "generated_token_ids": [
+    3913,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5652613380007097,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000007_prop_0006_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000007_prop_0006_para_02/logits_summary.npz"
+}

@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000003_prop_0006_para_06",
+  "world_id": "train_world_000003",
+  "proposition_id": "train_world_000003_prop_0006",
+  "paraphrase_id": "para_06",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "at_least_two_v2",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "vorn",
+    "object": "lume",
+    "relation": "vark",
+    "type": "at_least_two"
+  },
+  "statement": "At least two item that is vorn stands in relation vark to lume.",
+  "prompt": "World:\n- tib is glim.\n- vonn is glim.\n- wug is not glim.\n- vonn is vorn.\n- wug is vorn.\n- zorb is vorn.\n- tib tobs lume.\n- lume does not tob tib.\n- lume does not tob vonn.\n- lume does not tob wug.\n- tib does not tob vonn.\n- vonn does not tob lume.\n- vonn does not tob tib.\n- vonn does not tob wug.\n- wug does not tob vonn.\n- wug does not tob zorb.\n- zorb does not tob tib.\n- lume varks vonn.\n- tib varks wug.\n- vonn varks wug.\n- vonn varks zorb.\n- tib does not vark lume.\n- tib does not vark vonn.\n- wug does not vark lume.\n- zorb does not vark lume.\n- zorb does not vark vonn.\n\nStatement:\nAt least two item that is vorn stands in relation vark to lume.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7024971140017442,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000003_prop_0006_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000003_prop_0006_para_06/logits_summary.npz"
+}

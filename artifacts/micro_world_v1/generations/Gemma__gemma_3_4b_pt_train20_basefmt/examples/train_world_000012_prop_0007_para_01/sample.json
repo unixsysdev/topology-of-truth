@@ -1,0 +1,34 @@
+{
+  "example_id": "train_world_000012_prop_0007_para_01",
+  "world_id": "train_world_000012",
+  "proposition_id": "train_world_000012_prop_0007",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "rel_v1",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "tib",
+    "relation": "lirp",
+    "subject": "pavo",
+    "type": "rel"
+  },
+  "statement": "The item named pavo lirps the item named tib.",
+  "prompt": "World:\n- pavo is selt.\n- tib is selt.\n- vonn is selt.\n- kiv is not selt.\n- lume is not selt.\n- lume is pald.\n- pavo is pald.\n- vonn is not pald.\n- wug is not pald.\n- lume sumes pavo.\n- pavo sumes kiv.\n- pavo sumes lume.\n- pavo sumes tib.\n- tib sumes vonn.\n- tib sumes wug.\n- lume does not sume vonn.\n- pavo does not sume vonn.\n- tib does not sume kiv.\n- tib does not sume lume.\n- vonn does not sume wug.\n- wug does not sume tib.\n- wug does not sume vonn.\n- pavo lirps lume.\n- pavo lirps wug.\n- tib lirps pavo.\n- tib lirps wug.\n- vonn lirps lume.\n- wug lirps kiv.\n- wug lirps vonn.\n- kiv does not lirp pavo.\n- tib does not lirp lume.\n- tib does not lirp vonn.\n- vonn does not lirp kiv.\n- vonn does not lirp pavo.\n- vonn does not lirp tib.\n- wug does not lirp tib.\n\nStatement:\nThe item named pavo lirps the item named tib.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n",
+  "generated_token_ids": [
+    6288,
+    236761,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5266914489984629,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000012_prop_0007_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000012_prop_0007_para_01/logits_summary.npz"
+}

@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0006",
+  "dataset_sample_id": "gsm8k_000005",
+  "question": "Kylar went to the store to buy glasses for his new apartment. One glass costs $5, but every second glass costs only 60% of the price. Kylar wants to buy 16 glasses. How much does he need to pay for them?",
+  "gold_answer": "64",
+  "generated_text": "To find the total cost for 16 glasses, we need to calculate the cost for each glass and then sum them up.\n\n**Step 1: Determine the cost of the first glass.**\nThe problem states that one glass costs $5.\n$$ \\text{Cost of 1st glass} = \\$5 $$\n\n**Step 2: Determine the cost of the second glass.**\nThe problem states that every second glass costs 60% of the price.\n$$ \\text{Cost of 2nd glass} = 0.60 \\times 5 = \\$3 $$\n\n**Step 3: Determine the cost of the third glass.**\nThe pattern continues: every second glass (the 3rd one) costs 60% of the price.\n$$ \\text{Cost of 3rd glass} = 0.60 \\times 5 = \\$3 $$\n\n**Step 4: Determine the cost of the fourth glass.**\nThe pattern continues: every second glass (the 4th one) costs 60% of the price.\n$$ \\text{Cost of 4th glass} = 0.60 \\times 5 = \\$3 $$\n\n**Step 5: Determine the cost of the fifth glass.**\nThe pattern continues: every second glass (the 5th one) costs 60% of the price.\n$$ \\text{Cost of 5th glass} = 0.60 \\times 5 = \\$3 $$\n\n**Step 6: Determine the cost of the sixth glass.**\nThe pattern continues: every second glass (the 6th one) costs 60% of the price.\n$$ \\text{Cost of 6th glass} = 0.60 \\times 5 = \\$3 $$\n\n**Step 7: Determine the cost of the seventh glass.**\nThe pattern continues: every second glass (the 7th one) costs 60% of the price.\n$$ \\text{Cost of 7th glass} = 0.60 \\times 5 = \\$3 $$\n\n**Step 8: Determine the cost of the eighth glass.**\nThe pattern continues: every second glass (the 8th one) costs 60% of the price.\n$$ \\text{Cost of 8th glass} = 0.60 \\times 5 = \\$3 $$\n\n**Step ",
+  "pred_answer": "3",
+  "correct": false,
+  "token_count": 512,
+  "hidden_shape": [
+    512,
+    1024
+  ],
+  "stop_reason": "max_new_tokens",
+  "runtime_sec": 33.813109375,
+  "h0_entropy": 6.036385883115579,
+  "h0_total_persistence": 2064.231769680977
+}

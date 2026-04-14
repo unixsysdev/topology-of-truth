@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000001_prop_0001_para_05",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0001",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "and_v5_attr_v5_rel_v6",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "soric",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "right": {
+      "object": "grel",
+      "relation": "fosh",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "The first clause is 'Among the named items, mep is soric' and the connector is and with 'For this world, toma foshes grel'.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nThe first clause is 'Among the named items, mep is soric' and the connector is and with 'For this world, toma foshes grel'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.8309760160009318,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000001_prop_0001_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000001_prop_0001_para_05/logits_summary.npz"
+}

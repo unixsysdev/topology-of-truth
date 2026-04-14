@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000019_prop_0002_para_01",
+  "world_id": "eval_world_000019",
+  "proposition_id": "eval_world_000019_prop_0002",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "and_v5_attr_v5_attr_v6",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "soric",
+      "entity": "toma",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "zantic",
+      "entity": "koba",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "The first clause is 'Among the named items, toma is soric' and the connector is and with 'zantic applies to koba'.",
+  "prompt": "World:\n- grel is zantic.\n- koba is zantic.\n- lirk is not zantic.\n- koba is soric.\n- lirk is soric.\n- nalo is soric.\n- toma is soric.\n- grel is not soric.\n- sop is not soric.\n- koba nimps nalo.\n- koba nimps toma.\n- lirk nimps grel.\n- nalo nimps grel.\n- nalo nimps koba.\n- sop nimps lirk.\n- toma nimps koba.\n- koba does not nimp grel.\n- lirk does not nimp koba.\n- lirk does not nimp nalo.\n- sop does not nimp koba.\n- sop does not nimp toma.\n- grel kelds koba.\n- lirk kelds grel.\n- lirk kelds koba.\n- lirk kelds nalo.\n- lirk kelds sop.\n- nalo kelds grel.\n- sop kelds koba.\n- toma kelds sop.\n- grel does not keld lirk.\n- grel does not keld nalo.\n- nalo does not keld sop.\n- sop does not keld nalo.\n- sop does not keld toma.\n- toma does not keld grel.\n\nStatement:\nThe first clause is 'Among the named items, toma is soric' and the connector is and with 'zantic applies to koba'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6186717200016574,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000019_prop_0002_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000019_prop_0002_para_01/logits_summary.npz"
+}

@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000008_prop_0000_para_06",
+  "world_id": "eval_world_000008",
+  "proposition_id": "eval_world_000008_prop_0000",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v6_attr_v6_attr_v7",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "peln",
+      "entity": "drin",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "peln",
+      "entity": "koba",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "Evaluate this compound claim: peln applies to drin and The peln property holds for koba.",
+  "prompt": "World:\n- drin is soric.\n- grel is soric.\n- toma is not soric.\n- grel is not peln.\n- drin foshes grel.\n- drin foshes koba.\n- drin foshes toma.\n- toma foshes koba.\n- koba does not fosh drin.\n- toma does not fosh drin.\n- drin sovs grel.\n- drin sovs toma.\n- grel sovs toma.\n- grel does not sov drin.\n- koba does not sov toma.\n- toma does not sov drin.\n\nStatement:\nEvaluate this compound claim: peln applies to drin and The peln property holds for koba.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True\n\nStatement:",
+  "generated_token_ids": [
+    6288,
+    108,
+    19128,
+    236787
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.4413798780005891,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000008_prop_0000_para_06/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000008_prop_0000_para_06/logits_summary.npz"
+}

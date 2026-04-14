@@ -1,0 +1,35 @@
+{
+  "example_id": "train_world_000019_prop_0006_para_02",
+  "world_id": "train_world_000019",
+  "proposition_id": "train_world_000019_prop_0006",
+  "paraphrase_id": "para_02",
+  "split": "train",
+  "label": "True",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "not_v2_attr_v2",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "daxel",
+      "entity": "norp",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Not: It is true that norp is daxel.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is daxel.\n- norp is not daxel.\n- sarn is not daxel.\n- norp is glim.\n- tib is not glim.\n- kiv sumes norp.\n- norp sumes vonn.\n- sarn sumes kiv.\n- tib sumes norp.\n- kiv does not sume tib.\n- norp does not sume tib.\n- sarn does not sume vonn.\n- tib does not sume kiv.\n- vonn does not sume tib.\n- kiv nazes sarn.\n- sarn nazes tib.\n- tib nazes norp.\n- vonn nazes kiv.\n- norp does not naze sarn.\n- norp does not naze tib.\n- sarn does not naze kiv.\n- tib does not naze kiv.\n- vonn does not naze norp.\n\nStatement:\nNot: It is true that norp is daxel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7191258780003409,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000019_prop_0006_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000019_prop_0006_para_02/logits_summary.npz"
+}

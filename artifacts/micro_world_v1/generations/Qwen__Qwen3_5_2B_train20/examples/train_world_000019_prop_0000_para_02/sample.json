@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000019_prop_0000_para_02",
+  "world_id": "train_world_000019",
+  "proposition_id": "train_world_000019_prop_0000",
+  "paraphrase_id": "para_02",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v2_attr_v2_rel_v3",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "glim",
+      "entity": "kiv",
+      "type": "attr"
+    },
+    "right": {
+      "object": "norp",
+      "relation": "sume",
+      "subject": "vonn",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "The claim combines these with and: It is true that kiv is glim; vonn stands in the sume relation to norp.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is daxel.\n- norp is not daxel.\n- sarn is not daxel.\n- norp is glim.\n- tib is not glim.\n- kiv sumes norp.\n- norp sumes vonn.\n- sarn sumes kiv.\n- tib sumes norp.\n- kiv does not sume tib.\n- norp does not sume tib.\n- sarn does not sume vonn.\n- tib does not sume kiv.\n- vonn does not sume tib.\n- kiv nazes sarn.\n- sarn nazes tib.\n- tib nazes norp.\n- vonn nazes kiv.\n- norp does not naze sarn.\n- norp does not naze tib.\n- sarn does not naze kiv.\n- tib does not naze kiv.\n- vonn does not naze norp.\n\nStatement:\nThe claim combines these with and: It is true that kiv is glim; vonn stands in the sume relation to norp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6082535149998876,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000019_prop_0000_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000019_prop_0000_para_02/logits_summary.npz"
+}

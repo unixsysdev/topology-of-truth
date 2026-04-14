@@ -1,0 +1,39 @@
+{
+  "example_id": "eval_world_000014_prop_0006_para_04",
+  "world_id": "eval_world_000014",
+  "proposition_id": "eval_world_000014_prop_0006",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "or_v4_attr_v4_rel_v5",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "peln",
+      "entity": "toma",
+      "type": "attr"
+    },
+    "right": {
+      "object": "toma",
+      "relation": "nimp",
+      "subject": "sop",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "Either The object toma has the property peln, or toma is nimped by sop.",
+  "prompt": "World:\n- sop is soric.\n- drin is not soric.\n- drin is peln.\n- sop is peln.\n- grel is not peln.\n- drin kelds toma.\n- mep kelds drin.\n- sop kelds mep.\n- toma kelds drin.\n- grel does not keld toma.\n- mep does not keld grel.\n- toma does not keld mep.\n- toma does not keld sop.\n- drin nimps sop.\n- grel nimps drin.\n- grel nimps sop.\n- grel nimps toma.\n- mep nimps sop.\n- sop nimps grel.\n- sop nimps mep.\n- toma nimps grel.\n- drin does not nimp mep.\n- drin does not nimp toma.\n- mep does not nimp toma.\n- sop does not nimp toma.\n- toma does not nimp drin.\n\nStatement:\nEither The object toma has the property peln, or toma is nimped by sop.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.336610826998367,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000014_prop_0006_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000014_prop_0006_para_04/logits_summary.npz"
+}

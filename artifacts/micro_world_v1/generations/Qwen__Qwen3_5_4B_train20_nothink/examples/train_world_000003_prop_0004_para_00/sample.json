@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000003_prop_0004_para_00",
+  "world_id": "train_world_000003",
+  "proposition_id": "train_world_000003_prop_0004",
+  "paraphrase_id": "para_00",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "some_v0",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "glim",
+    "object": "zorb",
+    "relation": "tob",
+    "type": "some"
+  },
+  "statement": "Some glim thing tobs zorb.",
+  "prompt": "World:\n- tib is glim.\n- vonn is glim.\n- wug is not glim.\n- vonn is vorn.\n- wug is vorn.\n- zorb is vorn.\n- tib tobs lume.\n- lume does not tob tib.\n- lume does not tob vonn.\n- lume does not tob wug.\n- tib does not tob vonn.\n- vonn does not tob lume.\n- vonn does not tob tib.\n- vonn does not tob wug.\n- wug does not tob vonn.\n- wug does not tob zorb.\n- zorb does not tob tib.\n- lume varks vonn.\n- tib varks wug.\n- vonn varks wug.\n- vonn varks zorb.\n- tib does not vark lume.\n- tib does not vark vonn.\n- wug does not vark lume.\n- zorb does not vark lume.\n- zorb does not vark vonn.\n\nStatement:\nSome glim thing tobs zorb.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7121281350009667,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000003_prop_0004_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000003_prop_0004_para_00/logits_summary.npz"
+}

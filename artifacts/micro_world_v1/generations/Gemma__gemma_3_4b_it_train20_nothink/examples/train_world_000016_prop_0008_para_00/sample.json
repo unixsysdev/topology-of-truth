@@ -1,0 +1,32 @@
+{
+  "example_id": "train_world_000016_prop_0008_para_00",
+  "world_id": "train_world_000016",
+  "proposition_id": "train_world_000016_prop_0008",
+  "paraphrase_id": "para_00",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "Unknown",
+  "correct": true,
+  "template_id": "some_v0",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "pald",
+    "object": "norp",
+    "relation": "lirp",
+    "type": "some"
+  },
+  "statement": "Some pald thing lirps norp.",
+  "prompt": "World:\n- zorb is not pald.\n- tib is vorn.\n- fep is not vorn.\n- norp is not vorn.\n- fep does not sume norp.\n- norp does not sume fep.\n- norp does not sume tib.\n- fep lirps zorb.\n- norp does not lirp tib.\n- norp does not lirp zorb.\n\nStatement:\nSome pald thing lirps norp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "Unknown\n",
+  "generated_token_ids": [
+    41387,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.33161457700043684,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000016_prop_0008_para_00/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000016_prop_0008_para_00/logits_summary.npz"
+}

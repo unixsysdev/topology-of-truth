@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000007_prop_0001_para_01",
+  "world_id": "eval_world_000007",
+  "proposition_id": "eval_world_000007_prop_0001",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "none_v5",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "brindle",
+    "object": "koba",
+    "relation": "drel",
+    "type": "none"
+  },
+  "statement": "The number of brindle things that drel koba matches: no.",
+  "prompt": "World:\n- nalo is brindle.\n- sop is brindle.\n- nalo is falm.\n- sop is falm.\n- bex is not falm.\n- koba is not falm.\n- bex sovs koba.\n- bex sovs sop.\n- sop sovs nalo.\n- koba does not sov sop.\n- nalo does not sov sop.\n- sop does not sov koba.\n- bex drels nalo.\n- koba drels nalo.\n- nalo drels bex.\n- nalo drels koba.\n- sop drels bex.\n- sop drels nalo.\n- bex does not drel koba.\n- koba does not drel sop.\n\nStatement:\nThe number of brindle things that drel koba matches: no.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6644754330009164,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000007_prop_0001_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000007_prop_0001_para_01/logits_summary.npz"
+}

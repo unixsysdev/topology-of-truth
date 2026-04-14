@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000013_prop_0005_para_01",
+  "world_id": "eval_world_000013",
+  "proposition_id": "eval_world_000013_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "all_v5",
+  "template_family": "all",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "toma",
+    "relation": "keld",
+    "type": "all"
+  },
+  "statement": "The number of soric things that keld toma matches: every.",
+  "prompt": "World:\n- drin is soric.\n- sop is soric.\n- toma is not soric.\n- sop is peln.\n- toma is peln.\n- bex is not peln.\n- vex is not peln.\n- bex sovs drin.\n- drin sovs sop.\n- sop sovs drin.\n- toma sovs drin.\n- vex sovs drin.\n- drin does not sov bex.\n- drin does not sov vex.\n- sop does not sov bex.\n- toma does not sov bex.\n- vex does not sov sop.\n- vex does not sov toma.\n- drin kelds toma.\n- bex does not keld drin.\n- bex does not keld toma.\n- bex does not keld vex.\n- drin does not keld sop.\n- sop does not keld bex.\n- sop does not keld vex.\n- toma does not keld bex.\n- toma does not keld drin.\n- toma does not keld sop.\n- vex does not keld bex.\n\nStatement:\nThe number of soric things that keld toma matches: every.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5527300280009513,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000013_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000013_prop_0005_para_01/logits_summary.npz"
+}

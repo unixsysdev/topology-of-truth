@@ -1,0 +1,34 @@
+{
+  "example_id": "eval_world_000005_prop_0006_para_07",
+  "world_id": "eval_world_000005",
+  "proposition_id": "eval_world_000005_prop_0006",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "not_v7_rel_v7",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "object": "grel",
+      "relation": "nimp",
+      "subject": "mep",
+      "type": "rel"
+    },
+    "type": "not"
+  },
+  "statement": "Apply logical NOT to this sentence: The ordered pair (mep, grel) has relation nimp.",
+  "prompt": "World:\n- grel is zantic.\n- nalo is zantic.\n- koba is not zantic.\n- bex is peln.\n- koba is peln.\n- grel is not peln.\n- mep is not peln.\n- bex sovs grel.\n- bex sovs koba.\n- bex sovs mep.\n- koba sovs bex.\n- koba sovs grel.\n- bex does not sov nalo.\n- mep does not sov bex.\n- mep does not sov nalo.\n- nalo does not sov grel.\n- mep nimps bex.\n- mep nimps grel.\n- bex does not nimp mep.\n- koba does not nimp bex.\n- mep does not nimp koba.\n- nalo does not nimp koba.\n\nStatement:\nApply logical NOT to this sentence: The ordered pair (mep, grel) has relation nimp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.32233579799867584,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000005_prop_0006_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000005_prop_0006_para_07/logits_summary.npz"
+}

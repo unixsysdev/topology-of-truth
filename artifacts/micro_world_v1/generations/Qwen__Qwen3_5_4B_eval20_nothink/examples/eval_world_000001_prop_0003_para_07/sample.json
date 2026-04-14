@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000001_prop_0003_para_07",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0003",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "at_least_two_v7",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "toma",
+    "relation": "fosh",
+    "type": "at_least_two"
+  },
+  "statement": "Among soric things, at least two of them fosh toma.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nAmong soric things, at least two of them fosh toma.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5757201220003481,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000001_prop_0003_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000001_prop_0003_para_07/logits_summary.npz"
+}

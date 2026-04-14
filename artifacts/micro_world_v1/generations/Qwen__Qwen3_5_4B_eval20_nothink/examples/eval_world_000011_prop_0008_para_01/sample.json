@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000011_prop_0008_para_01",
+  "world_id": "eval_world_000011",
+  "proposition_id": "eval_world_000011_prop_0008",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "or_v5_rel_v5_rel_v6",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "vex",
+      "relation": "keld",
+      "subject": "mep",
+      "type": "rel"
+    },
+    "right": {
+      "object": "grel",
+      "relation": "keld",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The first clause is 'vex is kelded by mep' and the connector is or with 'For this world, toma kelds grel'.",
+  "prompt": "World:\n- vex is falm.\n- toma is not falm.\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- vex is not soric.\n- mep kelds vex.\n- vex kelds toma.\n- grel does not keld mep.\n- toma does not keld grel.\n- vex does not keld grel.\n- grel foshes toma.\n- toma foshes grel.\n- toma foshes vex.\n- vex foshes mep.\n- vex foshes toma.\n- grel does not fosh mep.\n\nStatement:\nThe first clause is 'vex is kelded by mep' and the connector is or with 'For this world, toma kelds grel'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6654190989993367,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000011_prop_0008_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000011_prop_0008_para_01/logits_summary.npz"
+}

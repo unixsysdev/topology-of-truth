@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000009_prop_0000_para_01",
+  "world_id": "eval_world_000009",
+  "proposition_id": "eval_world_000009_prop_0000",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "or_v5_rel_v5_rel_v6",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "bex",
+      "relation": "drel",
+      "subject": "koba",
+      "type": "rel"
+    },
+    "right": {
+      "object": "bex",
+      "relation": "fosh",
+      "subject": "nalo",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The first clause is 'bex is dreled by koba' and the connector is or with 'For this world, nalo foshes bex'.",
+  "prompt": "World:\n- toma is zantic.\n- vex is zantic.\n- bex is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- koba is falm.\n- vex is not falm.\n- bex drels nalo.\n- nalo drels toma.\n- vex drels koba.\n- vex drels toma.\n- bex does not drel toma.\n- koba does not drel nalo.\n- toma does not drel vex.\n- bex foshes koba.\n- nalo foshes bex.\n- nalo foshes toma.\n- nalo foshes vex.\n- toma foshes vex.\n- vex foshes koba.\n- vex foshes nalo.\n- koba does not fosh nalo.\n- koba does not fosh toma.\n- toma does not fosh koba.\n- vex does not fosh toma.\n\nStatement:\nThe first clause is 'bex is dreled by koba' and the connector is or with 'For this world, nalo foshes bex'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " False\n",
+  "generated_token_ids": [
+    8450,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.41603103499801364,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000009_prop_0000_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000009_prop_0000_para_01/logits_summary.npz"
+}

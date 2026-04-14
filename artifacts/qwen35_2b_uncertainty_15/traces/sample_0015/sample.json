@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0015",
+  "dataset_sample_id": "gsm8k_000014",
+  "question": "In a dance class of 20 students, 20% enrolled in contemporary dance, 25% of the remaining enrolled in jazz dance, and the rest enrolled in hip-hop dance. What percentage of the entire students enrolled in hip-hop dance?",
+  "gold_answer": "60",
+  "generated_text": "To find the percentage of students enrolled in hip-hop dance, we can break down the problem step-by-step:\n\n1.  **Contemporary Dance**:\n    The problem states that 20% of the 20 students enrolled in contemporary dance.\n    $$20\\% \\text{ of } 20 = 0.20 \\times 20 = 4 \\text{ students}$$\n\n2.  **Jazz Dance**:\n    The problem states that 25% of the *remaining* students enrolled in jazz dance.\n    First, calculate the remaining students after contemporary dance:\n    $$20 \\text{ (total)} - 4 \\text{ (contemporary)} = 16 \\text{ students}$$\n    Now, calculate 25% of these remaining students:\n    $$25\\% \\text{ of } 16 = 0.25 \\times 16 = 4 \\text{ students}$$\n\n3.  **Hip-Hop Dance**:\n    The problem states that the \"rest\" enrolled in hip-hop dance.\n    First, calculate the total number of students enrolled in contemporary and jazz dance:\n    $$4 \\text{ (contemporary)} + 4 \\text{ (jazz)} = 8 \\text{ students}$$\n    Now, calculate the number of students in hip-hop dance by subtracting this from the total class size:\n    $$20 \\text{ (total)} - 8 \\text{ (contemporary and jazz)} = 12 \\text{ students}$$\n\n4.  **Calculate the Percentage**:\n    To find the percentage of the entire class that is in hip-hop dance:\n    $$\\frac{12}{20} \\times 100\\% = 0.6 \\times 100\\% = 60\\%$$\n\n\\boxed{60\\%}\n",
+  "pred_answer": "60\\%",
+  "correct": false,
+  "token_count": 416,
+  "answer_length": 195,
+  "hidden_shape": [
+    416,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 34.2689765625,
+  "h0_entropy": 5.977792379143887,
+  "h0_total_persistence": 2250.564952135086,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0015/logits_summary.npz"
+}

@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000009_prop_0001_para_03",
+  "world_id": "eval_world_000009",
+  "proposition_id": "eval_world_000009_prop_0001",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "attr_v7",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "falm",
+    "entity": "koba",
+    "type": "attr"
+  },
+  "statement": "The falm property holds for koba.",
+  "prompt": "World:\n- toma is zantic.\n- vex is zantic.\n- bex is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- koba is falm.\n- vex is not falm.\n- bex drels nalo.\n- nalo drels toma.\n- vex drels koba.\n- vex drels toma.\n- bex does not drel toma.\n- koba does not drel nalo.\n- toma does not drel vex.\n- bex foshes koba.\n- nalo foshes bex.\n- nalo foshes toma.\n- nalo foshes vex.\n- toma foshes vex.\n- vex foshes koba.\n- vex foshes nalo.\n- koba does not fosh nalo.\n- koba does not fosh toma.\n- toma does not fosh koba.\n- vex does not fosh toma.\n\nStatement:\nThe falm property holds for koba.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6506101499999204,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000009_prop_0001_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000009_prop_0001_para_03/logits_summary.npz"
+}

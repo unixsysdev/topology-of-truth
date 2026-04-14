@@ -55,6 +55,14 @@ def main() -> None:
     parser.add_argument("--resume-skip-existing", action="store_true")
     parser.add_argument("--system-prompt", default="")
     parser.add_argument("--disable-thinking", action="store_true")
+    parser.add_argument("--force-raw-prompt", action="store_true")
+    parser.add_argument("--constrained-label-decoding", action="store_true")
+    parser.add_argument(
+        "--prompt-variant",
+        choices=["default", "base_label"],
+        default="default",
+        help="Optional prompt rendering variant. 'base_label' appends an explicit answer cue.",
+    )
     args = parser.parse_args()
 
     prepare_hf_env()
@@ -82,6 +90,10 @@ def main() -> None:
         generation_config["system_prompt"] = str(args.system_prompt)
     if args.disable_thinking:
         generation_config["enable_thinking"] = False
+    if args.force_raw_prompt:
+        generation_config["force_raw_prompt"] = True
+    if args.constrained_label_decoding:
+        generation_config["constrained_labels"] = ["True", "False", "Unknown"]
     for example in examples:
         example_id = example["example_id"]
         example_dir = ensure_dir(examples_dir / example_id)
@@ -101,17 +113,24 @@ def main() -> None:
         try:
             with timed_step(logger, f"generate_{example_id}", args.timeout_sec):
                 start = time.perf_counter()
+                prompt_text = render_prompt(example["prompt"], args.prompt_variant)
                 generation = generate_response(
                     model,
                     tokenizer,
-                    example["prompt"],
+                    prompt_text,
                     generation_config,
                     save_logits=True,
                     save_full_logits=False,
                 )
                 runtime_sec = time.perf_counter() - start
 
-            rendered_prompt = build_chat_prompt(tokenizer, example["prompt"], generation_config.get("system_prompt"))
+            rendered_prompt = build_chat_prompt(
+                tokenizer,
+                prompt_text,
+                generation_config.get("system_prompt"),
+                generation_config.get("enable_thinking"),
+                bool(generation_config.get("force_raw_prompt", False)),
+            )
             prompt_ids = tokenizer(rendered_prompt, return_tensors="pt")["input_ids"][0].tolist()
             save_verdict_states(model, generation.full_token_ids, len(prompt_ids), states_path)
             saved_logits_path = save_logits_npz(logits_path, generation.logits_summary, generation.full_logits)
@@ -130,7 +149,8 @@ def main() -> None:
                 "template_family": example["template_family"],
                 "logical_form": example["logical_form"],
                 "statement": example["statement"],
-                "prompt": example["prompt"],
+                "prompt": prompt_text,
+                "prompt_variant": args.prompt_variant,
                 "generated_text": generation.generated_text,
                 "generated_token_ids": generation.generated_token_ids,
                 "stop_reason": generation.stop_reason,
@@ -196,6 +216,15 @@ def extract_pred_label(text: str) -> str:
     if value == "false":
         return "False"
     return "Unknown"
+
+
+def render_prompt(prompt: str, variant: str) -> str:
+    if variant == "base_label":
+        trimmed = prompt.rstrip()
+        if trimmed.endswith("Answer:"):
+            return trimmed
+        return f"{trimmed}\nAnswer:"
+    return prompt
 
 
 def row_from_payload(payload: dict[str, Any], sample_path: Path, states_path: Path, logits_path: Path, error: str) -> dict[str, Any]:

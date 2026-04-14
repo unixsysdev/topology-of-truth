@@ -1,0 +1,26 @@
+{
+  "question_id": "q_0020",
+  "dataset_sample_id": "gsm8k_000019",
+  "gold_answer": "6",
+  "question": "Marissa is hiking a 12-mile trail. She took 1 hour to walk the first 4 miles, then another hour to walk the next two miles. If she wants her average speed to be 4 miles per hour, what speed (in miles per hour) does she need to walk the remaining distance?",
+  "prompt": "Marissa is hiking a 12-mile trail. She took 1 hour to walk the first 4 miles, then another hour to walk the next two miles. If she wants her average speed to be 4 miles per hour, what speed (in miles per hour) does she need to walk the remaining distance?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 6.",
+  "token_count": 6,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    21,
+    13
+  ],
+  "answer_token_indices": [
+    4
+  ],
+  "hidden_shape": [
+    6,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0020/reference/reference_hidden.npy"
+}

@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000002_prop_0005_para_07",
+  "world_id": "train_world_000002",
+  "proposition_id": "train_world_000002_prop_0005",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "rel_v3",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "pavo",
+    "relation": "mip",
+    "subject": "norp",
+    "type": "rel"
+  },
+  "statement": "norp stands in the mip relation to pavo.",
+  "prompt": "World:\n- norp is daxel.\n- tib is daxel.\n- lume is not daxel.\n- pavo is not daxel.\n- norp is pald.\n- lume is not pald.\n- tib is not pald.\n- lume mips pavo.\n- norp mips lume.\n- tib mips norp.\n- lume does not mip tib.\n- pavo does not mip lume.\n- pavo does not mip tib.\n- lume varks tib.\n- norp varks tib.\n- pavo varks norp.\n- tib varks lume.\n- tib varks norp.\n- norp does not vark pavo.\n- pavo does not vark lume.\n- pavo does not vark tib.\n- tib does not vark pavo.\n\nStatement:\nnorp stands in the mip relation to pavo.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5606536840004992,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000002_prop_0005_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000002_prop_0005_para_07/logits_summary.npz"
+}

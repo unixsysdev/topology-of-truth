@@ -1,0 +1,36 @@
+{
+  "example_id": "eval_world_000004_prop_0008_para_02",
+  "world_id": "eval_world_000004",
+  "proposition_id": "eval_world_000004_prop_0008",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "not_v6_rel_v6",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "object": "vex",
+      "relation": "drel",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "type": "not"
+  },
+  "statement": "The proposition is the negation of 'For this world, toma drels vex'.",
+  "prompt": "World:\n- koba is not zantic.\n- vex is not zantic.\n- grel is brindle.\n- koba is brindle.\n- toma is brindle.\n- vex is brindle.\n- vex drels koba.\n- grel does not drel toma.\n- grel does not drel vex.\n- koba does not drel toma.\n- koba does not drel vex.\n- toma does not drel koba.\n- vex does not drel toma.\n- koba sovs grel.\n- toma sovs vex.\n- vex sovs grel.\n- grel does not sov koba.\n- grel does not sov vex.\n- vex does not sov toma.\n\nStatement:\nThe proposition is the negation of 'For this world, toma drels vex'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6684574150003755,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000004_prop_0008_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000004_prop_0008_para_02/logits_summary.npz"
+}

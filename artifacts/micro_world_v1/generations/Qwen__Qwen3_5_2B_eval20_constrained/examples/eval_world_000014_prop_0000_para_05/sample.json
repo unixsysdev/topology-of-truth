@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000014_prop_0000_para_05",
+  "world_id": "eval_world_000014",
+  "proposition_id": "eval_world_000014_prop_0000",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v5_rel_v5_rel_v6",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "drin",
+      "relation": "keld",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "right": {
+      "object": "toma",
+      "relation": "keld",
+      "subject": "mep",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The first clause is 'drin is kelded by toma' and the connector is or with 'For this world, mep kelds toma'.",
+  "prompt": "World:\n- sop is soric.\n- drin is not soric.\n- drin is peln.\n- sop is peln.\n- grel is not peln.\n- drin kelds toma.\n- mep kelds drin.\n- sop kelds mep.\n- toma kelds drin.\n- grel does not keld toma.\n- mep does not keld grel.\n- toma does not keld mep.\n- toma does not keld sop.\n- drin nimps sop.\n- grel nimps drin.\n- grel nimps sop.\n- grel nimps toma.\n- mep nimps sop.\n- sop nimps grel.\n- sop nimps mep.\n- toma nimps grel.\n- drin does not nimp mep.\n- drin does not nimp toma.\n- mep does not nimp toma.\n- sop does not nimp toma.\n- toma does not nimp drin.\n\nStatement:\nThe first clause is 'drin is kelded by toma' and the connector is or with 'For this world, mep kelds toma'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5842931490005867,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000014_prop_0000_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000014_prop_0000_para_05/logits_summary.npz"
+}

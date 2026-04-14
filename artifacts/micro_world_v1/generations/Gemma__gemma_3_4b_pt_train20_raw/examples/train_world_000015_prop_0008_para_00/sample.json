@@ -1,0 +1,31 @@
+{
+  "example_id": "train_world_000015_prop_0008_para_00",
+  "world_id": "train_world_000015",
+  "proposition_id": "train_world_000015_prop_0008",
+  "paraphrase_id": "para_00",
+  "split": "train",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "at_least_two_v0",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "daxel",
+    "object": "wug",
+    "relation": "naze",
+    "type": "at_least_two"
+  },
+  "statement": "At least two daxel thing nazes wug.",
+  "prompt": "World:\n- kiv is nubic.\n- sarn is nubic.\n- tib is nubic.\n- wug is nubic.\n- zorb is nubic.\n- lume is not nubic.\n- kiv is daxel.\n- lume is not daxel.\n- sarn is not daxel.\n- tib is not daxel.\n- wug is not daxel.\n- zorb is not daxel.\n- kiv mips wug.\n- kiv mips zorb.\n- lume mips tib.\n- sarn mips kiv.\n- sarn mips lume.\n- tib mips sarn.\n- wug mips kiv.\n- wug mips sarn.\n- wug mips tib.\n- kiv does not mip lume.\n- kiv does not mip tib.\n- sarn does not mip wug.\n- tib does not mip lume.\n- tib does not mip zorb.\n- wug does not mip zorb.\n- zorb does not mip lume.\n- zorb does not mip sarn.\n- zorb does not mip wug.\n- kiv nazes sarn.\n- kiv nazes wug.\n- kiv nazes zorb.\n- lume nazes sarn.\n- lume nazes wug.\n- lume nazes zorb.\n- sarn nazes wug.\n- tib nazes sarn.\n- wug nazes lume.\n- zorb nazes kiv.\n- lume does not naze kiv.\n- sarn does not naze lume.\n- sarn does not naze tib.\n- wug does not naze kiv.\n- wug does not naze sarn.\n- wug does not naze zorb.\n- zorb does not naze lume.\n- zorb does not naze wug.\n\nStatement:\nAt least two daxel thing nazes wug.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.35130781100087916,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000015_prop_0008_para_00/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000015_prop_0008_para_00/logits_summary.npz"
+}

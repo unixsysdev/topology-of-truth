@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000003_prop_0004_para_01",
+  "world_id": "train_world_000003",
+  "proposition_id": "train_world_000003_prop_0004",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "Unknown",
+  "correct": true,
+  "template_id": "some_v1",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "glim",
+    "object": "zorb",
+    "relation": "tob",
+    "type": "some"
+  },
+  "statement": "Some object with property glim tobs zorb.",
+  "prompt": "World:\n- tib is glim.\n- vonn is glim.\n- wug is not glim.\n- vonn is vorn.\n- wug is vorn.\n- zorb is vorn.\n- tib tobs lume.\n- lume does not tob tib.\n- lume does not tob vonn.\n- lume does not tob wug.\n- tib does not tob vonn.\n- vonn does not tob lume.\n- vonn does not tob tib.\n- vonn does not tob wug.\n- wug does not tob vonn.\n- wug does not tob zorb.\n- zorb does not tob tib.\n- lume varks vonn.\n- tib varks wug.\n- vonn varks wug.\n- vonn varks zorb.\n- tib does not vark lume.\n- tib does not vark vonn.\n- wug does not vark lume.\n- zorb does not vark lume.\n- zorb does not vark vonn.\n\nStatement:\nSome object with property glim tobs zorb.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nUnknown\nExplanation",
+  "generated_token_ids": [
+    107,
+    41387,
+    107,
+    44008
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5337336949996825,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000003_prop_0004_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000003_prop_0004_para_01/logits_summary.npz"
+}

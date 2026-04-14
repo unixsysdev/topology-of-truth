@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000011_prop_0001_para_02",
+  "world_id": "eval_world_000011",
+  "proposition_id": "eval_world_000011_prop_0001",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "none_v6",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "vex",
+    "relation": "keld",
+    "type": "none"
+  },
+  "statement": "Count the soric things that keld vex; the result is no.",
+  "prompt": "World:\n- vex is falm.\n- toma is not falm.\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- vex is not soric.\n- mep kelds vex.\n- vex kelds toma.\n- grel does not keld mep.\n- toma does not keld grel.\n- vex does not keld grel.\n- grel foshes toma.\n- toma foshes grel.\n- toma foshes vex.\n- vex foshes mep.\n- vex foshes toma.\n- grel does not fosh mep.\n\nStatement:\nCount the soric things that keld vex; the result is no.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.",
+  "generated_token_ids": [
+    6288,
+    236761,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.3704765739967115,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000011_prop_0001_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000011_prop_0001_para_02/logits_summary.npz"
+}

@@ -1,0 +1,14 @@
+{
+  "sample_id": "sample_0001",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "token_count": 286,
+  "hidden_shape": [
+    286,
+    1024
+  ],
+  "h0_num_components": 286,
+  "h0_entropy": 5.614879283687847,
+  "h0_total_persistence": 1816.162059545517,
+  "h0_max_persistence": 14.935224533081055,
+  "dust_score": 0.9921189023355239
+}

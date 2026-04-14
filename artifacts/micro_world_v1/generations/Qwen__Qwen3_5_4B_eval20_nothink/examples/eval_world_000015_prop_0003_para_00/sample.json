@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000015_prop_0003_para_00",
+  "world_id": "eval_world_000015",
+  "proposition_id": "eval_world_000015_prop_0003",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "attr_v4",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "zantic",
+    "entity": "toma",
+    "type": "attr"
+  },
+  "statement": "The object toma has the property zantic.",
+  "prompt": "World:\n- drin is peln.\n- nalo is peln.\n- toma is peln.\n- bex is not peln.\n- bex is not zantic.\n- drin is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- bex nimps drin.\n- bex nimps toma.\n- drin nimps nalo.\n- koba nimps bex.\n- koba nimps mep.\n- nalo nimps drin.\n- toma nimps koba.\n- bex does not nimp koba.\n- bex does not nimp mep.\n- drin does not nimp koba.\n- drin does not nimp toma.\n- koba does not nimp nalo.\n- mep does not nimp toma.\n- nalo does not nimp toma.\n- toma does not nimp bex.\n- toma does not nimp nalo.\n- bex kelds toma.\n- drin kelds nalo.\n- koba kelds bex.\n- koba kelds mep.\n- mep kelds bex.\n- nalo kelds mep.\n- bex does not keld drin.\n- bex does not keld koba.\n- drin does not keld bex.\n- koba does not keld nalo.\n- mep does not keld koba.\n- nalo does not keld koba.\n- toma does not keld drin.\n- toma does not keld koba.\n- toma does not keld mep.\n\nStatement:\nThe object toma has the property zantic.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.8877883939985622,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000015_prop_0003_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000015_prop_0003_para_00/logits_summary.npz"
+}

@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000018_prop_0006_para_07",
+  "world_id": "eval_world_000018",
+  "proposition_id": "eval_world_000018_prop_0006",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v7_attr_v7_rel_v0",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "peln",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "right": {
+      "object": "nalo",
+      "relation": "fosh",
+      "subject": "sop",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The compound proposition says The peln property holds for mep or sop foshes nalo.",
+  "prompt": "World:\n- lirk is soric.\n- mep is soric.\n- nalo is soric.\n- sop is soric.\n- mep is peln.\n- nalo is peln.\n- sop is peln.\n- vex is peln.\n- nalo sovs mep.\n- nalo sovs sop.\n- sop sovs nalo.\n- vex sovs lirk.\n- vex sovs sop.\n- lirk does not sov sop.\n- lirk does not sov vex.\n- sop does not sov lirk.\n- sop does not sov mep.\n- vex does not sov mep.\n- mep foshes nalo.\n- sop foshes vex.\n- vex foshes mep.\n- nalo does not fosh lirk.\n- sop does not fosh mep.\n- vex does not fosh lirk.\n\nStatement:\nThe compound proposition says The peln property holds for mep or sop foshes nalo.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5987074829990888,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000018_prop_0006_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000018_prop_0006_para_07/logits_summary.npz"
+}

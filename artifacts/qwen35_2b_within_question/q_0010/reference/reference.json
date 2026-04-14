@@ -1,0 +1,30 @@
+{
+  "question_id": "q_0010",
+  "dataset_sample_id": "gsm8k_000009",
+  "gold_answer": "460",
+  "question": "Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate. If Eliza worked for 45 hours this week, how much are her earnings for this week?",
+  "prompt": "Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate. If Eliza worked for 45 hours this week, how much are her earnings for this week?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 460.",
+  "token_count": 8,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    19,
+    21,
+    15,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5,
+    6
+  ],
+  "hidden_shape": [
+    8,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0010/reference/reference_hidden.npy"
+}

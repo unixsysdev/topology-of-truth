@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000008_prop_0005_para_01",
+  "world_id": "eval_world_000008",
+  "proposition_id": "eval_world_000008_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "none_v5",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "koba",
+    "relation": "fosh",
+    "type": "none"
+  },
+  "statement": "The number of soric things that fosh koba matches: no.",
+  "prompt": "World:\n- drin is soric.\n- grel is soric.\n- toma is not soric.\n- grel is not peln.\n- drin foshes grel.\n- drin foshes koba.\n- drin foshes toma.\n- toma foshes koba.\n- koba does not fosh drin.\n- toma does not fosh drin.\n- drin sovs grel.\n- drin sovs toma.\n- grel sovs toma.\n- grel does not sov drin.\n- koba does not sov toma.\n- toma does not sov drin.\n\nStatement:\nThe number of soric things that fosh koba matches: no.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.2519908520007448,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000008_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000008_prop_0005_para_01/logits_summary.npz"
+}

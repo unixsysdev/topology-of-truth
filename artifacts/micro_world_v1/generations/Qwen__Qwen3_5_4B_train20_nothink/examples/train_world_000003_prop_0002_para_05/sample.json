@@ -1,0 +1,42 @@
+{
+  "example_id": "train_world_000003_prop_0002_para_05",
+  "world_id": "train_world_000003",
+  "proposition_id": "train_world_000003_prop_0002",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "True",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "or_v1_rel_v1_rel_v2",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "lume",
+      "relation": "vark",
+      "subject": "zorb",
+      "type": "rel"
+    },
+    "right": {
+      "object": "zorb",
+      "relation": "vark",
+      "subject": "vonn",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "At least one claim holds: The item named zorb varks the item named lume; It is true that vonn varks zorb.",
+  "prompt": "World:\n- tib is glim.\n- vonn is glim.\n- wug is not glim.\n- vonn is vorn.\n- wug is vorn.\n- zorb is vorn.\n- tib tobs lume.\n- lume does not tob tib.\n- lume does not tob vonn.\n- lume does not tob wug.\n- tib does not tob vonn.\n- vonn does not tob lume.\n- vonn does not tob tib.\n- vonn does not tob wug.\n- wug does not tob vonn.\n- wug does not tob zorb.\n- zorb does not tob tib.\n- lume varks vonn.\n- tib varks wug.\n- vonn varks wug.\n- vonn varks zorb.\n- tib does not vark lume.\n- tib does not vark vonn.\n- wug does not vark lume.\n- zorb does not vark lume.\n- zorb does not vark vonn.\n\nStatement:\nAt least one claim holds: The item named zorb varks the item named lume; It is true that vonn varks zorb.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6946234530005313,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000003_prop_0002_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000003_prop_0002_para_05/logits_summary.npz"
+}

@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0010",
+  "dataset_sample_id": "gsm8k_000009",
+  "question": "Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate. If Eliza worked for 45 hours this week, how much are her earnings for this week?",
+  "gold_answer": "460",
+  "generated_text": "To find Eliza's earnings for the week, we need to calculate the earnings for the regular hours and the overtime hours separately, then sum them up.\n\n**1. Calculate Regular Hourly Earnings:**\n*   **Regular Hours:** 40 hours\n*   **Rate:** $10 per hour\n*   **Regular Earnings:** $10 \\times 40 = \\$400$\n\n**2. Calculate Overtime Hours and Rate:**\n*   **Total Hours Worked:** 45 hours\n*   **Regular Hours:** 40 hours\n*   **Overtime Hours:** $45 - 40 = 5$ hours\n*   **Overtime Pay Rate:** 1.2 times the regular hourly rate\n*   **Overtime Earnings:** $5 \\text{ hours} \\times \\$10/\\text{hour} \\times 1.2 = \\$60 \\times 1.2 = \\$72$\n\n**3. Calculate Total Earnings:**\n*   **Total Earnings:** Regular Earnings + Overtime Earnings\n*   **Total Earnings:** $\\$400 + \\$72 = \\$472$\n\n\\boxed{472}\n",
+  "pred_answer": "472",
+  "correct": false,
+  "token_count": 265,
+  "hidden_shape": [
+    265,
+    1024
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 19.589447265625,
+  "h0_entropy": 5.538661339447078,
+  "h0_total_persistence": 1727.0202581882477
+}

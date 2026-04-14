@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000003_prop_0001_para_03",
+  "world_id": "eval_world_000003",
+  "proposition_id": "eval_world_000003_prop_0001",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v7_attr_v7_attr_v0",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "brindle",
+      "entity": "drin",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "brindle",
+      "entity": "drin",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "The compound proposition says The brindle property holds for drin or drin is brindle.",
+  "prompt": "World:\n- drin is brindle.\n- koba is not brindle.\n- toma is not brindle.\n- koba is peln.\n- drin is not peln.\n- toma is not peln.\n- koba foshes vex.\n- toma foshes vex.\n- vex foshes drin.\n- koba does not fosh drin.\n- vex does not fosh koba.\n- vex does not fosh toma.\n- drin kelds toma.\n- drin kelds vex.\n- koba kelds drin.\n- vex kelds koba.\n- vex kelds toma.\n- koba does not keld vex.\n\nStatement:\nThe compound proposition says The brindle property holds for drin or drin is brindle.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6323550500001147,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000003_prop_0001_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000003_prop_0001_para_03/logits_summary.npz"
+}

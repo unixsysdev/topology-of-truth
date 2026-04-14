@@ -1,0 +1,42 @@
+{"message": "start", "step": "load_model", "ts": "2026-04-14T03:07:38.532782+00:00"}
+{"message": "end", "runtime_sec": 5.108, "step": "load_model", "ts": "2026-04-14T03:07:43.640811+00:00"}
+{"message": "start", "step": "reference_q_0001", "ts": "2026-04-14T03:07:43.663393+00:00"}
+{"message": "end", "runtime_sec": 0.66, "step": "reference_q_0001", "ts": "2026-04-14T03:07:44.323675+00:00"}
+{"message": "start", "step": "reference_q_0002", "ts": "2026-04-14T03:07:44.325433+00:00"}
+{"message": "end", "runtime_sec": 0.171, "step": "reference_q_0002", "ts": "2026-04-14T03:07:44.496837+00:00"}
+{"message": "start", "step": "reference_q_0003", "ts": "2026-04-14T03:07:44.498414+00:00"}
+{"message": "end", "runtime_sec": 0.258, "step": "reference_q_0003", "ts": "2026-04-14T03:07:44.756427+00:00"}
+{"message": "start", "step": "reference_q_0004", "ts": "2026-04-14T03:07:44.757974+00:00"}
+{"message": "end", "runtime_sec": 0.212, "step": "reference_q_0004", "ts": "2026-04-14T03:07:44.969682+00:00"}
+{"message": "start", "step": "reference_q_0005", "ts": "2026-04-14T03:07:44.971412+00:00"}
+{"message": "end", "runtime_sec": 0.263, "step": "reference_q_0005", "ts": "2026-04-14T03:07:45.234424+00:00"}
+{"message": "start", "step": "reference_q_0006", "ts": "2026-04-14T03:07:45.236070+00:00"}
+{"message": "end", "runtime_sec": 0.205, "step": "reference_q_0006", "ts": "2026-04-14T03:07:45.440698+00:00"}
+{"message": "start", "step": "reference_q_0007", "ts": "2026-04-14T03:07:45.442336+00:00"}
+{"message": "end", "runtime_sec": 0.216, "step": "reference_q_0007", "ts": "2026-04-14T03:07:45.658086+00:00"}
+{"message": "start", "step": "reference_q_0008", "ts": "2026-04-14T03:07:45.659679+00:00"}
+{"message": "end", "runtime_sec": 0.206, "step": "reference_q_0008", "ts": "2026-04-14T03:07:45.865236+00:00"}
+{"message": "start", "step": "reference_q_0009", "ts": "2026-04-14T03:07:45.867031+00:00"}
+{"message": "end", "runtime_sec": 0.267, "step": "reference_q_0009", "ts": "2026-04-14T03:07:46.134393+00:00"}
+{"message": "start", "step": "reference_q_0010", "ts": "2026-04-14T03:07:46.136067+00:00"}
+{"message": "end", "runtime_sec": 0.226, "step": "reference_q_0010", "ts": "2026-04-14T03:07:46.361862+00:00"}
+{"message": "start", "step": "reference_q_0011", "ts": "2026-04-14T03:07:46.364149+00:00"}
+{"message": "end", "runtime_sec": 0.205, "step": "reference_q_0011", "ts": "2026-04-14T03:07:46.568942+00:00"}
+{"message": "start", "step": "reference_q_0012", "ts": "2026-04-14T03:07:46.570490+00:00"}
+{"message": "end", "runtime_sec": 0.21, "step": "reference_q_0012", "ts": "2026-04-14T03:07:46.780742+00:00"}
+{"message": "start", "step": "reference_q_0013", "ts": "2026-04-14T03:07:46.782372+00:00"}
+{"message": "end", "runtime_sec": 0.207, "step": "reference_q_0013", "ts": "2026-04-14T03:07:46.989742+00:00"}
+{"message": "start", "step": "reference_q_0014", "ts": "2026-04-14T03:07:46.991270+00:00"}
+{"message": "end", "runtime_sec": 0.221, "step": "reference_q_0014", "ts": "2026-04-14T03:07:47.212617+00:00"}
+{"message": "start", "step": "reference_q_0015", "ts": "2026-04-14T03:07:47.214113+00:00"}
+{"message": "end", "runtime_sec": 0.219, "step": "reference_q_0015", "ts": "2026-04-14T03:07:47.433514+00:00"}
+{"message": "start", "step": "reference_q_0016", "ts": "2026-04-14T03:07:47.435303+00:00"}
+{"message": "end", "runtime_sec": 0.225, "step": "reference_q_0016", "ts": "2026-04-14T03:07:47.660349+00:00"}
+{"message": "start", "step": "reference_q_0017", "ts": "2026-04-14T03:07:47.662017+00:00"}
+{"message": "end", "runtime_sec": 0.224, "step": "reference_q_0017", "ts": "2026-04-14T03:07:47.886218+00:00"}
+{"message": "start", "step": "reference_q_0018", "ts": "2026-04-14T03:07:47.887704+00:00"}
+{"message": "end", "runtime_sec": 0.205, "step": "reference_q_0018", "ts": "2026-04-14T03:07:48.092237+00:00"}
+{"message": "start", "step": "reference_q_0019", "ts": "2026-04-14T03:07:48.093696+00:00"}
+{"message": "end", "runtime_sec": 0.18, "step": "reference_q_0019", "ts": "2026-04-14T03:07:48.273527+00:00"}
+{"message": "start", "step": "reference_q_0020", "ts": "2026-04-14T03:07:48.275004+00:00"}
+{"message": "end", "runtime_sec": 0.223, "step": "reference_q_0020", "ts": "2026-04-14T03:07:48.498315+00:00"}

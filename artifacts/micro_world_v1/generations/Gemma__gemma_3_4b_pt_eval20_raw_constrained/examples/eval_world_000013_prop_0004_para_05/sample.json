@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000013_prop_0004_para_05",
+  "world_id": "eval_world_000013",
+  "proposition_id": "eval_world_000013_prop_0004",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "Unknown",
+  "correct": false,
+  "template_id": "or_v5_rel_v5_attr_v6",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "vex",
+      "relation": "keld",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "peln",
+      "entity": "sop",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "The first clause is 'vex is kelded by toma' and the connector is or with 'peln applies to sop'.",
+  "prompt": "World:\n- drin is soric.\n- sop is soric.\n- toma is not soric.\n- sop is peln.\n- toma is peln.\n- bex is not peln.\n- vex is not peln.\n- bex sovs drin.\n- drin sovs sop.\n- sop sovs drin.\n- toma sovs drin.\n- vex sovs drin.\n- drin does not sov bex.\n- drin does not sov vex.\n- sop does not sov bex.\n- toma does not sov bex.\n- vex does not sov sop.\n- vex does not sov toma.\n- drin kelds toma.\n- bex does not keld drin.\n- bex does not keld toma.\n- bex does not keld vex.\n- drin does not keld sop.\n- sop does not keld bex.\n- sop does not keld vex.\n- toma does not keld bex.\n- toma does not keld drin.\n- toma does not keld sop.\n- vex does not keld bex.\n\nStatement:\nThe first clause is 'vex is kelded by toma' and the connector is or with 'peln applies to sop'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " Unknown\n",
+  "generated_token_ids": [
+    60355,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.40762466699743527,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000013_prop_0004_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000013_prop_0004_para_05/logits_summary.npz"
+}

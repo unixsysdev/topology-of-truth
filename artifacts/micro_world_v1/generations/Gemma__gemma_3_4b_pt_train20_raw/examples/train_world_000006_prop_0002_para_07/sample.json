@@ -1,0 +1,30 @@
+{
+  "example_id": "train_world_000006_prop_0002_para_07",
+  "world_id": "train_world_000006",
+  "proposition_id": "train_world_000006_prop_0002",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "attr_v3",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "pald",
+    "entity": "dax",
+    "type": "attr"
+  },
+  "statement": "dax belongs to the pald things.",
+  "prompt": "World:\n- kiv is pald.\n- zorb is pald.\n- dax is not pald.\n- tib is not pald.\n- vonn is vorn.\n- fep is not vorn.\n- kiv is not vorn.\n- zorb is not vorn.\n- kiv varks vonn.\n- tib varks kiv.\n- vonn varks dax.\n- zorb varks dax.\n- zorb varks fep.\n- zorb varks kiv.\n- dax does not vark fep.\n- fep does not vark zorb.\n- kiv does not vark dax.\n- kiv does not vark fep.\n- tib does not vark fep.\n- vonn does not vark fep.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- zorb does not vark vonn.\n- dax lirps vonn.\n- fep lirps vonn.\n- kiv lirps dax.\n- kiv lirps vonn.\n- kiv lirps zorb.\n- dax does not lirp kiv.\n- dax does not lirp tib.\n- dax does not lirp zorb.\n- fep does not lirp tib.\n- fep does not lirp zorb.\n- tib does not lirp zorb.\n- vonn does not lirp fep.\n- zorb does not lirp vonn.\n\nStatement:\ndax belongs to the pald things.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.324081324000872,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000006_prop_0002_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000006_prop_0002_para_07/logits_summary.npz"
+}

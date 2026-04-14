@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000000_prop_0006_para_01",
+  "world_id": "eval_world_000000",
+  "proposition_id": "eval_world_000000_prop_0006",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "or_v5_attr_v5_rel_v6",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "peln",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "right": {
+      "object": "nalo",
+      "relation": "fosh",
+      "subject": "lirk",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The first clause is 'Among the named items, mep is peln' and the connector is or with 'For this world, lirk foshes nalo'.",
+  "prompt": "World:\n- mep is falm.\n- grel is not falm.\n- nalo is not falm.\n- sop is not falm.\n- grel is peln.\n- sop is peln.\n- nalo is not peln.\n- nalo foshes sop.\n- sop foshes grel.\n- grel does not fosh lirk.\n- lirk does not fosh nalo.\n- lirk does not fosh sop.\n- nalo does not fosh grel.\n- nalo does not fosh mep.\n- grel nimps nalo.\n- mep nimps sop.\n- nalo nimps grel.\n- nalo nimps lirk.\n- sop nimps lirk.\n- sop nimps mep.\n- grel does not nimp mep.\n- grel does not nimp sop.\n- nalo does not nimp mep.\n- nalo does not nimp sop.\n\nStatement:\nThe first clause is 'Among the named items, mep is peln' and the connector is or with 'For this world, lirk foshes nalo'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5989715739997337,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_world_smoke/examples/eval_world_000000_prop_0006_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_world_smoke/examples/eval_world_000000_prop_0006_para_01/logits_summary.npz"
+}

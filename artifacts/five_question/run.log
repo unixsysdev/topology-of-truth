@@ -1,0 +1,24 @@
+{"message": "start", "step": "load_dataset", "ts": "2026-04-14T00:20:36.653866+00:00"}
+{"message": "end", "runtime_sec": 1.969, "step": "load_dataset", "ts": "2026-04-14T00:20:38.623195+00:00"}
+{"message": "start", "step": "load_model", "ts": "2026-04-14T00:20:38.623270+00:00"}
+{"message": "end", "runtime_sec": 3.751, "step": "load_model", "ts": "2026-04-14T00:20:42.374598+00:00"}
+{"message": "start", "step": "generate_sample_0001", "ts": "2026-04-14T00:20:42.375088+00:00"}
+{"message": "end", "runtime_sec": 9.808, "step": "generate_sample_0001", "ts": "2026-04-14T00:20:52.182985+00:00"}
+{"message": "start", "step": "hidden_sample_0001", "ts": "2026-04-14T00:20:52.183148+00:00"}
+{"message": "end", "runtime_sec": 0.328, "step": "hidden_sample_0001", "ts": "2026-04-14T00:20:52.511150+00:00"}
+{"message": "start", "step": "generate_sample_0002", "ts": "2026-04-14T00:20:52.662274+00:00"}
+{"message": "end", "runtime_sec": 16.76, "step": "generate_sample_0002", "ts": "2026-04-14T00:21:09.421854+00:00"}
+{"message": "start", "step": "hidden_sample_0002", "ts": "2026-04-14T00:21:09.422014+00:00"}
+{"message": "end", "runtime_sec": 0.424, "step": "hidden_sample_0002", "ts": "2026-04-14T00:21:09.845810+00:00"}
+{"message": "start", "step": "generate_sample_0003", "ts": "2026-04-14T00:21:11.134716+00:00"}
+{"message": "end", "runtime_sec": 13.032, "step": "generate_sample_0003", "ts": "2026-04-14T00:21:24.166994+00:00"}
+{"message": "start", "step": "hidden_sample_0003", "ts": "2026-04-14T00:21:24.167156+00:00"}
+{"message": "end", "runtime_sec": 0.419, "step": "hidden_sample_0003", "ts": "2026-04-14T00:21:24.585852+00:00"}
+{"message": "start", "step": "generate_sample_0004", "ts": "2026-04-14T00:21:27.039037+00:00"}
+{"message": "end", "runtime_sec": 5.099, "step": "generate_sample_0004", "ts": "2026-04-14T00:21:32.138188+00:00"}
+{"message": "start", "step": "hidden_sample_0004", "ts": "2026-04-14T00:21:32.138365+00:00"}
+{"message": "end", "runtime_sec": 0.237, "step": "hidden_sample_0004", "ts": "2026-04-14T00:21:32.375559+00:00"}
+{"message": "start", "step": "generate_sample_0005", "ts": "2026-04-14T00:21:33.466452+00:00"}
+{"message": "end", "runtime_sec": 14.549, "step": "generate_sample_0005", "ts": "2026-04-14T00:21:48.015066+00:00"}
+{"message": "start", "step": "hidden_sample_0005", "ts": "2026-04-14T00:21:48.015231+00:00"}
+{"message": "end", "runtime_sec": 0.512, "step": "hidden_sample_0005", "ts": "2026-04-14T00:21:48.527574+00:00"}

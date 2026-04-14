@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000003_prop_0007_para_06",
+  "world_id": "eval_world_000003",
+  "proposition_id": "eval_world_000003_prop_0007",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "all_v6",
+  "template_family": "all",
+  "logical_form": {
+    "attribute": "peln",
+    "object": "koba",
+    "relation": "fosh",
+    "type": "all"
+  },
+  "statement": "Count the peln things that fosh koba; the result is every.",
+  "prompt": "World:\n- drin is brindle.\n- koba is not brindle.\n- toma is not brindle.\n- koba is peln.\n- drin is not peln.\n- toma is not peln.\n- koba foshes vex.\n- toma foshes vex.\n- vex foshes drin.\n- koba does not fosh drin.\n- vex does not fosh koba.\n- vex does not fosh toma.\n- drin kelds toma.\n- drin kelds vex.\n- koba kelds drin.\n- vex kelds koba.\n- vex kelds toma.\n- koba does not keld vex.\n\nStatement:\nCount the peln things that fosh koba; the result is every.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.26685622399963904,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000003_prop_0007_para_06/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000003_prop_0007_para_06/logits_summary.npz"
+}

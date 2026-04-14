@@ -1,0 +1,40 @@
+{
+  "example_id": "train_world_000016_prop_0000_para_01",
+  "world_id": "train_world_000016",
+  "proposition_id": "train_world_000016_prop_0000",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "or_v1_attr_v1_attr_v2",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "pald",
+      "entity": "zorb",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "vorn",
+      "entity": "fep",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "At least one claim holds: The item named zorb is pald; It is true that fep is vorn.",
+  "prompt": "World:\n- zorb is not pald.\n- tib is vorn.\n- fep is not vorn.\n- norp is not vorn.\n- fep does not sume norp.\n- norp does not sume fep.\n- norp does not sume tib.\n- fep lirps zorb.\n- norp does not lirp tib.\n- norp does not lirp zorb.\n\nStatement:\nAt least one claim holds: The item named zorb is pald; It is true that fep is vorn.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5975512400000298,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000016_prop_0000_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000016_prop_0000_para_01/logits_summary.npz"
+}

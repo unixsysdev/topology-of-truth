@@ -1,0 +1,35 @@
+{
+  "example_id": "train_world_000019_prop_0006_para_03",
+  "world_id": "train_world_000019",
+  "proposition_id": "train_world_000019_prop_0006",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "True",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "not_v3_attr_v3",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "daxel",
+      "entity": "norp",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Deny the claim that norp belongs to the daxel things.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is daxel.\n- norp is not daxel.\n- sarn is not daxel.\n- norp is glim.\n- tib is not glim.\n- kiv sumes norp.\n- norp sumes vonn.\n- sarn sumes kiv.\n- tib sumes norp.\n- kiv does not sume tib.\n- norp does not sume tib.\n- sarn does not sume vonn.\n- tib does not sume kiv.\n- vonn does not sume tib.\n- kiv nazes sarn.\n- sarn nazes tib.\n- tib nazes norp.\n- vonn nazes kiv.\n- norp does not naze sarn.\n- norp does not naze tib.\n- sarn does not naze kiv.\n- tib does not naze kiv.\n- vonn does not naze norp.\n\nStatement:\nDeny the claim that norp belongs to the daxel things.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nFalse\n",
+  "generated_token_ids": [
+    107,
+    9277,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.525947174999601,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000019_prop_0006_para_03/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000019_prop_0006_para_03/logits_summary.npz"
+}

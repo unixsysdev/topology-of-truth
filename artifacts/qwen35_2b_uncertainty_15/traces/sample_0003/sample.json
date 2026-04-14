@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0003",
+  "dataset_sample_id": "gsm8k_000002",
+  "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+  "gold_answer": "70000",
+  "generated_text": "To find the profit Josh made, we need to determine the total cost of the house and the total value of the house after the repairs.\n\n1.  **Calculate the total cost of the house:**\n    Josh bought the house for $\\$80,000$ and spent $\\$50,000$ on repairs.\n    $$ \\text{Total Cost} = \\$80,000 + \\$50,000 = \\$130,000 $$\n\n2.  **Calculate the new value of the house:**\n    The problem states that the repairs increased the value by $150\\%$.\n    First, find $150\\%$ of the original cost:\n    $$ 150\\% \\text{ of } \\$130,000 = 1.50 \\times \\$130,000 = \\$195,000 $$\n    Now, add this increase to the original cost to get the new value:\n    $$ \\text{New Value} = \\text{Original Cost} + \\text{Increase} $$\n    $$ \\text{New Value} = \\$130,000 + \\$195,000 = \\$325,000 $$\n    *(Alternatively, the new value is $250\\%$ of the original cost: $2.50 \\times 130,000 = 325,000$)*\n\n3.  **Calculate the profit:**\n    Profit is the difference between the new value and the total cost.\n    $$ \\text{Profit} = \\text{New Value} - \\text{Total Cost} $$\n    $$ \\text{Profit} = \\$325,000 - \\$130,000 = \\$195,000 $$\n\n\\boxed{195000}\n",
+  "pred_answer": "195000",
+  "correct": false,
+  "token_count": 424,
+  "answer_length": 176,
+  "hidden_shape": [
+    424,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 35.39800390625,
+  "h0_entropy": 5.980534895133893,
+  "h0_total_persistence": 2329.3845361471176,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0003/logits_summary.npz"
+}

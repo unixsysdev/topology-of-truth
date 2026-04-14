@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000019_prop_0003_para_06",
+  "world_id": "train_world_000019",
+  "proposition_id": "train_world_000019_prop_0003",
+  "paraphrase_id": "para_06",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "none_v2",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "daxel",
+    "object": "kiv",
+    "relation": "naze",
+    "type": "none"
+  },
+  "statement": "No item that is daxel stands in relation naze to kiv.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is daxel.\n- norp is not daxel.\n- sarn is not daxel.\n- norp is glim.\n- tib is not glim.\n- kiv sumes norp.\n- norp sumes vonn.\n- sarn sumes kiv.\n- tib sumes norp.\n- kiv does not sume tib.\n- norp does not sume tib.\n- sarn does not sume vonn.\n- tib does not sume kiv.\n- vonn does not sume tib.\n- kiv nazes sarn.\n- sarn nazes tib.\n- tib nazes norp.\n- vonn nazes kiv.\n- norp does not naze sarn.\n- norp does not naze tib.\n- sarn does not naze kiv.\n- tib does not naze kiv.\n- vonn does not naze norp.\n\nStatement:\nNo item that is daxel stands in relation naze to kiv.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7307874790021742,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000019_prop_0003_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000019_prop_0003_para_06/logits_summary.npz"
+}

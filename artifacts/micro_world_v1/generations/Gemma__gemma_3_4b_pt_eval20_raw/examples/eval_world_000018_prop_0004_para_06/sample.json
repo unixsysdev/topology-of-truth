@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000018_prop_0004_para_06",
+  "world_id": "eval_world_000018",
+  "proposition_id": "eval_world_000018_prop_0004",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "not_v6_attr_v6",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "soric",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "The proposition is the negation of 'soric applies to mep'.",
+  "prompt": "World:\n- lirk is soric.\n- mep is soric.\n- nalo is soric.\n- sop is soric.\n- mep is peln.\n- nalo is peln.\n- sop is peln.\n- vex is peln.\n- nalo sovs mep.\n- nalo sovs sop.\n- sop sovs nalo.\n- vex sovs lirk.\n- vex sovs sop.\n- lirk does not sov sop.\n- lirk does not sov vex.\n- sop does not sov lirk.\n- sop does not sov mep.\n- vex does not sov mep.\n- mep foshes nalo.\n- sop foshes vex.\n- vex foshes mep.\n- nalo does not fosh lirk.\n- sop does not fosh mep.\n- vex does not fosh lirk.\n\nStatement:\nThe proposition is the negation of 'soric applies to mep'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.33028317899879767,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000018_prop_0004_para_06/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000018_prop_0004_para_06/logits_summary.npz"
+}

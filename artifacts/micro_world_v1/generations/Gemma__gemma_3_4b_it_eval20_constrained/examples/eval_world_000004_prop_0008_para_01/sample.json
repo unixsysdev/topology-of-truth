@@ -1,0 +1,35 @@
+{
+  "example_id": "eval_world_000004_prop_0008_para_01",
+  "world_id": "eval_world_000004",
+  "proposition_id": "eval_world_000004_prop_0008",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "not_v5_rel_v5",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "object": "vex",
+      "relation": "drel",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "type": "not"
+  },
+  "statement": "Logical form: NOT[vex is dreled by toma].",
+  "prompt": "World:\n- koba is not zantic.\n- vex is not zantic.\n- grel is brindle.\n- koba is brindle.\n- toma is brindle.\n- vex is brindle.\n- vex drels koba.\n- grel does not drel toma.\n- grel does not drel vex.\n- koba does not drel toma.\n- koba does not drel vex.\n- toma does not drel koba.\n- vex does not drel toma.\n- koba sovs grel.\n- toma sovs vex.\n- vex sovs grel.\n- grel does not sov koba.\n- grel does not sov vex.\n- vex does not sov toma.\n\nStatement:\nLogical form: NOT[vex is dreled by toma].\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.4115338970004814,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_constrained/examples/eval_world_000004_prop_0008_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_constrained/examples/eval_world_000004_prop_0008_para_01/logits_summary.npz"
+}

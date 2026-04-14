@@ -1,0 +1,39 @@
+{
+  "example_id": "eval_world_000019_prop_0002_para_02",
+  "world_id": "eval_world_000019",
+  "proposition_id": "eval_world_000019_prop_0002",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "and_v6_attr_v6_attr_v7",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "soric",
+      "entity": "toma",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "zantic",
+      "entity": "koba",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "Evaluate this compound claim: soric applies to toma and The zantic property holds for koba.",
+  "prompt": "World:\n- grel is zantic.\n- koba is zantic.\n- lirk is not zantic.\n- koba is soric.\n- lirk is soric.\n- nalo is soric.\n- toma is soric.\n- grel is not soric.\n- sop is not soric.\n- koba nimps nalo.\n- koba nimps toma.\n- lirk nimps grel.\n- nalo nimps grel.\n- nalo nimps koba.\n- sop nimps lirk.\n- toma nimps koba.\n- koba does not nimp grel.\n- lirk does not nimp koba.\n- lirk does not nimp nalo.\n- sop does not nimp koba.\n- sop does not nimp toma.\n- grel kelds koba.\n- lirk kelds grel.\n- lirk kelds koba.\n- lirk kelds nalo.\n- lirk kelds sop.\n- nalo kelds grel.\n- sop kelds koba.\n- toma kelds sop.\n- grel does not keld lirk.\n- grel does not keld nalo.\n- nalo does not keld sop.\n- sop does not keld nalo.\n- sop does not keld toma.\n- toma does not keld grel.\n\nStatement:\nEvaluate this compound claim: soric applies to toma and The zantic property holds for koba.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.4207402319989342,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_constrained/examples/eval_world_000019_prop_0002_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_constrained/examples/eval_world_000019_prop_0002_para_02/logits_summary.npz"
+}

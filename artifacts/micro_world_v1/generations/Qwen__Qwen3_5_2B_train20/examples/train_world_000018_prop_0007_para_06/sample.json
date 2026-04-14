@@ -1,0 +1,32 @@
+{
+  "example_id": "train_world_000018_prop_0007_para_06",
+  "world_id": "train_world_000018",
+  "proposition_id": "train_world_000018_prop_0007",
+  "paraphrase_id": "para_06",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "attr_v2",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "daxel",
+    "entity": "lume",
+    "type": "attr"
+  },
+  "statement": "It is true that lume is daxel.",
+  "prompt": "World:\n- blicket is selt.\n- fep is selt.\n- lume is selt.\n- kiv is not selt.\n- fep is daxel.\n- kiv is daxel.\n- pavo is daxel.\n- tib is daxel.\n- blicket is not daxel.\n- lume is not daxel.\n- blicket mips lume.\n- fep mips lume.\n- kiv mips pavo.\n- kiv mips tib.\n- lume mips fep.\n- pavo mips fep.\n- pavo mips lume.\n- blicket does not mip pavo.\n- kiv does not mip fep.\n- kiv does not mip lume.\n- lume does not mip blicket.\n- lume does not mip tib.\n- pavo does not mip blicket.\n- pavo does not mip kiv.\n- pavo does not mip tib.\n- tib does not mip kiv.\n- blicket sumes pavo.\n- kiv sumes blicket.\n- lume sumes fep.\n- lume sumes tib.\n- pavo sumes fep.\n- pavo sumes lume.\n- tib sumes fep.\n- tib sumes lume.\n- fep does not sume blicket.\n- fep does not sume kiv.\n- fep does not sume pavo.\n- fep does not sume tib.\n- kiv does not sume pavo.\n- lume does not sume kiv.\n- pavo does not sume blicket.\n- tib does not sume blicket.\n- tib does not sume pavo.\n\nStatement:\nIt is true that lume is daxel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6226549229995726,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000018_prop_0007_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000018_prop_0007_para_06/logits_summary.npz"
+}

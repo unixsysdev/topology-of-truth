@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000019_prop_0006_para_04",
+  "world_id": "eval_world_000019",
+  "proposition_id": "eval_world_000019_prop_0006",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "attr_v4",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "soric",
+    "entity": "toma",
+    "type": "attr"
+  },
+  "statement": "The object toma has the property soric.",
+  "prompt": "World:\n- grel is zantic.\n- koba is zantic.\n- lirk is not zantic.\n- koba is soric.\n- lirk is soric.\n- nalo is soric.\n- toma is soric.\n- grel is not soric.\n- sop is not soric.\n- koba nimps nalo.\n- koba nimps toma.\n- lirk nimps grel.\n- nalo nimps grel.\n- nalo nimps koba.\n- sop nimps lirk.\n- toma nimps koba.\n- koba does not nimp grel.\n- lirk does not nimp koba.\n- lirk does not nimp nalo.\n- sop does not nimp koba.\n- sop does not nimp toma.\n- grel kelds koba.\n- lirk kelds grel.\n- lirk kelds koba.\n- lirk kelds nalo.\n- lirk kelds sop.\n- nalo kelds grel.\n- sop kelds koba.\n- toma kelds sop.\n- grel does not keld lirk.\n- grel does not keld nalo.\n- nalo does not keld sop.\n- sop does not keld nalo.\n- sop does not keld toma.\n- toma does not keld grel.\n\nStatement:\nThe object toma has the property soric.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n\nAnswer:\n",
+  "generated_token_ids": [
+    108,
+    7925,
+    236787,
+    107
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5157044549996499,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000019_prop_0006_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000019_prop_0006_para_04/logits_summary.npz"
+}

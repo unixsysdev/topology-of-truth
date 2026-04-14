@@ -1,0 +1,4 @@
+model,accuracy_constrained,accuracy_unconstrained,macro_f1_constrained,macro_f1_unconstrained,recall_unknown_constrained,recall_unknown_unconstrained,pred_unknown_rate_constrained,pred_unknown_rate_unconstrained,delta_accuracy_constrained_minus_unconstrained,delta_macro_f1_constrained_minus_unconstrained,delta_unknown_recall_constrained_minus_unconstrained
+Qwen3.5-2B,0.4347222222222222,0.4361111111111111,0.3384310265744485,0.3402981251100757,0.0,0.0,0.0,0.0,-0.0013888888888888,-0.0018670985356271,0.0
+Qwen3.5-4B,0.4777777777777778,0.4777777777777778,0.3767619047619048,0.3767619047619048,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gemma-3-4B-it,0.3972222222222222,0.3972222222222222,0.3085034013605442,0.3085034013605442,0.0125,0.0125,0.008333333333333333,0.008333333333333333,0.0,0.0,0.0

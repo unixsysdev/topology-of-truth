@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000008_prop_0007_para_07",
+  "world_id": "train_world_000008",
+  "proposition_id": "train_world_000008_prop_0007",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "all_v3",
+  "template_family": "all",
+  "logical_form": {
+    "attribute": "nubic",
+    "object": "pavo",
+    "relation": "naze",
+    "type": "all"
+  },
+  "statement": "Every nubic entity has the naze relation to pavo.",
+  "prompt": "World:\n- fep is vorn.\n- sarn is vorn.\n- zorb is vorn.\n- wug is not vorn.\n- fep is nubic.\n- wug is nubic.\n- zorb is nubic.\n- sarn tobs zorb.\n- zorb tobs pavo.\n- fep does not tob sarn.\n- fep does not tob wug.\n- sarn does not tob pavo.\n- sarn does not tob wug.\n- wug does not tob zorb.\n- pavo nazes sarn.\n- sarn nazes fep.\n- sarn nazes wug.\n- sarn nazes zorb.\n- wug nazes zorb.\n- zorb nazes sarn.\n- fep does not naze sarn.\n- sarn does not naze pavo.\n- zorb does not naze wug.\n\nStatement:\nEvery nubic entity has the naze relation to pavo.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6782478770001035,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000008_prop_0007_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000008_prop_0007_para_07/logits_summary.npz"
+}

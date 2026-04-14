@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0005",
+  "dataset_sample_id": "gsm8k_000004",
+  "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
+  "gold_answer": "20",
+  "generated_text": "To find the total amount of feed needed for the final meal, we need to determine the total number of cups of feed given in the morning and afternoon, and then add the amount for the final meal.\n\n**Step 1: Calculate the feed given in the morning.**\nThe problem states that Wendi gives her flock 15 cups of feed in the morning.\n$$ \\text{Morning Feed} = 15 \\text{ cups} $$\n\n**Step 2: Calculate the feed given in the afternoon.**\nThe problem states that Wendi gives her chickens another 25 cups of feed in the afternoon.\n$$ \\text{Afternoon Feed} = 25 \\text{ cups} $$\n\n**Step 3: Calculate the total feed given in the day.**\n$$ \\text{Total Feed} = \\text{Morning Feed} + \\text{Afternoon Feed} $$\n$$ \\text{Total Feed} = 15 + 25 = 40 \\text{ cups} $$\n\n**Step 4: Calculate the feed for the final meal.**\nThe problem states that the flock has 20 chickens.\n$$ \\text{Feed per Chicken} = \\frac{\\text{Total Feed}}{\\text{Number of Chickens}} $$\n$$ \\text{Feed per Chicken} = \\frac{40}{20} = 2 \\text{ cups} $$\n\n**Step 5: Calculate the total feed for the final meal.**\n$$ \\text{Final Meal Feed} = \\text{Feed per Chicken} \\times \\text{Number of Chickens} $$\n$$ \\text{Final Meal Feed} = 2 \\times 20 = 40 \\text{ cups} $$\n\nAlternatively, you can think of it as:\n$$ \\text{Total Feed} = 40 \\text{ cups} $$\n$$ \\text{Final Meal} = \\frac{40}{20} \\times 20 = 40 \\text{ cups} $$\n\nThe final answer is 40 cups.\n\n\\boxed{40}\n",
+  "pred_answer": "40",
+  "correct": false,
+  "token_count": 445,
+  "hidden_shape": [
+    445,
+    1024
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 14.5483017578125,
+  "h0_entropy": 6.04031199196012,
+  "h0_total_persistence": 2396.198798775673
+}

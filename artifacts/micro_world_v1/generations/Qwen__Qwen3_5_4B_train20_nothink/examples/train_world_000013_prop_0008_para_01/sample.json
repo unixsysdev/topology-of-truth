@@ -1,0 +1,32 @@
+{
+  "example_id": "train_world_000013_prop_0008_para_01",
+  "world_id": "train_world_000013",
+  "proposition_id": "train_world_000013_prop_0008",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "attr_v1",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "glim",
+    "entity": "kiv",
+    "type": "attr"
+  },
+  "statement": "The item named kiv is glim.",
+  "prompt": "World:\n- kiv is vorn.\n- pavo is vorn.\n- pavo is glim.\n- kiv is not glim.\n- fep nazes kiv.\n- kiv nazes fep.\n- kiv nazes norp.\n- norp nazes kiv.\n- pavo does not naze norp.\n- fep lirps kiv.\n- kiv lirps fep.\n- kiv lirps norp.\n- kiv lirps pavo.\n- norp lirps pavo.\n- pavo lirps norp.\n- fep does not lirp norp.\n\nStatement:\nThe item named kiv is glim.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5709661880027852,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000013_prop_0008_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000013_prop_0008_para_01/logits_summary.npz"
+}

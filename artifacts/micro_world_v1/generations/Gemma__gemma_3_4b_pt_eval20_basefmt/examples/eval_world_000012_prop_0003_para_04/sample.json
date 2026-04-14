@@ -1,0 +1,36 @@
+{
+  "example_id": "eval_world_000012_prop_0003_para_04",
+  "world_id": "eval_world_000012",
+  "proposition_id": "eval_world_000012_prop_0003",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "not_v4_attr_v4",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "soric",
+      "entity": "grel",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "The proposition applies logical negation to this clause: The object grel has the property soric.",
+  "prompt": "World:\n- mep is soric.\n- bex is not soric.\n- grel is not soric.\n- lirk is not soric.\n- bex is falm.\n- grel is falm.\n- lirk is falm.\n- mep is not falm.\n- nalo is not falm.\n- toma is not falm.\n- bex sovs lirk.\n- bex sovs nalo.\n- bex sovs toma.\n- mep sovs grel.\n- mep sovs nalo.\n- toma sovs nalo.\n- grel does not sov bex.\n- grel does not sov mep.\n- grel does not sov toma.\n- lirk does not sov grel.\n- lirk does not sov nalo.\n- toma does not sov lirk.\n- bex kelds grel.\n- bex kelds toma.\n- grel kelds mep.\n- mep kelds lirk.\n- mep kelds toma.\n- nalo kelds grel.\n- toma kelds grel.\n- bex does not keld mep.\n- bex does not keld nalo.\n- grel does not keld bex.\n- lirk does not keld mep.\n- lirk does not keld nalo.\n- mep does not keld grel.\n- nalo does not keld mep.\n- toma does not keld lirk.\n- toma does not keld mep.\n\nStatement:\nThe proposition applies logical negation to this clause: The object grel has the property soric.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nStatement",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    19128
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5460834309997153,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000012_prop_0003_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000012_prop_0003_para_04/logits_summary.npz"
+}

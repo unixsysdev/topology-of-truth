@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000000_prop_0003_para_06",
+  "world_id": "eval_world_000000",
+  "proposition_id": "eval_world_000000_prop_0003",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "or_v6_rel_v6_attr_v7",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "mep",
+      "relation": "fosh",
+      "subject": "nalo",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "peln",
+      "entity": "grel",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "Evaluate this compound claim: For this world, nalo foshes mep or The peln property holds for grel.",
+  "prompt": "World:\n- mep is falm.\n- grel is not falm.\n- nalo is not falm.\n- sop is not falm.\n- grel is peln.\n- sop is peln.\n- nalo is not peln.\n- nalo foshes sop.\n- sop foshes grel.\n- grel does not fosh lirk.\n- lirk does not fosh nalo.\n- lirk does not fosh sop.\n- nalo does not fosh grel.\n- nalo does not fosh mep.\n- grel nimps nalo.\n- mep nimps sop.\n- nalo nimps grel.\n- nalo nimps lirk.\n- sop nimps lirk.\n- sop nimps mep.\n- grel does not nimp mep.\n- grel does not nimp sop.\n- nalo does not nimp mep.\n- nalo does not nimp sop.\n\nStatement:\nEvaluate this compound claim: For this world, nalo foshes mep or The peln property holds for grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "The user wants to",
+  "generated_token_ids": [
+    760,
+    1156,
+    6587,
+    310
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.7095127219999995,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000000_prop_0003_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000000_prop_0003_para_06/logits_summary.npz"
+}

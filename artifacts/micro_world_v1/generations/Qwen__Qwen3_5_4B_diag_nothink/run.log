@@ -1,0 +1,6 @@
+{"message": "start", "step": "load_model", "ts": "2026-04-14T06:58:15.867265+00:00"}
+{"message": "end", "runtime_sec": 5.395, "step": "load_model", "ts": "2026-04-14T06:58:21.261839+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_00", "ts": "2026-04-14T06:58:21.262076+00:00"}
+{"message": "end", "runtime_sec": 1.183, "step": "generate_eval_world_000000_prop_0000_para_00", "ts": "2026-04-14T06:58:22.445116+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_01", "ts": "2026-04-14T06:58:22.899882+00:00"}
+{"message": "end", "runtime_sec": 0.716, "step": "generate_eval_world_000000_prop_0000_para_01", "ts": "2026-04-14T06:58:23.615537+00:00"}

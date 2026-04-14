@@ -1,0 +1,42 @@
+{
+  "example_id": "train_world_000001_prop_0001_para_04",
+  "world_id": "train_world_000001",
+  "proposition_id": "train_world_000001_prop_0001",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v0_attr_v0_rel_v1",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "selt",
+      "entity": "vonn",
+      "type": "attr"
+    },
+    "right": {
+      "object": "kiv",
+      "relation": "vark",
+      "subject": "norp",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "vonn is selt or The item named norp varks the item named kiv.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is not daxel.\n- norp is selt.\n- kiv is not selt.\n- vonn is not selt.\n- norp varks kiv.\n- norp does not vark vonn.\n- tib does not vark norp.\n- tib does not vark vonn.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- vonn tobs norp.\n- tib does not tob norp.\n- tib does not tob vonn.\n\nStatement:\nvonn is selt or The item named norp varks the item named kiv.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nExplanation",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    44008
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.4527524450022611,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000001_prop_0001_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000001_prop_0001_para_04/logits_summary.npz"
+}

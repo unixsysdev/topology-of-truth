@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000005_prop_0001_para_04",
+  "world_id": "train_world_000005",
+  "proposition_id": "train_world_000005_prop_0001",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "rel_v0",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "dax",
+    "relation": "vark",
+    "subject": "wug",
+    "type": "rel"
+  },
+  "statement": "wug varks dax.",
+  "prompt": "World:\n- pavo is not pald.\n- tib is not pald.\n- dax is selt.\n- pavo is selt.\n- wug is selt.\n- wug varks dax.\n- dax does not vark tib.\n- pavo does not vark dax.\n- tib does not vark dax.\n- tib does not vark pavo.\n- tib does not vark wug.\n- dax sumes wug.\n- pavo sumes wug.\n- pavo does not sume dax.\n- pavo does not sume tib.\n\nStatement:\nwug varks dax.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nTrue\n",
+  "generated_token_ids": [
+    107,
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.4519059209997067,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000005_prop_0001_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000005_prop_0001_para_04/logits_summary.npz"
+}

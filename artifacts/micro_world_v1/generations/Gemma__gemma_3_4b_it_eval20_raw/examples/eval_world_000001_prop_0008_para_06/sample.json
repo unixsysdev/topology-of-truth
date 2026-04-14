@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000001_prop_0008_para_06",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0008",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "some_v6",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "brindle",
+    "object": "toma",
+    "relation": "nimp",
+    "type": "some"
+  },
+  "statement": "Count the brindle things that nimp toma; the result is some.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nCount the brindle things that nimp toma; the result is some.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nTrue\n",
+  "generated_token_ids": [
+    107,
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.43197483599942643,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw/examples/eval_world_000001_prop_0008_para_06/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw/examples/eval_world_000001_prop_0008_para_06/logits_summary.npz"
+}

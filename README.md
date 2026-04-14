@@ -1,5 +1,32 @@
 # Topology of Truth: Geometric Audit of LLM Reasoning
 
+## Status Note
+
+This repository currently contains two different things:
+
+1. Legacy flat scripts and historical result files from an earlier static-topology experiment.
+2. A newer `topology_paper/` pipeline for dynamic token-trajectory topology on Qwen3.5 models.
+
+The newer pipeline has now been smoke-tested and exercised on a small number of real GSM8K generations in the ROCm toolbox, but it does **not** yet support paper-level empirical claims. Treat the detailed results below as legacy project notes, not as the validated status of the current Qwen3.5 dynamic-topology study.
+
+Current honest status:
+
+- real-model generation is working for `Qwen/Qwen3.5-0.8B`
+- real hidden-state traces and real TDA features have been produced
+- the dynamic-Qwen3.5 experiment has not yet been run at scale
+- no paper claim about predictive separation should be taken as established yet
+
+### Current Qwen3.5 Pilot Note
+
+The current Qwen3.5 pilot should be read as a measurement audit, not a positive topology result.
+
+- Prefix `H0` on the new Qwen3.5 traces was strongly length-confounded.
+- Fixed-window `H0` was nearly window-size-driven even after removing per-window whitening and per-window PCA fitting.
+- On the paired `Qwen/Qwen3.5-2B` pilot batch, corrected windowed `H0` features hurt classification relative to simple controls.
+- Cheap final-state hidden features also did not beat simple controls on that batch.
+
+Until a different representation measure shows signal on the existing traces, the `H0`-as-primary-correctness-signal branch should be treated as a negative pilot result.
+
 **Can we detect correct reasoning from the shape of a model's thoughts?**
 
 This project uses **Topological Data Analysis (TDA)** to analyze the manifold structure of LLM activations during reasoning. The hypothesis: correct reasoning has a distinct topological signature that we can measure *without knowing the ground truth answer*.

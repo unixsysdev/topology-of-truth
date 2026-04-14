@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000005_prop_0000_para_02",
+  "world_id": "eval_world_000005",
+  "proposition_id": "eval_world_000005_prop_0000",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "some_v6",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "peln",
+    "object": "mep",
+    "relation": "sov",
+    "type": "some"
+  },
+  "statement": "Count the peln things that sov mep; the result is some.",
+  "prompt": "World:\n- grel is zantic.\n- nalo is zantic.\n- koba is not zantic.\n- bex is peln.\n- koba is peln.\n- grel is not peln.\n- mep is not peln.\n- bex sovs grel.\n- bex sovs koba.\n- bex sovs mep.\n- koba sovs bex.\n- koba sovs grel.\n- bex does not sov nalo.\n- mep does not sov bex.\n- mep does not sov nalo.\n- nalo does not sov grel.\n- mep nimps bex.\n- mep nimps grel.\n- bex does not nimp mep.\n- koba does not nimp bex.\n- mep does not nimp koba.\n- nalo does not nimp koba.\n\nStatement:\nCount the peln things that sov mep; the result is some.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.3540819419977197,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000005_prop_0000_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000005_prop_0000_para_02/logits_summary.npz"
+}
