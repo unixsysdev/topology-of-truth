@@ -1,0 +1,4 @@
+model,n_eval_worlds,decoder_unknown_recall,decoder_unknown_recall_ci_low,decoder_unknown_recall_ci_high,probe_unknown_recall_verdict_token,probe_unknown_recall_verdict_token_ci_low,probe_unknown_recall_verdict_token_ci_high,gap_probe_minus_decoder,gap_probe_minus_decoder_ci_low,gap_probe_minus_decoder_ci_high,bootstrap_resamples,bootstrap_unit
+Qwen3.5-2B,20,0.0,0.0,0.0,0.7375,0.65,0.8208333333333333,0.7375,0.65,0.8208333333333333,5000,world
+Qwen3.5-4B (no-think),20,0.0,0.0,0.0,0.12916666666666668,0.06666666666666667,0.19583333333333333,0.12916666666666668,0.06666666666666667,0.19583333333333333,5000,world
+Gemma-3-4B-it (no-think),20,0.0125,0.0,0.03333333333333333,0.5625,0.4666666666666667,0.6625,0.55,0.45416666666666666,0.65,5000,world

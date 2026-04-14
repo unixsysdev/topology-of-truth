@@ -112,7 +112,7 @@ def _plot_gemma_logit_competitiveness() -> None:
     )
     logits = logits.sort_values("run_label")
 
-    fig, axes = plt.subplots(1, 2, figsize=(8.2, 3.8))
+    fig, axes = plt.subplots(1, 2, figsize=(9.0, 4.4), constrained_layout=True)
 
     axes[0].bar(
         logits["run_label"],
@@ -121,7 +121,8 @@ def _plot_gemma_logit_competitiveness() -> None:
     )
     axes[0].set_ylim(0.0, 0.25)
     axes[0].set_title("Mean P(Unknown)\non gold-Unknown decoder failures")
-    axes[0].tick_params(axis="x", rotation=12)
+    axes[0].tick_params(axis="x", rotation=8)
+    axes[0].tick_params(axis="x", labelsize=9)
 
     axes[1].bar(
         logits["run_label"],
@@ -130,10 +131,12 @@ def _plot_gemma_logit_competitiveness() -> None:
     )
     axes[1].set_title("Mean logP(Unknown) - best non-Unknown\n(gold-Unknown decoder failures)")
     axes[1].axhline(0.0, color="black", linewidth=0.8)
-    axes[1].tick_params(axis="x", rotation=12)
+    ymin = min(-1.4, float(logits["unknown_fail_mean_unknown_minus_best_nonunknown_logp"].min()) - 0.08)
+    axes[1].set_ylim(ymin, 0.1)
+    axes[1].tick_params(axis="x", rotation=8)
+    axes[1].tick_params(axis="x", labelsize=9)
 
-    fig.suptitle("Verdict-step Unknown under-ranking in Gemma", y=1.02)
-    plt.tight_layout()
+    fig.suptitle("Verdict-step Unknown under-ranking in Gemma", fontsize=12)
     plt.savefig(FIG_DIR / "fig3_gemma_unknown_logit_competitiveness.png", dpi=220)
     plt.close()
 

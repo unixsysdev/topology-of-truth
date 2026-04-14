@@ -189,6 +189,7 @@ Critically, anti-shortcut controls are built into generation:
   \item per-world proposition sampling is label-balanced over \texttt{True}/\texttt{False}/\texttt{Unknown}.
 \end{itemize}
 These details target reviewer concerns about lexical leakage and template-only clustering.
+The purpose of this benchmark is not realism but \emph{semantic identifiability}: exact tri-label truth conditions under controlled lexical and templatic shift.
 
 \section{Task Definition}
 Let a world be a finite structured state
@@ -278,6 +279,27 @@ In code:
 Micro-world inference runs use short deterministic decoding (\texttt{temperature=0}, \texttt{max\_new\_tokens=4}) with strict label parsing.
 ``No-think'' in this paper refers to runs where internal reasoning mode was disabled via the \texttt{enable\_thinking=False} generation flag.
 We evaluate both default chat-style prompting and raw/base-label prompt paths as controls.
+
+\subsection{Primary Protocol and Control Matrix}
+To reduce protocol ambiguity, we separate \textbf{primary evaluation} from \textbf{mechanistic controls}.
+
+\paragraph{Primary evaluation protocol.}
+\begin{itemize}
+  \item models: Qwen3.5-2B, Qwen3.5-4B (no-think), Gemma-3-4B-it (no-think),
+  \item prompt path: default chat-formatted micro-world prompt,
+  \item decoding: deterministic, \texttt{max\_new\_tokens=4},
+  \item parser: strict \{\texttt{True}, \texttt{False}, \texttt{Unknown}\} label parser,
+  \item states: \texttt{final\_prompt}, \texttt{prompt\_tail\_mean}, \texttt{verdict\_token}, \texttt{verdict\_span\_mean}.
+\end{itemize}
+
+\paragraph{Control variants.}
+\begin{itemize}
+  \item raw prompt-path controls (chat-templating ablation),
+  \item constrained decoding (\{\texttt{True},\texttt{False},\texttt{Unknown}\}),
+  \item Gemma base-format prompt repair (\texttt{basefmt}) for parse-valid base comparison,
+  \item verdict-step label-logit competitiveness analysis,
+  \item layer-wise probe sweeps.
+\end{itemize}
 
 \section{Methods}
 \subsection{Linear Probe}
@@ -394,6 +416,23 @@ Gemma-3-4B-it (no-think) & 0.397 & 0.013 & 0.563 \\
 \end{tabular}
 \end{table}
 
+\begin{table}[H]
+\centering
+\caption{World-bootstrap 95\% intervals for Unknown recall (5,000 resamples, unit = world).}
+\label{tab:unknown_ci}
+\begin{tabular}{lccc}
+\toprule
+Model & Decoder Unknown recall & Probe Unknown recall & Gap (Probe -- Decoder) \\
+\midrule
+Qwen3.5-2B & 0.000 [0.000, 0.000] & 0.738 [0.650, 0.821] & 0.738 [0.650, 0.821] \\
+Qwen3.5-4B (no-think) & 0.000 [0.000, 0.000] & 0.129 [0.067, 0.196] & 0.129 [0.067, 0.196] \\
+Gemma-3-4B-it (no-think) & 0.013 [0.000, 0.033] & 0.563 [0.463, 0.663] & 0.550 [0.454, 0.650] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All headline Unknown recalls are therefore stable under world-level resampling; interval estimates are reported to separate signal strength from sample-specific fluctuations.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.80\linewidth]{figures/fig2_unknown_decoder_vs_probe.png}
@@ -415,6 +454,14 @@ So the signal is not driven by one class boundary alone.
 \end{figure}
 
 For the headline state keys, sign counts are \(19/19\) (Qwen3.5-2B) and \(20/20\) (Gemma-3-4B-it), matching the exact-binomial sanity values in the methods section.
+
+To test the strongest remaining confound (same-proposition paraphrase clustering), we recomputed geometry after excluding all same-proposition pairs.
+Under this stricter cross-proposition control, geometry remains positive but materially weaker:
+\begin{itemize}
+  \item Gemma-3-4B-it positive-gap rates are \(0.75\) (\texttt{final\_prompt}), \(0.55\) (\texttt{verdict\_span\_mean}), \(0.65\) (\texttt{verdict\_token}),
+  \item Qwen3.5-2B positive-gap rates are \(0.58\), \(0.53\), and \(0.47\) on the same state keys.
+\end{itemize}
+This is why geometry is treated as supportive and secondary; the primary evidence remains probe/readout dissociation.
 
 \subsection{Cross-Family Replication}
 The dissociation replicates across Qwen and Gemma:
@@ -492,10 +539,13 @@ The combined evidence supports a readout-bottleneck interpretation:
   \item layer sweeps show strong internal signal upstream of failed readout.
 \end{enumerate}
 
+Our claim is about \textbf{representational availability plus decoder under-realization}, not causal mediation of final token choice by any single internal feature.
+This aligns with the ELK framing that latent knowledge can be present yet imperfectly elicited at readout time \cite{hubinger2021elk,burns2022discovering}, and with post-training behavior-shaping concerns such as sycophancy and over-commitment pressure \cite{sharma2023sycophancy}.
+
 This is stronger and narrower than the original repository framing.
 Results do \emph{not} support a universal ``truth topology'' scalar.
 
-\section{Why This Should Survive Review}
+\section{Robustness Checks and Mitigations}
 The result survives the obvious reviewer attacks:
 \begin{itemize}
   \item \textbf{Memorization objection}: nonce vocabularies, held-out lexicons, held-out templates.
@@ -536,12 +586,27 @@ That matters for:
 \end{itemize}
 This paper does not claim direct transfer to all tasks, but it motivates testing representation--readout gaps in other controlled domains.
 
+\section{Next Mechanistic Experiments}
+The current evidence favors a readout-bottleneck interpretation over a missing-representation interpretation.
+This does not yet isolate a single causal source of the bottleneck; it may reflect a combination of final-layer calibration, label competition, and post-training behavior shaping.
+Base-vs-instruct comparisons suggest post-training is not the sole cause, since mismatch persists after prompt-format repair in base models.
+
+Highest-value next experiments are:
+\begin{enumerate}
+  \item \textbf{Readout intervention (primary):} apply a minimal intervention at verdict time (e.g., additive Unknown logit correction or probe-guided residual steering) and test whether Unknown emission and tri-label accuracy improve without changing upstream representation.
+  \item \textbf{Base vs instruct amplification test:} compare decoder Unknown recall, verdict-step Unknown margin, probe Unknown recall, and representation--decoder gap under matched prompt/parser settings.
+  \item \textbf{Layer-wise logit-lens track:} alongside layer-wise probe recoverability, evaluate Unknown token competitiveness under native LM-head projection across layers.
+  \item \textbf{Prompt calibration stress test:} apply strict abstention framing and few-shot Unknown examples to test policy sensitivity of decoder readout.
+  \item \textbf{Nonlinear-probe sensitivity check:} keep linear probe as primary; add shallow MLP probe only as a secondary estimate of nonlinearly accessible Unknown structure.
+\end{enumerate}
+
 \section{Limitations}
 \begin{itemize}
   \item The micro-world benchmark is synthetic, even though controlled and compositional.
   \item Model coverage is small-to-mid scale; larger-scale behavior is open.
   \item Probe recoverability does not prove causal use by decoder policy.
   \item The exact source of readout failure is not fully decomposed; it may involve calibration, label competition, or post-training behavior shaping.
+  \item The most plausible interpretation is that non-entailment is encoded upstream as a distributed uncertainty/insufficiency state, but the final label readout is biased toward binary commitment and therefore under-realizes Unknown as an output class.
 \end{itemize}
 
 \section{Reproducibility}
@@ -567,6 +632,7 @@ semantic non-entailment is strongly encoded in hidden states but systematically 
 The correct framing is no longer a search for a single topology-of-truth scalar, but a study of how semantic uncertainty is preserved internally and lost at decoder readout.
 
 \section*{References}
+\renewcommand{\refname}{}
 \begin{thebibliography}{99}
 
 \bibitem{alain2016probes}
@@ -589,6 +655,11 @@ Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Ka
 \newblock Training verifiers to solve math word problems.
 \newblock arXiv:2110.14168, 2021.
 
+\bibitem{burns2022discovering}
+Collin Burns, Haotian Ye, Dan Klein, and Jacob Steinhardt.
+\newblock Discovering latent knowledge in language models without supervision.
+\newblock arXiv:2212.03827, 2022.
+
 \bibitem{gemma_model_card}
 Google.
 \newblock Gemma 3 4B Instruct model card.
@@ -599,10 +670,21 @@ Percy Liang, Rishi Bommasani, Tony Lee, et al.
 \newblock Holistic evaluation of language models.
 \newblock \emph{Transactions on Machine Learning Research}, 2023.
 
+\bibitem{hubinger2021elk}
+Evan Hubinger, Jack Clark, et al.
+\newblock Eliciting latent knowledge: How to tell if your eyes deceive you.
+\newblock Alignment Research Center report, 2021.
+\newblock \url{https://www.alignmentforum.org/posts/2R8YpY8cL4ePj4Aqk/eliciting-latent-knowledge-how-to-tell-if-your-eyes-deceive}. Accessed 2026-04-14.
+
 \bibitem{qwen_model_card}
 Qwen Team.
 \newblock Qwen3.5 model family card.
 \newblock \url{https://huggingface.co/Qwen/Qwen3.5-4B}. Accessed 2026-04-14.
+
+\bibitem{sharma2023sycophancy}
+Mrinank Sharma, Meg Tong, et al.
+\newblock Towards understanding sycophancy in language models.
+\newblock arXiv:2310.13548, 2023.
 
 \end{thebibliography}
 
@@ -674,5 +756,12 @@ Non-finite activations are replaced with zero prior to fitting.
   \item \textbf{Representation--decoder gap:} probe Unknown recall minus decoder Unknown recall on matched eval sets.
 \end{itemize}
 These are related but non-identical quantities, and they are reported separately throughout.
+
+\section{Appendix D: Additional Robustness Artifacts}
+Additional reviewer-targeted artifacts added in this revision:
+\begin{itemize}
+  \item cross-proposition geometry control summary: \texttt{artifacts/micro\_world\_v1/cross\_proposition\_geometry\_control\_summary.csv},
+  \item world-bootstrap Unknown recall intervals: \texttt{artifacts/micro\_world\_v1/comparison\_unknown\_recall\_bootstrap\_ci.csv}.
+\end{itemize}
 
 \end{document}
