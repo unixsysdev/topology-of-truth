@@ -1,6 +1,7 @@
 # Paper Draft
 
-This directory contains a submission-style draft of the project report and the figure pipeline used by the manuscript.
+This directory contains the submission draft aligned with the current repository claim:
+the micro-world representation--decoder dissociation for `Unknown` is the main positive result; the GSM8K global-topology branch is a documented negative result.
 
 ## Files
 
@@ -21,3 +22,9 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 The GitHub workflow `.github/workflows/paper.yml` runs the same steps and uploads a release bundle.
+
+See also:
+
+- `../CLAIMS_AND_EVIDENCE.md`
+- `../REPO_MAP.md`
+- `../PAPER_STATUS.md`

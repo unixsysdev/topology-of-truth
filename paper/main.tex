@@ -6,6 +6,7 @@
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{setspace}
 
@@ -26,52 +27,99 @@ Negative Replication on GSM8K and a Positive Representation--Decoder Dissociatio
 \onehalfspacing
 
 \begin{abstract}
-We report a multi-stage study of hidden-state geometry for correctness prediction in language-model reasoning.
-The initial hypothesis was that global topological summaries (especially persistent-homology $H_0$/$H_1$ features) would provide a robust correctness signal.
-That hypothesis failed under controlled checks: dynamic and windowed $H_0$ features were weak or degenerate and did not outperform simple baselines.
-In a separate fixed-decoding GSM8K branch, we found a stronger operational effect: non-convergence (token-cap termination) was the dominant predictor of error.
-We then moved to a procedurally generated language micro-world with nonce lexicons, held-out templates, and exact truth conditions over \texttt{True}/\texttt{False}/\texttt{Unknown}.
-Across Qwen and Gemma families, decoder behavior systematically under-expressed \texttt{Unknown}, yet verdict-region hidden-state probes recovered substantial \texttt{Unknown} signal on held-out worlds.
-This representation--decoder dissociation persisted under prompt-path controls, constrained label decoding, base-vs-instruct checks, verdict-step logit analysis, and layer sweeps.
-The main positive result is therefore not a global ``truth topology'' scalar, but a replicated internal-semantic/readout mismatch for non-entailment.
+We report a three-phase investigation of hidden-state geometry for reasoning correctness and semantic truth status.
+Phase A tested a global ``topology of truth'' hypothesis on GSM8K-style traces; this branch failed under stronger controls.
+Dynamic and fixed-window $H_0$ summaries were weak or degenerate and did not outperform simple controls after confound checks.
+Phase B, under fixed decoding, showed a different strong effect: token-cap termination was the dominant operational predictor of error, indicating non-convergence as the primary failure mode.
+Phase C introduced a procedural micro-world benchmark with nonce lexicons, held-out templates, and exact \texttt{True}/\texttt{False}/\texttt{Unknown} labels.
+Across Qwen and Gemma families, decoder behavior systematically under-expressed \texttt{Unknown}, while verdict-region hidden-state probes recovered substantial \texttt{Unknown} signal on held-out worlds.
+This dissociation survived prompt-path controls, constrained decoding, base-vs-instruct checks, verdict-step label-logit analysis, and layer sweeps.
+The positive contribution is therefore not a universal scalar ``truth topology,'' but a replicated representation--decoder mismatch for non-entailment.
 \end{abstract}
 
-\section{Scope and Claim}
-This repository started as a ``topology of truth'' project.
-The final evidence supports a narrower and stronger claim:
+\section{Introduction}
+This repository started from a broad claim: correct reasoning might have a globally coherent topological signature in hidden-state trajectories.
+That claim did not survive replication-quality checks.
+The final evidence supports a narrower and stronger statement:
 \begin{quote}
-In a held-out procedural semantic task, non-entailment (\texttt{Unknown}) is represented in hidden states but systematically under-realized by decoder outputs.
+On a controlled semantic task, non-entailment (\texttt{Unknown}) is encoded in internal representations but systematically under-expressed by decoder outputs.
 \end{quote}
-The paper is therefore a combined report of:
+
+We report the full trajectory rather than hiding failures:
 \begin{enumerate}
-  \item negative results for global topology summaries on math traces,
-  \item a convergence-failure result in fixed-decoding GSM8K runs, and
-  \item a replicated representation--decoder dissociation in a controlled micro-world.
+  \item \textbf{Phase A (negative):} global trace topology did not yield a reliable correctness signal.
+  \item \textbf{Phase B (positive):} fixed-decoding non-convergence strongly predicted wrong answers.
+  \item \textbf{Phase C (main positive):} replicated representation--decoder dissociation for \texttt{Unknown} in a held-out procedural semantic benchmark.
 \end{enumerate}
 
-\section{Experimental Trajectory}
-\subsection{Phase A: Global Topology on GSM8K (Negative)}
-We first tested static and dynamic topology features on small paired runs (Qwen3.5-0.8B/2B).
-The dynamic $H_0$ pilot on non-capped 2B traces (9 samples) showed weak separation:
-\texttt{h0\_entropy\_final AUC=0.55}, \texttt{peak\_h0\_entropy AUC=0.55}, \texttt{auc\_h0\_entropy\_per\_token AUC=0.50}, and \texttt{max\_delta\_h0 AUC=0.60}.
+\section{Research Questions}
+\textbf{RQ1 (failed):} Can global topological summaries of natural-language reasoning traces predict correctness robustly across conditions?
 
-The subsequent windowed correction test showed that fixed-window topology remained non-useful:
-\begin{itemize}
-  \item controls-only AUC: 0.60,
-  \item corrected-topology-only AUC: 0.20,
-  \item controls+corrected-topology AUC: 0.20.
-\end{itemize}
-These outputs are in \texttt{artifacts/qwen35\_2b\_window\_corrected/}.
+\textbf{RQ2 (supported):} In a controlled semantic benchmark, is \texttt{Unknown} / non-entailment represented in hidden states even when decoder behavior collapses that class?
 
-\subsection{Phase B: Fixed-Config Within-Question GSM8K (Convergence Result)}
-We ran Qwen3.5-2B with fixed decoding (\texttt{temperature=0.7}, \texttt{top\_p=0.95}, \texttt{max\_new\_tokens=384}) on a within-question batch (\(n=180\) total samples).
-The strongest effect was termination mode:
+\section{Phase A: Global Topology on GSM8K (Negative Replication)}
+\subsection{Setup}
+Phase A used paired Qwen3.5-0.8B/2B pilot traces and computed static/dynamic topological summaries from hidden-state clouds.
+The main files are in:
 \begin{itemize}
-  \item capped: 87 (75 wrong / 12 correct),
-  \item EOS: 93 (17 wrong / 76 correct),
-  \item AUC(cap $\rightarrow$ wrong): 0.839,
-  \item odds ratio (wrong given cap): 26.40.
+  \item \texttt{artifacts/paired\_dynamic\_qwen35/}
+  \item \texttt{artifacts/qwen35\_2b\_window\_corrected/}
 \end{itemize}
+
+\subsection{Result}
+On non-capped 2B pilot traces, dynamic metrics were weak:
+\begin{itemize}
+  \item \texttt{h0\_entropy\_final AUC=0.55}
+  \item \texttt{peak\_h0\_entropy AUC=0.55}
+  \item \texttt{auc\_h0\_entropy\_per\_token AUC=0.50}
+  \item \texttt{max\_delta\_h0 AUC=0.60}
+\end{itemize}
+
+After fixing window preprocessing, topology remained non-competitive:
+\begin{itemize}
+  \item controls-only AUC: 0.60
+  \item corrected-topology-only AUC: 0.20
+  \item controls+corrected-topology AUC: 0.20
+\end{itemize}
+
+\subsection{Interpretation}
+The global hypothesis failed because the measured summaries were dominated by construction and length effects, not stable correctness-related geometry.
+This branch is retained as a negative replication record.
+
+\section{Phase B: Fixed-Decoding Convergence Branch}
+\subsection{Setup}
+We ran Qwen3.5-2B with fixed decoding:
+\begin{itemize}
+  \item \texttt{temperature=0.7}
+  \item \texttt{top\_p=0.95}
+  \item \texttt{max\_new\_tokens=384}
+  \item 20 questions $\times$ 9 samples/question ($n=180$ total)
+\end{itemize}
+
+Primary manifest:
+\texttt{artifacts/qwen35\_2b\_within\_question/run\_manifest.csv}
+
+\subsection{Outcome and equation}
+Define
+\[
+C = \mathbb{1}[\text{termination is cap}], \qquad Y = \mathbb{1}[\text{wrong answer}]
+\]
+Counts:
+\begin{itemize}
+  \item capped: 87 (75 wrong / 12 correct)
+  \item EOS: 93 (17 wrong / 76 correct)
+\end{itemize}
+The operational signal is large:
+\[
+\mathrm{AUC}(C \rightarrow Y)=0.839
+\]
+and the odds ratio is
+\[
+\mathrm{OR}
+=
+\frac{\frac{75}{12}}{\frac{17}{76}}
+\approx 26.40.
+\]
 
 \begin{figure}[H]
   \centering
@@ -79,34 +127,121 @@ The strongest effect was termination mode:
   \caption{Fixed-config Qwen3.5-2B run: correctness split by termination mode.}
 \end{figure}
 
-For sensitivity, we reran all originally capped samples (\(n=87\)) at \texttt{max\_new\_tokens=640} with matched seeds/IDs:
+\subsection{Cap sensitivity at longer budget}
+We reran all originally capped samples at \texttt{max\_new\_tokens=640} with matched IDs/seeds:
 \begin{itemize}
-  \item 59 reached EOS, 28 remained capped,
-  \item among 75 originally capped wrong: 27 flipped wrong$\rightarrow$correct, 48 stayed wrong.
+  \item rerun set: \(n=87\), in \texttt{artifacts/qwen35\_2b\_cap\_sensitivity\_640/}
+  \item among originally capped wrong (75): 27 flipped wrong$\rightarrow$correct, 48 stayed wrong
+  \item still capped at 640 remained heavily wrong (24 wrong / 4 correct)
 \end{itemize}
-Interpretation: both truncation and deeper non-convergence contribute.
+Conclusion: truncation matters, but deeper non-convergence remains a dominant regime.
 
-\subsection{Phase C: Procedural Micro-World Semantics (Main Positive Result)}
-To reduce benchmark contamination and isolate semantic reasoning, we built a synthetic micro-world dataset:
+\section{Phase C: Procedural Micro-World Benchmark}
+\subsection{Dataset design}
+To isolate semantics from benchmark contamination, we procedurally generate latent worlds and render language statements over nonce symbols.
+The dataset generator is:
+\texttt{scripts/generate\_micro\_world\_dataset.py}
+with outputs under
+\texttt{artifacts/micro\_world\_v1/dataset/}.
+
+Each world has:
 \begin{itemize}
-  \item latent structured worlds with nonce vocabularies,
-  \item held-out lexicons/templates across splits,
-  \item exact tri-label truth status: \texttt{True}/\texttt{False}/\texttt{Unknown},
-  \item 72 examples per world (9 propositions \(\times\) 8 paraphrases),
-  \item 20 train worlds + 20 eval worlds used in the main model sweeps.
+  \item entities and attributes with split-specific nonce lexicon,
+  \item binary relations with held-out lexical variants,
+  \item 9 propositions and 8 paraphrases/proposition,
+  \item exact labels \(y \in \{\texttt{True},\texttt{False},\texttt{Unknown}\}\).
 \end{itemize}
+Thus each world contributes 72 examples.
 
-\section{Core Micro-World Results}
-\subsection{Decoder Unknown Collapse vs Hidden Unknown Recoverability}
-Table~\ref{tab:decoder_probe} compares decoder behavior to verdict-token probe recovery on held-out eval worlds.
+Main sweeps use 20 train worlds and 20 eval worlds (1,440 eval examples/model).
+
+\subsection{Worked world example}
+Table~\ref{tab:world_example} shows the style of one generated world in human-readable form.
 
 \begin{table}[H]
 \centering
-\caption{Decoder vs verdict-token probe on eval micro-worlds (\(n=1440\) per model).}
+\caption{Worked micro-world example (illustrative format).}
+\label{tab:world_example}
+\begin{tabular}{p{0.28\linewidth} p{0.46\linewidth} p{0.14\linewidth}}
+\toprule
+World fact set & Query statement & Gold label \\
+\midrule
+\texttt{mep is falm}; \texttt{grel is not falm}; \texttt{nalo foshes sop} &
+\texttt{The object mep has property falm.} & True \\
+\addlinespace
+\texttt{mep is falm}; \texttt{grel is not falm}; \texttt{nalo foshes sop} &
+\texttt{The object grel has property falm.} & False \\
+\addlinespace
+\texttt{mep is falm}; \texttt{grel is not falm}; \texttt{nalo foshes sop} &
+\texttt{The relation fosh holds from mep to nalo.} & Unknown \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Methods}
+\subsection{Stored inference artifacts}
+Per example we store prompt text, gold label, decoder label, parse status, verdict-region hidden states, and verdict-step logits.
+The canonical per-sample files are:
+\begin{itemize}
+  \item \texttt{sample.json}
+  \item \texttt{verdict\_states.npz}
+  \item \texttt{logits\_summary.npz}
+\end{itemize}
+
+\subsection{Linear probe}
+For one state key, with hidden vector \(h_i \in \mathbb{R}^d\) and class \(y_i \in \{1,2,3\}\), the probe is:
+\[
+s_i = Wh_i + b,\quad W\in\mathbb{R}^{3\times d},\ b\in\mathbb{R}^{3},
+\]
+\[
+\hat y_i = \arg\max_c (s_i)_c.
+\]
+Training minimizes multiclass cross-entropy:
+\[
+\mathcal{L}(W,b) = -\sum_i
+\log \frac{\exp((Wh_i+b)_{y_i})}{\sum_c \exp((Wh_i+b)_c)}.
+\]
+This asks whether class information is linearly recoverable from hidden states, without modifying the base model.
+
+\subsection{Within-world geometry gap}
+Within each world and state key, we compute:
+\[
+D_{\text{same}} = \mathbb{E}[d(h_i,h_j)\mid y_i=y_j], \quad
+D_{\text{diff}} = \mathbb{E}[d(h_i,h_j)\mid y_i\neq y_j],
+\]
+\[
+\Delta = D_{\text{diff}} - D_{\text{same}}.
+\]
+\(\Delta>0\) implies tighter same-label neighborhoods than different-label neighborhoods.
+We report sign-test consistency across worlds.
+
+\subsection{Verdict-step label-logit metrics}
+For label logits \((\ell_T,\ell_F,\ell_U)\):
+\[
+P_U = \frac{e^{\ell_U}}{e^{\ell_T}+e^{\ell_F}+e^{\ell_U}},
+\qquad
+m_U = \ell_U - \max(\ell_T,\ell_F).
+\]
+Negative \(m_U\) means \texttt{Unknown} is under-ranked at the final decision step.
+
+\subsection{Layer sweep}
+For each transformer layer \(\ell\), we extract the same state family and evaluate the same linear probe protocol:
+\[
+R_U^{(\ell)} = \text{probe recall for Unknown at layer }\ell.
+\]
+This identifies where non-entailment is maximally linearly recoverable.
+
+\section{Main Results}
+\subsection{Decoder collapse vs hidden-state recovery}
+Table~\ref{tab:decoder_probe} compares decoder output and verdict-token probe performance.
+
+\begin{table}[H]
+\centering
+\caption{Decoder vs verdict-token probe (\(n=1440\) eval examples/model).}
 \label{tab:decoder_probe}
 \begin{tabular}{lccc}
 \toprule
-Model & Decoder Acc. & Decoder Unknown Recall & Probe Unknown Recall \\
+Model & Decoder Accuracy & Decoder Unknown Recall & Probe Unknown Recall \\
 \midrule
 Qwen3.5-2B & 0.436 & 0.000 & 0.738 \\
 Qwen3.5-4B (no-think) & 0.478 & 0.000 & 0.129 \\
@@ -118,105 +253,147 @@ Gemma-3-4B-it (no-think) & 0.397 & 0.013 & 0.563 \\
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.80\linewidth]{figures/fig2_unknown_decoder_vs_probe.png}
-  \caption{Unknown recall: decoder outputs vs verdict-token probe. Hidden-state signal substantially exceeds emitted-label signal.}
+  \caption{Decoder Unknown recall vs verdict-token probe Unknown recall.}
 \end{figure}
 
-\subsection{World-Level Geometry Consistency}
-Within-world geometry tests compare same-label vs different-label verdict-state distances.
-For Qwen3.5-2B (19 valid eval worlds) and Gemma-3-4B-it (20 worlds), all tested state keys had positive sign-test rates:
-\[
-\text{different-label distance} > \text{same-label distance}
-\]
-in \(19/19\) and \(20/20\) worlds, respectively.
+The key effect is replicated: decoder behavior under-expresses \texttt{Unknown} while hidden states encode it.
+
+\subsection{World-level geometry consistency}
+Sign tests on world-level geometry gaps were positive across all valid worlds:
+\begin{itemize}
+  \item Qwen3.5-2B: 19/19 worlds with \(\Delta>0\),
+  \item Gemma-3-4B-it: 20/20 worlds with \(\Delta>0\).
+\end{itemize}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\linewidth]{figures/fig5_geometry_sign_tests.png}
-  \caption{Fraction of worlds with positive same-vs-different label distance gap.}
+  \caption{Fraction of worlds with positive same-vs-different label gap.}
 \end{figure}
 
-\subsection{Mechanistic Controls: Prompt Path, Constrained Decode, Base vs Instruct}
-The dissociation survived multiple controls:
+\subsection{Mechanistic controls}
+The dissociation persisted under:
 \begin{itemize}
-  \item raw-prompt path for Gemma-it still showed decoder/probe mismatch,
-  \item constrained \{\texttt{True},\texttt{False},\texttt{Unknown}\} decoding did not reliably repair Unknown emission,
-  \item initial Gemma-base parse failures under mismatched prompt format were repaired using a base-specific label format,
-  \item after parse-confound repair, Gemma-base still had decoder Unknown recall \(=0\) while probes recovered Unknown.
+  \item raw prompt path control,
+  \item constrained \{\texttt{True}, \texttt{False}, \texttt{Unknown}\} decoding,
+  \item base-vs-instruct comparison with base-format parse repair,
+  \item verdict-step logit analysis,
+  \item layer-sweep probes.
 \end{itemize}
 
-\subsection{Verdict-Step Logit Analysis}
-On gold-\texttt{Unknown} decoder failures, verdict-step logits under-ranked \texttt{Unknown}:
+\subsection{Logit evidence}
+On gold-\texttt{Unknown} decoder failures:
 \begin{itemize}
-  \item Gemma-3-4B-it: mean \(P(\texttt{Unknown})=0.192\), mean log-prob margin \(-1.293\),
-  \item Gemma-3-4B-pt (basefmt): mean \(P(\texttt{Unknown})=0.177\), mean log-prob margin \(-1.045\).
+  \item Gemma-3-4B-it raw: mean \(P(\texttt{Unknown})=0.192\), mean margin \(m_U=-1.293\),
+  \item Gemma-3-4B-pt basefmt: mean \(P(\texttt{Unknown})=0.177\), mean margin \(m_U=-1.045\).
 \end{itemize}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.86\linewidth]{figures/fig3_gemma_unknown_logit_competitiveness.png}
-  \caption{Verdict-step evidence of Unknown under-ranking on gold-Unknown failures.}
+  \caption{Unknown competitiveness on gold-Unknown decoder failures.}
 \end{figure}
 
-\subsection{Layer Sweep}
-Layer-wise probes showed strong internal Unknown recoverability in both Gemma variants, with model-dependent layer locations.
+\subsection{Layer-sweep evidence}
 Best Unknown recall by state family:
 \begin{itemize}
-  \item Gemma-it: prompt\_last 0.779 (layer 1), verdict\_token 0.742 (layer 10),
-  \item Gemma-pt (basefmt): prompt\_last 0.825 (layer 29), verdict\_token 0.733 (layer 28).
+  \item Gemma-it: \texttt{prompt\_last}=0.779 at layer 1; \texttt{verdict\_token}=0.742 at layer 10
+  \item Gemma-pt-basefmt: \texttt{prompt\_last}=0.825 at layer 29; \texttt{verdict\_token}=0.733 at layer 28
 \end{itemize}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.76\linewidth]{figures/fig4_layer_sweep_unknown_recall.png}
-  \caption{Best Unknown recall from layer sweeps by state family.}
+  \caption{Best Unknown recall from layer sweeps.}
 \end{figure}
 
 \section{Interpretation}
-The combined evidence supports a readout bottleneck interpretation:
+The evidence supports a representation--readout bottleneck:
 \begin{enumerate}
-  \item semantic non-entailment is encoded internally,
-  \item decoder outputs under-express that class,
-  \item the mismatch is replicated across model families and controls.
-\end{enumerate}
-We do \textbf{not} claim a universal global topology scalar for correctness.
-That formulation was not supported by the GSM8K/global-$H_0$ branch.
-
-\section{Contributions}
-\begin{enumerate}
-  \item A complete negative replication record for global-trace topology correctness signals.
-  \item A fixed-decoding convergence analysis showing cap-linked non-convergence as a dominant error mode.
-  \item A procedural, held-out semantic benchmark with exact tri-label truth status.
-  \item A replicated representation--decoder dissociation for non-entailment across model families.
-  \item Mechanistic triangulation via constrained decoding, prompt-path controls, logit-level analysis, and layer sweeps.
+  \item non-entailment is encoded internally,
+  \item the decoder under-ranks/under-emits that class,
+  \item this mismatch replicates across model families and controls.
 \end{enumerate}
 
-\section{Reproducibility and Artifacts}
-All produced outputs are committed under \texttt{artifacts/} and \texttt{outputs/} in this repository.
-Key analysis entry points:
+What is \textbf{not} supported:
 \begin{itemize}
-  \item convergence branch: \texttt{artifacts/qwen35\_2b\_within\_question/analysis/},
-  \item cap sensitivity: \texttt{artifacts/qwen35\_2b\_cap\_sensitivity\_640/analysis/},
-  \item micro-world comparisons: \texttt{artifacts/micro\_world\_v1/comparison\_*.csv},
-  \item layer sweep: \texttt{artifacts/micro\_world\_v1/layer\_sweep\_*},
-  \item label-logit analysis: \texttt{artifacts/micro\_world\_v1/label\_logits\_*}.
+  \item a universal scalar ``topology of truth,''
+  \item a claim that topology alone is the dominant predictive signal on GSM8K traces.
 \end{itemize}
 
-Paper figures are generated deterministically from committed CSV files via:
+\section{Reproducibility}
+\subsection{Environment}
+Locked dependency snapshot:
+\texttt{repro/requirements.lock.txt}
+
+\subsection{Core commands}
+From repository root:
 \begin{verbatim}
+# Figures
 python3 paper/scripts/make_figures.py
+
+# Compile PDF
+cd paper
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
 \end{verbatim}
+
+\subsection{Artifact locations used in this manuscript}
+\begin{itemize}
+  \item Phase A negative: \texttt{artifacts/paired\_dynamic\_qwen35/}, \texttt{artifacts/qwen35\_2b\_window\_corrected/}
+  \item Phase B convergence: \texttt{artifacts/qwen35\_2b\_within\_question/}
+  \item Phase B sensitivity: \texttt{artifacts/qwen35\_2b\_cap\_sensitivity\_640/analysis/}
+  \item Phase C comparisons: \texttt{artifacts/micro\_world\_v1/comparison\_*.csv}
+  \item Phase C logits: \texttt{artifacts/micro\_world\_v1/comparison\_label\_logits\_gemma\_it\_vs\_pt\_basefmt.csv}
+  \item Phase C layer sweep: \texttt{artifacts/micro\_world\_v1/comparison\_layer\_sweep\_gemma\_it\_vs\_pt\_basefmt.csv}
+\end{itemize}
 
 \section{Limitations}
 \begin{itemize}
-  \item We studied small-to-mid model sizes only; larger-scale behavior is open.
-  \item The micro-world is controlled and compositional, but still synthetic.
-  \item Probe recoverability does not, by itself, prove causal use by the decoder.
+  \item Model coverage is small-to-mid scale only.
+  \item The procedural benchmark is controlled but synthetic.
+  \item Probe recoverability does not alone prove causal use by decoder policy.
 \end{itemize}
 
 \section{Conclusion}
-The original ``truth topology'' objective was too broad for the observed evidence.
-The final, validated contribution is a replicated representation--decoder dissociation:
-non-entailment is internally represented but systematically under-surfaced at output time.
-This reframes the problem from discovering a single topology-of-truth scalar to studying how semantic uncertainty is lost between internal representation and decoder readout.
+The original global-topology headline did not survive.
+The validated result is a replicated representation--decoder dissociation:
+on a held-out procedural semantic benchmark, \texttt{Unknown} is strongly recoverable from hidden states while decoder outputs systematically under-express it.
+This reframes the work from ``truth topology'' to readout bottlenecks in semantic uncertainty expression.
+
+\appendix
+\section{Appendix A: Full Reproduction Commands}
+\begin{verbatim}
+# Phase A dynamic topology
+python3 scripts/analyze_paired_dynamic.py \
+  --artifact-08b artifacts/paired_qwen35_08b_10 \
+  --artifact-2b artifacts/paired_qwen35_2b_10 \
+  --out-dir artifacts/paired_dynamic_qwen35
+
+# Phase A corrected window test
+python3 scripts/analyze_2b_window_corrected.py \
+  --artifact-dir artifacts/paired_qwen35_2b_10 \
+  --out-dir artifacts/qwen35_2b_window_corrected
+
+# Phase B fixed-decoding run
+python3 scripts/run_multi_sample_questions.py \
+  --model-id Qwen/Qwen3.5-2B \
+  --question-start 0 --question-count 20 --samples-per-question 9 \
+  --temperature 0.7 --top-p 0.95 --max-new-tokens 384 \
+  --artifact-dir artifacts/qwen35_2b_within_question
+
+# Phase B cap sensitivity
+python3 scripts/run_cap_sensitivity.py \
+  --model-id Qwen/Qwen3.5-2B \
+  --source-artifact-dir artifacts/qwen35_2b_within_question \
+  --out-dir artifacts/qwen35_2b_cap_sensitivity_640 \
+  --temperature 0.7 --top-p 0.95 --max-new-tokens 640
+
+# Phase C dataset
+python3 scripts/generate_micro_world_dataset.py \
+  --out-dir artifacts/micro_world_v1/dataset \
+  --seed 1729 --train-worlds 100 --dev-worlds 25 --eval-worlds 100 \
+  --props-per-world 9 --paraphrases-per-prop 8
+\end{verbatim}
 
 \end{document}

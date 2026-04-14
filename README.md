@@ -1,76 +1,44 @@
-# Topology of Truth (Consolidated Main)
+# Topology Repository
 
-This repository is now one merged branch with all experiments, artifacts, and paper outputs.
+This repo contains three completed experiment phases. The front-door claim is:
 
-## Project Status (short)
+> On a held-out procedural micro-world task, `Unknown` / non-entailment is recoverable from verdict-region hidden states, while decoder outputs under-express it.
 
-- The original global-topology hypothesis did **not** verify.
-- A fixed-decoding GSM8K branch found a strong **convergence-failure** effect.
-- A procedural micro-world branch found a replicated **representation--decoder dissociation** for `Unknown`.
+The old “global topology of truth” headline did not survive.
 
-## The 3 Experiment Tracks
-
-1. **Old global H0/H1 topology (negative)**  
-   Details: [docs/experiments/01_global_h0_topology/README.md](docs/experiments/01_global_h0_topology/README.md)
-
-2. **Convergence failure on fixed GSM8K decoding (positive)**  
-   Details: [docs/experiments/02_convergence_failure/README.md](docs/experiments/02_convergence_failure/README.md)
-
-3. **Procedural micro-world semantics (main positive)**  
-   Details: [docs/experiments/03_micro_world_semantics/README.md](docs/experiments/03_micro_world_semantics/README.md)
-
-Index: [docs/experiments/README.md](docs/experiments/README.md)
-
-## Key Results
-
-### Track 1 (negative)
-
-- Dynamic/topology separability stayed weak (`AUC ~0.5-0.6`).
-- Corrected fixed-window topology did not beat controls (`AUC 0.20` vs controls `0.60`).
-
-### Track 2 (convergence)
-
-From `artifacts/qwen35_2b_within_question/run_manifest.csv`:
-
-- `n=180`, correct/wrong = `88/92`
-- capped = `87` (`75` wrong, `12` correct)
-- eos = `93` (`17` wrong, `76` correct)
-- cap->wrong AUC = `0.839`
-
-From `artifacts/qwen35_2b_cap_sensitivity_640/analysis/transition_summary.csv`:
-
-- matched capped reruns = `87`
-- wrong->correct at longer budget = `27`
-- wrong->still wrong = `48`
-
-### Track 3 (micro-world)
-
-Decoder baseline (`artifacts/micro_world_v1/comparison_decoder_qwen_gemma.csv`):
-
-- Qwen3.5-2B Unknown recall = `0.000`
-- Qwen3.5-4B Unknown recall = `0.000`
-- Gemma-3-4B-it Unknown recall = `0.0125`
-
-Verdict-token probe (`artifacts/micro_world_v1/comparison_probe_states_qwen_gemma.csv`):
-
-- Qwen3.5-2B Unknown recall = `0.7375`
-- Qwen3.5-4B Unknown recall = `0.1292`
-- Gemma-3-4B-it Unknown recall = `0.5625`
-
-## Paper and CI
+## Start Here
 
 - Paper source: [paper/main.tex](paper/main.tex)
-- Compiled PDF: [paper/paper.pdf](paper/paper.pdf)
-- Figure generator: [paper/scripts/make_figures.py](paper/scripts/make_figures.py)
-- CI workflow: [.github/workflows/paper.yml](.github/workflows/paper.yml)
-- Release bundle script: [scripts/package_release_bundle.py](scripts/package_release_bundle.py)
+- Paper PDF: [paper/paper.pdf](paper/paper.pdf)
+- Claim-to-file mapping: [CLAIMS_AND_EVIDENCE.md](CLAIMS_AND_EVIDENCE.md)
+- Repository file map: [REPO_MAP.md](REPO_MAP.md)
+- Experiment index: [docs/experiments/README.md](docs/experiments/README.md)
+
+## Three Phases
+
+1. Phase A (negative): global H0/H1 topology on GSM8K traces  
+   [docs/experiments/01_global_h0_topology/README.md](docs/experiments/01_global_h0_topology/README.md)
+
+2. Phase B (positive): fixed-decoding convergence failure on GSM8K  
+   [docs/experiments/02_convergence_failure/README.md](docs/experiments/02_convergence_failure/README.md)
+
+3. Phase C (main positive): procedural micro-world representation–decoder dissociation  
+   [docs/experiments/03_micro_world_semantics/README.md](docs/experiments/03_micro_world_semantics/README.md)
+
+## Main Numbers
+
+- Phase A: corrected topology-only AUC = `0.20` (controls = `0.60`)
+- Phase B: cap→wrong AUC = `0.839`; OR ≈ `26.40`
+- Phase C: decoder Unknown recall (`Qwen2B=0.000`, `Qwen4B=0.000`, `Gemma-it=0.0125`) while verdict-token probe Unknown recall (`0.7375`, `0.1292`, `0.5625`)
+
+## Repo Notes
+
+- Legacy root Python scripts were moved to `phase_a_global_h0_topology/scripts/`.
+- All committed artifacts are kept under `artifacts/` and `outputs/`.
+- `.npz` artifacts are committed (not ignored).
 
 ## Reproducibility
 
-- Version lock: [repro/requirements.lock.txt](repro/requirements.lock.txt)
-- Rebuild instructions: [repro/README.md](repro/README.md)
-
-## Artifact policy
-
-All committed artifacts are retained in-repo under `artifacts/` and `outputs/`.
-Release packaging additionally provides `release/paper_release_bundle.tar.gz` for a compact reproducible subset.
+- Locked deps: [repro/requirements.lock.txt](repro/requirements.lock.txt)
+- Rebuild guide: [repro/README.md](repro/README.md)
+- CI build/release: [.github/workflows/paper.yml](.github/workflows/paper.yml)

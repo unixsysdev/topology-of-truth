@@ -20,7 +20,7 @@ python3 scripts/run_multi_sample_questions.py \
   --model-id Qwen/Qwen3.5-2B \
   --question-start 0 \
   --question-count 20 \
-  --samples-per-question 5 \
+  --samples-per-question 9 \
   --temperature 0.7 \
   --top-p 0.95 \
   --max-new-tokens 384 \

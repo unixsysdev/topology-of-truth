@@ -11,6 +11,8 @@ This track is the direct test of that idea.
 
 - GSM8K examples from configured dataset loader.
 - Model generations and hidden states from Qwen3.5 0.8B/2B pilots.
+- Legacy first-pass pipeline scripts now live in:
+  - `phase_a_global_h0_topology/scripts/`
 
 ## Artifact generation pipeline
 
