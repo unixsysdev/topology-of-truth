@@ -23,5 +23,10 @@ env/
 # Serena
 .serena/
 
-# Large binary files - exclude activation npz files
-*.npz
+# Binary artifacts are intentionally versioned in this repository.
+
+# LaTeX build intermediates (final PDF is tracked)
+paper/*.aux
+paper/main.log
+paper/*.out
+paper/*.toc

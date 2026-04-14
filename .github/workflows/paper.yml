@@ -1,0 +1,65 @@
+name: Build And Release Paper
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-paper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Figure Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas matplotlib
+
+      - name: Generate Paper Figures
+        run: python3 paper/scripts/make_figures.py
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra
+
+      - name: Compile Manuscript
+        run: |
+          cd paper
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          cp main.pdf paper.pdf
+
+      - name: Package Release Bundle
+        run: python3 scripts/package_release_bundle.py
+
+      - name: Upload Paper Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-artifacts
+          path: |
+            paper/paper.pdf
+            paper/main.tex
+            paper/figures/*.png
+            release/paper_release_bundle.tar.gz
+
+      - name: Publish paper-latest release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: ncipollo/release-action@v1
+        with:
+          tag: paper-latest
+          name: paper-latest
+          allowUpdates: true
+          replacesArtifacts: true
+          artifactErrorsFailBuild: true
+          artifacts: "paper/paper.pdf,paper/main.tex,release/paper_release_bundle.tar.gz"
+          token: ${{ secrets.GITHUB_TOKEN }}

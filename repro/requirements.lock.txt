@@ -1,0 +1,20 @@
+# Reproducibility lock used for this consolidated branch.
+# These versions are the ones recorded in run environment manifests and the
+# local analysis environment used to regenerate figures/paper.
+
+accelerate==1.11.0
+datasets==4.8.4
+matplotlib==3.10.8
+numpy==2.4.3
+pandas==3.0.1
+persim==0.3.8
+pyarrow==23.0.1
+PyYAML==6.0.3
+ripser==0.6.14
+scikit-learn==1.7.2
+scipy==1.17.1
+seaborn==0.13.2
+torch==2.10.0
+tqdm==4.67.1
+transformers==5.4.0
+umap-learn==0.5.9.post2
