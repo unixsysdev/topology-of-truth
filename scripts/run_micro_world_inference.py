@@ -53,6 +53,8 @@ def main() -> None:
     parser.add_argument("--max-new-tokens", type=int, default=4)
     parser.add_argument("--timeout-sec", type=int, default=900)
     parser.add_argument("--resume-skip-existing", action="store_true")
+    parser.add_argument("--system-prompt", default="")
+    parser.add_argument("--disable-thinking", action="store_true")
     args = parser.parse_args()
 
     prepare_hf_env()
@@ -76,6 +78,10 @@ def main() -> None:
         "temperature": 0.0,
         "max_new_tokens": int(args.max_new_tokens),
     }
+    if args.system_prompt:
+        generation_config["system_prompt"] = str(args.system_prompt)
+    if args.disable_thinking:
+        generation_config["enable_thinking"] = False
     for example in examples:
         example_id = example["example_id"]
         example_dir = ensure_dir(examples_dir / example_id)
