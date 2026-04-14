@@ -1,0 +1,40 @@
+{
+  "example_id": "train_world_000000_prop_0007_para_03",
+  "world_id": "train_world_000000",
+  "proposition_id": "train_world_000000_prop_0007",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v3_attr_v3_attr_v4",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "glim",
+      "entity": "blicket",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "daxel",
+      "entity": "kiv",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "It is true that blicket belongs to the glim things or that The object kiv has the property daxel.",
+  "prompt": "World:\n- blicket is glim.\n- dax is glim.\n- pavo is glim.\n- lume is daxel.\n- pavo is daxel.\n- blicket is not daxel.\n- dax is not daxel.\n- kiv is not daxel.\n- blicket tobs lume.\n- dax tobs blicket.\n- dax tobs norp.\n- norp tobs dax.\n- norp tobs kiv.\n- blicket does not tob kiv.\n- blicket does not tob norp.\n- blicket does not tob pavo.\n- dax does not tob lume.\n- lume does not tob norp.\n- norp does not tob blicket.\n- norp does not tob pavo.\n- pavo does not tob norp.\n- kiv sumes blicket.\n- lume sumes blicket.\n- norp sumes lume.\n- pavo sumes blicket.\n- pavo sumes kiv.\n- dax does not sume blicket.\n- kiv does not sume lume.\n- kiv does not sume pavo.\n- lume does not sume pavo.\n- norp does not sume kiv.\n- pavo does not sume lume.\n\nStatement:\nIt is true that blicket belongs to the glim things or that The object kiv has the property daxel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7906124490000366,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000000_prop_0007_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000000_prop_0007_para_03/logits_summary.npz"
+}

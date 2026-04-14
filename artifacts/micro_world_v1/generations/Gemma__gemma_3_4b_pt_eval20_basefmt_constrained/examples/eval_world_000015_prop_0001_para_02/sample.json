@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000015_prop_0001_para_02",
+  "world_id": "eval_world_000015",
+  "proposition_id": "eval_world_000015_prop_0001",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v6_rel_v6_rel_v7",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "koba",
+      "relation": "nimp",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "right": {
+      "object": "drin",
+      "relation": "keld",
+      "subject": "koba",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "Evaluate this compound claim: For this world, toma nimps koba or The ordered pair (koba, drin) has relation keld.",
+  "prompt": "World:\n- drin is peln.\n- nalo is peln.\n- toma is peln.\n- bex is not peln.\n- bex is not zantic.\n- drin is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- bex nimps drin.\n- bex nimps toma.\n- drin nimps nalo.\n- koba nimps bex.\n- koba nimps mep.\n- nalo nimps drin.\n- toma nimps koba.\n- bex does not nimp koba.\n- bex does not nimp mep.\n- drin does not nimp koba.\n- drin does not nimp toma.\n- koba does not nimp nalo.\n- mep does not nimp toma.\n- nalo does not nimp toma.\n- toma does not nimp bex.\n- toma does not nimp nalo.\n- bex kelds toma.\n- drin kelds nalo.\n- koba kelds bex.\n- koba kelds mep.\n- mep kelds bex.\n- nalo kelds mep.\n- bex does not keld drin.\n- bex does not keld koba.\n- drin does not keld bex.\n- koba does not keld nalo.\n- mep does not keld koba.\n- nalo does not keld koba.\n- toma does not keld drin.\n- toma does not keld koba.\n- toma does not keld mep.\n\nStatement:\nEvaluate this compound claim: For this world, toma nimps koba or The ordered pair (koba, drin) has relation keld.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True\n",
+  "generated_token_ids": [
+    6288,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.45119905100000324,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt_constrained/examples/eval_world_000015_prop_0001_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt_constrained/examples/eval_world_000015_prop_0001_para_02/logits_summary.npz"
+}

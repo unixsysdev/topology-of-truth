@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000011_prop_0008_para_07",
+  "world_id": "eval_world_000011",
+  "proposition_id": "eval_world_000011_prop_0008",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v7_rel_v7_rel_v0",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "vex",
+      "relation": "keld",
+      "subject": "mep",
+      "type": "rel"
+    },
+    "right": {
+      "object": "grel",
+      "relation": "keld",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The compound proposition says The ordered pair (mep, vex) has relation keld or toma kelds grel.",
+  "prompt": "World:\n- vex is falm.\n- toma is not falm.\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- vex is not soric.\n- mep kelds vex.\n- vex kelds toma.\n- grel does not keld mep.\n- toma does not keld grel.\n- vex does not keld grel.\n- grel foshes toma.\n- toma foshes grel.\n- toma foshes vex.\n- vex foshes mep.\n- vex foshes toma.\n- grel does not fosh mep.\n\nStatement:\nThe compound proposition says The ordered pair (mep, vex) has relation keld or toma kelds grel.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True",
+  "generated_token_ids": [
+    6288,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.2589071990005323,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt_constrained/examples/eval_world_000011_prop_0008_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt_constrained/examples/eval_world_000011_prop_0008_para_07/logits_summary.npz"
+}

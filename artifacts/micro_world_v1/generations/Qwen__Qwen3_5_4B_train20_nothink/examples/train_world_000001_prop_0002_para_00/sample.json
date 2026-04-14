@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000001_prop_0002_para_00",
+  "world_id": "train_world_000001",
+  "proposition_id": "train_world_000001_prop_0002",
+  "paraphrase_id": "para_00",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "none_v0",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "selt",
+    "object": "kiv",
+    "relation": "vark",
+    "type": "none"
+  },
+  "statement": "No selt thing varks kiv.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is not daxel.\n- norp is selt.\n- kiv is not selt.\n- vonn is not selt.\n- norp varks kiv.\n- norp does not vark vonn.\n- tib does not vark norp.\n- tib does not vark vonn.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- vonn tobs norp.\n- tib does not tob norp.\n- tib does not tob vonn.\n\nStatement:\nNo selt thing varks kiv.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6643873249995522,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000001_prop_0002_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000001_prop_0002_para_00/logits_summary.npz"
+}

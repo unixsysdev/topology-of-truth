@@ -1,0 +1,4 @@
+label,n,source_correct,source_wrong,rerun_correct,rerun_wrong,rerun_capped,rerun_eos,wrong_to_correct,wrong_to_wrong,wrong_to_eos_correct,wrong_to_eos_wrong,wrong_to_still_capped_correct,wrong_to_still_capped_wrong,correct_to_correct,correct_to_wrong,correct_to_eos_correct,correct_to_still_capped_correct,correct_to_still_capped_wrong
+all,87,12,75,38,49,28,59,27,48,24,24,3,24,11,1,10,1,0
+source_wrong,75,0,75,27,48,27,48,27,48,24,24,3,24,0,0,0,0,0
+source_correct,12,12,0,11,1,1,11,0,0,0,0,0,0,11,1,10,1,0

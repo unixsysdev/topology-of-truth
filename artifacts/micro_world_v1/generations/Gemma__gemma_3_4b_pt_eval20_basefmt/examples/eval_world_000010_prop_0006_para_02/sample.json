@@ -1,0 +1,34 @@
+{
+  "example_id": "eval_world_000010_prop_0006_para_02",
+  "world_id": "eval_world_000010",
+  "proposition_id": "eval_world_000010_prop_0006",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "exactly_one_v6",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "falm",
+    "object": "bex",
+    "relation": "nimp",
+    "type": "exactly_one"
+  },
+  "statement": "Count the falm things that nimp bex; the result is exactly one.",
+  "prompt": "World:\n- bex is falm.\n- nalo is falm.\n- vex is not falm.\n- vex is zantic.\n- bex is not zantic.\n- grel is not zantic.\n- nalo is not zantic.\n- sop is not zantic.\n- bex drels vex.\n- grel drels nalo.\n- nalo drels sop.\n- vex drels bex.\n- grel does not drel sop.\n- grel does not drel vex.\n- nalo does not drel bex.\n- sop does not drel grel.\n- sop does not drel nalo.\n- sop does not drel vex.\n- vex does not drel nalo.\n- vex does not drel sop.\n- bex nimps nalo.\n- bex nimps vex.\n- nalo nimps bex.\n- nalo nimps vex.\n- sop nimps nalo.\n- sop nimps vex.\n- vex nimps grel.\n- vex does not nimp bex.\n- vex does not nimp sop.\n\nStatement:\nCount the falm things that nimp bex; the result is exactly one.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n",
+  "generated_token_ids": [
+    6288,
+    236761,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5088265629965463,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000010_prop_0006_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000010_prop_0006_para_02/logits_summary.npz"
+}

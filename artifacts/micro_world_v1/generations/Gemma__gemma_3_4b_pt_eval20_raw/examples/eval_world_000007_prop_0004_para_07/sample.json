@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000007_prop_0004_para_07",
+  "world_id": "eval_world_000007",
+  "proposition_id": "eval_world_000007_prop_0004",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "exactly_one_v7",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "brindle",
+    "object": "koba",
+    "relation": "drel",
+    "type": "exactly_one"
+  },
+  "statement": "Among brindle things, exactly one of them drel koba.",
+  "prompt": "World:\n- nalo is brindle.\n- sop is brindle.\n- nalo is falm.\n- sop is falm.\n- bex is not falm.\n- koba is not falm.\n- bex sovs koba.\n- bex sovs sop.\n- sop sovs nalo.\n- koba does not sov sop.\n- nalo does not sov sop.\n- sop does not sov koba.\n- bex drels nalo.\n- koba drels nalo.\n- nalo drels bex.\n- nalo drels koba.\n- sop drels bex.\n- sop drels nalo.\n- bex does not drel koba.\n- koba does not drel sop.\n\nStatement:\nAmong brindle things, exactly one of them drel koba.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.3309272829974361,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000007_prop_0004_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000007_prop_0004_para_07/logits_summary.npz"
+}

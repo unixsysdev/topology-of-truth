@@ -1,0 +1,18 @@
+{"message": "start", "step": "load_model", "ts": "2026-04-14T09:02:35.528112+00:00"}
+{"message": "end", "runtime_sec": 408.994, "step": "load_model", "ts": "2026-04-14T09:09:24.522383+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_00", "ts": "2026-04-14T09:09:24.522529+00:00"}
+{"message": "end", "runtime_sec": 0.83, "step": "generate_eval_world_000000_prop_0000_para_00", "ts": "2026-04-14T09:09:25.352095+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_01", "ts": "2026-04-14T09:09:25.558499+00:00"}
+{"message": "end", "runtime_sec": 0.499, "step": "generate_eval_world_000000_prop_0000_para_01", "ts": "2026-04-14T09:09:26.057125+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_02", "ts": "2026-04-14T09:09:26.264597+00:00"}
+{"message": "end", "runtime_sec": 0.48, "step": "generate_eval_world_000000_prop_0000_para_02", "ts": "2026-04-14T09:09:26.744269+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_03", "ts": "2026-04-14T09:09:26.953258+00:00"}
+{"message": "end", "runtime_sec": 0.457, "step": "generate_eval_world_000000_prop_0000_para_03", "ts": "2026-04-14T09:09:27.410151+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_04", "ts": "2026-04-14T09:09:27.610530+00:00"}
+{"message": "end", "runtime_sec": 0.46, "step": "generate_eval_world_000000_prop_0000_para_04", "ts": "2026-04-14T09:09:28.070520+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_05", "ts": "2026-04-14T09:09:28.271237+00:00"}
+{"message": "end", "runtime_sec": 0.46, "step": "generate_eval_world_000000_prop_0000_para_05", "ts": "2026-04-14T09:09:28.731309+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_06", "ts": "2026-04-14T09:09:28.937474+00:00"}
+{"message": "end", "runtime_sec": 0.461, "step": "generate_eval_world_000000_prop_0000_para_06", "ts": "2026-04-14T09:09:29.398826+00:00"}
+{"message": "start", "step": "generate_eval_world_000000_prop_0000_para_07", "ts": "2026-04-14T09:09:29.602617+00:00"}
+{"message": "end", "runtime_sec": 0.458, "step": "generate_eval_world_000000_prop_0000_para_07", "ts": "2026-04-14T09:09:30.060196+00:00"}

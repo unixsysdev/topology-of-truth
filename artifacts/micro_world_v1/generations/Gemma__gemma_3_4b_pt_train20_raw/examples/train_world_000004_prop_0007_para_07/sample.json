@@ -1,0 +1,31 @@
+{
+  "example_id": "train_world_000004_prop_0007_para_07",
+  "world_id": "train_world_000004",
+  "proposition_id": "train_world_000004_prop_0007",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "rel_v3",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "zorb",
+    "relation": "tob",
+    "subject": "lume",
+    "type": "rel"
+  },
+  "statement": "lume stands in the tob relation to zorb.",
+  "prompt": "World:\n- lume is nubic.\n- norp is nubic.\n- zorb is nubic.\n- blicket is not nubic.\n- fep is not nubic.\n- fep is pald.\n- lume is pald.\n- wug is pald.\n- blicket is not pald.\n- norp is not pald.\n- blicket mips norp.\n- fep mips blicket.\n- lume mips fep.\n- norp mips lume.\n- wug mips fep.\n- zorb mips norp.\n- blicket does not mip zorb.\n- fep does not mip lume.\n- fep does not mip zorb.\n- lume does not mip blicket.\n- lume does not mip norp.\n- norp does not mip fep.\n- wug does not mip zorb.\n- zorb does not mip blicket.\n- blicket tobs lume.\n- lume tobs wug.\n- lume tobs zorb.\n- wug tobs lume.\n- wug tobs zorb.\n- blicket does not tob wug.\n- blicket does not tob zorb.\n- fep does not tob wug.\n- lume does not tob norp.\n- wug does not tob fep.\n- wug does not tob norp.\n- zorb does not tob lume.\n- zorb does not tob norp.\n\nStatement:\nlume stands in the tob relation to zorb.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.34224466000159737,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000004_prop_0007_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000004_prop_0007_para_07/logits_summary.npz"
+}

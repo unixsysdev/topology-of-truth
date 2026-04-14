@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000013_prop_0003_para_04",
+  "world_id": "train_world_000013",
+  "proposition_id": "train_world_000013_prop_0003",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "or_v0_rel_v0_attr_v1",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "pavo",
+      "relation": "lirp",
+      "subject": "fep",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "vorn",
+      "entity": "fep",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "fep lirps pavo or The item named fep is vorn.",
+  "prompt": "World:\n- kiv is vorn.\n- pavo is vorn.\n- pavo is glim.\n- kiv is not glim.\n- fep nazes kiv.\n- kiv nazes fep.\n- kiv nazes norp.\n- norp nazes kiv.\n- pavo does not naze norp.\n- fep lirps kiv.\n- kiv lirps fep.\n- kiv lirps norp.\n- kiv lirps pavo.\n- norp lirps pavo.\n- pavo lirps norp.\n- fep does not lirp norp.\n\nStatement:\nfep lirps pavo or The item named fep is vorn.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5728036500004237,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000013_prop_0003_para_04/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000013_prop_0003_para_04/logits_summary.npz"
+}

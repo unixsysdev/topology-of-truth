@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000009_prop_0005_para_01",
+  "world_id": "eval_world_000009",
+  "proposition_id": "eval_world_000009_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "some_v5",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "zantic",
+    "object": "nalo",
+    "relation": "drel",
+    "type": "some"
+  },
+  "statement": "The number of zantic things that drel nalo matches: some.",
+  "prompt": "World:\n- toma is zantic.\n- vex is zantic.\n- bex is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- koba is falm.\n- vex is not falm.\n- bex drels nalo.\n- nalo drels toma.\n- vex drels koba.\n- vex drels toma.\n- bex does not drel toma.\n- koba does not drel nalo.\n- toma does not drel vex.\n- bex foshes koba.\n- nalo foshes bex.\n- nalo foshes toma.\n- nalo foshes vex.\n- toma foshes vex.\n- vex foshes koba.\n- vex foshes nalo.\n- koba does not fosh nalo.\n- koba does not fosh toma.\n- toma does not fosh koba.\n- vex does not fosh toma.\n\nStatement:\nThe number of zantic things that drel nalo matches: some.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5987819050023973,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000009_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000009_prop_0005_para_01/logits_summary.npz"
+}

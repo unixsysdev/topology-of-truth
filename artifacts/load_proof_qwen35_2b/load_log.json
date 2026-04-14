@@ -1,0 +1,37 @@
+{
+  "ts": "2026-04-14T00:40:52.893922+00:00",
+  "model_id": "Qwen/Qwen3.5-2B",
+  "device": "cuda:0",
+  "dtype": "torch.bfloat16",
+  "device_name": "Radeon 8060S Graphics",
+  "wall_clock_sec": 4.643,
+  "hidden_size": 2048,
+  "num_hidden_layers": 24,
+  "hf_cache_path": "/home/marcel/.cache/huggingface/hub/models--Qwen--Qwen3.5-2B/snapshots/15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "memory_allocated": 3763673088,
+  "memory_reserved": 3768582144,
+  "events": [
+    {
+      "ts": "2026-04-14T00:40:48.251616+00:00",
+      "step": "load_config",
+      "message": "start"
+    },
+    {
+      "ts": "2026-04-14T00:40:48.443328+00:00",
+      "step": "load_config",
+      "message": "end",
+      "runtime_sec": 0.192
+    },
+    {
+      "ts": "2026-04-14T00:40:48.443418+00:00",
+      "step": "load_model",
+      "message": "start"
+    },
+    {
+      "ts": "2026-04-14T00:40:52.893922+00:00",
+      "step": "load_model",
+      "message": "end",
+      "runtime_sec": 4.45
+    }
+  ]
+}

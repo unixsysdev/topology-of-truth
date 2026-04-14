@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000011_prop_0006_para_00",
+  "world_id": "train_world_000011",
+  "proposition_id": "train_world_000011_prop_0006",
+  "paraphrase_id": "para_00",
+  "split": "train",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "at_least_two_v0",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "vorn",
+    "object": "kiv",
+    "relation": "sume",
+    "type": "at_least_two"
+  },
+  "statement": "At least two vorn thing sumes kiv.",
+  "prompt": "World:\n- norp is vorn.\n- lume is not vorn.\n- tib is not vorn.\n- lume is nubic.\n- norp is nubic.\n- tib is not nubic.\n- lume sumes tib.\n- norp sumes kiv.\n- tib sumes norp.\n- lume does not sume norp.\n- lume mips kiv.\n- norp mips tib.\n- kiv does not mip tib.\n- lume does not mip norp.\n- lume does not mip tib.\n- tib does not mip lume.\n\nStatement:\nAt least two vorn thing sumes kiv.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5792342109998572,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000011_prop_0006_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000011_prop_0006_para_00/logits_summary.npz"
+}

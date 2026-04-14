@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000016_prop_0003_para_06",
+  "world_id": "eval_world_000016",
+  "proposition_id": "eval_world_000016_prop_0003",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "and_v6_rel_v6_rel_v7",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "grel",
+      "relation": "sov",
+      "subject": "sop",
+      "type": "rel"
+    },
+    "right": {
+      "object": "drin",
+      "relation": "drel",
+      "subject": "vex",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "Evaluate this compound claim: For this world, sop sovs grel and The ordered pair (vex, drin) has relation drel.",
+  "prompt": "World:\n- vex is zantic.\n- grel is not zantic.\n- sop is not zantic.\n- lirk is brindle.\n- vex is brindle.\n- grel is not brindle.\n- bex drels lirk.\n- bex drels sop.\n- bex drels vex.\n- drin drels lirk.\n- grel drels lirk.\n- lirk drels bex.\n- sop drels bex.\n- sop drels lirk.\n- sop drels vex.\n- vex drels drin.\n- vex drels lirk.\n- drin does not drel bex.\n- drin does not drel grel.\n- drin does not drel sop.\n- grel does not drel bex.\n- grel does not drel drin.\n- lirk does not drel grel.\n- sop does not drel drin.\n- vex does not drel bex.\n- bex sovs lirk.\n- grel sovs drin.\n- vex sovs drin.\n- bex does not sov drin.\n- drin does not sov vex.\n- grel does not sov vex.\n- lirk does not sov vex.\n- sop does not sov drin.\n- sop does not sov grel.\n- sop does not sov lirk.\n- vex does not sov lirk.\n- vex does not sov sop.\n\nStatement:\nEvaluate this compound claim: For this world, sop sovs grel and The ordered pair (vex, drin) has relation drel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.8112162340003124,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000016_prop_0003_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000016_prop_0003_para_06/logits_summary.npz"
+}

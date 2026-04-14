@@ -1,0 +1,34 @@
+{
+  "example_id": "train_world_000018_prop_0002_para_07",
+  "world_id": "train_world_000018",
+  "proposition_id": "train_world_000018_prop_0002",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "not_v3_rel_v3",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "object": "tib",
+      "relation": "sume",
+      "subject": "kiv",
+      "type": "rel"
+    },
+    "type": "not"
+  },
+  "statement": "Deny the claim that kiv stands in the sume relation to tib.",
+  "prompt": "World:\n- blicket is selt.\n- fep is selt.\n- lume is selt.\n- kiv is not selt.\n- fep is daxel.\n- kiv is daxel.\n- pavo is daxel.\n- tib is daxel.\n- blicket is not daxel.\n- lume is not daxel.\n- blicket mips lume.\n- fep mips lume.\n- kiv mips pavo.\n- kiv mips tib.\n- lume mips fep.\n- pavo mips fep.\n- pavo mips lume.\n- blicket does not mip pavo.\n- kiv does not mip fep.\n- kiv does not mip lume.\n- lume does not mip blicket.\n- lume does not mip tib.\n- pavo does not mip blicket.\n- pavo does not mip kiv.\n- pavo does not mip tib.\n- tib does not mip kiv.\n- blicket sumes pavo.\n- kiv sumes blicket.\n- lume sumes fep.\n- lume sumes tib.\n- pavo sumes fep.\n- pavo sumes lume.\n- tib sumes fep.\n- tib sumes lume.\n- fep does not sume blicket.\n- fep does not sume kiv.\n- fep does not sume pavo.\n- fep does not sume tib.\n- kiv does not sume pavo.\n- lume does not sume kiv.\n- pavo does not sume blicket.\n- tib does not sume blicket.\n- tib does not sume pavo.\n\nStatement:\nDeny the claim that kiv stands in the sume relation to tib.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.3353608779980277,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000018_prop_0002_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000018_prop_0002_para_07/logits_summary.npz"
+}

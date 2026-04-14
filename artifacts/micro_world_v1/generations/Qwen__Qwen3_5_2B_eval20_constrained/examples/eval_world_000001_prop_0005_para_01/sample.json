@@ -1,0 +1,39 @@
+{
+  "example_id": "eval_world_000001_prop_0005_para_01",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "or_v5_attr_v5_rel_v6",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "brindle",
+      "entity": "drin",
+      "type": "attr"
+    },
+    "right": {
+      "object": "mep",
+      "relation": "fosh",
+      "subject": "grel",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The first clause is 'Among the named items, drin is brindle' and the connector is or with 'For this world, grel foshes mep'.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nThe first clause is 'Among the named items, drin is brindle' and the connector is or with 'For this world, grel foshes mep'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5437610789995233,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000001_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000001_prop_0005_para_01/logits_summary.npz"
+}

@@ -1,0 +1,30 @@
+{
+  "question_id": "q_0008",
+  "dataset_sample_id": "gsm8k_000007",
+  "gold_answer": "160",
+  "question": "Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has to restart the download from the beginning. How load does it take to download the file?",
+  "prompt": "Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has to restart the download from the beginning. How load does it take to download the file?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 160.",
+  "token_count": 8,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    16,
+    21,
+    15,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5,
+    6
+  ],
+  "hidden_shape": [
+    8,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0008/reference/reference_hidden.npy"
+}

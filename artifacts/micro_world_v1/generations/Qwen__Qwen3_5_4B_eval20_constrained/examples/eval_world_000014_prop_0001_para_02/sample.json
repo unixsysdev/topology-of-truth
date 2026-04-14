@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000014_prop_0001_para_02",
+  "world_id": "eval_world_000014",
+  "proposition_id": "eval_world_000014_prop_0001",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "exactly_one_v6",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "peln",
+    "object": "grel",
+    "relation": "nimp",
+    "type": "exactly_one"
+  },
+  "statement": "Count the peln things that nimp grel; the result is exactly one.",
+  "prompt": "World:\n- sop is soric.\n- drin is not soric.\n- drin is peln.\n- sop is peln.\n- grel is not peln.\n- drin kelds toma.\n- mep kelds drin.\n- sop kelds mep.\n- toma kelds drin.\n- grel does not keld toma.\n- mep does not keld grel.\n- toma does not keld mep.\n- toma does not keld sop.\n- drin nimps sop.\n- grel nimps drin.\n- grel nimps sop.\n- grel nimps toma.\n- mep nimps sop.\n- sop nimps grel.\n- sop nimps mep.\n- toma nimps grel.\n- drin does not nimp mep.\n- drin does not nimp toma.\n- mep does not nimp toma.\n- sop does not nimp toma.\n- toma does not nimp drin.\n\nStatement:\nCount the peln things that nimp grel; the result is exactly one.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.921237831000326,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000014_prop_0001_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000014_prop_0001_para_02/logits_summary.npz"
+}

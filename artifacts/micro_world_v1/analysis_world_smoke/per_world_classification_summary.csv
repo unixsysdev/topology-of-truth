@@ -1,0 +1,2 @@
+world_id,n_examples,accuracy,macro_f1,pred_missing_rate,support_true,accuracy_true,pred_rate_true,support_false,accuracy_false,pred_rate_false,support_unknown,accuracy_unknown,pred_rate_unknown
+eval_world_000000,72,0.4722222222222222,0.3721112416764591,0.0,24,0.9166666666666666,0.6944444444444444,24,0.5,0.3055555555555556,24,0.0,0.0

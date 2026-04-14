@@ -1,0 +1,34 @@
+{
+  "example_id": "eval_world_000018_prop_0004_para_03",
+  "world_id": "eval_world_000018",
+  "proposition_id": "eval_world_000018_prop_0004",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "not_v7_attr_v7",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "soric",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Apply logical NOT to this sentence: The soric property holds for mep.",
+  "prompt": "World:\n- lirk is soric.\n- mep is soric.\n- nalo is soric.\n- sop is soric.\n- mep is peln.\n- nalo is peln.\n- sop is peln.\n- vex is peln.\n- nalo sovs mep.\n- nalo sovs sop.\n- sop sovs nalo.\n- vex sovs lirk.\n- vex sovs sop.\n- lirk does not sov sop.\n- lirk does not sov vex.\n- sop does not sov lirk.\n- sop does not sov mep.\n- vex does not sov mep.\n- mep foshes nalo.\n- sop foshes vex.\n- vex foshes mep.\n- nalo does not fosh lirk.\n- sop does not fosh mep.\n- vex does not fosh lirk.\n\nStatement:\nApply logical NOT to this sentence: The soric property holds for mep.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.676278752998769,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000018_prop_0004_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000018_prop_0004_para_03/logits_summary.npz"
+}

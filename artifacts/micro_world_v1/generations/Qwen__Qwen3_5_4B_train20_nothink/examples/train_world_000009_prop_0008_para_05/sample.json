@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000009_prop_0008_para_05",
+  "world_id": "train_world_000009",
+  "proposition_id": "train_world_000009_prop_0008",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v1_rel_v1_attr_v2",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "vonn",
+      "relation": "tob",
+      "subject": "lume",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "selt",
+      "entity": "vonn",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "Both claims hold: The item named lume tobs the item named vonn; It is true that vonn is selt.",
+  "prompt": "World:\n- lume is selt.\n- pavo is selt.\n- vonn is selt.\n- zorb is selt.\n- pavo is daxel.\n- vonn sumes pavo.\n- zorb sumes lume.\n- lume does not sume kiv.\n- lume does not sume pavo.\n- lume does not sume vonn.\n- vonn does not sume kiv.\n- vonn does not sume zorb.\n- zorb does not sume vonn.\n- lume tobs pavo.\n- pavo tobs lume.\n- pavo tobs vonn.\n- zorb tobs lume.\n- zorb tobs vonn.\n- kiv does not tob lume.\n- kiv does not tob vonn.\n- lume does not tob zorb.\n- vonn does not tob lume.\n- vonn does not tob zorb.\n- zorb does not tob kiv.\n- zorb does not tob pavo.\n\nStatement:\nBoth claims hold: The item named lume tobs the item named vonn; It is true that vonn is selt.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7071780579972256,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000009_prop_0008_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000009_prop_0008_para_05/logits_summary.npz"
+}

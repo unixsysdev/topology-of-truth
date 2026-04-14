@@ -1,0 +1,32 @@
+{
+  "example_id": "train_world_000013_prop_0008_para_03",
+  "world_id": "train_world_000013",
+  "proposition_id": "train_world_000013_prop_0008",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "attr_v3",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "glim",
+    "entity": "kiv",
+    "type": "attr"
+  },
+  "statement": "kiv belongs to the glim things.",
+  "prompt": "World:\n- kiv is vorn.\n- pavo is vorn.\n- pavo is glim.\n- kiv is not glim.\n- fep nazes kiv.\n- kiv nazes fep.\n- kiv nazes norp.\n- norp nazes kiv.\n- pavo does not naze norp.\n- fep lirps kiv.\n- kiv lirps fep.\n- kiv lirps norp.\n- kiv lirps pavo.\n- norp lirps pavo.\n- pavo lirps norp.\n- fep does not lirp norp.\n\nStatement:\nkiv belongs to the glim things.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n\nWorld:\n",
+  "generated_token_ids": [
+    108,
+    14447,
+    236787,
+    107
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.4610162870012573,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000013_prop_0008_para_03/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000013_prop_0008_para_03/logits_summary.npz"
+}

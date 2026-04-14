@@ -1,0 +1,42 @@
+{
+  "example_id": "train_world_000014_prop_0007_para_07",
+  "world_id": "train_world_000014",
+  "proposition_id": "train_world_000014_prop_0007",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "or_v3_rel_v3_attr_v4",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "blicket",
+      "relation": "naze",
+      "subject": "kiv",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "daxel",
+      "entity": "fep",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "It is true that kiv stands in the naze relation to blicket or that The object fep has the property daxel.",
+  "prompt": "World:\n- blicket is daxel.\n- sarn is daxel.\n- wug is daxel.\n- zorb is daxel.\n- fep is not daxel.\n- kiv is pald.\n- zorb is not pald.\n- blicket tobs fep.\n- blicket tobs kiv.\n- fep tobs sarn.\n- fep tobs wug.\n- kiv tobs blicket.\n- kiv tobs zorb.\n- wug tobs sarn.\n- fep does not tob kiv.\n- kiv does not tob sarn.\n- zorb does not tob fep.\n- zorb does not tob wug.\n- blicket nazes fep.\n- blicket nazes sarn.\n- blicket nazes zorb.\n- fep nazes zorb.\n- sarn nazes fep.\n- sarn nazes wug.\n- wug nazes fep.\n- kiv does not naze blicket.\n- kiv does not naze zorb.\n- sarn does not naze blicket.\n- sarn does not naze zorb.\n- zorb does not naze fep.\n\nStatement:\nIt is true that kiv stands in the naze relation to blicket or that The object fep has the property daxel.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nStatement",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    19128
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5252576729981229,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000014_prop_0007_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000014_prop_0007_para_07/logits_summary.npz"
+}

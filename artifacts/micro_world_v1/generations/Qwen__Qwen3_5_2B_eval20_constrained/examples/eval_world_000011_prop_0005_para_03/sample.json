@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000011_prop_0005_para_03",
+  "world_id": "eval_world_000011",
+  "proposition_id": "eval_world_000011_prop_0005",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "some_v7",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "falm",
+    "object": "grel",
+    "relation": "keld",
+    "type": "some"
+  },
+  "statement": "Among falm things, some of them keld grel.",
+  "prompt": "World:\n- vex is falm.\n- toma is not falm.\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- vex is not soric.\n- mep kelds vex.\n- vex kelds toma.\n- grel does not keld mep.\n- toma does not keld grel.\n- vex does not keld grel.\n- grel foshes toma.\n- toma foshes grel.\n- toma foshes vex.\n- vex foshes mep.\n- vex foshes toma.\n- grel does not fosh mep.\n\nStatement:\nAmong falm things, some of them keld grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.526688223999372,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000011_prop_0005_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000011_prop_0005_para_03/logits_summary.npz"
+}

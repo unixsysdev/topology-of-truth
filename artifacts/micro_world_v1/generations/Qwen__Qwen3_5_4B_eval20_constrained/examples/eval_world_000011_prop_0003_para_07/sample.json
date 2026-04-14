@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000011_prop_0003_para_07",
+  "world_id": "eval_world_000011",
+  "proposition_id": "eval_world_000011_prop_0003",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v7_rel_v7_attr_v0",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "vex",
+      "relation": "keld",
+      "subject": "grel",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "soric",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "The compound proposition says The ordered pair (grel, vex) has relation keld and mep is soric.",
+  "prompt": "World:\n- vex is falm.\n- toma is not falm.\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- vex is not soric.\n- mep kelds vex.\n- vex kelds toma.\n- grel does not keld mep.\n- toma does not keld grel.\n- vex does not keld grel.\n- grel foshes toma.\n- toma foshes grel.\n- toma foshes vex.\n- vex foshes mep.\n- vex foshes toma.\n- grel does not fosh mep.\n\nStatement:\nThe compound proposition says The ordered pair (grel, vex) has relation keld and mep is soric.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.8301285880006617,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000011_prop_0003_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000011_prop_0003_para_07/logits_summary.npz"
+}

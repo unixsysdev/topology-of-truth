@@ -1,0 +1,38 @@
+{
+  "example_id": "eval_world_000000_prop_0005_para_07",
+  "world_id": "eval_world_000000",
+  "proposition_id": "eval_world_000000_prop_0005",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "or_v7_attr_v7_attr_v0",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "peln",
+      "entity": "sop",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "peln",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "The compound proposition says The peln property holds for sop or mep is peln.",
+  "prompt": "World:\n- mep is falm.\n- grel is not falm.\n- nalo is not falm.\n- sop is not falm.\n- grel is peln.\n- sop is peln.\n- nalo is not peln.\n- nalo foshes sop.\n- sop foshes grel.\n- grel does not fosh lirk.\n- lirk does not fosh nalo.\n- lirk does not fosh sop.\n- nalo does not fosh grel.\n- nalo does not fosh mep.\n- grel nimps nalo.\n- mep nimps sop.\n- nalo nimps grel.\n- nalo nimps lirk.\n- sop nimps lirk.\n- sop nimps mep.\n- grel does not nimp mep.\n- grel does not nimp sop.\n- nalo does not nimp mep.\n- nalo does not nimp sop.\n\nStatement:\nThe compound proposition says The peln property holds for sop or mep is peln.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.33275414400122827,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000000_prop_0005_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw/examples/eval_world_000000_prop_0005_para_07/logits_summary.npz"
+}

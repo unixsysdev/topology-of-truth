@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000017_prop_0000_para_01",
+  "world_id": "eval_world_000017",
+  "proposition_id": "eval_world_000017_prop_0000",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "rel_v5",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "lirk",
+    "relation": "keld",
+    "subject": "vex",
+    "type": "rel"
+  },
+  "statement": "lirk is kelded by vex.",
+  "prompt": "World:\n- koba is brindle.\n- nalo is brindle.\n- vex is brindle.\n- lirk is peln.\n- nalo is peln.\n- vex is peln.\n- bex is not peln.\n- koba is not peln.\n- bex kelds koba.\n- koba kelds nalo.\n- lirk kelds koba.\n- lirk kelds nalo.\n- lirk kelds vex.\n- nalo kelds lirk.\n- vex kelds grel.\n- bex does not keld grel.\n- bex does not keld lirk.\n- grel does not keld koba.\n- grel does not keld lirk.\n- grel does not keld nalo.\n- koba does not keld vex.\n- lirk does not keld grel.\n- bex drels nalo.\n- lirk drels grel.\n- lirk drels nalo.\n- lirk drels vex.\n- nalo drels grel.\n- nalo drels lirk.\n- nalo drels vex.\n- vex drels grel.\n- vex drels koba.\n- vex drels nalo.\n- bex does not drel koba.\n- bex does not drel lirk.\n- grel does not drel koba.\n- grel does not drel lirk.\n- grel does not drel nalo.\n- grel does not drel vex.\n- koba does not drel grel.\n- koba does not drel lirk.\n- koba does not drel nalo.\n- koba does not drel vex.\n\nStatement:\nlirk is kelded by vex.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6632516139998188,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000017_prop_0000_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000017_prop_0000_para_01/logits_summary.npz"
+}

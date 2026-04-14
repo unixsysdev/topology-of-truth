@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000011_prop_0000_para_04",
+  "world_id": "eval_world_000011",
+  "proposition_id": "eval_world_000011_prop_0000",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "and_v4_rel_v4_rel_v5",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "toma",
+      "relation": "keld",
+      "subject": "grel",
+      "type": "rel"
+    },
+    "right": {
+      "object": "mep",
+      "relation": "keld",
+      "subject": "grel",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "The relation keld holds from grel to toma. Also, mep is kelded by grel.",
+  "prompt": "World:\n- vex is falm.\n- toma is not falm.\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- vex is not soric.\n- mep kelds vex.\n- vex kelds toma.\n- grel does not keld mep.\n- toma does not keld grel.\n- vex does not keld grel.\n- grel foshes toma.\n- toma foshes grel.\n- toma foshes vex.\n- vex foshes mep.\n- vex foshes toma.\n- grel does not fosh mep.\n\nStatement:\nThe relation keld holds from grel to toma. Also, mep is kelded by grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6702168680003524,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000011_prop_0000_para_04/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000011_prop_0000_para_04/logits_summary.npz"
+}

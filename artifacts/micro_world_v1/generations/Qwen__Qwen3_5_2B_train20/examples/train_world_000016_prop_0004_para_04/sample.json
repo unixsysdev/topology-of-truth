@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000016_prop_0004_para_04",
+  "world_id": "train_world_000016",
+  "proposition_id": "train_world_000016_prop_0004",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "some_v0",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "vorn",
+    "object": "fep",
+    "relation": "lirp",
+    "type": "some"
+  },
+  "statement": "Some vorn thing lirps fep.",
+  "prompt": "World:\n- zorb is not pald.\n- tib is vorn.\n- fep is not vorn.\n- norp is not vorn.\n- fep does not sume norp.\n- norp does not sume fep.\n- norp does not sume tib.\n- fep lirps zorb.\n- norp does not lirp tib.\n- norp does not lirp zorb.\n\nStatement:\nSome vorn thing lirps fep.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5043361239986552,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000016_prop_0004_para_04/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000016_prop_0004_para_04/logits_summary.npz"
+}

@@ -1,0 +1,5 @@
+question_id,dataset_index,dataset_sample_id,sample_id,seed,status,correct,stop_reason,token_count,answer_length,pred_answer,gold_answer,extractor_confident,runtime_sec,hidden_path,logits_path,error
+q_0001,0,gsm8k_000000,sample_00,1000,ok,False,eos_token,239,125,26,18,True,20.881,artifacts/qwen35_2b_within_question_smoke/q_0001/sample_00/hidden.npy,artifacts/qwen35_2b_within_question_smoke/q_0001/sample_00/logits_summary.npz,
+q_0001,0,gsm8k_000000,sample_01,1001,ok,True,eos_token,318,197,18,18,True,26.618,artifacts/qwen35_2b_within_question_smoke/q_0001/sample_01/hidden.npy,artifacts/qwen35_2b_within_question_smoke/q_0001/sample_01/logits_summary.npz,
+q_0002,1,gsm8k_000001,sample_00,1002,ok,True,eos_token,164,107,3,3,True,13.915,artifacts/qwen35_2b_within_question_smoke/q_0002/sample_00/hidden.npy,artifacts/qwen35_2b_within_question_smoke/q_0002/sample_00/logits_summary.npz,
+q_0002,1,gsm8k_000001,sample_01,1003,ok,True,eos_token,204,122,3,3,True,17.12,artifacts/qwen35_2b_within_question_smoke/q_0002/sample_01/hidden.npy,artifacts/qwen35_2b_within_question_smoke/q_0002/sample_01/logits_summary.npz,

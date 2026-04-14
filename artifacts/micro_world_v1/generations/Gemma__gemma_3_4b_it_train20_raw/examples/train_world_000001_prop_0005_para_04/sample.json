@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000001_prop_0005_para_04",
+  "world_id": "train_world_000001",
+  "proposition_id": "train_world_000001_prop_0005",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "False",
+  "pred_label": "Unknown",
+  "correct": false,
+  "template_id": "some_v0",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "selt",
+    "object": "norp",
+    "relation": "vark",
+    "type": "some"
+  },
+  "statement": "Some selt thing varks norp.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is not daxel.\n- norp is selt.\n- kiv is not selt.\n- vonn is not selt.\n- norp varks kiv.\n- norp does not vark vonn.\n- tib does not vark norp.\n- tib does not vark vonn.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- vonn tobs norp.\n- tib does not tob norp.\n- tib does not tob vonn.\n\nStatement:\nSome selt thing varks norp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nUnknown\n```",
+  "generated_token_ids": [
+    107,
+    41387,
+    107,
+    2717
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.44075389800127596,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000001_prop_0005_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000001_prop_0005_para_04/logits_summary.npz"
+}

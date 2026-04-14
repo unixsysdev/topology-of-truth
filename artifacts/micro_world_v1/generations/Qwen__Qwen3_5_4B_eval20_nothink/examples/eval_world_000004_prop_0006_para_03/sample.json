@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000004_prop_0006_para_03",
+  "world_id": "eval_world_000004",
+  "proposition_id": "eval_world_000004_prop_0006",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "at_least_two_v7",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "brindle",
+    "object": "grel",
+    "relation": "sov",
+    "type": "at_least_two"
+  },
+  "statement": "Among brindle things, at least two of them sov grel.",
+  "prompt": "World:\n- koba is not zantic.\n- vex is not zantic.\n- grel is brindle.\n- koba is brindle.\n- toma is brindle.\n- vex is brindle.\n- vex drels koba.\n- grel does not drel toma.\n- grel does not drel vex.\n- koba does not drel toma.\n- koba does not drel vex.\n- toma does not drel koba.\n- vex does not drel toma.\n- koba sovs grel.\n- toma sovs vex.\n- vex sovs grel.\n- grel does not sov koba.\n- grel does not sov vex.\n- vex does not sov toma.\n\nStatement:\nAmong brindle things, at least two of them sov grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6633560850004869,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000004_prop_0006_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000004_prop_0006_para_03/logits_summary.npz"
+}

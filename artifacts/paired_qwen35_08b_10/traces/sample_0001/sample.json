@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0001",
+  "dataset_sample_id": "gsm8k_000000",
+  "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+  "gold_answer": "18",
+  "generated_text": "To find out how much Janet makes every day at the farmers' market, we need to calculate the total number of eggs she lays and subtract the eggs she eats and the eggs she sells.\n\n**Step 1: Calculate the total number of eggs laid per day.**\nJanet lays 16 eggs per day.\n$$ \\text{Total eggs} = 16 $$\n\n**Step 2: Calculate the number of eggs eaten per day.**\nShe eats 3 eggs for breakfast every morning.\n$$ \\text{Eaten eggs} = 3 $$\n\n**Step 3: Calculate the number of eggs sold per day.**\nShe sells the remainder at the farmers' market.\n$$ \\text{Sells} = \\text{Total eggs} - \\text{Eaten eggs} $$\n$$ \\text{Sells} = 16 - 3 = 13 $$\n\n**Step 4: Calculate the total revenue from selling the eggs.**\nShe sells 13 eggs at $2 per egg.\n$$ \\text{Total revenue} = 13 \\times 2 = 26 $$\n\n**Step 5: Calculate the total amount made every day.**\nThe amount made is the total revenue from selling the eggs.\n$$ \\text{Total amount} = 26 $$\n\n\\boxed{26}\n",
+  "pred_answer": "26",
+  "correct": false,
+  "token_count": 286,
+  "hidden_shape": [
+    286,
+    1024
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 12.4423251953125,
+  "h0_entropy": 5.614879283687847,
+  "h0_total_persistence": 1816.162059545517
+}

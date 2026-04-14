@@ -1,0 +1,34 @@
+{
+  "example_id": "eval_world_000018_prop_0005_para_05",
+  "world_id": "eval_world_000018",
+  "proposition_id": "eval_world_000018_prop_0005",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "Unknown",
+  "correct": false,
+  "template_id": "not_v5_attr_v5",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "peln",
+      "entity": "sop",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Logical form: NOT[Among the named items, sop is peln].",
+  "prompt": "World:\n- lirk is soric.\n- mep is soric.\n- nalo is soric.\n- sop is soric.\n- mep is peln.\n- nalo is peln.\n- sop is peln.\n- vex is peln.\n- nalo sovs mep.\n- nalo sovs sop.\n- sop sovs nalo.\n- vex sovs lirk.\n- vex sovs sop.\n- lirk does not sov sop.\n- lirk does not sov vex.\n- sop does not sov lirk.\n- sop does not sov mep.\n- vex does not sov mep.\n- mep foshes nalo.\n- sop foshes vex.\n- vex foshes mep.\n- nalo does not fosh lirk.\n- sop does not fosh mep.\n- vex does not fosh lirk.\n\nStatement:\nLogical form: NOT[Among the named items, sop is peln].\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " Unknown\n",
+  "generated_token_ids": [
+    60355,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.42659961599929375,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000018_prop_0005_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000018_prop_0005_para_05/logits_summary.npz"
+}

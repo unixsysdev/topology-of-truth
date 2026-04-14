@@ -1,0 +1,30 @@
+{
+  "example_id": "eval_world_000006_prop_0001_para_02",
+  "world_id": "eval_world_000006",
+  "proposition_id": "eval_world_000006_prop_0001",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "attr_v6",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "brindle",
+    "entity": "grel",
+    "type": "attr"
+  },
+  "statement": "brindle applies to grel.",
+  "prompt": "World:\n- bex is brindle.\n- nalo is brindle.\n- lirk is not brindle.\n- sop is not brindle.\n- bex is not falm.\n- grel is not falm.\n- bex foshes sop.\n- grel foshes bex.\n- grel foshes lirk.\n- grel foshes nalo.\n- grel foshes sop.\n- lirk foshes sop.\n- sop foshes grel.\n- sop foshes lirk.\n- bex does not fosh grel.\n- bex does not fosh nalo.\n- lirk does not fosh grel.\n- bex sovs grel.\n- bex sovs lirk.\n- bex sovs nalo.\n- bex sovs sop.\n- grel sovs sop.\n- lirk sovs grel.\n- nalo sovs bex.\n- nalo sovs grel.\n- grel does not sov nalo.\n- lirk does not sov sop.\n- nalo does not sov sop.\n- sop does not sov bex.\n\nStatement:\nbrindle applies to grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.6325279760021658,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000006_prop_0001_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000006_prop_0001_para_02/logits_summary.npz"
+}

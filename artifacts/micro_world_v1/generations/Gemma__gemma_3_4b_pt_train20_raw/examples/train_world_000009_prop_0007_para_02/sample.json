@@ -1,0 +1,40 @@
+{
+  "example_id": "train_world_000009_prop_0007_para_02",
+  "world_id": "train_world_000009",
+  "proposition_id": "train_world_000009_prop_0007",
+  "paraphrase_id": "para_02",
+  "split": "train",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "and_v2_attr_v2_attr_v3",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "daxel",
+      "entity": "pavo",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "selt",
+      "entity": "zorb",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "The claim combines these with and: It is true that pavo is daxel; zorb belongs to the selt things.",
+  "prompt": "World:\n- lume is selt.\n- pavo is selt.\n- vonn is selt.\n- zorb is selt.\n- pavo is daxel.\n- vonn sumes pavo.\n- zorb sumes lume.\n- lume does not sume kiv.\n- lume does not sume pavo.\n- lume does not sume vonn.\n- vonn does not sume kiv.\n- vonn does not sume zorb.\n- zorb does not sume vonn.\n- lume tobs pavo.\n- pavo tobs lume.\n- pavo tobs vonn.\n- zorb tobs lume.\n- zorb tobs vonn.\n- kiv does not tob lume.\n- kiv does not tob vonn.\n- lume does not tob zorb.\n- vonn does not tob lume.\n- vonn does not tob zorb.\n- zorb does not tob kiv.\n- zorb does not tob pavo.\n\nStatement:\nThe claim combines these with and: It is true that pavo is daxel; zorb belongs to the selt things.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n\nWorld:\n",
+  "generated_token_ids": [
+    108,
+    14447,
+    236787,
+    107
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5247523440011719,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000009_prop_0007_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000009_prop_0007_para_02/logits_summary.npz"
+}

@@ -1,0 +1,5 @@
+model_key,mode,n_examples,parse_failure_count,wrong_label_count,missing_unknown_count,pred_true_count,pred_false_count,pred_unknown_count
+gemma_3_4b_it,unconstrained,1440,0,880,300,860,72,508
+gemma_3_4b_it,constrained,1440,0,868,344,862,186,392
+gemma_3_4b_pt,unconstrained,1440,1404,22,480,36,0,0
+gemma_3_4b_pt,constrained,1440,0,960,2,4,0,1436

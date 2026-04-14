@@ -1,0 +1,32 @@
+{
+  "example_id": "train_world_000016_prop_0001_para_04",
+  "world_id": "train_world_000016",
+  "proposition_id": "train_world_000016_prop_0001",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "exactly_one_v0",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "vorn",
+    "object": "fep",
+    "relation": "sume",
+    "type": "exactly_one"
+  },
+  "statement": "Exactly one vorn thing sumes fep.",
+  "prompt": "World:\n- zorb is not pald.\n- tib is vorn.\n- fep is not vorn.\n- norp is not vorn.\n- fep does not sume norp.\n- norp does not sume fep.\n- norp does not sume tib.\n- fep lirps zorb.\n- norp does not lirp tib.\n- norp does not lirp zorb.\n\nStatement:\nExactly one vorn thing sumes fep.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    9277,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.33804172899908735,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000016_prop_0001_para_04/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000016_prop_0001_para_04/logits_summary.npz"
+}

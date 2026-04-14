@@ -1,0 +1,39 @@
+{
+  "example_id": "train_world_000009_prop_0007_para_07",
+  "world_id": "train_world_000009",
+  "proposition_id": "train_world_000009_prop_0007",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "and_v3_attr_v3_attr_v4",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "daxel",
+      "entity": "pavo",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "selt",
+      "entity": "zorb",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "It is true that pavo belongs to the daxel things and that The object zorb has the property selt.",
+  "prompt": "World:\n- lume is selt.\n- pavo is selt.\n- vonn is selt.\n- zorb is selt.\n- pavo is daxel.\n- vonn sumes pavo.\n- zorb sumes lume.\n- lume does not sume kiv.\n- lume does not sume pavo.\n- lume does not sume vonn.\n- vonn does not sume kiv.\n- vonn does not sume zorb.\n- zorb does not sume vonn.\n- lume tobs pavo.\n- pavo tobs lume.\n- pavo tobs vonn.\n- zorb tobs lume.\n- zorb tobs vonn.\n- kiv does not tob lume.\n- kiv does not tob vonn.\n- lume does not tob zorb.\n- vonn does not tob lume.\n- vonn does not tob zorb.\n- zorb does not tob kiv.\n- zorb does not tob pavo.\n\nStatement:\nIt is true that pavo belongs to the daxel things and that The object zorb has the property selt.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.423884474002989,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000009_prop_0007_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000009_prop_0007_para_07/logits_summary.npz"
+}

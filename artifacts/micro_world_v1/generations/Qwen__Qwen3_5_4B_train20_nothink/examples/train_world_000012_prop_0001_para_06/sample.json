@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000012_prop_0001_para_06",
+  "world_id": "train_world_000012",
+  "proposition_id": "train_world_000012_prop_0001",
+  "paraphrase_id": "para_06",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "some_v2",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "selt",
+    "object": "lume",
+    "relation": "sume",
+    "type": "some"
+  },
+  "statement": "Some item that is selt stands in relation sume to lume.",
+  "prompt": "World:\n- pavo is selt.\n- tib is selt.\n- vonn is selt.\n- kiv is not selt.\n- lume is not selt.\n- lume is pald.\n- pavo is pald.\n- vonn is not pald.\n- wug is not pald.\n- lume sumes pavo.\n- pavo sumes kiv.\n- pavo sumes lume.\n- pavo sumes tib.\n- tib sumes vonn.\n- tib sumes wug.\n- lume does not sume vonn.\n- pavo does not sume vonn.\n- tib does not sume kiv.\n- tib does not sume lume.\n- vonn does not sume wug.\n- wug does not sume tib.\n- wug does not sume vonn.\n- pavo lirps lume.\n- pavo lirps wug.\n- tib lirps pavo.\n- tib lirps wug.\n- vonn lirps lume.\n- wug lirps kiv.\n- wug lirps vonn.\n- kiv does not lirp pavo.\n- tib does not lirp lume.\n- tib does not lirp vonn.\n- vonn does not lirp kiv.\n- vonn does not lirp pavo.\n- vonn does not lirp tib.\n- wug does not lirp tib.\n\nStatement:\nSome item that is selt stands in relation sume to lume.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7598925470010727,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000012_prop_0001_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000012_prop_0001_para_06/logits_summary.npz"
+}

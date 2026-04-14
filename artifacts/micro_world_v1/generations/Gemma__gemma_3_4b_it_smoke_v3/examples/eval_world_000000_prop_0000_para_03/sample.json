@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000000_prop_0000_para_03",
+  "world_id": "eval_world_000000",
+  "proposition_id": "eval_world_000000_prop_0000",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "rel_v7",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "sop",
+    "relation": "nimp",
+    "subject": "lirk",
+    "type": "rel"
+  },
+  "statement": "The ordered pair (lirk, sop) has relation nimp.",
+  "prompt": "World:\n- mep is falm.\n- grel is not falm.\n- nalo is not falm.\n- sop is not falm.\n- grel is peln.\n- sop is peln.\n- nalo is not peln.\n- nalo foshes sop.\n- sop foshes grel.\n- grel does not fosh lirk.\n- lirk does not fosh nalo.\n- lirk does not fosh sop.\n- nalo does not fosh grel.\n- nalo does not fosh mep.\n- grel nimps nalo.\n- mep nimps sop.\n- nalo nimps grel.\n- nalo nimps lirk.\n- sop nimps lirk.\n- sop nimps mep.\n- grel does not nimp mep.\n- grel does not nimp sop.\n- nalo does not nimp mep.\n- nalo does not nimp sop.\n\nStatement:\nThe ordered pair (lirk, sop) has relation nimp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.3852942470002745,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_smoke_v3/examples/eval_world_000000_prop_0000_para_03/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_smoke_v3/examples/eval_world_000000_prop_0000_para_03/logits_summary.npz"
+}

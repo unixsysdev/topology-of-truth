@@ -1,0 +1,34 @@
+{
+  "example_id": "eval_world_000000_prop_0002_para_00",
+  "world_id": "eval_world_000000",
+  "proposition_id": "eval_world_000000_prop_0002",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "at_least_two_v4",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "falm",
+    "object": "mep",
+    "relation": "fosh",
+    "type": "at_least_two"
+  },
+  "statement": "In this world, at least two falm thing foshes mep.",
+  "prompt": "World:\n- mep is falm.\n- grel is not falm.\n- nalo is not falm.\n- sop is not falm.\n- grel is peln.\n- sop is peln.\n- nalo is not peln.\n- nalo foshes sop.\n- sop foshes grel.\n- grel does not fosh lirk.\n- lirk does not fosh nalo.\n- lirk does not fosh sop.\n- nalo does not fosh grel.\n- nalo does not fosh mep.\n- grel nimps nalo.\n- mep nimps sop.\n- nalo nimps grel.\n- nalo nimps lirk.\n- sop nimps lirk.\n- sop nimps mep.\n- grel does not nimp mep.\n- grel does not nimp sop.\n- nalo does not nimp mep.\n- nalo does not nimp sop.\n\nStatement:\nIn this world, at least two falm thing foshes mep.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n",
+  "generated_token_ids": [
+    6288,
+    236761,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5168408389945398,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt_smoke/examples/eval_world_000000_prop_0002_para_00/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt_smoke/examples/eval_world_000000_prop_0002_para_00/logits_summary.npz"
+}

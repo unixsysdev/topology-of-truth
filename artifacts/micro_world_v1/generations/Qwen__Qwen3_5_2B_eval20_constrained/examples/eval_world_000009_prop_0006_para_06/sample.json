@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000009_prop_0006_para_06",
+  "world_id": "eval_world_000009",
+  "proposition_id": "eval_world_000009_prop_0006",
+  "paraphrase_id": "para_06",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "exactly_one_v6",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "zantic",
+    "object": "bex",
+    "relation": "drel",
+    "type": "exactly_one"
+  },
+  "statement": "Count the zantic things that drel bex; the result is exactly one.",
+  "prompt": "World:\n- toma is zantic.\n- vex is zantic.\n- bex is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- koba is falm.\n- vex is not falm.\n- bex drels nalo.\n- nalo drels toma.\n- vex drels koba.\n- vex drels toma.\n- bex does not drel toma.\n- koba does not drel nalo.\n- toma does not drel vex.\n- bex foshes koba.\n- nalo foshes bex.\n- nalo foshes toma.\n- nalo foshes vex.\n- toma foshes vex.\n- vex foshes koba.\n- vex foshes nalo.\n- koba does not fosh nalo.\n- koba does not fosh toma.\n- toma does not fosh koba.\n- vex does not fosh toma.\n\nStatement:\nCount the zantic things that drel bex; the result is exactly one.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5904322120004508,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000009_prop_0006_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000009_prop_0006_para_06/logits_summary.npz"
+}

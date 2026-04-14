@@ -1,0 +1,26 @@
+{
+  "question_id": "q_0002",
+  "dataset_sample_id": "gsm8k_000001",
+  "gold_answer": "3",
+  "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+  "prompt": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 3.",
+  "token_count": 6,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    18,
+    13
+  ],
+  "answer_token_indices": [
+    4
+  ],
+  "hidden_shape": [
+    6,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question_smoke/q_0002/reference/reference_hidden.npy"
+}

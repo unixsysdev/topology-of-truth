@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000017_prop_0007_para_05",
+  "world_id": "eval_world_000017",
+  "proposition_id": "eval_world_000017_prop_0007",
+  "paraphrase_id": "para_05",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v5_rel_v5_rel_v6",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "bex",
+      "relation": "keld",
+      "subject": "vex",
+      "type": "rel"
+    },
+    "right": {
+      "object": "nalo",
+      "relation": "keld",
+      "subject": "grel",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "The first clause is 'bex is kelded by vex' and the connector is and with 'For this world, grel kelds nalo'.",
+  "prompt": "World:\n- koba is brindle.\n- nalo is brindle.\n- vex is brindle.\n- lirk is peln.\n- nalo is peln.\n- vex is peln.\n- bex is not peln.\n- koba is not peln.\n- bex kelds koba.\n- koba kelds nalo.\n- lirk kelds koba.\n- lirk kelds nalo.\n- lirk kelds vex.\n- nalo kelds lirk.\n- vex kelds grel.\n- bex does not keld grel.\n- bex does not keld lirk.\n- grel does not keld koba.\n- grel does not keld lirk.\n- grel does not keld nalo.\n- koba does not keld vex.\n- lirk does not keld grel.\n- bex drels nalo.\n- lirk drels grel.\n- lirk drels nalo.\n- lirk drels vex.\n- nalo drels grel.\n- nalo drels lirk.\n- nalo drels vex.\n- vex drels grel.\n- vex drels koba.\n- vex drels nalo.\n- bex does not drel koba.\n- bex does not drel lirk.\n- grel does not drel koba.\n- grel does not drel lirk.\n- grel does not drel nalo.\n- grel does not drel vex.\n- koba does not drel grel.\n- koba does not drel lirk.\n- koba does not drel nalo.\n- koba does not drel vex.\n\nStatement:\nThe first clause is 'bex is kelded by vex' and the connector is and with 'For this world, grel kelds nalo'.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6975175640000089,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000017_prop_0007_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000017_prop_0007_para_05/logits_summary.npz"
+}

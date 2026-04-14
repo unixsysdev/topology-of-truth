@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0008",
+  "dataset_sample_id": "gsm8k_000007",
+  "question": "Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has to restart the download from the beginning. How load does it take to download the file?",
+  "gold_answer": "160",
+  "generated_text": "To find the total time Carla takes to download the file, we need to break the process into two distinct phases: the initial download and the restart phase.\n\n**Phase 1: Initial Download**\n*   **Total File Size:** $200 \\text{ GB}$\n*   **Download Speed:** $2 \\text{ GB/minute}$\n*   **Time to complete:**\n    $$ \\text{Time}_1 = \\frac{\\text{Total Size}}{\\text{Speed}} = \\frac{200}{2} = 100 \\text{ minutes} $$\n*   **Progress at this point:** $100 \\text{ minutes} \\times 2 \\text{ GB/min} = 200 \\text{ GB}$.\n*   **Percentage of file downloaded:** $\\frac{200}{200} = 100\\%$.\n\n**Phase 2: Restart and Re-download**\n*   **Restart Duration:** $20 \\text{ minutes}$\n*   **Speed during restart:** $2 \\text{ GB/minute}$ (Assuming the download speed remains constant after the restart).\n*   **Time to complete:**\n    $$ \\text{Time}_2 = \\frac{\\text{Total Size}}{\\text{Speed}} = \\frac{200}{2} = 100 \\text{ minutes} $$\n*   **Total time for this phase:**\n    $$ \\text{Total Time}_2 = \\text{Restart Time} + \\text{Re-download Time} = 20 + 100 = 120 \\text{ minutes} $$\n\n**Total Time Calculation**\nThe total time is the sum of the time taken in Phase 1 and Phase 2.\n$$ \\text{Total Time} = \\text{Time}_1 + \\text{Total Time}_2 $$\n$$ \\text{Total Time} = 100 + 120 = 220 \\text{ minutes} $$\n\n\\boxed{220}\n",
+  "pred_answer": "220",
+  "correct": false,
+  "token_count": 444,
+  "answer_length": 193,
+  "hidden_shape": [
+    444,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 37.2810703125,
+  "h0_entropy": 6.0443969244838875,
+  "h0_total_persistence": 2501.2789356708527,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0008/logits_summary.npz"
+}

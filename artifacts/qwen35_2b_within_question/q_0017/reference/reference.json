@@ -1,0 +1,30 @@
+{
+  "question_id": "q_0017",
+  "dataset_sample_id": "gsm8k_000016",
+  "gold_answer": "230",
+  "question": "Two trains leave San Rafael at the same time. They begin traveling westward, both traveling for 80 miles. The next day, they travel northwards, covering 150 miles. What's the distance covered by each train in the two days?",
+  "prompt": "Two trains leave San Rafael at the same time. They begin traveling westward, both traveling for 80 miles. The next day, they travel northwards, covering 150 miles. What's the distance covered by each train in the two days?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 230.",
+  "token_count": 8,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    17,
+    18,
+    15,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5,
+    6
+  ],
+  "hidden_shape": [
+    8,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0017/reference/reference_hidden.npy"
+}

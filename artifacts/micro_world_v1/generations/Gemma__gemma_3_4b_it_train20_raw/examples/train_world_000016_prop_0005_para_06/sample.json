@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000016_prop_0005_para_06",
+  "world_id": "train_world_000016",
+  "proposition_id": "train_world_000016_prop_0005",
+  "paraphrase_id": "para_06",
+  "split": "train",
+  "label": "False",
+  "pred_label": "Unknown",
+  "correct": false,
+  "template_id": "and_v2_rel_v2_attr_v3",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "zorb",
+      "relation": "lirp",
+      "subject": "fep",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "vorn",
+      "entity": "fep",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "The claim combines these with and: It is true that fep lirps zorb; fep belongs to the vorn things.",
+  "prompt": "World:\n- zorb is not pald.\n- tib is vorn.\n- fep is not vorn.\n- norp is not vorn.\n- fep does not sume norp.\n- norp does not sume fep.\n- norp does not sume tib.\n- fep lirps zorb.\n- norp does not lirp tib.\n- norp does not lirp zorb.\n\nStatement:\nThe claim combines these with and: It is true that fep lirps zorb; fep belongs to the vorn things.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\nUnknown\n```",
+  "generated_token_ids": [
+    107,
+    41387,
+    107,
+    2717
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.43179427399809356,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000016_prop_0005_para_06/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_raw/examples/train_world_000016_prop_0005_para_06/logits_summary.npz"
+}

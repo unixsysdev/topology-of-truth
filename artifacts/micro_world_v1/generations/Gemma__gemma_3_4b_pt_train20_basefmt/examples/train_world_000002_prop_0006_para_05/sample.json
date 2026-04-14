@@ -1,0 +1,34 @@
+{
+  "example_id": "train_world_000002_prop_0006_para_05",
+  "world_id": "train_world_000002",
+  "proposition_id": "train_world_000002_prop_0006",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "at_least_two_v1",
+  "template_family": "at_least_two",
+  "logical_form": {
+    "attribute": "daxel",
+    "object": "norp",
+    "relation": "mip",
+    "type": "at_least_two"
+  },
+  "statement": "At least two object with property daxel mips norp.",
+  "prompt": "World:\n- norp is daxel.\n- tib is daxel.\n- lume is not daxel.\n- pavo is not daxel.\n- norp is pald.\n- lume is not pald.\n- tib is not pald.\n- lume mips pavo.\n- norp mips lume.\n- tib mips norp.\n- lume does not mip tib.\n- pavo does not mip lume.\n- pavo does not mip tib.\n- lume varks tib.\n- norp varks tib.\n- pavo varks norp.\n- tib varks lume.\n- tib varks norp.\n- norp does not vark pavo.\n- pavo does not vark lume.\n- pavo does not vark tib.\n- tib does not vark pavo.\n\nStatement:\nAt least two object with property daxel mips norp.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n",
+  "generated_token_ids": [
+    6288,
+    236761,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5189422740004375,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000002_prop_0006_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000002_prop_0006_para_05/logits_summary.npz"
+}

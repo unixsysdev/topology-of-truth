@@ -1,0 +1,34 @@
+{
+  "example_id": "train_world_000011_prop_0005_para_05",
+  "world_id": "train_world_000011",
+  "proposition_id": "train_world_000011_prop_0005",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "all_v1",
+  "template_family": "all",
+  "logical_form": {
+    "attribute": "nubic",
+    "object": "tib",
+    "relation": "mip",
+    "type": "all"
+  },
+  "statement": "Every object with property nubic mips tib.",
+  "prompt": "World:\n- norp is vorn.\n- lume is not vorn.\n- tib is not vorn.\n- lume is nubic.\n- norp is nubic.\n- tib is not nubic.\n- lume sumes tib.\n- norp sumes kiv.\n- tib sumes norp.\n- lume does not sume norp.\n- lume mips kiv.\n- norp mips tib.\n- kiv does not mip tib.\n- lume does not mip norp.\n- lume does not mip tib.\n- tib does not mip lume.\n\nStatement:\nEvery object with property nubic mips tib.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n",
+  "generated_token_ids": [
+    6288,
+    236761,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.4303261079985532,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000011_prop_0005_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000011_prop_0005_para_05/logits_summary.npz"
+}

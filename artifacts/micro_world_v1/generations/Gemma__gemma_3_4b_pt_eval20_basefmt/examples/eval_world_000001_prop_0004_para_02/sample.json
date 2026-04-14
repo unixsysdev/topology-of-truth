@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000001_prop_0004_para_02",
+  "world_id": "eval_world_000001",
+  "proposition_id": "eval_world_000001_prop_0004",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "attr_v6",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "soric",
+    "entity": "toma",
+    "type": "attr"
+  },
+  "statement": "soric applies to toma.",
+  "prompt": "World:\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- grel is brindle.\n- mep is brindle.\n- drin foshes mep.\n- mep foshes drin.\n- mep foshes toma.\n- toma foshes mep.\n- grel does not fosh toma.\n- drin nimps grel.\n- grel nimps toma.\n- mep nimps grel.\n- mep nimps toma.\n- grel does not nimp drin.\n- toma does not nimp mep.\n\nStatement:\nsoric applies to toma.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.",
+  "generated_token_ids": [
+    6288,
+    236761,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.35965122900233837,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000001_prop_0004_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000001_prop_0004_para_02/logits_summary.npz"
+}

@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0013",
+  "dataset_sample_id": "gsm8k_000012",
+  "question": "Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for $1.5 each. It costs $3 a year to water and feed the tree. How many years will it take before he starts earning money on the lemon tree?",
+  "gold_answer": "13",
+  "generated_text": "To determine how many years it takes for Carlos to start earning money, we need to compare the cost of planting the tree with the revenue generated from selling the lemons.\n\n1.  **Identify the initial cost**:\n    The tree costs $\\$90$ to plant. This is a one-time expense.\n\n2.  **Identify the annual revenue**:\n    Each year, the tree grows 7 lemons.\n    Selling price per lemon = $\\$1.5$.\n    Annual revenue = $7 \\text{ lemons} \\times \\$1.5/\\text{lemon} = \\$10.50$.\n\n3.  **Identify the annual cost**:\n    It costs $\\$3$ a year to water and feed the tree.\n\n4.  **Calculate the net annual profit**:\n    Net profit per year = Annual Revenue - Annual Cost\n    Net profit = $\\$10.50 - \\$3 = \\$7.50$.\n\n5.  **Determine the number of years to break even**:\n    Carlos needs to earn at least $\\$90$ to cover the planting cost.\n    Number of years = $\\frac{\\text{Total Cost}}{\\text{Net Annual Profit}}$\n    Number of years = $\\frac{90}{7.50}$\n\n    Let's perform the division:\n    $90 \\div 7.5 = 90 \\div \\frac{15}{2} = 90 \\times \\frac{2}{15} = \\frac{180}{15} = 12$.\n\n    So, it takes 12 years to earn $\\$105$ in revenue, which covers the $\\$90$ cost.\n    Year 1: Earns $\\$10.50$, Net $\\$7.50$ (Total spent $\\$90$, Total earned $\\$10.50$).\n    Year 2: Earns $\\$10.50$, Net $\\$7.50$.\n    ...\n    Year 12: Earns $\\$10.50$, Net $\\$7.50$.\n    Total Revenue after 12 years = $12 \\times 10.50 = \\$126$.\n    Total Cost = $\\$90$.\n    Profit = $\\",
+  "pred_answer": "90",
+  "correct": false,
+  "token_count": 512,
+  "answer_length": 226,
+  "hidden_shape": [
+    512,
+    2048
+  ],
+  "stop_reason": "max_new_tokens",
+  "runtime_sec": 42.92159375,
+  "h0_entropy": 6.194276472771394,
+  "h0_total_persistence": 2838.78786444664,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0013/logits_summary.npz"
+}

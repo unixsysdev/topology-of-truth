@@ -1,0 +1,30 @@
+{
+  "question_id": "q_0016",
+  "dataset_sample_id": "gsm8k_000015",
+  "gold_answer": "125",
+  "question": "A merchant wants to make a choice of purchase between 2 purchase plans: jewelry worth $5,000 or electronic gadgets worth $8,000. His financial advisor speculates that the jewelry market will go up 2.5% while the electronic gadgets market will rise 1.2% within the same month. If the merchant is looking to maximize profit at the end of this month by making a choice, how much profit would this be?",
+  "prompt": "A merchant wants to make a choice of purchase between 2 purchase plans: jewelry worth $5,000 or electronic gadgets worth $8,000. His financial advisor speculates that the jewelry market will go up 2.5% while the electronic gadgets market will rise 1.2% within the same month. If the merchant is looking to maximize profit at the end of this month by making a choice, how much profit would this be?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 125.",
+  "token_count": 8,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    16,
+    17,
+    20,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5,
+    6
+  ],
+  "hidden_shape": [
+    8,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0016/reference/reference_hidden.npy"
+}

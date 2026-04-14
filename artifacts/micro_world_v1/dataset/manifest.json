@@ -1,0 +1,19 @@
+{
+  "dev_worlds": 25,
+  "eval_worlds": 100,
+  "label_counts": {
+    "dev:False": 600,
+    "dev:True": 600,
+    "dev:Unknown": 600,
+    "eval:False": 2400,
+    "eval:True": 2400,
+    "eval:Unknown": 2400,
+    "train:False": 2400,
+    "train:True": 2400,
+    "train:Unknown": 2400
+  },
+  "paraphrases_per_prop": 8,
+  "props_per_world": 9,
+  "seed": 1729,
+  "train_worlds": 100
+}

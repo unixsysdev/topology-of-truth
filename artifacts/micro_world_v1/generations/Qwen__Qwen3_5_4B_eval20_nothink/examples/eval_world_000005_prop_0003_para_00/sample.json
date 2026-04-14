@@ -1,0 +1,35 @@
+{
+  "example_id": "eval_world_000005_prop_0003_para_00",
+  "world_id": "eval_world_000005",
+  "proposition_id": "eval_world_000005_prop_0003",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "not_v4_attr_v4",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "zantic",
+      "entity": "grel",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "The proposition applies logical negation to this clause: The object grel has the property zantic.",
+  "prompt": "World:\n- grel is zantic.\n- nalo is zantic.\n- koba is not zantic.\n- bex is peln.\n- koba is peln.\n- grel is not peln.\n- mep is not peln.\n- bex sovs grel.\n- bex sovs koba.\n- bex sovs mep.\n- koba sovs bex.\n- koba sovs grel.\n- bex does not sov nalo.\n- mep does not sov bex.\n- mep does not sov nalo.\n- nalo does not sov grel.\n- mep nimps bex.\n- mep nimps grel.\n- bex does not nimp mep.\n- koba does not nimp bex.\n- mep does not nimp koba.\n- nalo does not nimp koba.\n\nStatement:\nThe proposition applies logical negation to this clause: The object grel has the property zantic.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7096417299999302,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000005_prop_0003_para_00/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000005_prop_0003_para_00/logits_summary.npz"
+}

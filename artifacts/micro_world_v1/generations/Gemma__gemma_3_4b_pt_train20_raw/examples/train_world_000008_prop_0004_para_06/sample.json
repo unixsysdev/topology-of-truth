@@ -1,0 +1,38 @@
+{
+  "example_id": "train_world_000008_prop_0004_para_06",
+  "world_id": "train_world_000008",
+  "proposition_id": "train_world_000008_prop_0004",
+  "paraphrase_id": "para_06",
+  "split": "train",
+  "label": "True",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "or_v2_attr_v2_attr_v3",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "vorn",
+      "entity": "sarn",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "nubic",
+      "entity": "zorb",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "The claim combines these with or: It is true that sarn is vorn; zorb belongs to the nubic things.",
+  "prompt": "World:\n- fep is vorn.\n- sarn is vorn.\n- zorb is vorn.\n- wug is not vorn.\n- fep is nubic.\n- wug is nubic.\n- zorb is nubic.\n- sarn tobs zorb.\n- zorb tobs pavo.\n- fep does not tob sarn.\n- fep does not tob wug.\n- sarn does not tob pavo.\n- sarn does not tob wug.\n- wug does not tob zorb.\n- pavo nazes sarn.\n- sarn nazes fep.\n- sarn nazes wug.\n- sarn nazes zorb.\n- wug nazes zorb.\n- zorb nazes sarn.\n- fep does not naze sarn.\n- sarn does not naze pavo.\n- zorb does not naze wug.\n\nStatement:\nThe claim combines these with or: It is true that sarn is vorn; zorb belongs to the nubic things.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.32802963699941756,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000008_prop_0004_para_06/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000008_prop_0004_para_06/logits_summary.npz"
+}

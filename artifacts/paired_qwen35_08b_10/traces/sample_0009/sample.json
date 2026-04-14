@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0009",
+  "dataset_sample_id": "gsm8k_000008",
+  "question": "John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very important at home.  He tries to get home in 4 hours but spends the first 2 hours in standstill traffic.  He spends the next half-hour driving at a speed of 30mph, before being able to drive the remaining time of the 4 hours going at 80 mph.  How far is he from home at the end of those 4 hours?",
+  "gold_answer": "45",
+  "generated_text": "To find the total distance John drives, we need to calculate the distance covered during each segment of his trip and sum them up.\n\n**1. First Segment: Driving at 60 mph for 3 hours**\n*   Speed ($v_1$) = 60 mph\n*   Time ($t_1$) = 3 hours\n*   Distance ($d_1$) = $v_1 \\times t_1 = 60 \\times 3 = 180$ miles.\n\n**2. Second Segment: Standing still for 2 hours**\n*   Speed ($v_2$) = 0 mph\n*   Time ($t_2$) = 2 hours\n*   Distance ($d_2$) = $v_2 \\times t_2 = 0 \\times 2 = 0$ miles.\n\n**3. Third Segment: Driving at 30 mph for 0.5 hours**\n*   Speed ($v_3$) = 30 mph\n*   Time ($t_3$) = 0.5 hours\n*   Distance ($d_3$) = $v_3 \\times t_3 = 30 \\times 0.5 = 15$ miles.\n\n**4. Fourth Segment: Driving at 80 mph for the remaining time**\n*   Total time for this segment = Total time ($t_{total}$) - Time in segment 3 ($t_3$)\n*   $t_{total} = 4$ hours\n*   $t_3 = 0.5$ hours\n*   Remaining time ($t_4$) = $4 - 0.5 = 3.5$ hours.\n*   Speed ($v_4$) = 80 mph\n*   Distance ($d_4$) = $v_4 \\times t_4 = 80 \\times 3.5 = 280$ miles.\n\n**Total Distance Calculation**\nTotal Distance = $d_1 + d_2 + d_3 + d_4$\nTotal Distance = $180 + 0 + 15 + 280$\nTotal Distance = $475$ miles.\n\n\\boxed{475}\n",
+  "pred_answer": "475",
+  "correct": false,
+  "token_count": 496,
+  "hidden_shape": [
+    496,
+    1024
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 33.044328125,
+  "h0_entropy": 6.161163168453558,
+  "h0_total_persistence": 2743.0297396183014
+}

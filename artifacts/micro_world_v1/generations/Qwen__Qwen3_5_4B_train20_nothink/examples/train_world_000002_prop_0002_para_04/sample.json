@@ -1,0 +1,40 @@
+{
+  "example_id": "train_world_000002_prop_0002_para_04",
+  "world_id": "train_world_000002",
+  "proposition_id": "train_world_000002_prop_0002",
+  "paraphrase_id": "para_04",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v0_attr_v0_attr_v1",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "daxel",
+      "entity": "norp",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "pald",
+      "entity": "lume",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "norp is daxel and The item named lume is pald.",
+  "prompt": "World:\n- norp is daxel.\n- tib is daxel.\n- lume is not daxel.\n- pavo is not daxel.\n- norp is pald.\n- lume is not pald.\n- tib is not pald.\n- lume mips pavo.\n- norp mips lume.\n- tib mips norp.\n- lume does not mip tib.\n- pavo does not mip lume.\n- pavo does not mip tib.\n- lume varks tib.\n- norp varks tib.\n- pavo varks norp.\n- tib varks lume.\n- tib varks norp.\n- norp does not vark pavo.\n- pavo does not vark lume.\n- pavo does not vark tib.\n- tib does not vark pavo.\n\nStatement:\nnorp is daxel and The item named lume is pald.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7098753280006349,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000002_prop_0002_para_04/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000002_prop_0002_para_04/logits_summary.npz"
+}

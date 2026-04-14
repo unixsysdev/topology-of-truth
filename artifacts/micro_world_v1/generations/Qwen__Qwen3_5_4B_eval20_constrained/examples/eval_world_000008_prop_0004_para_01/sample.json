@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000008_prop_0004_para_01",
+  "world_id": "eval_world_000008",
+  "proposition_id": "eval_world_000008_prop_0004",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "rel_v5",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "grel",
+    "relation": "fosh",
+    "subject": "toma",
+    "type": "rel"
+  },
+  "statement": "grel is foshed by toma.",
+  "prompt": "World:\n- drin is soric.\n- grel is soric.\n- toma is not soric.\n- grel is not peln.\n- drin foshes grel.\n- drin foshes koba.\n- drin foshes toma.\n- toma foshes koba.\n- koba does not fosh drin.\n- toma does not fosh drin.\n- drin sovs grel.\n- drin sovs toma.\n- grel sovs toma.\n- grel does not sov drin.\n- koba does not sov toma.\n- toma does not sov drin.\n\nStatement:\ngrel is foshed by toma.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.7064099380004336,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000008_prop_0004_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000008_prop_0004_para_01/logits_summary.npz"
+}

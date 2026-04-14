@@ -1,0 +1,41 @@
+{
+  "example_id": "eval_world_000015_prop_0000_para_03",
+  "world_id": "eval_world_000015",
+  "proposition_id": "eval_world_000015_prop_0000",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v7_attr_v7_rel_v0",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "zantic",
+      "entity": "nalo",
+      "type": "attr"
+    },
+    "right": {
+      "object": "drin",
+      "relation": "keld",
+      "subject": "nalo",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "The compound proposition says The zantic property holds for nalo and nalo kelds drin.",
+  "prompt": "World:\n- drin is peln.\n- nalo is peln.\n- toma is peln.\n- bex is not peln.\n- bex is not zantic.\n- drin is not zantic.\n- koba is not zantic.\n- nalo is not zantic.\n- bex nimps drin.\n- bex nimps toma.\n- drin nimps nalo.\n- koba nimps bex.\n- koba nimps mep.\n- nalo nimps drin.\n- toma nimps koba.\n- bex does not nimp koba.\n- bex does not nimp mep.\n- drin does not nimp koba.\n- drin does not nimp toma.\n- koba does not nimp nalo.\n- mep does not nimp toma.\n- nalo does not nimp toma.\n- toma does not nimp bex.\n- toma does not nimp nalo.\n- bex kelds toma.\n- drin kelds nalo.\n- koba kelds bex.\n- koba kelds mep.\n- mep kelds bex.\n- nalo kelds mep.\n- bex does not keld drin.\n- bex does not keld koba.\n- drin does not keld bex.\n- koba does not keld nalo.\n- mep does not keld koba.\n- nalo does not keld koba.\n- toma does not keld drin.\n- toma does not keld koba.\n- toma does not keld mep.\n\nStatement:\nThe compound proposition says The zantic property holds for nalo and nalo kelds drin.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6929913660005695,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000015_prop_0000_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000015_prop_0000_para_03/logits_summary.npz"
+}

@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000018_prop_0006_para_00",
+  "world_id": "eval_world_000018",
+  "proposition_id": "eval_world_000018_prop_0006",
+  "paraphrase_id": "para_00",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v4_attr_v4_rel_v5",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "peln",
+      "entity": "mep",
+      "type": "attr"
+    },
+    "right": {
+      "object": "nalo",
+      "relation": "fosh",
+      "subject": "sop",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "Either The object mep has the property peln, or nalo is foshed by sop.",
+  "prompt": "World:\n- lirk is soric.\n- mep is soric.\n- nalo is soric.\n- sop is soric.\n- mep is peln.\n- nalo is peln.\n- sop is peln.\n- vex is peln.\n- nalo sovs mep.\n- nalo sovs sop.\n- sop sovs nalo.\n- vex sovs lirk.\n- vex sovs sop.\n- lirk does not sov sop.\n- lirk does not sov vex.\n- sop does not sov lirk.\n- sop does not sov mep.\n- vex does not sov mep.\n- mep foshes nalo.\n- sop foshes vex.\n- vex foshes mep.\n- nalo does not fosh lirk.\n- sop does not fosh mep.\n- vex does not fosh lirk.\n\nStatement:\nEither The object mep has the property peln, or nalo is foshed by sop.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " True\n",
+  "generated_token_ids": [
+    6288,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.4444838260023971,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000018_prop_0006_para_00/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_eval20_raw_constrained/examples/eval_world_000018_prop_0006_para_00/logits_summary.npz"
+}

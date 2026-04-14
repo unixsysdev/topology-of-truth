@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0011",
+  "dataset_sample_id": "gsm8k_000010",
+  "question": "A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many as the downloads in the first month, but then reduced by 30% in the third month. How many downloads did the program have total over the three months?",
+  "gold_answer": "366",
+  "generated_text": "To find the total number of downloads over the three months, we will calculate the downloads for each month step by step.\n\n1.  **First Month:**\n    The problem states there were 60 downloads.\n    $$ \\text{Downloads}_1 = 60 $$\n\n2.  **Second Month:**\n    The number of downloads was three times as many as the first month.\n    $$ \\text{Downloads}_2 = 3 \\times 60 = 180 $$\n\n3.  **Third Month:**\n    The number of downloads was reduced by 30% in the third month. This means the downloads in the third month are 70% of the second month's amount (since $100\\% - 30\\% = 70\\%$).\n    $$ \\text{Reduction} = 30\\% \\text{ of } 180 = 0.30 \\times 180 = 54 $$\n    $$ \\text{Downloads}_3 = 180 - 54 = 126 $$\n    Alternatively, using the percentage directly:\n    $$ \\text{Downloads}_3 = 180 \\times (1 - 0.30) = 180 \\times 0.70 = 126 $$\n\n4.  **Total Downloads:**\n    Add the downloads from all three months together.\n    $$ \\text{Total} = \\text{Downloads}_1 + \\text{Downloads}_2 + \\text{Downloads}_3 $$\n    $$ \\text{Total} = 60 + 180 + 126 $$\n    $$ \\text{Total} = 240 + 126 $$\n    $$ \\text{Total} = 366 $$\n\n\\boxed{366}\n",
+  "pred_answer": "366",
+  "correct": true,
+  "token_count": 405,
+  "answer_length": 184,
+  "hidden_shape": [
+    405,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 33.8025234375,
+  "h0_entropy": 5.951802260356435,
+  "h0_total_persistence": 2244.309346437454,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0011/logits_summary.npz"
+}

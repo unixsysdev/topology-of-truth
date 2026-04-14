@@ -1,0 +1,28 @@
+{
+  "question_id": "q_0001",
+  "dataset_sample_id": "gsm8k_000000",
+  "gold_answer": "18",
+  "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+  "prompt": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 18.",
+  "token_count": 7,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    16,
+    23,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5
+  ],
+  "hidden_shape": [
+    7,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0001/reference/reference_hidden.npy"
+}

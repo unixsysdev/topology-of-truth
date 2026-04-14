@@ -1,0 +1,10 @@
+state_key,true_label,pred_true,pred_false,pred_unknown
+final_prompt,True,266,0,214
+final_prompt,False,244,0,236
+final_prompt,Unknown,242,0,238
+verdict_token,True,260,86,134
+verdict_token,False,222,116,142
+verdict_token,Unknown,224,96,160
+verdict_span_mean,True,94,4,382
+verdict_span_mean,False,78,10,392
+verdict_span_mean,Unknown,66,2,412

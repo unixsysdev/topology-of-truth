@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000004_prop_0004_para_02",
+  "world_id": "eval_world_000004",
+  "proposition_id": "eval_world_000004_prop_0004",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "Unknown",
+  "correct": true,
+  "template_id": "none_v6",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "zantic",
+    "object": "toma",
+    "relation": "sov",
+    "type": "none"
+  },
+  "statement": "Count the zantic things that sov toma; the result is no.",
+  "prompt": "World:\n- koba is not zantic.\n- vex is not zantic.\n- grel is brindle.\n- koba is brindle.\n- toma is brindle.\n- vex is brindle.\n- vex drels koba.\n- grel does not drel toma.\n- grel does not drel vex.\n- koba does not drel toma.\n- koba does not drel vex.\n- toma does not drel koba.\n- vex does not drel toma.\n- koba sovs grel.\n- toma sovs vex.\n- vex sovs grel.\n- grel does not sov koba.\n- grel does not sov vex.\n- vex does not sov toma.\n\nStatement:\nCount the zantic things that sov toma; the result is no.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": " Unknown\n",
+  "generated_token_ids": [
+    60355,
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.41979586799789104,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000004_prop_0004_para_02/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_raw_constrained/examples/eval_world_000004_prop_0004_para_02/logits_summary.npz"
+}

@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0012",
+  "dataset_sample_id": "gsm8k_000011",
+  "question": "Toula went to the bakery and bought various types of pastries. She bought 3 dozen donuts which cost $68 per dozen, 2 dozen mini cupcakes which cost $80 per dozen, and 6 dozen mini cheesecakes for $55 per dozen. How much was the total cost?",
+  "gold_answer": "694",
+  "generated_text": "To find the total cost, we need to calculate the cost for each type of pastry and then sum them up.\n\n1.  **Donuts**:\n    *   Quantity: 3 dozen\n    *   Price per dozen: $68\n    *   Total cost for donuts: $3 \\times 68 = 204$\n\n2.  **Mini Cupcakes**:\n    *   Quantity: 2 dozen\n    *   Price per dozen: $80\n    *   Total cost for mini cupcakes: $2 \\times 80 = 160$\n\n3.  **Mini Cheesecakes**:\n    *   Quantity: 6 dozen\n    *   Price per dozen: $55\n    *   Total cost for mini cheesecakes: $6 \\times 55 = 330$\n\n4.  **Total Cost**:\n    *   Sum of all individual costs: $204 + 160 + 330$\n    *   $204 + 160 = 364$\n    *   $364 + 330 = 694$\n\nThe total cost is $694.\n\n\\boxed{694}\n",
+  "pred_answer": "694",
+  "correct": true,
+  "token_count": 274,
+  "answer_length": 120,
+  "hidden_shape": [
+    274,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 22.774642578125,
+  "h0_entropy": 5.545543617694442,
+  "h0_total_persistence": 1668.3953431844711,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0012/logits_summary.npz"
+}

@@ -1,0 +1,38 @@
+{
+  "example_id": "train_world_000002_prop_0002_para_03",
+  "world_id": "train_world_000002",
+  "proposition_id": "train_world_000002_prop_0002",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "and_v3_attr_v3_attr_v4",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "daxel",
+      "entity": "norp",
+      "type": "attr"
+    },
+    "right": {
+      "attribute": "pald",
+      "entity": "lume",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "It is true that norp belongs to the daxel things and that The object lume has the property pald.",
+  "prompt": "World:\n- norp is daxel.\n- tib is daxel.\n- lume is not daxel.\n- pavo is not daxel.\n- norp is pald.\n- lume is not pald.\n- tib is not pald.\n- lume mips pavo.\n- norp mips lume.\n- tib mips norp.\n- lume does not mip tib.\n- pavo does not mip lume.\n- pavo does not mip tib.\n- lume varks tib.\n- norp varks tib.\n- pavo varks norp.\n- tib varks lume.\n- tib varks norp.\n- norp does not vark pavo.\n- pavo does not vark lume.\n- pavo does not vark tib.\n- tib does not vark pavo.\n\nStatement:\nIt is true that norp belongs to the daxel things and that The object lume has the property pald.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n",
+  "generated_token_ids": [
+    107,
+    1
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.3214114879992849,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000002_prop_0002_para_03/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000002_prop_0002_para_03/logits_summary.npz"
+}

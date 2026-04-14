@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000004_prop_0004_para_05",
+  "world_id": "train_world_000004",
+  "proposition_id": "train_world_000004_prop_0004",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v1_rel_v1_rel_v2",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "zorb",
+      "relation": "mip",
+      "subject": "wug",
+      "type": "rel"
+    },
+    "right": {
+      "object": "lume",
+      "relation": "mip",
+      "subject": "wug",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "Both claims hold: The item named wug mips the item named zorb; It is true that wug mips lume.",
+  "prompt": "World:\n- lume is nubic.\n- norp is nubic.\n- zorb is nubic.\n- blicket is not nubic.\n- fep is not nubic.\n- fep is pald.\n- lume is pald.\n- wug is pald.\n- blicket is not pald.\n- norp is not pald.\n- blicket mips norp.\n- fep mips blicket.\n- lume mips fep.\n- norp mips lume.\n- wug mips fep.\n- zorb mips norp.\n- blicket does not mip zorb.\n- fep does not mip lume.\n- fep does not mip zorb.\n- lume does not mip blicket.\n- lume does not mip norp.\n- norp does not mip fep.\n- wug does not mip zorb.\n- zorb does not mip blicket.\n- blicket tobs lume.\n- lume tobs wug.\n- lume tobs zorb.\n- wug tobs lume.\n- wug tobs zorb.\n- blicket does not tob wug.\n- blicket does not tob zorb.\n- fep does not tob wug.\n- lume does not tob norp.\n- wug does not tob fep.\n- wug does not tob norp.\n- zorb does not tob lume.\n- zorb does not tob norp.\n\nStatement:\nBoth claims hold: The item named wug mips the item named zorb; It is true that wug mips lume.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    4339,
+    107,
+    106
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 0.44391472499773954,
+  "model_id": "google/gemma-3-4b-it",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000004_prop_0004_para_05/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_it_train20_nothink/examples/train_world_000004_prop_0004_para_05/logits_summary.npz"
+}

@@ -1,0 +1,6 @@
+{"message": "start", "step": "load_model", "ts": "2026-04-14T02:03:03.730947+00:00"}
+{"message": "end", "runtime_sec": 4.335, "step": "load_model", "ts": "2026-04-14T02:03:08.065469+00:00"}
+{"message": "start", "step": "reference_q_0001", "ts": "2026-04-14T02:03:08.089248+00:00"}
+{"message": "end", "runtime_sec": 0.688, "step": "reference_q_0001", "ts": "2026-04-14T02:03:08.777184+00:00"}
+{"message": "start", "step": "reference_q_0002", "ts": "2026-04-14T02:03:08.778832+00:00"}
+{"message": "end", "runtime_sec": 0.174, "step": "reference_q_0002", "ts": "2026-04-14T02:03:08.953206+00:00"}

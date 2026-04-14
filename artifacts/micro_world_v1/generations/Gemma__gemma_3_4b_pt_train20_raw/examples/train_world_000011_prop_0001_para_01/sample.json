@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000011_prop_0001_para_01",
+  "world_id": "train_world_000011",
+  "proposition_id": "train_world_000011_prop_0001",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "or_v1_rel_v1_attr_v2",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "tib",
+      "relation": "sume",
+      "subject": "norp",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "nubic",
+      "entity": "kiv",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "At least one claim holds: The item named norp sumes the item named tib; It is true that kiv is nubic.",
+  "prompt": "World:\n- norp is vorn.\n- lume is not vorn.\n- tib is not vorn.\n- lume is nubic.\n- norp is nubic.\n- tib is not nubic.\n- lume sumes tib.\n- norp sumes kiv.\n- tib sumes norp.\n- lume does not sume norp.\n- lume mips kiv.\n- norp mips tib.\n- kiv does not mip tib.\n- lume does not mip norp.\n- lume does not mip tib.\n- tib does not mip lume.\n\nStatement:\nAt least one claim holds: The item named norp sumes the item named tib; It is true that kiv is nubic.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "\n\nThe answer is",
+  "generated_token_ids": [
+    108,
+    818,
+    3890,
+    563
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.46576888900017366,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000011_prop_0001_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_raw/examples/train_world_000011_prop_0001_para_01/logits_summary.npz"
+}

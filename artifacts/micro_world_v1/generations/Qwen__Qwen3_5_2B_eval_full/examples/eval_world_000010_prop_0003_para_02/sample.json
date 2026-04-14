@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000010_prop_0003_para_02",
+  "world_id": "eval_world_000010",
+  "proposition_id": "eval_world_000010_prop_0003",
+  "paraphrase_id": "para_02",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "attr_v6",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "zantic",
+    "entity": "grel",
+    "type": "attr"
+  },
+  "statement": "zantic applies to grel.",
+  "prompt": "World:\n- bex is falm.\n- nalo is falm.\n- vex is not falm.\n- vex is zantic.\n- bex is not zantic.\n- grel is not zantic.\n- nalo is not zantic.\n- sop is not zantic.\n- bex drels vex.\n- grel drels nalo.\n- nalo drels sop.\n- vex drels bex.\n- grel does not drel sop.\n- grel does not drel vex.\n- nalo does not drel bex.\n- sop does not drel grel.\n- sop does not drel nalo.\n- sop does not drel vex.\n- vex does not drel nalo.\n- vex does not drel sop.\n- bex nimps nalo.\n- bex nimps vex.\n- nalo nimps bex.\n- nalo nimps vex.\n- sop nimps nalo.\n- sop nimps vex.\n- vex nimps grel.\n- vex does not nimp bex.\n- vex does not nimp sop.\n\nStatement:\nzantic applies to grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6305435200010834,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000010_prop_0003_para_02/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000010_prop_0003_para_02/logits_summary.npz"
+}

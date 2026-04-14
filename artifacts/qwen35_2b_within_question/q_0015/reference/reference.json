@@ -1,0 +1,28 @@
+{
+  "question_id": "q_0015",
+  "dataset_sample_id": "gsm8k_000014",
+  "gold_answer": "60",
+  "question": "In a dance class of 20 students, 20% enrolled in contemporary dance, 25% of the remaining enrolled in jazz dance, and the rest enrolled in hip-hop dance. What percentage of the entire students enrolled in hip-hop dance?",
+  "prompt": "In a dance class of 20 students, 20% enrolled in contemporary dance, 25% of the remaining enrolled in jazz dance, and the rest enrolled in hip-hop dance. What percentage of the entire students enrolled in hip-hop dance?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 60.",
+  "token_count": 7,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    21,
+    15,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5
+  ],
+  "hidden_shape": [
+    7,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0015/reference/reference_hidden.npy"
+}

@@ -1,0 +1,2 @@
+model_id,n_train,n_test,n_layers,hidden_dim,train_verdict_valid,test_verdict_valid
+google/gemma-3-4b-pt,1440,1440,35,2560,1440,1440

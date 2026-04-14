@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000005_prop_0005_para_01",
+  "world_id": "eval_world_000005",
+  "proposition_id": "eval_world_000005_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "rel_v5",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "grel",
+    "relation": "sov",
+    "subject": "bex",
+    "type": "rel"
+  },
+  "statement": "grel is soved by bex.",
+  "prompt": "World:\n- grel is zantic.\n- nalo is zantic.\n- koba is not zantic.\n- bex is peln.\n- koba is peln.\n- grel is not peln.\n- mep is not peln.\n- bex sovs grel.\n- bex sovs koba.\n- bex sovs mep.\n- koba sovs bex.\n- koba sovs grel.\n- bex does not sov nalo.\n- mep does not sov bex.\n- mep does not sov nalo.\n- nalo does not sov grel.\n- mep nimps bex.\n- mep nimps grel.\n- bex does not nimp mep.\n- koba does not nimp bex.\n- mep does not nimp koba.\n- nalo does not nimp koba.\n\nStatement:\ngrel is soved by bex.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7101143299987598,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000005_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_nothink/examples/eval_world_000005_prop_0005_para_01/logits_summary.npz"
+}

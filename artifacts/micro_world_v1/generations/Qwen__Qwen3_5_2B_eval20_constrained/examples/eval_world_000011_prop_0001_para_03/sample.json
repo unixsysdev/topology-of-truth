@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000011_prop_0001_para_03",
+  "world_id": "eval_world_000011",
+  "proposition_id": "eval_world_000011_prop_0001",
+  "paraphrase_id": "para_03",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "none_v7",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "soric",
+    "object": "vex",
+    "relation": "keld",
+    "type": "none"
+  },
+  "statement": "Among soric things, no of them keld vex.",
+  "prompt": "World:\n- vex is falm.\n- toma is not falm.\n- grel is soric.\n- toma is soric.\n- mep is not soric.\n- vex is not soric.\n- mep kelds vex.\n- vex kelds toma.\n- grel does not keld mep.\n- toma does not keld grel.\n- vex does not keld grel.\n- grel foshes toma.\n- toma foshes grel.\n- toma foshes vex.\n- vex foshes mep.\n- vex foshes toma.\n- grel does not fosh mep.\n\nStatement:\nAmong soric things, no of them keld vex.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False",
+  "generated_token_ids": [
+    3913,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5476710580005602,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000011_prop_0001_para_03/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000011_prop_0001_para_03/logits_summary.npz"
+}

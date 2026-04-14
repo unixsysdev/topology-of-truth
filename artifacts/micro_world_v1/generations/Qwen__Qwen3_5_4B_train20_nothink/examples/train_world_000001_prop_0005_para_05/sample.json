@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000001_prop_0005_para_05",
+  "world_id": "train_world_000001",
+  "proposition_id": "train_world_000001_prop_0005",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "False",
+  "pred_label": "False",
+  "correct": true,
+  "template_id": "some_v1",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "selt",
+    "object": "norp",
+    "relation": "vark",
+    "type": "some"
+  },
+  "statement": "Some object with property selt varks norp.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is not daxel.\n- norp is selt.\n- kiv is not selt.\n- vonn is not selt.\n- norp varks kiv.\n- norp does not vark vonn.\n- tib does not vark norp.\n- tib does not vark vonn.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- vonn tobs norp.\n- tib does not tob norp.\n- tib does not tob vonn.\n\nStatement:\nSome object with property selt varks norp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.5836297489986464,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000001_prop_0005_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000001_prop_0005_para_05/logits_summary.npz"
+}

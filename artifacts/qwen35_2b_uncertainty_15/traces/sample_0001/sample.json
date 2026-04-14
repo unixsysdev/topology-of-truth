@@ -1,0 +1,20 @@
+{
+  "sample_id": "sample_0001",
+  "dataset_sample_id": "gsm8k_000000",
+  "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+  "gold_answer": "18",
+  "generated_text": "To find out how much Janet makes at the farmers' market, we need to determine the number of eggs she sells and the total value of those eggs.\n\n1.  **Calculate the total number of eggs produced:**\n    Janet lays 16 eggs per day.\n\n2.  **Calculate the number of eggs eaten:**\n    She eats 3 eggs for breakfast every morning.\n    $$16 - 3 = 13 \\text{ eggs remaining}$$\n\n3.  **Calculate the number of eggs sold:**\n    She sells the remainder.\n    $$13 \\text{ eggs}$$\n\n4.  **Calculate the total revenue:**\n    She sells the eggs for $2 per egg.\n    $$13 \\text{ eggs} \\times \\$2/\\text{egg} = \\$26$$\n\nJanet makes $26 every day at the farmers' market.\n\n\\boxed{26}\n",
+  "pred_answer": "26",
+  "correct": false,
+  "token_count": 199,
+  "answer_length": 109,
+  "hidden_shape": [
+    199,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 17.219279296875,
+  "h0_entropy": 5.249345732335257,
+  "h0_total_persistence": 1367.1705334186554,
+  "logits_path": "artifacts/qwen35_2b_uncertainty_15/traces/sample_0001/logits_summary.npz"
+}

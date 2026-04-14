@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000004_prop_0004_para_07",
+  "world_id": "eval_world_000004",
+  "proposition_id": "eval_world_000004_prop_0004",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "none_v7",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "zantic",
+    "object": "toma",
+    "relation": "sov",
+    "type": "none"
+  },
+  "statement": "Among zantic things, no of them sov toma.",
+  "prompt": "World:\n- koba is not zantic.\n- vex is not zantic.\n- grel is brindle.\n- koba is brindle.\n- toma is brindle.\n- vex is brindle.\n- vex drels koba.\n- grel does not drel toma.\n- grel does not drel vex.\n- koba does not drel toma.\n- koba does not drel vex.\n- toma does not drel koba.\n- vex does not drel toma.\n- koba sovs grel.\n- toma sovs vex.\n- vex sovs grel.\n- grel does not sov koba.\n- grel does not sov vex.\n- vex does not sov toma.\n\nStatement:\nAmong zantic things, no of them sov toma.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False",
+  "generated_token_ids": [
+    3913,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.575283849000698,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000004_prop_0004_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000004_prop_0004_para_07/logits_summary.npz"
+}

@@ -1,0 +1,25 @@
+reducer,family,comparison,metric,direction,n,support,p2,mean_delta
+mean,pairwise,cc_vs_cw,final_state_euclidean,CC < CW,3,2,1.0,6.980479399363201
+mean,pairwise,cc_vs_cw,final_state_cosine,CC < CW,3,2,1.0,0.006681366099251633
+mean,pairwise,cc_vs_cw,answer_state_euclidean,CC < CW,3,3,0.25,29.85926405588786
+mean,pairwise,cc_vs_cw,answer_state_cosine,CC < CW,3,3,0.25,0.06846033202277292
+mean,pairwise,cc_vs_cw,late_alignment_cosine_16,CC > CW,3,2,1.0,0.07785409357812671
+mean,pairwise,cc_vs_cw,late_alignment_cosine_32,CC > CW,3,2,1.0,0.020573816365665853
+mean,reference,correct_vs_wrong,reference_final_state_euclidean,correct < wrong,4,2,1.0,-0.07466856638589547
+mean,reference,correct_vs_wrong,reference_final_state_cosine,correct < wrong,4,2,1.0,-0.000977360953887313
+mean,reference,correct_vs_wrong,reference_answer_state_euclidean,correct < wrong,4,2,1.0,-2.4355735778808594
+mean,reference,correct_vs_wrong,reference_answer_state_cosine,correct < wrong,4,2,1.0,-0.009723975012699768
+mean,reference,correct_vs_wrong,reference_late_alignment_cosine_16,correct > wrong,4,1,1.0,-0.005073675264914826
+mean,reference,correct_vs_wrong,reference_late_alignment_cosine_32,correct > wrong,4,1,1.0,-0.005073675264914826
+median,pairwise,cc_vs_cw,final_state_euclidean,CC < CW,3,2,1.0,6.588595708211263
+median,pairwise,cc_vs_cw,final_state_cosine,CC < CW,3,2,1.0,0.006288866202036517
+median,pairwise,cc_vs_cw,answer_state_euclidean,CC < CW,3,3,0.25,27.422255833943684
+median,pairwise,cc_vs_cw,answer_state_cosine,CC < CW,3,3,0.25,0.06413838267326356
+median,pairwise,cc_vs_cw,late_alignment_cosine_16,CC > CW,3,2,1.0,0.021203279495239258
+median,pairwise,cc_vs_cw,late_alignment_cosine_32,CC > CW,3,1,1.0,-0.007427210609118107
+median,reference,correct_vs_wrong,reference_final_state_euclidean,correct < wrong,4,2,1.0,-0.09270858764648438
+median,reference,correct_vs_wrong,reference_final_state_cosine,correct < wrong,4,2,1.0,-0.00038021802902213353
+median,reference,correct_vs_wrong,reference_answer_state_euclidean,correct < wrong,4,2,1.0,-1.6182031631469727
+median,reference,correct_vs_wrong,reference_answer_state_cosine,correct < wrong,4,2,1.0,-0.004867792129516588
+median,reference,correct_vs_wrong,reference_late_alignment_cosine_16,correct > wrong,4,1,1.0,-0.0037549342960119386
+median,reference,correct_vs_wrong,reference_late_alignment_cosine_32,correct > wrong,4,1,1.0,-0.0037549342960119386

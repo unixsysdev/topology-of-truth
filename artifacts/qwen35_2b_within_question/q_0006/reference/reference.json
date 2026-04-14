@@ -1,0 +1,28 @@
+{
+  "question_id": "q_0006",
+  "dataset_sample_id": "gsm8k_000005",
+  "gold_answer": "64",
+  "question": "Kylar went to the store to buy glasses for his new apartment. One glass costs $5, but every second glass costs only 60% of the price. Kylar wants to buy 16 glasses. How much does he need to pay for them?",
+  "prompt": "Kylar went to the store to buy glasses for his new apartment. One glass costs $5, but every second glass costs only 60% of the price. Kylar wants to buy 16 glasses. How much does he need to pay for them?\n\nShow your work briefly and put the final answer in \\boxed{}.",
+  "template": "The answer is {answer}.",
+  "target_text": "The answer is 64.",
+  "token_count": 7,
+  "target_token_ids": [
+    760,
+    4087,
+    369,
+    220,
+    21,
+    19,
+    13
+  ],
+  "answer_token_indices": [
+    4,
+    5
+  ],
+  "hidden_shape": [
+    7,
+    2048
+  ],
+  "hidden_path": "artifacts/qwen35_2b_within_question/q_0006/reference/reference_hidden.npy"
+}

@@ -1,0 +1,35 @@
+{
+  "example_id": "train_world_000014_prop_0008_para_06",
+  "world_id": "train_world_000014",
+  "proposition_id": "train_world_000014_prop_0008",
+  "paraphrase_id": "para_06",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "not_v2_attr_v2",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "daxel",
+      "entity": "kiv",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Not: It is true that kiv is daxel.",
+  "prompt": "World:\n- blicket is daxel.\n- sarn is daxel.\n- wug is daxel.\n- zorb is daxel.\n- fep is not daxel.\n- kiv is pald.\n- zorb is not pald.\n- blicket tobs fep.\n- blicket tobs kiv.\n- fep tobs sarn.\n- fep tobs wug.\n- kiv tobs blicket.\n- kiv tobs zorb.\n- wug tobs sarn.\n- fep does not tob kiv.\n- kiv does not tob sarn.\n- zorb does not tob fep.\n- zorb does not tob wug.\n- blicket nazes fep.\n- blicket nazes sarn.\n- blicket nazes zorb.\n- fep nazes zorb.\n- sarn nazes fep.\n- sarn nazes wug.\n- wug nazes fep.\n- kiv does not naze blicket.\n- kiv does not naze zorb.\n- sarn does not naze blicket.\n- sarn does not naze zorb.\n- zorb does not naze fep.\n\nStatement:\nNot: It is true that kiv is daxel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7928038370009745,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000014_prop_0008_para_06/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000014_prop_0008_para_06/logits_summary.npz"
+}

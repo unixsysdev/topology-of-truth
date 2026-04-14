@@ -1,0 +1,36 @@
+{
+  "example_id": "train_world_000001_prop_0003_para_07",
+  "world_id": "train_world_000001",
+  "proposition_id": "train_world_000001_prop_0003",
+  "paraphrase_id": "para_07",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "not_v3_rel_v3",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "object": "norp",
+      "relation": "tob",
+      "subject": "kiv",
+      "type": "rel"
+    },
+    "type": "not"
+  },
+  "statement": "Deny the claim that kiv stands in the tob relation to norp.",
+  "prompt": "World:\n- kiv is daxel.\n- vonn is not daxel.\n- norp is selt.\n- kiv is not selt.\n- vonn is not selt.\n- norp varks kiv.\n- norp does not vark vonn.\n- tib does not vark norp.\n- tib does not vark vonn.\n- vonn does not vark kiv.\n- vonn does not vark tib.\n- vonn tobs norp.\n- tib does not tob norp.\n- tib does not tob vonn.\n\nStatement:\nDeny the claim that kiv stands in the tob relation to norp.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.49574228700112144,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000001_prop_0003_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000001_prop_0003_para_07/logits_summary.npz"
+}

@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000017_prop_0008_para_05",
+  "world_id": "train_world_000017",
+  "proposition_id": "train_world_000017_prop_0008",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "False",
+  "correct": false,
+  "template_id": "none_v1",
+  "template_family": "none",
+  "logical_form": {
+    "attribute": "daxel",
+    "object": "lume",
+    "relation": "naze",
+    "type": "none"
+  },
+  "statement": "No object with property daxel nazes lume.",
+  "prompt": "World:\n- fep is daxel.\n- lume is daxel.\n- dax is not daxel.\n- kiv is not daxel.\n- zorb is not daxel.\n- kiv is nubic.\n- zorb is nubic.\n- dax is not nubic.\n- dax nazes fep.\n- dax nazes kiv.\n- fep nazes norp.\n- fep nazes zorb.\n- kiv nazes lume.\n- norp nazes kiv.\n- norp nazes lume.\n- zorb nazes kiv.\n- zorb nazes lume.\n- dax does not naze norp.\n- fep does not naze lume.\n- kiv does not naze zorb.\n- lume does not naze dax.\n- lume does not naze fep.\n- lume does not naze norp.\n- norp does not naze fep.\n- zorb does not naze dax.\n- zorb does not naze fep.\n- zorb does not naze norp.\n- dax lirps lume.\n- dax lirps zorb.\n- fep lirps lume.\n- kiv lirps lume.\n- norp lirps dax.\n- fep does not lirp kiv.\n- fep does not lirp zorb.\n- kiv does not lirp fep.\n- lume does not lirp kiv.\n- lume does not lirp norp.\n- norp does not lirp fep.\n- norp does not lirp kiv.\n- zorb does not lirp fep.\n- zorb does not lirp kiv.\n- zorb does not lirp lume.\n\nStatement:\nNo object with property daxel nazes lume.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "False\n",
+  "generated_token_ids": [
+    3913,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6202468150004279,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000017_prop_0008_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000017_prop_0008_para_05/logits_summary.npz"
+}

@@ -1,0 +1,35 @@
+{
+  "example_id": "eval_world_000000_prop_0004_para_07",
+  "world_id": "eval_world_000000",
+  "proposition_id": "eval_world_000000_prop_0004",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "not_v7_attr_v7",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "peln",
+      "entity": "grel",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Apply logical NOT to this sentence: The peln property holds for grel.",
+  "prompt": "World:\n- mep is falm.\n- grel is not falm.\n- nalo is not falm.\n- sop is not falm.\n- grel is peln.\n- sop is peln.\n- nalo is not peln.\n- nalo foshes sop.\n- sop foshes grel.\n- grel does not fosh lirk.\n- lirk does not fosh nalo.\n- lirk does not fosh sop.\n- nalo does not fosh grel.\n- nalo does not fosh mep.\n- grel nimps nalo.\n- mep nimps sop.\n- nalo nimps grel.\n- nalo nimps lirk.\n- sop nimps lirk.\n- sop nimps mep.\n- grel does not nimp mep.\n- grel does not nimp sop.\n- nalo does not nimp mep.\n- nalo does not nimp sop.\n\nStatement:\nApply logical NOT to this sentence: The peln property holds for grel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "Thinking Process:\n\n",
+  "generated_token_ids": [
+    90700,
+    8340,
+    25,
+    271
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.7003253200000472,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000000_prop_0004_para_07/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000000_prop_0004_para_07/logits_summary.npz"
+}

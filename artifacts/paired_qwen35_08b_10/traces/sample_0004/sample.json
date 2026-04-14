@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0004",
+  "dataset_sample_id": "gsm8k_000003",
+  "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+  "gold_answer": "540",
+  "generated_text": "To find the total meters James runs a week, we need to calculate the total distance for each sprint and then multiply by the number of sprints.\n\n1.  **Distance per sprint**: James runs 60 meters.\n2.  **Number of sprints**: He runs 3 sprints a week.\n3.  **Total distance**:\n    $$ \\text{Total distance} = \\text{Distance per sprint} \\times \\text{Number of sprints} $$\n    $$ \\text{Total distance} = 60 \\text{ meters} \\times 3 $$\n    $$ \\text{Total distance} = 180 \\text{ meters} $$\n\n\\boxed{180}\n",
+  "pred_answer": "180",
+  "correct": false,
+  "token_count": 155,
+  "hidden_shape": [
+    155,
+    1024
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 8.6797646484375,
+  "h0_entropy": 4.997964624417108,
+  "h0_total_persistence": 1122.6949520111084
+}

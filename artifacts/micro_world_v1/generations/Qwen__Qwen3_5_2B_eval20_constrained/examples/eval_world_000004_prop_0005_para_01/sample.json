@@ -1,0 +1,31 @@
+{
+  "example_id": "eval_world_000004_prop_0005_para_01",
+  "world_id": "eval_world_000004",
+  "proposition_id": "eval_world_000004_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "exactly_one_v5",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "zantic",
+    "object": "toma",
+    "relation": "drel",
+    "type": "exactly_one"
+  },
+  "statement": "The number of zantic things that drel toma matches: exactly one.",
+  "prompt": "World:\n- koba is not zantic.\n- vex is not zantic.\n- grel is brindle.\n- koba is brindle.\n- toma is brindle.\n- vex is brindle.\n- vex drels koba.\n- grel does not drel toma.\n- grel does not drel vex.\n- koba does not drel toma.\n- koba does not drel vex.\n- toma does not drel koba.\n- vex does not drel toma.\n- koba sovs grel.\n- toma sovs vex.\n- vex sovs grel.\n- grel does not sov koba.\n- grel does not sov vex.\n- vex does not sov toma.\n\nStatement:\nThe number of zantic things that drel toma matches: exactly one.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True",
+  "generated_token_ids": [
+    2434,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 2,
+  "runtime_sec": 0.5153133950007032,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000004_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval20_constrained/examples/eval_world_000004_prop_0005_para_01/logits_summary.npz"
+}

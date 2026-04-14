@@ -1,0 +1,42 @@
+{
+  "example_id": "train_world_000007_prop_0004_para_03",
+  "world_id": "train_world_000007",
+  "proposition_id": "train_world_000007_prop_0004",
+  "paraphrase_id": "para_03",
+  "split": "train",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "and_v3_attr_v3_rel_v4",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "attribute": "vorn",
+      "entity": "wug",
+      "type": "attr"
+    },
+    "right": {
+      "object": "blicket",
+      "relation": "sume",
+      "subject": "fep",
+      "type": "rel"
+    },
+    "type": "and"
+  },
+  "statement": "It is true that wug belongs to the vorn things and that The relation sume holds from fep to blicket.",
+  "prompt": "World:\n- blicket is vorn.\n- kiv is vorn.\n- lume is vorn.\n- wug is not vorn.\n- fep is daxel.\n- blicket is not daxel.\n- wug is not daxel.\n- blicket sumes kiv.\n- fep sumes blicket.\n- fep sumes kiv.\n- fep sumes wug.\n- kiv sumes tib.\n- lume sumes kiv.\n- tib sumes blicket.\n- tib sumes fep.\n- tib sumes wug.\n- wug sumes fep.\n- blicket does not sume tib.\n- blicket does not sume wug.\n- kiv does not sume fep.\n- kiv does not sume lume.\n- kiv does not sume wug.\n- lume does not sume fep.\n- lume does not sume tib.\n- tib does not sume kiv.\n- wug does not sume blicket.\n- wug does not sume kiv.\n- blicket lirps tib.\n- kiv lirps fep.\n- tib lirps blicket.\n- tib lirps fep.\n- tib lirps kiv.\n- tib lirps lume.\n- tib lirps wug.\n- wug lirps fep.\n- blicket does not lirp kiv.\n- fep does not lirp blicket.\n- fep does not lirp kiv.\n- fep does not lirp lume.\n- fep does not lirp wug.\n- kiv does not lirp lume.\n- kiv does not lirp wug.\n- lume does not lirp blicket.\n- lume does not lirp kiv.\n- lume does not lirp tib.\n- lume does not lirp wug.\n\nStatement:\nIt is true that wug belongs to the vorn things and that The relation sume holds from fep to blicket.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nStatement",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    19128
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5703484629993909,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000007_prop_0004_para_03/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_train20_basefmt/examples/train_world_000007_prop_0004_para_03/logits_summary.npz"
+}

@@ -1,0 +1,36 @@
+{
+  "example_id": "eval_world_000005_prop_0001_para_01",
+  "world_id": "eval_world_000005",
+  "proposition_id": "eval_world_000005_prop_0001",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "not_v5_attr_v5",
+  "template_family": "negation",
+  "logical_form": {
+    "child": {
+      "attribute": "zantic",
+      "entity": "nalo",
+      "type": "attr"
+    },
+    "type": "not"
+  },
+  "statement": "Logical form: NOT[Among the named items, nalo is zantic].",
+  "prompt": "World:\n- grel is zantic.\n- nalo is zantic.\n- koba is not zantic.\n- bex is peln.\n- koba is peln.\n- grel is not peln.\n- mep is not peln.\n- bex sovs grel.\n- bex sovs koba.\n- bex sovs mep.\n- koba sovs bex.\n- koba sovs grel.\n- bex does not sov nalo.\n- mep does not sov bex.\n- mep does not sov nalo.\n- nalo does not sov grel.\n- mep nimps bex.\n- mep nimps grel.\n- bex does not nimp mep.\n- koba does not nimp bex.\n- mep does not nimp koba.\n- nalo does not nimp koba.\n\nStatement:\nLogical form: NOT[Among the named items, nalo is zantic].\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nExplanation",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    44008
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5257558130033431,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000005_prop_0001_para_01/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000005_prop_0001_para_01/logits_summary.npz"
+}

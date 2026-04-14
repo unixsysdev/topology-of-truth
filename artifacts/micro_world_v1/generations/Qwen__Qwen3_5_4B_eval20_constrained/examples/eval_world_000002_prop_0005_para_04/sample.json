@@ -1,0 +1,40 @@
+{
+  "example_id": "eval_world_000002_prop_0005_para_04",
+  "world_id": "eval_world_000002",
+  "proposition_id": "eval_world_000002_prop_0005",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v4_rel_v4_attr_v5",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "object": "bex",
+      "relation": "keld",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "zantic",
+      "entity": "toma",
+      "type": "attr"
+    },
+    "type": "or"
+  },
+  "statement": "Either The relation keld holds from toma to bex, or Among the named items, toma is zantic.",
+  "prompt": "World:\n- bex is brindle.\n- toma is brindle.\n- grel is not brindle.\n- bex is zantic.\n- mep is zantic.\n- grel is not zantic.\n- nalo is not zantic.\n- bex sovs koba.\n- grel sovs bex.\n- grel sovs koba.\n- grel sovs nalo.\n- grel sovs toma.\n- mep sovs bex.\n- mep sovs grel.\n- mep sovs koba.\n- mep sovs nalo.\n- nalo sovs toma.\n- toma sovs koba.\n- toma sovs nalo.\n- bex does not sov toma.\n- koba does not sov mep.\n- koba does not sov toma.\n- mep does not sov toma.\n- nalo does not sov mep.\n- toma does not sov bex.\n- grel kelds mep.\n- koba kelds mep.\n- koba kelds nalo.\n- nalo kelds bex.\n- toma kelds bex.\n- bex does not keld nalo.\n- grel does not keld nalo.\n- mep does not keld bex.\n- mep does not keld koba.\n- nalo does not keld toma.\n\nStatement:\nEither The relation keld holds from toma to bex, or Among the named items, toma is zantic.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 3,
+  "runtime_sec": 1.0097854820014618,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000002_prop_0005_para_04/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20_constrained/examples/eval_world_000002_prop_0005_para_04/logits_summary.npz"
+}

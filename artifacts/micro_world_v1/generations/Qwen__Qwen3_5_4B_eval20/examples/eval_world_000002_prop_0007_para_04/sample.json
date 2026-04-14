@@ -1,0 +1,33 @@
+{
+  "example_id": "eval_world_000002_prop_0007_para_04",
+  "world_id": "eval_world_000002",
+  "proposition_id": "eval_world_000002_prop_0007",
+  "paraphrase_id": "para_04",
+  "split": "eval",
+  "label": "False",
+  "pred_label": "",
+  "correct": false,
+  "template_id": "exactly_one_v4",
+  "template_family": "exactly_one",
+  "logical_form": {
+    "attribute": "zantic",
+    "object": "koba",
+    "relation": "sov",
+    "type": "exactly_one"
+  },
+  "statement": "In this world, exactly one zantic thing sovs koba.",
+  "prompt": "World:\n- bex is brindle.\n- toma is brindle.\n- grel is not brindle.\n- bex is zantic.\n- mep is zantic.\n- grel is not zantic.\n- nalo is not zantic.\n- bex sovs koba.\n- grel sovs bex.\n- grel sovs koba.\n- grel sovs nalo.\n- grel sovs toma.\n- mep sovs bex.\n- mep sovs grel.\n- mep sovs koba.\n- mep sovs nalo.\n- nalo sovs toma.\n- toma sovs koba.\n- toma sovs nalo.\n- bex does not sov toma.\n- koba does not sov mep.\n- koba does not sov toma.\n- mep does not sov toma.\n- nalo does not sov mep.\n- toma does not sov bex.\n- grel kelds mep.\n- koba kelds mep.\n- koba kelds nalo.\n- nalo kelds bex.\n- toma kelds bex.\n- bex does not keld nalo.\n- grel does not keld nalo.\n- mep does not keld bex.\n- mep does not keld koba.\n- nalo does not keld toma.\n\nStatement:\nIn this world, exactly one zantic thing sovs koba.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "The user wants to",
+  "generated_token_ids": [
+    760,
+    1156,
+    6587,
+    310
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.7587461109997093,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000002_prop_0007_para_04/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_eval20/examples/eval_world_000002_prop_0007_para_04/logits_summary.npz"
+}

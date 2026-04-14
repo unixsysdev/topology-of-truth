@@ -1,0 +1,6 @@
+sample_id,sample_index,status,pred_answer,gold_answer,correct,token_count,runtime_sec,stop_reason,h0_entropy,h0_total_persistence,error
+sample_0001,0,ok,26,18,False,286,9.808,eos_token,5.614879283687847,1816.162059545517,
+sample_0002,1,ok,2,3,False,512,16.759,max_new_tokens,6.182257078805801,2780.86607670784,
+sample_0003,2,ok,120000,70000,False,401,13.032,eos_token,5.9204332798769475,2204.01670897007,
+sample_0004,3,ok,180,540,False,155,5.099,eos_token,4.997964624417108,1122.6949520111084,
+sample_0005,4,ok,40,20,False,445,14.548,eos_token,6.04031199196012,2396.198798775673,

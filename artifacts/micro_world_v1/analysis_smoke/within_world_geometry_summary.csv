@@ -1,0 +1,5 @@
+world_id,state_key,n_examples,n_true,n_false,n_unknown,same_label_mean_cosine,different_label_mean_cosine,same_minus_different_cosine,nearest_neighbor_purity
+eval_world_000000,final_prompt,6,0,0,6,0.011672429243723552,,,1.0
+eval_world_000000,prompt_tail_mean,6,0,0,6,0.013912681738535564,,,1.0
+eval_world_000000,verdict_token,6,0,0,6,0.007358129819234212,,,1.0
+eval_world_000000,verdict_span_mean,6,0,0,6,0.0038903435071309406,,,1.0

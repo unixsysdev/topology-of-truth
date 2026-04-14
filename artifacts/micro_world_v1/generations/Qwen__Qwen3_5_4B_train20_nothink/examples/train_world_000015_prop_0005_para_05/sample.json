@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000015_prop_0005_para_05",
+  "world_id": "train_world_000015",
+  "proposition_id": "train_world_000015_prop_0005",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "Unknown",
+  "pred_label": "True",
+  "correct": false,
+  "template_id": "rel_v1",
+  "template_family": "rel",
+  "logical_form": {
+    "object": "kiv",
+    "relation": "mip",
+    "subject": "zorb",
+    "type": "rel"
+  },
+  "statement": "The item named zorb mips the item named kiv.",
+  "prompt": "World:\n- kiv is nubic.\n- sarn is nubic.\n- tib is nubic.\n- wug is nubic.\n- zorb is nubic.\n- lume is not nubic.\n- kiv is daxel.\n- lume is not daxel.\n- sarn is not daxel.\n- tib is not daxel.\n- wug is not daxel.\n- zorb is not daxel.\n- kiv mips wug.\n- kiv mips zorb.\n- lume mips tib.\n- sarn mips kiv.\n- sarn mips lume.\n- tib mips sarn.\n- wug mips kiv.\n- wug mips sarn.\n- wug mips tib.\n- kiv does not mip lume.\n- kiv does not mip tib.\n- sarn does not mip wug.\n- tib does not mip lume.\n- tib does not mip zorb.\n- wug does not mip zorb.\n- zorb does not mip lume.\n- zorb does not mip sarn.\n- zorb does not mip wug.\n- kiv nazes sarn.\n- kiv nazes wug.\n- kiv nazes zorb.\n- lume nazes sarn.\n- lume nazes wug.\n- lume nazes zorb.\n- sarn nazes wug.\n- tib nazes sarn.\n- wug nazes lume.\n- zorb nazes kiv.\n- lume does not naze kiv.\n- sarn does not naze lume.\n- sarn does not naze tib.\n- wug does not naze kiv.\n- wug does not naze sarn.\n- wug does not naze zorb.\n- zorb does not naze lume.\n- zorb does not naze wug.\n\nStatement:\nThe item named zorb mips the item named kiv.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.8634402520001458,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000015_prop_0005_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000015_prop_0005_para_05/logits_summary.npz"
+}

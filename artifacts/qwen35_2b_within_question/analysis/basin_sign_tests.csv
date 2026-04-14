@@ -1,0 +1,19 @@
+family,comparison,metric,support_direction,n_questions,n_support,sign_p_two_sided,mean_effect_delta
+pairwise,cc_vs_cw,final_state_euclidean,CC < CW,3,2,1.0,6.980479399363201
+pairwise,cc_vs_cw,final_state_cosine,CC < CW,3,2,1.0,0.006681366099251633
+pairwise,cc_vs_cw,answer_state_euclidean,CC < CW,3,3,0.25,29.85926405588786
+pairwise,cc_vs_cw,answer_state_cosine,CC < CW,3,3,0.25,0.06846033202277292
+pairwise,cc_vs_cw,late_alignment_cosine_16,CC > CW,3,2,1.0,0.07785409357812671
+pairwise,cc_vs_cw,late_alignment_cosine_32,CC > CW,3,2,1.0,0.020573816365665853
+pairwise,cc_vs_ww,final_state_euclidean,CC < WW,2,1,1.0,-1.2919484774271623
+pairwise,cc_vs_ww,final_state_cosine,CC < WW,2,1,1.0,-0.0019484261671701827
+pairwise,cc_vs_ww,answer_state_euclidean,CC < WW,2,0,1.0,-8.478891531626383
+pairwise,cc_vs_ww,answer_state_cosine,CC < WW,2,0,1.0,-0.010747522115707349
+pairwise,cc_vs_ww,late_alignment_cosine_16,CC > WW,2,1,1.0,-0.05424854159355158
+pairwise,cc_vs_ww,late_alignment_cosine_32,CC > WW,2,1,1.0,-0.18943993250528965
+reference,correct_vs_wrong,reference_final_state_euclidean,correct < wrong,4,2,1.0,-0.07466856638589547
+reference,correct_vs_wrong,reference_final_state_cosine,correct < wrong,4,2,1.0,-0.000977360953887313
+reference,correct_vs_wrong,reference_answer_state_euclidean,correct < wrong,4,2,1.0,-2.4355735778808594
+reference,correct_vs_wrong,reference_answer_state_cosine,correct < wrong,4,2,1.0,-0.009723975012699768
+reference,correct_vs_wrong,reference_late_alignment_cosine_16,correct > wrong,4,1,1.0,-0.005073675264914826
+reference,correct_vs_wrong,reference_late_alignment_cosine_32,correct > wrong,4,1,1.0,-0.005073675264914826

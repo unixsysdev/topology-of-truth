@@ -1,0 +1,42 @@
+{
+  "example_id": "eval_world_000002_prop_0004_para_07",
+  "world_id": "eval_world_000002",
+  "proposition_id": "eval_world_000002_prop_0004",
+  "paraphrase_id": "para_07",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "or_v7_attr_v7_rel_v0",
+  "template_family": "or",
+  "logical_form": {
+    "left": {
+      "attribute": "brindle",
+      "entity": "toma",
+      "type": "attr"
+    },
+    "right": {
+      "object": "koba",
+      "relation": "sov",
+      "subject": "toma",
+      "type": "rel"
+    },
+    "type": "or"
+  },
+  "statement": "The compound proposition says The brindle property holds for toma or toma sovs koba.",
+  "prompt": "World:\n- bex is brindle.\n- toma is brindle.\n- grel is not brindle.\n- bex is zantic.\n- mep is zantic.\n- grel is not zantic.\n- nalo is not zantic.\n- bex sovs koba.\n- grel sovs bex.\n- grel sovs koba.\n- grel sovs nalo.\n- grel sovs toma.\n- mep sovs bex.\n- mep sovs grel.\n- mep sovs koba.\n- mep sovs nalo.\n- nalo sovs toma.\n- toma sovs koba.\n- toma sovs nalo.\n- bex does not sov toma.\n- koba does not sov mep.\n- koba does not sov toma.\n- mep does not sov toma.\n- nalo does not sov mep.\n- toma does not sov bex.\n- grel kelds mep.\n- koba kelds mep.\n- koba kelds nalo.\n- nalo kelds bex.\n- toma kelds bex.\n- bex does not keld nalo.\n- grel does not keld nalo.\n- mep does not keld bex.\n- mep does not keld koba.\n- nalo does not keld toma.\n\nStatement:\nThe compound proposition says The brindle property holds for toma or toma sovs koba.\n\nAnswer with exactly one token: True, False, or Unknown.\nAnswer:",
+  "prompt_variant": "base_label",
+  "generated_text": " True.\n\nExplanation",
+  "generated_token_ids": [
+    6288,
+    236761,
+    108,
+    44008
+  ],
+  "stop_reason": "max_new_tokens",
+  "token_count": 4,
+  "runtime_sec": 0.5301023950014496,
+  "model_id": "google/gemma-3-4b-pt",
+  "states_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000002_prop_0004_para_07/verdict_states.npz",
+  "logits_path": "/home/marcel/Work/topology/artifacts/micro_world_v1/generations/Gemma__gemma_3_4b_pt_eval20_basefmt/examples/eval_world_000002_prop_0004_para_07/logits_summary.npz"
+}

@@ -1,0 +1,33 @@
+{
+  "example_id": "train_world_000010_prop_0005_para_01",
+  "world_id": "train_world_000010",
+  "proposition_id": "train_world_000010_prop_0005",
+  "paraphrase_id": "para_01",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "some_v1",
+  "template_family": "some",
+  "logical_form": {
+    "attribute": "glim",
+    "object": "zorb",
+    "relation": "mip",
+    "type": "some"
+  },
+  "statement": "Some object with property glim mips zorb.",
+  "prompt": "World:\n- blicket is glim.\n- lume is glim.\n- sarn is glim.\n- wug is glim.\n- kiv is not glim.\n- sarn is vorn.\n- blicket is not vorn.\n- wug is not vorn.\n- zorb is not vorn.\n- blicket mips lume.\n- kiv mips blicket.\n- lume mips wug.\n- lume mips zorb.\n- sarn mips zorb.\n- wug mips blicket.\n- lume does not mip blicket.\n- zorb does not mip kiv.\n- zorb does not mip wug.\n- blicket tobs zorb.\n- kiv tobs blicket.\n- sarn tobs blicket.\n- zorb tobs blicket.\n- zorb tobs sarn.\n- blicket does not tob kiv.\n- blicket does not tob wug.\n- kiv does not tob lume.\n- lume does not tob sarn.\n- lume does not tob wug.\n- lume does not tob zorb.\n- sarn does not tob kiv.\n- sarn does not tob lume.\n- wug does not tob blicket.\n- wug does not tob kiv.\n- wug does not tob sarn.\n- wug does not tob zorb.\n\nStatement:\nSome object with property glim mips zorb.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6080032699992444,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000010_prop_0005_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_train20/examples/train_world_000010_prop_0005_para_01/logits_summary.npz"
+}

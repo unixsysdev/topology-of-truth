@@ -1,0 +1,41 @@
+{
+  "example_id": "train_world_000014_prop_0004_para_05",
+  "world_id": "train_world_000014",
+  "proposition_id": "train_world_000014_prop_0004",
+  "paraphrase_id": "para_05",
+  "split": "train",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "and_v1_rel_v1_attr_v2",
+  "template_family": "and",
+  "logical_form": {
+    "left": {
+      "object": "zorb",
+      "relation": "naze",
+      "subject": "blicket",
+      "type": "rel"
+    },
+    "right": {
+      "attribute": "daxel",
+      "entity": "zorb",
+      "type": "attr"
+    },
+    "type": "and"
+  },
+  "statement": "Both claims hold: The item named blicket nazes the item named zorb; It is true that zorb is daxel.",
+  "prompt": "World:\n- blicket is daxel.\n- sarn is daxel.\n- wug is daxel.\n- zorb is daxel.\n- fep is not daxel.\n- kiv is pald.\n- zorb is not pald.\n- blicket tobs fep.\n- blicket tobs kiv.\n- fep tobs sarn.\n- fep tobs wug.\n- kiv tobs blicket.\n- kiv tobs zorb.\n- wug tobs sarn.\n- fep does not tob kiv.\n- kiv does not tob sarn.\n- zorb does not tob fep.\n- zorb does not tob wug.\n- blicket nazes fep.\n- blicket nazes sarn.\n- blicket nazes zorb.\n- fep nazes zorb.\n- sarn nazes fep.\n- sarn nazes wug.\n- wug nazes fep.\n- kiv does not naze blicket.\n- kiv does not naze zorb.\n- sarn does not naze blicket.\n- sarn does not naze zorb.\n- zorb does not naze fep.\n\nStatement:\nBoth claims hold: The item named blicket nazes the item named zorb; It is true that zorb is daxel.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.7565098639970529,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000014_prop_0004_para_05/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_4B_train20_nothink/examples/train_world_000014_prop_0004_para_05/logits_summary.npz"
+}

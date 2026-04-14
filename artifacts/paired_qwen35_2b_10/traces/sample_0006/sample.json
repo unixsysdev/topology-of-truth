@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_0006",
+  "dataset_sample_id": "gsm8k_000005",
+  "question": "Kylar went to the store to buy glasses for his new apartment. One glass costs $5, but every second glass costs only 60% of the price. Kylar wants to buy 16 glasses. How much does he need to pay for them?",
+  "gold_answer": "64",
+  "generated_text": "To find the total cost, we need to calculate the price for the first glass and the remaining glasses separately, then sum them up.\n\n1.  **First Glass**:\n    The first glass costs the full price.\n    Price = $\\$5$.\n\n2.  **Remaining Glasses**:\n    Kylar wants to buy a total of 16 glasses.\n    Number of remaining glasses = $16 - 1 = 15$.\n    According to the rule, every second glass costs 60% of the price.\n    Price per remaining glass = $60\\%$ of $\\$5 = 0.60 \\times 5 = \\$3$.\n\n3.  **Total Cost**:\n    Total Cost = (Price of 1st glass) + (Price of 15 remaining glasses)\n    Total Cost = $5 + (15 \\times 3)$\n    Total Cost = $5 + 45$\n    Total Cost = $50$.\n\nKylar needs to pay $\\$50$.\n\n\\boxed{50}\n",
+  "pred_answer": "50",
+  "correct": false,
+  "token_count": 234,
+  "hidden_shape": [
+    234,
+    2048
+  ],
+  "stop_reason": "eos_token",
+  "runtime_sec": 23.36402734375,
+  "h0_entropy": 5.421514030447061,
+  "h0_total_persistence": 1549.8385317325592
+}

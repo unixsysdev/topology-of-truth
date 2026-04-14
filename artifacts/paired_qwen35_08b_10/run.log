@@ -1,0 +1,44 @@
+{"message": "start", "step": "load_dataset", "ts": "2026-04-14T00:41:03.406888+00:00"}
+{"message": "end", "runtime_sec": 1.952, "step": "load_dataset", "ts": "2026-04-14T00:41:05.358660+00:00"}
+{"message": "start", "step": "load_model", "ts": "2026-04-14T00:41:05.358734+00:00"}
+{"message": "end", "runtime_sec": 4.025, "step": "load_model", "ts": "2026-04-14T00:41:09.383894+00:00"}
+{"message": "start", "step": "generate_sample_0001", "ts": "2026-04-14T00:41:09.384312+00:00"}
+{"message": "end", "runtime_sec": 12.443, "step": "generate_sample_0001", "ts": "2026-04-14T00:41:21.827011+00:00"}
+{"message": "start", "step": "hidden_sample_0001", "ts": "2026-04-14T00:41:21.827196+00:00"}
+{"message": "end", "runtime_sec": 0.516, "step": "hidden_sample_0001", "ts": "2026-04-14T00:41:22.342907+00:00"}
+{"message": "start", "step": "generate_sample_0002", "ts": "2026-04-14T00:41:25.054120+00:00"}
+{"message": "end", "runtime_sec": 35.652, "step": "generate_sample_0002", "ts": "2026-04-14T00:42:00.705866+00:00"}
+{"message": "start", "step": "hidden_sample_0002", "ts": "2026-04-14T00:42:00.706147+00:00"}
+{"message": "end", "runtime_sec": 0.685, "step": "hidden_sample_0002", "ts": "2026-04-14T00:42:01.391275+00:00"}
+{"message": "start", "step": "generate_sample_0003", "ts": "2026-04-14T00:42:08.707105+00:00"}
+{"message": "end", "runtime_sec": 29.949, "step": "generate_sample_0003", "ts": "2026-04-14T00:42:38.655770+00:00"}
+{"message": "start", "step": "hidden_sample_0003", "ts": "2026-04-14T00:42:38.656031+00:00"}
+{"message": "end", "runtime_sec": 0.59, "step": "hidden_sample_0003", "ts": "2026-04-14T00:42:39.245657+00:00"}
+{"message": "start", "step": "generate_sample_0004", "ts": "2026-04-14T00:42:41.807361+00:00"}
+{"message": "end", "runtime_sec": 8.68, "step": "generate_sample_0004", "ts": "2026-04-14T00:42:50.487633+00:00"}
+{"message": "start", "step": "hidden_sample_0004", "ts": "2026-04-14T00:42:50.487843+00:00"}
+{"message": "end", "runtime_sec": 0.389, "step": "hidden_sample_0004", "ts": "2026-04-14T00:42:50.877035+00:00"}
+{"message": "start", "step": "generate_sample_0005", "ts": "2026-04-14T00:42:51.537010+00:00"}
+{"message": "end", "runtime_sec": 30.342, "step": "generate_sample_0005", "ts": "2026-04-14T00:43:21.878536+00:00"}
+{"message": "start", "step": "hidden_sample_0005", "ts": "2026-04-14T00:43:21.878789+00:00"}
+{"message": "end", "runtime_sec": 0.667, "step": "hidden_sample_0005", "ts": "2026-04-14T00:43:22.545734+00:00"}
+{"message": "start", "step": "generate_sample_0006", "ts": "2026-04-14T00:43:24.316092+00:00"}
+{"message": "end", "runtime_sec": 33.813, "step": "generate_sample_0006", "ts": "2026-04-14T00:43:58.129602+00:00"}
+{"message": "start", "step": "hidden_sample_0006", "ts": "2026-04-14T00:43:58.129819+00:00"}
+{"message": "end", "runtime_sec": 0.674, "step": "hidden_sample_0006", "ts": "2026-04-14T00:43:58.803747+00:00"}
+{"message": "start", "step": "generate_sample_0007", "ts": "2026-04-14T00:43:59.713797+00:00"}
+{"message": "end", "runtime_sec": 17.373, "step": "generate_sample_0007", "ts": "2026-04-14T00:44:17.087314+00:00"}
+{"message": "start", "step": "hidden_sample_0007", "ts": "2026-04-14T00:44:17.087641+00:00"}
+{"message": "end", "runtime_sec": 0.462, "step": "hidden_sample_0007", "ts": "2026-04-14T00:44:17.549357+00:00"}
+{"message": "start", "step": "generate_sample_0008", "ts": "2026-04-14T00:44:19.789638+00:00"}
+{"message": "end", "runtime_sec": 24.372, "step": "generate_sample_0008", "ts": "2026-04-14T00:44:44.161609+00:00"}
+{"message": "start", "step": "hidden_sample_0008", "ts": "2026-04-14T00:44:44.161812+00:00"}
+{"message": "end", "runtime_sec": 0.57, "step": "hidden_sample_0008", "ts": "2026-04-14T00:44:44.732292+00:00"}
+{"message": "start", "step": "generate_sample_0009", "ts": "2026-04-14T00:44:48.034551+00:00"}
+{"message": "end", "runtime_sec": 33.045, "step": "generate_sample_0009", "ts": "2026-04-14T00:45:21.079248+00:00"}
+{"message": "start", "step": "hidden_sample_0009", "ts": "2026-04-14T00:45:21.079527+00:00"}
+{"message": "end", "runtime_sec": 0.699, "step": "hidden_sample_0009", "ts": "2026-04-14T00:45:21.778265+00:00"}
+{"message": "start", "step": "generate_sample_0010", "ts": "2026-04-14T00:45:25.249660+00:00"}
+{"message": "end", "runtime_sec": 19.59, "step": "generate_sample_0010", "ts": "2026-04-14T00:45:44.839505+00:00"}
+{"message": "start", "step": "hidden_sample_0010", "ts": "2026-04-14T00:45:44.839697+00:00"}
+{"message": "end", "runtime_sec": 0.489, "step": "hidden_sample_0010", "ts": "2026-04-14T00:45:45.328745+00:00"}

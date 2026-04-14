@@ -1,0 +1,32 @@
+{
+  "example_id": "eval_world_000012_prop_0000_para_01",
+  "world_id": "eval_world_000012",
+  "proposition_id": "eval_world_000012_prop_0000",
+  "paraphrase_id": "para_01",
+  "split": "eval",
+  "label": "True",
+  "pred_label": "True",
+  "correct": true,
+  "template_id": "attr_v5",
+  "template_family": "attr",
+  "logical_form": {
+    "attribute": "falm",
+    "entity": "grel",
+    "type": "attr"
+  },
+  "statement": "Among the named items, grel is falm.",
+  "prompt": "World:\n- mep is soric.\n- bex is not soric.\n- grel is not soric.\n- lirk is not soric.\n- bex is falm.\n- grel is falm.\n- lirk is falm.\n- mep is not falm.\n- nalo is not falm.\n- toma is not falm.\n- bex sovs lirk.\n- bex sovs nalo.\n- bex sovs toma.\n- mep sovs grel.\n- mep sovs nalo.\n- toma sovs nalo.\n- grel does not sov bex.\n- grel does not sov mep.\n- grel does not sov toma.\n- lirk does not sov grel.\n- lirk does not sov nalo.\n- toma does not sov lirk.\n- bex kelds grel.\n- bex kelds toma.\n- grel kelds mep.\n- mep kelds lirk.\n- mep kelds toma.\n- nalo kelds grel.\n- toma kelds grel.\n- bex does not keld mep.\n- bex does not keld nalo.\n- grel does not keld bex.\n- lirk does not keld mep.\n- lirk does not keld nalo.\n- mep does not keld grel.\n- nalo does not keld mep.\n- toma does not keld lirk.\n- toma does not keld mep.\n\nStatement:\nAmong the named items, grel is falm.\n\nAnswer with exactly one token: True, False, or Unknown.",
+  "generated_text": "True\n",
+  "generated_token_ids": [
+    2434,
+    248046,
+    198,
+    248044
+  ],
+  "stop_reason": "eos_token",
+  "token_count": 4,
+  "runtime_sec": 0.6894010430005437,
+  "model_id": "Qwen/Qwen3.5-2B",
+  "states_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000012_prop_0000_para_01/verdict_states.npz",
+  "logits_path": "artifacts/micro_world_v1/generations/Qwen__Qwen3_5_2B_eval_full/examples/eval_world_000012_prop_0000_para_01/logits_summary.npz"
+}
