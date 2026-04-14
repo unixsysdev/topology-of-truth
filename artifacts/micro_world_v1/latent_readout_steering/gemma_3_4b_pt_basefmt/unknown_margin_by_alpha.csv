@@ -1,0 +1,10 @@
+run,alpha,gold_unknown_count,mean_unknown_margin_on_gold_unknown,unknown_argmax_rate_on_gold_unknown
+gemma_3_4b_pt_basefmt,-2.0,480,-1.0910829305648804,0.0
+gemma_3_4b_pt_basefmt,-1.0,480,-1.0674164295196533,0.0
+gemma_3_4b_pt_basefmt,-0.5,480,-1.0556437969207764,0.0
+gemma_3_4b_pt_basefmt,0.0,480,-1.0439300537109375,0.0
+gemma_3_4b_pt_basefmt,0.5,480,-1.0322346687316895,0.0
+gemma_3_4b_pt_basefmt,1.0,480,-1.0205509662628174,0.0
+gemma_3_4b_pt_basefmt,1.5,480,-1.009091854095459,0.0
+gemma_3_4b_pt_basefmt,2.0,480,-0.9977610111236572,0.0
+gemma_3_4b_pt_basefmt,3.0,480,-0.9757992625236511,0.0

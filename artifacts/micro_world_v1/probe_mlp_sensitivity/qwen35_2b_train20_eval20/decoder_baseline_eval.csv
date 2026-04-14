@@ -1,0 +1,2 @@
+n_test,accuracy,macro_f1,precision_true,recall_true,f1_true,precision_false,recall_false,f1_false,precision_unknown,recall_unknown,f1_unknown
+1440,0.4361111111111111,0.3402981251100757,0.4064885496183206,0.8875,0.5575916230366492,0.5153061224489796,0.42083333333333334,0.463302752293578,0.0,0.0,0.0

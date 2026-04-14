@@ -47,12 +47,18 @@ This file maps the paper claims to concrete directories and entry points.
   - `scripts/run_micro_world_probe.py`
   - `scripts/analyze_micro_world_label_logits.py`
   - `scripts/run_micro_world_layer_sweep_probe.py`
+  - `scripts/run_readout_intervention.py`
+  - `scripts/run_latent_readout_steering.py`
+  - `scripts/run_mlp_probe_sensitivity.py`
 - Main artifacts:
   - `artifacts/micro_world_v1/dataset/`
   - `artifacts/micro_world_v1/generations/`
   - `artifacts/micro_world_v1/comparison_*.csv`
   - `artifacts/micro_world_v1/layer_sweep_*`
   - `artifacts/micro_world_v1/label_logits_*`
+  - `artifacts/micro_world_v1/readout_intervention/`
+  - `artifacts/micro_world_v1/latent_readout_steering/`
+  - `artifacts/micro_world_v1/probe_mlp_sensitivity/`
 
 ## Paper Assets
 

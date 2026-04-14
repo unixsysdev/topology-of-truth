@@ -30,6 +30,9 @@ The old “global topology of truth” headline did not survive.
 - Phase A: corrected topology-only AUC = `0.20` (controls = `0.60`)
 - Phase B: cap→wrong AUC = `0.839`; OR ≈ `26.40`
 - Phase C: decoder Unknown recall (`Qwen2B=0.000`, `Qwen4B=0.000`, `Gemma-it=0.0125`) while verdict-token probe Unknown recall (`0.7375`, `0.1292`, `0.5625`)
+- Phase C add-ons:
+  - latent pre-readout steering (Gemma-it raw) improves macro-F1 `0.339→0.395` with Unknown recall `0.375→0.363`
+  - shallow MLP sensitivity shows strong hidden Unknown signal on Qwen4B no-think (`verdict_token` recall `0.129→0.638`)
 
 ## Repo Notes
 

@@ -132,6 +132,46 @@ Outputs:
 - `layer_sweep_best.csv`
 - `layer_sweep_metadata.csv`
 
+### Step 7: post-hoc readout intervention pilot
+
+```bash
+python3 scripts/run_readout_intervention.py \
+  --out-dir artifacts/micro_world_v1/readout_intervention
+```
+
+Outputs:
+
+- `aggregate_readout_intervention.csv`
+- per-run `intervention_summary.csv`
+- per-run confusion and LOOW parameter files
+
+### Step 8: latent residual steering (pre-readout)
+
+```bash
+python3 scripts/run_latent_readout_steering.py \
+  --out-dir artifacts/micro_world_v1/latent_readout_steering
+```
+
+Outputs:
+
+- `aggregate_latent_steering.csv`
+- per-run `latent_steering_summary.csv`
+- per-run `unknown_margin_by_alpha.csv`
+- per-run `unknown_direction.npz`, LOOW alpha files
+
+### Step 9: nonlinear probe sensitivity (shallow MLP)
+
+```bash
+python3 scripts/run_mlp_probe_sensitivity.py \
+  --out-dir artifacts/micro_world_v1/probe_mlp_sensitivity
+```
+
+Outputs:
+
+- `comparison_probe_states_mlp.csv`
+- `comparison_probe_linear_vs_mlp.csv`
+- per-run `probe_summary_mlp.csv`
+
 ## Consolidated comparison artifacts
 
 These files aggregate the reported cross-run results:
@@ -142,6 +182,9 @@ These files aggregate the reported cross-run results:
 - `artifacts/micro_world_v1/comparison_gemma_base_prompt_rerun.csv`
 - `artifacts/micro_world_v1/comparison_label_logits_gemma_it_vs_pt_basefmt.csv`
 - `artifacts/micro_world_v1/comparison_layer_sweep_gemma_it_vs_pt_basefmt.csv`
+- `artifacts/micro_world_v1/readout_intervention/aggregate_readout_intervention.csv`
+- `artifacts/micro_world_v1/latent_readout_steering/aggregate_latent_steering.csv`
+- `artifacts/micro_world_v1/probe_mlp_sensitivity/comparison_probe_linear_vs_mlp.csv`
 
 ## Controls run on this track
 
@@ -151,12 +194,17 @@ These files aggregate the reported cross-run results:
 4. Base-vs-instruct with base-specific format repair.
 5. Verdict-step logit competitiveness analysis.
 6. Layer-sweep probes for Unknown recoverability.
+7. Post-hoc readout intervention pilot.
+8. Pre-readout latent residual steering.
+9. Nonlinear probe sensitivity (MLP vs linear).
 
 ## What this track supports
 
 - Decoder Unknown is under-expressed.
 - Unknown is recoverable from verdict-region hidden states.
 - The representation/readout gap replicates across families and controls.
+- Minimal latent steering improves aggregate metrics but does not uniformly recover Unknown.
+- Nonlinear probes recover substantially more Unknown signal in hard linear settings (notably Qwen3.5-4B no-think).
 
 ## What this track does not claim
 

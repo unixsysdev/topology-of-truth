@@ -515,6 +515,37 @@ LOOW intervention results:
 So a tiny readout correction can substantially rescue Unknown emission in the basefmt collapse regime while improving tri-label quality, consistent with a readout/calibration bottleneck there.
 For instruct-raw, the same family of corrections improves aggregate metrics but reduces Unknown recall, indicating the readout bottleneck is not uniform across post-training variants.
 
+\subsection{Latent Residual Steering (Pre-Readout)}
+We then moved the intervention upstream and modified hidden states before label scoring.
+Using train-world \texttt{final\_prompt} states, we estimate an Unknown direction
+\[
+v_U = \frac{\mu_{\texttt{Unknown}} - \mu_{\texttt{non-Unknown}}}{\left\lVert \mu_{\texttt{Unknown}} - \mu_{\texttt{non-Unknown}}\right\rVert_2},
+\]
+and steer eval hidden states by
+\[
+h' = h + \alpha v_U.
+\]
+Label scores are computed from the frozen model output embedding on first-token label candidates, so the intervention acts on representation rather than post-hoc decoder probabilities.
+We report both fixed-\(\alpha\) and leave-one-world-out (LOOW) tuning over \(\alpha\).
+
+LOOW latent-steering results:
+\begin{itemize}
+  \item Gemma-3-4B-it (raw): accuracy \(0.389\to0.410\), macro-F1 \(0.339\to0.395\), Unknown recall \(0.375\to0.363\).
+  \item Gemma-3-4B-pt (basefmt): accuracy \(0.346\to0.386\), macro-F1 \(0.201\to0.275\), Unknown recall \(0.000\to0.000\).
+\end{itemize}
+So pre-readout steering improves aggregate quality for both variants, but only weakly preserves Unknown on instruct and fails to recover Unknown in basefmt.
+This sharpens the mechanism: a simple latent shift does not uniformly repair class emission, especially in the strongest collapse regime.
+
+\subsection{Nonlinear Probe Sensitivity (Shallow MLP)}
+To test whether linear probes were understating latent signal, we ran a shallow MLP probe sensitivity pass on the same train/eval world split.
+This produced large Unknown-recall gains in the hardest linear case:
+\begin{itemize}
+  \item Qwen3.5-4B (no-think), \texttt{verdict\_token}: \(0.129 \to 0.638\),
+  \item Qwen3.5-4B (no-think), \texttt{verdict\_span\_mean}: \(0.267 \to 0.767\).
+\end{itemize}
+Across all three primary models, MLP probes improved Unknown recall and macro-F1 on every reported state key.
+This supports the view that part of the non-entailment signal is present but not fully linearly separated in some model/state combinations.
+
 \section{Verdict-Step Label-Logit Analysis}
 For gold-\texttt{Unknown} decoder failures:
 \begin{itemize}
@@ -554,10 +585,13 @@ The combined evidence supports a readout-bottleneck interpretation:
   \item the mismatch is replicated across model families and controls,
   \item verdict-step logits under-rank Unknown,
   \item layer sweeps show strong internal signal upstream of failed readout.
+  \item pre-readout latent steering improves aggregate quality but does not uniformly recover Unknown,
+  \item shallow nonlinear probes recover substantially more Unknown signal in hard linear settings.
 \end{enumerate}
 
 Our claim is about \textbf{representational availability plus decoder under-realization}, not causal mediation of final token choice by any single internal feature.
 This aligns with the ELK framing that latent knowledge can be present yet imperfectly elicited at readout time \cite{hubinger2021elk,burns2022discovering}, and with post-training behavior-shaping concerns such as sycophancy and over-commitment pressure \cite{sharma2023sycophancy}.
+Methodologically, our latent-steering follow-up is aligned with representation-engineering and activation-steering perspectives \cite{zou2023repe,turner2023actadd}, though our intervention remains intentionally minimal.
 
 This is stronger and narrower than the original repository framing.
 Results do \emph{not} support a universal ``truth topology'' scalar.
@@ -590,6 +624,8 @@ Key outputs used in the paper:
   \item verdict-step logits: \texttt{artifacts/micro\_world\_v1/label\_logits\_*/}
   \item layer sweeps: \texttt{artifacts/micro\_world\_v1/layer\_sweep\_*/}
   \item readout-intervention pilot: \texttt{artifacts/micro\_world\_v1/readout\_intervention/}
+  \item latent residual steering: \texttt{artifacts/micro\_world\_v1/latent\_readout\_steering/}
+  \item nonlinear-probe sensitivity: \texttt{artifacts/micro\_world\_v1/probe\_mlp\_sensitivity/}
 \end{itemize}
 
 \section{Implications Beyond This Benchmark}
@@ -609,13 +645,13 @@ The current evidence favors a readout-bottleneck interpretation over a missing-r
 This does not yet isolate a single causal source of the bottleneck; it may reflect a combination of final-layer calibration, label competition, and post-training behavior shaping.
 Base-vs-instruct comparisons suggest post-training is not the sole cause, since mismatch persists after prompt-format repair in base models.
 
-Given the pilot readout intervention above, highest-value next experiments are:
+Given the pilot readout, latent-steering, and nonlinear-probe results above, highest-value next experiments are:
 \begin{enumerate}
-  \item \textbf{Readout intervention (expanded):} extend from the current post-hoc Unknown-logit correction to stronger but still minimal interventions (e.g., probe-guided residual steering at verdict step), with world-held-out evaluation.
+  \item \textbf{Layer-targeted latent steering:} move from global final-prompt steering to layer/position-targeted steering (especially verdict-adjacent layers) with matched world-held-out selection.
   \item \textbf{Base vs instruct amplification test:} compare decoder Unknown recall, verdict-step Unknown margin, probe Unknown recall, and representation--decoder gap under matched prompt/parser settings.
-  \item \textbf{Layer-wise logit-lens track:} alongside layer-wise probe recoverability, evaluate Unknown token competitiveness under native LM-head projection across layers.
+  \item \textbf{Layer-wise logit-lens track:} alongside layer-wise probe recoverability, evaluate Unknown token competitiveness under native label scoring across layers.
   \item \textbf{Prompt calibration stress test:} apply strict abstention framing and few-shot Unknown examples to test policy sensitivity of decoder readout.
-  \item \textbf{Nonlinear-probe sensitivity check:} keep linear probe as primary; add shallow MLP probe only as a secondary estimate of nonlinearly accessible Unknown structure.
+  \item \textbf{Nonlinear control expansion:} keep linear probe primary, and add small-capacity nonlinear probes with stronger regularization and per-world uncertainty intervals.
 \end{enumerate}
 
 \section{Limitations}
@@ -705,6 +741,16 @@ Mrinank Sharma, Meg Tong, et al.
 \newblock arXiv:2310.13548, 2023.
 \newblock \url{https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models}. Accessed 2026-04-14.
 
+\bibitem{turner2023actadd}
+Alexander Matt Turner, Lisa Thiergart, Gavin Leech, David Udell, Ulisse Mini, and Monte MacDiarmid.
+\newblock Activation Addition: Steering Language Models Without Optimization.
+\newblock arXiv:2308.10248, 2023.
+
+\bibitem{zou2023repe}
+Andy Zou, Zifan Wang, Nicholas Carlini, Milad Nasr, J. Zico Kolter, and Matt Fredrikson.
+\newblock Representation Engineering: A Top-Down Approach to AI Transparency.
+\newblock arXiv:2310.01405, 2023.
+
 \end{thebibliography}
 
 \appendix
@@ -744,6 +790,14 @@ python3 scripts/generate_micro_world_dataset.py \
 # Phase C readout intervention pilot
 python3 scripts/run_readout_intervention.py \
   --out-dir artifacts/micro_world_v1/readout_intervention
+
+# Phase C latent residual steering pilot
+python3 scripts/run_latent_readout_steering.py \
+  --out-dir artifacts/micro_world_v1/latent_readout_steering
+
+# Phase C nonlinear probe sensitivity
+python3 scripts/run_mlp_probe_sensitivity.py \
+  --out-dir artifacts/micro_world_v1/probe_mlp_sensitivity
 \end{verbatim}
 
 \section{Appendix B: Protocol Details}
@@ -786,6 +840,8 @@ Additional reviewer-targeted artifacts added in this revision:
   \item cross-proposition geometry control summary: \texttt{artifacts/micro\_world\_v1/cross\_proposition\_geometry\_control\_summary.csv},
   \item world-bootstrap Unknown recall intervals: \texttt{artifacts/micro\_world\_v1/comparison\_unknown\_recall\_bootstrap\_ci.csv}.
   \item readout-intervention pilot summaries: \texttt{artifacts/micro\_world\_v1/readout\_intervention/}.
+  \item latent-steering pilot summaries: \texttt{artifacts/micro\_world\_v1/latent\_readout\_steering/}.
+  \item nonlinear probe sensitivity summaries: \texttt{artifacts/micro\_world\_v1/probe\_mlp\_sensitivity/}.
 \end{itemize}
 
 \end{document}

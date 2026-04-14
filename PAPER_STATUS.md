@@ -18,6 +18,9 @@ What is included in the current draft:
 - World-level geometry gap definition.
 - Verdict-step label-logit metrics.
 - Layer-sweep formulation.
+- Post-hoc readout intervention pilot.
+- Pre-readout latent residual steering pilot.
+- Nonlinear probe sensitivity (shallow MLP).
 - Worked micro-world example table.
 - Exact artifact paths and reproduction commands.
 

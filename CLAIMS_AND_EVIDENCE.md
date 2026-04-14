@@ -14,6 +14,8 @@ This table is the canonical mapping from research claims to exact artifacts and 
 | Gemma base-vs-instruct comparison after parse-confound repair still shows readout mismatch | **Yes** | `artifacts/micro_world_v1/comparison_gemma_base_prompt_rerun.csv`; `artifacts/micro_world_v1/comparison_probe_gemma_basefmt_vs_it_raw.csv` | `scripts/run_micro_world_inference.py`; `scripts/run_micro_world_probe.py` |
 | Verdict-step label logits under-rank `Unknown` on gold-Unknown decoder failures | **Yes** | `artifacts/micro_world_v1/comparison_label_logits_gemma_it_vs_pt_basefmt.csv` | `scripts/analyze_micro_world_label_logits.py` |
 | Layer sweeps show strong internal Unknown recoverability even when decoder fails | **Yes** | `artifacts/micro_world_v1/comparison_layer_sweep_gemma_it_vs_pt_basefmt.csv` | `scripts/run_micro_world_layer_sweep_probe.py` |
+| Minimal latent residual steering (pre-readout) improves aggregate quality but does not uniformly recover Unknown | **Yes (mixed)** | `artifacts/micro_world_v1/latent_readout_steering/aggregate_latent_steering.csv`; `artifacts/micro_world_v1/latent_readout_steering/*/latent_steering_summary.csv` | `scripts/run_latent_readout_steering.py` |
+| Linear probes understate Unknown signal on some models/states; shallow MLP probes recover substantially more | **Yes** | `artifacts/micro_world_v1/probe_mlp_sensitivity/comparison_probe_linear_vs_mlp.csv`; `artifacts/micro_world_v1/probe_mlp_sensitivity/comparison_probe_states_mlp.csv` | `scripts/run_mlp_probe_sensitivity.py` |
 
 ## Main Paper Claim
 

@@ -1,0 +1,3 @@
+run,n_eval,decoder_unknown_recall,latent_loow_unknown_recall,decoder_accuracy,latent_loow_accuracy,decoder_macro_f1,latent_loow_macro_f1,fixed_alpha
+gemma_3_4b_it_raw,1440,0.375,0.3625,0.3888888888888889,0.4097222222222222,0.33892089747822524,0.39526076087993145,1.0
+gemma_3_4b_pt_basefmt,1440,0.0,0.0,0.3458333333333333,0.3861111111111111,0.20134982514865762,0.27541220766124286,1.0
