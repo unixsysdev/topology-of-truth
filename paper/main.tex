@@ -39,12 +39,12 @@ Negative Replication on GSM8K and a Positive Representation--Decoder Dissociatio
 This paper reports a multi-stage study of hidden-state geometry for correctness prediction in language-model reasoning.
 The original hypothesis was ambitious: perhaps global topological summaries of hidden-state traces could provide a robust signal of correctness or ``truth.''
 That hypothesis did not survive stronger checks.
-On GSM8K-style reasoning traces, dynamic and windowed $H_0$ features were weak, often degenerate, and did not outperform simple controls.
+On GSM8K-style reasoning traces \cite{cobbe2021gsm8k}, dynamic and windowed $H_0$ features were weak, often degenerate, and did not outperform simple controls.
 A separate fixed-decoding GSM8K branch yielded a stronger operational result: non-convergence, as measured by token-cap termination, was the dominant predictor of error.
 
 The main positive result emerged only after changing the task.
 We introduced a procedural micro-world benchmark with nonce vocabularies, held-out templates, and exact tri-label semantics over \texttt{True}/\texttt{False}/\texttt{Unknown}.
-In that setting, a consistent dissociation appeared across Qwen and Gemma families: decoder behavior systematically under-expressed \texttt{Unknown}, yet verdict-region hidden-state probes recovered substantial \texttt{Unknown} signal on held-out worlds.
+In that setting, a consistent dissociation appeared across Qwen and Gemma families \cite{qwen_model_card,gemma_model_card}: decoder behavior systematically under-expressed \texttt{Unknown}, yet verdict-region hidden-state probes recovered substantial \texttt{Unknown} signal on held-out worlds.
 This dissociation survived prompt-path controls, constrained label decoding, base-vs-instruct checks, verdict-step logit analysis, and layer sweeps.
 The paper's final claim is therefore narrower and stronger than the original repository framing: semantic non-entailment is internally represented, but often under-realized by decoder readout.
 \end{abstract}
@@ -67,7 +67,7 @@ The main contribution is \emph{not} a universal scalar ``topology of truth.''
 The stronger result is a readout-bottleneck interpretation supported by multiple controls.
 
 \section{Why the Original Idea Failed}
-The original working hypothesis was that correct reasoning might have a cleaner global geometric or topological signature than incorrect reasoning.
+The original working hypothesis was that correct reasoning might have a cleaner global geometric or topological signature than incorrect reasoning \cite{carlsson2009,bauer2021ripser}.
 The basic recipe was:
 \begin{enumerate}
   \item run a small model on a reasoning task,
@@ -114,7 +114,7 @@ A corrected fixed-window test did worse:
 These numbers are not compatible with a strong correctness-prediction claim.
 
 \subsection{Phase B: Fixed-Decoding GSM8K (Convergence Result)}
-A second branch held decoding fixed for Qwen3.5-2B and shifted focus from topology to operational failure mode.
+A second branch held decoding fixed for Qwen3.5-2B and shifted focus from topology to operational failure mode on a GSM8K slice \cite{cobbe2021gsm8k}.
 The key variables were:
 \[
 C = \mathbf{1}[\text{run terminated by } \texttt{max\_new\_tokens}], \qquad
@@ -147,7 +147,7 @@ A matched sensitivity rerun at 640 tokens for the originally capped cases showed
 some failures were rescued by a longer budget, but many remained wrong even after receiving more room to continue.
 
 \subsection{Phase C: Procedural Micro-World Semantics (Main Positive Result)}
-The project became scientifically cleaner only after replacing benchmark reasoning with a procedurally generated semantic task.
+The project became scientifically cleaner only after replacing benchmark reasoning with a procedurally generated semantic task, in line with controlled-evaluation guidance from recent LM analysis literature \cite{liang2022holistic}.
 Each generated world contains:
 \begin{itemize}
   \item a latent structured state,
@@ -252,7 +252,7 @@ Training minimizes multiclass cross-entropy:
 \log \frac{\exp((Wh_i+b)_{y_i})}{\sum_c \exp((Wh_i+b)_c)}.
 \]
 
-This probe is intentionally weak.
+This probe is intentionally weak and follows the standard linear-probe setup \cite{alain2016probes}.
 If it succeeds, the information is already arranged in hidden space in a directly readable linear form.
 
 \subsection{Within-World Geometry Gap}
@@ -445,6 +445,46 @@ The original ``truth topology'' objective was too broad for the observed evidenc
 The final validated contribution is a replicated representation--decoder dissociation:
 semantic non-entailment is strongly encoded in hidden states but systematically under-surfaced at output time.
 The correct framing is no longer a search for a single topology-of-truth scalar, but a study of how semantic uncertainty is preserved internally and lost at decoder readout.
+
+\section*{References}
+\begin{thebibliography}{99}
+
+\bibitem{alain2016probes}
+Guillaume Alain and Yoshua Bengio.
+\newblock Understanding intermediate layers using linear classifier probes.
+\newblock In \emph{ICLR Workshop Track}, 2016.
+
+\bibitem{bauer2021ripser}
+Ulrich Bauer.
+\newblock Ripser: efficient computation of Vietoris--Rips persistence barcodes.
+\newblock \emph{Journal of Applied and Computational Topology}, 5:391--423, 2021.
+
+\bibitem{carlsson2009}
+Gunnar Carlsson.
+\newblock Topology and data.
+\newblock \emph{Bulletin of the American Mathematical Society}, 46(2):255--308, 2009.
+
+\bibitem{cobbe2021gsm8k}
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher Hesse, and John Schulman.
+\newblock Training verifiers to solve math word problems.
+\newblock arXiv:2110.14168, 2021.
+
+\bibitem{gemma_model_card}
+Google.
+\newblock Gemma 3 4B Instruct model card.
+\newblock \url{https://huggingface.co/google/gemma-3-4b-it}. Accessed 2026-04-14.
+
+\bibitem{liang2022holistic}
+Percy Liang, Rishi Bommasani, Tony Lee, et al.
+\newblock Holistic evaluation of language models.
+\newblock \emph{Transactions on Machine Learning Research}, 2023.
+
+\bibitem{qwen_model_card}
+Qwen Team.
+\newblock Qwen3.5 model family card.
+\newblock \url{https://huggingface.co/Qwen/Qwen3.5-4B}. Accessed 2026-04-14.
+
+\end{thebibliography}
 
 \appendix
 \section{Appendix A: Full Reproduction Commands}
