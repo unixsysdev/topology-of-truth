@@ -498,6 +498,23 @@ Numerically:
 \end{itemize}
 This isolates readout behavior from trivial formatting failures.
 
+\subsection{Readout Intervention Pilot}
+We ran a minimal post-hoc readout intervention on Gemma eval slices using existing verdict-step logits and verdict-token probe scores.
+The intervention adjusts only the Unknown logit:
+\[
+\ell_U' = \ell_U + \beta + \alpha\left(\log p_U^{\text{probe}} - \max(\log p_T^{\text{probe}},\log p_F^{\text{probe}})\right),
+\]
+with \(\ell_T,\ell_F\) unchanged.
+We report both a fixed tiny correction (\(\alpha=1.0,\beta=0.25\)) and a leave-one-world-out (LOOW) tuned variant over a small grid (\(\alpha\in\{0,0.5,1.0,1.5,2.0\}\), \(\beta\in\{-0.5,-0.25,0,0.25,0.5\}\)).
+
+LOOW intervention results:
+\begin{itemize}
+  \item Gemma-3-4B-it (raw): accuracy \(0.389\to0.413\), macro-F1 \(0.339\to0.378\), Unknown recall \(0.375\to0.167\).
+  \item Gemma-3-4B-pt (basefmt): accuracy \(0.346\to0.358\), macro-F1 \(0.201\to0.289\), Unknown recall \(0.000\to0.317\).
+\end{itemize}
+So a tiny readout correction can substantially rescue Unknown emission in the basefmt collapse regime while improving tri-label quality, consistent with a readout/calibration bottleneck there.
+For instruct-raw, the same family of corrections improves aggregate metrics but reduces Unknown recall, indicating the readout bottleneck is not uniform across post-training variants.
+
 \section{Verdict-Step Label-Logit Analysis}
 For gold-\texttt{Unknown} decoder failures:
 \begin{itemize}
@@ -572,6 +589,7 @@ Key outputs used in the paper:
   \item constrained-decoding comparisons: \texttt{artifacts/micro\_world\_v1/comparison\_decoder\_constrained\_*.csv}
   \item verdict-step logits: \texttt{artifacts/micro\_world\_v1/label\_logits\_*/}
   \item layer sweeps: \texttt{artifacts/micro\_world\_v1/layer\_sweep\_*/}
+  \item readout-intervention pilot: \texttt{artifacts/micro\_world\_v1/readout\_intervention/}
 \end{itemize}
 
 \section{Implications Beyond This Benchmark}
@@ -591,9 +609,9 @@ The current evidence favors a readout-bottleneck interpretation over a missing-r
 This does not yet isolate a single causal source of the bottleneck; it may reflect a combination of final-layer calibration, label competition, and post-training behavior shaping.
 Base-vs-instruct comparisons suggest post-training is not the sole cause, since mismatch persists after prompt-format repair in base models.
 
-Highest-value next experiments are:
+Given the pilot readout intervention above, highest-value next experiments are:
 \begin{enumerate}
-  \item \textbf{Readout intervention (primary):} apply a minimal intervention at verdict time (e.g., additive Unknown logit correction or probe-guided residual steering) and test whether Unknown emission and tri-label accuracy improve without changing upstream representation.
+  \item \textbf{Readout intervention (expanded):} extend from the current post-hoc Unknown-logit correction to stronger but still minimal interventions (e.g., probe-guided residual steering at verdict step), with world-held-out evaluation.
   \item \textbf{Base vs instruct amplification test:} compare decoder Unknown recall, verdict-step Unknown margin, probe Unknown recall, and representation--decoder gap under matched prompt/parser settings.
   \item \textbf{Layer-wise logit-lens track:} alongside layer-wise probe recoverability, evaluate Unknown token competitiveness under native LM-head projection across layers.
   \item \textbf{Prompt calibration stress test:} apply strict abstention framing and few-shot Unknown examples to test policy sensitivity of decoder readout.
@@ -674,7 +692,7 @@ Percy Liang, Rishi Bommasani, Tony Lee, et al.
 Evan Hubinger, Jack Clark, et al.
 \newblock Eliciting latent knowledge: How to tell if your eyes deceive you.
 \newblock Alignment Research Center report, 2021.
-\newblock \url{https://www.alignmentforum.org/posts/2R8YpY8cL4ePj4Aqk/eliciting-latent-knowledge-how-to-tell-if-your-eyes-deceive}. Accessed 2026-04-14.
+\newblock \url{https://www.alignment.org/blog/arcs-first-technical-report-eliciting-latent-knowledge/}. Accessed 2026-04-14.
 
 \bibitem{qwen_model_card}
 Qwen Team.
@@ -685,6 +703,7 @@ Qwen Team.
 Mrinank Sharma, Meg Tong, et al.
 \newblock Towards understanding sycophancy in language models.
 \newblock arXiv:2310.13548, 2023.
+\newblock \url{https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models}. Accessed 2026-04-14.
 
 \end{thebibliography}
 
@@ -721,6 +740,10 @@ python3 scripts/generate_micro_world_dataset.py \
   --out-dir artifacts/micro_world_v1/dataset \
   --seed 1729 --train-worlds 100 --dev-worlds 25 --eval-worlds 100 \
   --props-per-world 9 --paraphrases-per-prop 8
+
+# Phase C readout intervention pilot
+python3 scripts/run_readout_intervention.py \
+  --out-dir artifacts/micro_world_v1/readout_intervention
 \end{verbatim}
 
 \section{Appendix B: Protocol Details}
@@ -762,6 +785,7 @@ Additional reviewer-targeted artifacts added in this revision:
 \begin{itemize}
   \item cross-proposition geometry control summary: \texttt{artifacts/micro\_world\_v1/cross\_proposition\_geometry\_control\_summary.csv},
   \item world-bootstrap Unknown recall intervals: \texttt{artifacts/micro\_world\_v1/comparison\_unknown\_recall\_bootstrap\_ci.csv}.
+  \item readout-intervention pilot summaries: \texttt{artifacts/micro\_world\_v1/readout\_intervention/}.
 \end{itemize}
 
 \end{document}
