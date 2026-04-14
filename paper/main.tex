@@ -65,6 +65,13 @@ The paper therefore has three parts:
 
 The main contribution is \emph{not} a universal scalar ``topology of truth.''
 The stronger result is a readout-bottleneck interpretation supported by multiple controls.
+To avoid over-claiming, we explicitly do \emph{not} claim:
+\begin{itemize}
+  \item a universal geometry-of-truth detector across unrestricted tasks,
+  \item a complete causal account of decoder behavior,
+  \item or that topology alone is the primary predictive tool in natural reasoning traces.
+\end{itemize}
+The claim is intentionally task-conditioned and mechanism-narrow.
 
 \section{Why the Original Idea Failed}
 The original working hypothesis was that correct reasoning might have a cleaner global geometric or topological signature than incorrect reasoning \cite{carlsson2009,bauer2021ripser}.
@@ -94,8 +101,19 @@ The failure of the first branch is itself important.
 It prevented a misleading positive claim and forced a cleaner task design.
 
 \section{Experimental Trajectory}
+\subsection{Why These Three Phases Belong in One Paper}
+The paper is not a grab-bag chronology.
+It is a causal progression in experimental design:
+\begin{enumerate}
+  \item \textbf{Phase A falsified} the original global-scalar hypothesis under realistic trace conditions.
+  \item \textbf{Phase B diagnosed} the dominant confound in that setting (non-convergence under fixed decoding).
+  \item \textbf{Phase C redesigned} the task to isolate semantics directly, enabling a sharper representation-vs-readout test.
+\end{enumerate}
+The positive result is only interpretable in light of that redesign logic.
+
 \subsection{Phase A: Global Topology on GSM8K (Negative)}
 Small paired runs on Qwen3.5-0.8B and Qwen3.5-2B produced weak dynamic-$H_0$ signals on non-capped 2B traces.
+The primary dynamic pilot used 10 paired 2B samples, with one capped trace removed for the non-capped comparison set (\(n=9\): 4 correct, 5 wrong).
 Representative pilot numbers were:
 \begin{itemize}
   \item \texttt{h0\_entropy\_final AUC = 0.55}
@@ -112,6 +130,7 @@ A corrected fixed-window test did worse:
 \end{itemize}
 
 These numbers are not compatible with a strong correctness-prediction claim.
+We treat them as descriptive pilot outcomes, not inferential proof that topology is universally uninformative.
 
 \subsection{Phase B: Fixed-Decoding GSM8K (Convergence Result)}
 A second branch held decoding fixed for Qwen3.5-2B and shifted focus from topology to operational failure mode on a GSM8K slice \cite{cobbe2021gsm8k}.
@@ -145,6 +164,8 @@ The odds ratio calculation is:
 
 A matched sensitivity rerun at 640 tokens for the originally capped cases showed that both truncation and deeper non-convergence mattered:
 some failures were rescued by a longer budget, but many remained wrong even after receiving more room to continue.
+Concretely, among 75 originally capped wrong runs, 27 flipped to correct and 48 remained wrong; 24 stayed both capped and wrong at 640.
+This rules out the trivial interpretation that the cap signal is only an artifact of an arbitrary token budget.
 
 \subsection{Phase C: Procedural Micro-World Semantics (Main Positive Result)}
 The project became scientifically cleaner only after replacing benchmark reasoning with a procedurally generated semantic task, in line with controlled-evaluation guidance from recent LM analysis literature \cite{liang2022holistic}.
@@ -159,6 +180,15 @@ Each generated world contains:
 
 Each world yields 72 examples: 9 propositions times 8 paraphrases.
 The main sweeps used 20 train worlds and 20 eval worlds.
+The generator itself produces larger split files (default 100/25/100 worlds for train/dev/eval), and analysis subsets are explicitly selected from those outputs.
+
+Critically, anti-shortcut controls are built into generation:
+\begin{itemize}
+  \item split-specific nonce lexicon pools are disjoint for entities/attributes/relations,
+  \item eval paraphrases use template variants 4--7, while train uses 0--3 (dev uses overlap variants by design for intermediate stress),
+  \item per-world proposition sampling is label-balanced over \texttt{True}/\texttt{False}/\texttt{Unknown}.
+\end{itemize}
+These details target reviewer concerns about lexical leakage and template-only clustering.
 
 \section{Task Definition}
 Let a world be a finite structured state
@@ -182,24 +212,35 @@ This matters because \texttt{Unknown} is not a stylistic hesitation label.
 It is exact non-entailment under the generator.
 
 \subsection{Worked Micro-World Example}
-Table~\ref{tab:world_example} shows one illustrative world/query slice.
+Table~\ref{tab:world_facts} shows a compact latent world.
+Table~\ref{tab:world_queries} then shows one proposition per label class, plus a second paraphrase for one query to make template variation explicit.
 
 \begin{table}[H]
 \centering
-\caption{Worked micro-world example (illustrative format).}
-\label{tab:world_example}
-\begin{tabular}{p{0.28\linewidth} p{0.46\linewidth} p{0.14\linewidth}}
+\caption{Worked world facts (illustrative).}
+\label{tab:world_facts}
+\begin{tabular}{p{0.96\linewidth}}
 \toprule
-World fact set & Query statement & Gold label \\
+\texttt{mep is falm. grel is not falm. nalo foshes sop.} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Label semantics on the worked world.}
+\label{tab:world_queries}
+\begin{tabular}{p{0.38\linewidth} p{0.12\linewidth} p{0.42\linewidth}}
+\toprule
+Query statement & Gold label & Why \\
 \midrule
-\texttt{mep is falm}; \texttt{grel is not falm}; \texttt{nalo foshes sop} &
-\texttt{The object mep has property falm.} & True \\
+\texttt{The object mep has property falm.} & True & Explicit positive fact in world state. \\
 \addlinespace
-\texttt{mep is falm}; \texttt{grel is not falm}; \texttt{nalo foshes sop} &
-\texttt{The object grel has property falm.} & False \\
+\texttt{The object grel has property falm.} & False & Explicit negative fact (\texttt{grel is not falm}). \\
 \addlinespace
-\texttt{mep is falm}; \texttt{grel is not falm}; \texttt{nalo foshes sop} &
-\texttt{The relation fosh holds from mep to nalo.} & Unknown \\
+\texttt{The relation fosh holds from mep to nalo.} & Unknown & Neither positive nor negative fact provided for this ordered pair. \\
+\addlinespace
+\texttt{The ordered pair (mep, nalo) has relation fosh.} & Unknown & Same proposition as previous row, different paraphrase template. \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -225,6 +266,18 @@ The key state locations are:
 \end{itemize}
 
 These are the local decision states of the model near label emission.
+In code:
+\begin{itemize}
+  \item \texttt{final\_prompt}: last hidden vector of prompt tokens,
+  \item \texttt{prompt\_tail\_mean}: mean of last \(\min(5,\text{prompt\_len})\) prompt vectors,
+  \item \texttt{verdict\_token}: first generated-token hidden vector (zero vector if no generated token in non-sweep extraction),
+  \item \texttt{verdict\_span\_mean}: mean of first \(\min(3,\text{gen\_len})\) generated vectors (zero vector if none).
+\end{itemize}
+
+\subsection{Inference and Prompt Protocol}
+Micro-world inference runs use short deterministic decoding (\texttt{temperature=0}, \texttt{max\_new\_tokens=4}) with strict label parsing.
+``No-think'' in this paper refers to runs where internal reasoning mode was disabled via the \texttt{enable\_thinking=False} generation flag.
+We evaluate both default chat-style prompting and raw/base-label prompt paths as controls.
 
 \section{Methods}
 \subsection{Linear Probe}
@@ -254,6 +307,14 @@ Training minimizes multiclass cross-entropy:
 
 This probe is intentionally weak and follows the standard linear-probe setup \cite{alain2016probes}.
 If it succeeds, the information is already arranged in hidden space in a directly readable linear form.
+Implementation details (from the committed probe script):
+\begin{itemize}
+  \item feature standardization: \texttt{StandardScaler(with\_mean=True, with\_std=True)},
+  \item classifier: multinomial logistic regression (\texttt{lbfgs}, \(C=1.0\), \texttt{max\_iter}=4000),
+  \item class labels: fixed order \(\{\texttt{True},\texttt{False},\texttt{Unknown}\}\),
+  \item no class weighting, no hidden-state PCA, no extra feature engineering.
+\end{itemize}
+Train/test separation is by world split manifests (train worlds for fitting, held-out eval worlds for reporting), not random sentence-level splitting.
 
 \subsection{Within-World Geometry Gap}
 For one world and one state key, with distance \(d(\cdot,\cdot)\):
@@ -268,6 +329,20 @@ Define the world-level gap:
 \Delta = D_{\text{diff}} - D_{\text{same}}.
 \]
 A positive \(\Delta\) means same-label states are more tightly organized than different-label states.
+The main metric is cosine distance over \(L_2\)-normalized vectors:
+\[
+d_{\cos}(h_i,h_j)=1-\frac{h_i^\top h_j}{\lVert h_i\rVert_2 \lVert h_j\rVert_2}.
+\]
+All pairwise distances are computed within world and state key before aggregation.
+
+\subsection{Sign-Test Reporting}
+World-level sign tests are reported as descriptive primary statistics (positive/zero/negative world counts).
+For calibration, one-sided exact binomial values under null \(p=0.5\) are:
+\begin{itemize}
+  \item \(19/19\) positives: \(p=2^{-19}\approx 1.91\times10^{-6}\),
+  \item \(20/20\) positives: \(p=2^{-20}\approx 9.54\times10^{-7}\).
+\end{itemize}
+These values are supportive but secondary to the held-out-world descriptive consistency.
 
 \subsection{Verdict-Step Label-Logit Metrics}
 Let verdict-step logits for canonical label tokens be
@@ -283,6 +358,9 @@ with the Unknown competitiveness margin
 m_U = \ell_U - \max(\ell_T,\ell_F).
 \]
 If \(m_U < 0\), Unknown is under-ranked against the strongest non-Unknown candidate.
+Canonical label-token scoring uses first-token variants for each label string with and without leading space.
+For each label, we keep unique first-token IDs and use the \emph{maximum} first-token log-prob across those variants.
+This reduces tokenizer-surface artifacts from a single textual form.
 
 \subsection{Layer Sweeps}
 For each layer \(\ell\), evaluate the same probe protocol and report
@@ -290,6 +368,12 @@ For each layer \(\ell\), evaluate the same probe protocol and report
 R_U^{(\ell)} = \text{Unknown recall of the probe at layer }\ell.
 \]
 This reveals where non-entailment is maximally linearly recoverable in the network.
+Sweep implementation details:
+\begin{itemize}
+  \item \texttt{prompt\_last}: extracted for every example and every layer,
+  \item \texttt{verdict\_token}: extracted at the first generated token; examples with no generated token are excluded from this branch via a validity mask,
+  \item non-finite activations are replaced with zero before probe fitting (\texttt{nan\_to\_num}) to keep full sweeps stable.
+\end{itemize}
 
 \section{Main Micro-World Results}
 \subsection{Decoder Behavior vs Hidden-State Recoverability}
@@ -321,12 +405,16 @@ It is the gap between emitted-\texttt{Unknown} behavior and hidden-state recover
 
 \subsection{World-Level Geometry Consistency}
 World-level same-vs-different label distance gaps were positive in every evaluated world for main state keys in both Qwen3.5-2B and Gemma-3-4B-it.
+This includes all three class-pair comparisons (\texttt{True--False}, \texttt{True--Unknown}, \texttt{False--Unknown}) in the aggregate label-pair summaries, not only pooled different-vs-same averages.
+So the signal is not driven by one class boundary alone.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\linewidth]{figures/fig5_geometry_sign_tests.png}
   \caption{Fraction of worlds with positive same-vs-different label distance gap.}
 \end{figure}
+
+For the headline state keys, sign counts are \(19/19\) (Qwen3.5-2B) and \(20/20\) (Gemma-3-4B-it), matching the exact-binomial sanity values in the methods section.
 
 \subsection{Cross-Family Replication}
 The dissociation replicates across Qwen and Gemma:
@@ -339,16 +427,29 @@ The dissociation replicates across Qwen and Gemma:
 \section{Mechanistic Controls}
 \subsection{Constrained Decoding}
 To test whether free-form decoding alone caused the issue, decoding was constrained to \{\texttt{True}, \texttt{False}, \texttt{Unknown}\}.
-This did not repair Unknown collapse in the main models.
+This did not repair Unknown collapse in the main models:
+\begin{itemize}
+  \item Qwen3.5-2B and Qwen3.5-4B remained at decoder Unknown recall \(=0.0\),
+  \item Gemma-3-4B-it remained low (Unknown recall \(=0.0125\), unchanged in matched constrained/unconstrained eval runs).
+\end{itemize}
+So the bottleneck is not reducible to unconstrained text drift.
 
 \subsection{Prompt-Path Control}
 Raw-prompt controls were used to rule out chat-template-only explanations.
 The core dissociation remained.
+For Gemma instruct under raw prompting, decoder Unknown recall increased relative to the no-think default path, but remained materially below hidden-state recoverability, preserving the central mismatch.
 
 \subsection{Base vs Instruct}
 Gemma base initially showed severe parse failures under an unsuitable prompt path.
 After repairing prompt format with a base-specific label format, the parse confound disappeared.
 Yet base still showed decoder Unknown collapse while probes recovered substantial Unknown signal.
+Numerically:
+\begin{itemize}
+  \item raw base prompt path parse-failure rate was \(97.5\%\),
+  \item repaired base-format path reduced parse failure to \(0\%\),
+  \item repaired base-format decoder Unknown recall remained \(0.0\).
+\end{itemize}
+This isolates readout behavior from trivial formatting failures.
 
 \section{Verdict-Step Label-Logit Analysis}
 For gold-\texttt{Unknown} decoder failures:
@@ -357,6 +458,8 @@ For gold-\texttt{Unknown} decoder failures:
   \item Gemma-3-4B-pt (basefmt): mean \(P(\texttt{Unknown})=0.177\), mean margin \(m_U=-1.045\).
 \end{itemize}
 So Unknown is often present but not competitive enough at final label-token competition.
+Importantly, this is a \emph{readout-stage} diagnosis: Unknown is not absent from representation, but is systematically under-ranked at the verdict step on failures where gold is Unknown.
+That distinction is what links probe recoverability and emitted-label collapse.
 
 \begin{figure}[H]
   \centering
@@ -371,6 +474,7 @@ The best Unknown recall by state family was:
   \item Gemma-3-4B-pt (basefmt): \texttt{prompt\_last} 0.825 at layer 29, \texttt{verdict\_token} 0.733 at layer 28
 \end{itemize}
 This shows strong recoverable Unknown signal exists internally in both instruct and base variants, even when emitted behavior still collapses that class.
+The layer locations differ by model variant (early-mid for instruct vs late for basefmt in this slice), which supports a ``signal location and readout alignment'' view rather than a simple ``more scale always better'' view.
 
 \begin{figure}[H]
   \centering
@@ -400,6 +504,10 @@ The result survives the obvious reviewer attacks:
   \item \textbf{Parse objection}: Gemma base rerun with repaired prompt format.
   \item \textbf{Free-decoding objection}: constrained decoding tested.
   \item \textbf{``No internal Unknown'' objection}: probes, geometry, logits, and layer sweeps all counter it.
+  \item \textbf{Synthetic-task objection}: synthetic design is deliberate to obtain exact entailment labels and control lexical leakage; the claim is scoped to this setting.
+  \item \textbf{Tokenization-artifact objection}: label-logit analysis uses multiple first-token variants (with/without leading space) and takes the strongest per-label candidate.
+  \item \textbf{Lexical-clustering objection}: eval uses held-out lexical pools and template variants, and geometry is evaluated within world across paraphrases.
+  \item \textbf{``Probes are not causal'' objection}: agreed; probe results establish information availability, while constrained decoding and verdict logits target the usage/readout side.
 \end{itemize}
 
 No single analysis carries the paper; strength comes from triangulation.
@@ -415,6 +523,18 @@ Key outputs used in the paper:
   \item verdict-step logits: \texttt{artifacts/micro\_world\_v1/label\_logits\_*/}
   \item layer sweeps: \texttt{artifacts/micro\_world\_v1/layer\_sweep\_*/}
 \end{itemize}
+
+\section{Implications Beyond This Benchmark}
+The main result has implications beyond this specific micro-world generator.
+If semantic non-entailment is recoverable internally while decoder outputs collapse it, then evaluation based only on emitted labels can underestimate a model's internal uncertainty structure.
+That matters for:
+\begin{itemize}
+  \item abstention and selective prediction design,
+  \item post-hoc confidence calibration,
+  \item safety analysis of over-assertive outputs,
+  \item readout-head or decoding-policy interventions that target decision alignment rather than representation learning.
+\end{itemize}
+This paper does not claim direct transfer to all tasks, but it motivates testing representation--readout gaps in other controlled domains.
 
 \section{Limitations}
 \begin{itemize}
@@ -520,5 +640,39 @@ python3 scripts/generate_micro_world_dataset.py \
   --seed 1729 --train-worlds 100 --dev-worlds 25 --eval-worlds 100 \
   --props-per-world 9 --paraphrases-per-prop 8
 \end{verbatim}
+
+\section{Appendix B: Protocol Details}
+\subsection{Dataset Generation Protocol}
+The generator samples partial worlds with 4--6 entities, 2 attributes, and 2 relations per world by default.
+Per relation/attribute assignment, facts are sampled as explicit positive, explicit negative, or omitted (Unknown) states.
+For each world, proposition sampling is quota-balanced over \texttt{True}/\texttt{False}/\texttt{Unknown} labels before paraphrase rendering.
+
+\subsection{Train/Test Separation}
+Probe training uses only train-world manifests (\texttt{status=ok}, label in \{\texttt{True},\texttt{False},\texttt{Unknown}\}).
+Evaluation uses held-out eval-world manifests.
+No sentence-level random split is used in the reported probe tables.
+
+\subsection{Probe Fitting Defaults}
+All reported linear probes use:
+\begin{itemize}
+  \item \texttt{StandardScaler} (mean/std normalization),
+  \item \texttt{LogisticRegression(solver=lbfgs, C=1.0, max\_iter=4000)},
+  \item three-class label set in fixed order \(\{\texttt{True},\texttt{False},\texttt{Unknown}\}\),
+  \item zero-division-safe precision/recall/F1 reporting.
+\end{itemize}
+
+\subsection{Layer Sweep Inclusion Rules}
+For \texttt{verdict\_token} sweeps, examples with no generated token are excluded via a validity mask.
+For \texttt{prompt\_last} sweeps, all \texttt{status=ok} examples are included.
+Non-finite activations are replaced with zero prior to fitting.
+
+\section{Appendix C: Definitions and Notation}
+\begin{itemize}
+  \item \textbf{Unknown (semantic class):} non-entailment in the generator's three-valued semantics.
+  \item \textbf{Unknown (decoder output):} emitted label string parsed from model output.
+  \item \textbf{Unknown recoverability:} recall of the Unknown class under a linear probe on hidden states.
+  \item \textbf{Representation--decoder gap:} probe Unknown recall minus decoder Unknown recall on matched eval sets.
+\end{itemize}
+These are related but non-identical quantities, and they are reported separately throughout.
 
 \end{document}
