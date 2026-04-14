@@ -10,3 +10,9 @@ These files were moved out of repository root to reduce confusion between:
 2. the later Phase B/Phase C pipelines that support the final paper claim.
 
 Root-level files with the same names are compatibility shims that forward to this directory.
+
+Legacy visuals from the old (now-negative) direction are preserved under:
+
+- `phase_a_global_h0_topology/figures_archive/`
+
+This includes copied plots from `results_thinking/` and the Phase A pilot artifact plot folders.

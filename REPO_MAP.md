@@ -13,6 +13,7 @@ This file maps the paper claims to concrete directories and entry points.
 - `repro/` — environment lock and rebuild notes.
 - `scripts/` — active analysis/generation scripts for Phases A/B/C.
 - `phase_a_global_h0_topology/scripts/` — legacy original root scripts (moved for clarity).
+- `phase_a_global_h0_topology/figures_archive/` — preserved visuals from the original Phase A direction.
 
 ## Experiment Phases
 
